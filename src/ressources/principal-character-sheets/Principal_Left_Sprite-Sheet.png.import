@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8j0yhgsv8265"
-path="res://.godot/imported/woodplank8.png-57250428b20385d2ce0f89d3b3f08c90.ctex"
+uid="uid://5fwunysh57eq"
+path="res://.godot/imported/Principal_Left_Sprite-Sheet.png-99a4084707da22cec6f3b942fe1d6f61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesMap/woodplank8.png"
-dest_files=["res://.godot/imported/woodplank8.png-57250428b20385d2ce0f89d3b3f08c90.ctex"]
+source_file="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png"
+dest_files=["res://.godot/imported/Principal_Left_Sprite-Sheet.png-99a4084707da22cec6f3b942fe1d6f61.ctex"]
 
 [params]
 

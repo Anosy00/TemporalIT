@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i4y438usgn4d"
-path="res://.godot/imported/tileset_16x16_interior.png-b832563860ae46ef6039cbb2c9a7f6da.ctex"
+uid="uid://d0rbnur7ylkkv"
+path="res://.godot/imported/nails.png-8fdbb4640d2cfb4e75a76b4f0fac29e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesMap/tileset_16x16_interior/tileset_16x16_interior.png"
-dest_files=["res://.godot/imported/tileset_16x16_interior.png-b832563860ae46ef6039cbb2c9a7f6da.ctex"]
+source_file="res://ressources/tilesmap/nails/nails.png"
+dest_files=["res://.godot/imported/nails.png-8fdbb4640d2cfb4e75a76b4f0fac29e5.ctex"]
 
 [params]
 
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr5yogmu2q4a0"
-path="res://.godot/imported/medieval tileset interior.png-0c68c7e7fba1ebedd501189d9807a65a.ctex"
+uid="uid://lhh7arcbmxms"
+path="res://.godot/imported/rpg indoor tileset expansion 1 trans.png-60a510ef99a50f35e85c10370fc30da6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesMap/medieval tileset interior.png"
-dest_files=["res://.godot/imported/medieval tileset interior.png-0c68c7e7fba1ebedd501189d9807a65a.ctex"]
+source_file="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png"
+dest_files=["res://.godot/imported/rpg indoor tileset expansion 1 trans.png-60a510ef99a50f35e85c10370fc30da6.ctex"]
 
 [params]
 

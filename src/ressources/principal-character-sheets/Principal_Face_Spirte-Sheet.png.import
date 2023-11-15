@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lngbjo08vofg"
-path="res://.godot/imported/preview.png-32950608699c7cc7121083e457702436.ctex"
+uid="uid://c3wech4vfwa3r"
+path="res://.godot/imported/Principal_Face_Spirte-Sheet.png-060ecb3022bfc36b2e4fb7a28e69adbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesMap/LPC_house_interior/LPC_house_interior/preview.png"
-dest_files=["res://.godot/imported/preview.png-32950608699c7cc7121083e457702436.ctex"]
+source_file="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png"
+dest_files=["res://.godot/imported/Principal_Face_Spirte-Sheet.png-060ecb3022bfc36b2e4fb7a28e69adbe.ctex"]
 
 [params]
 

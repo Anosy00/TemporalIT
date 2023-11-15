@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0rbnur7ylkkv"
-path="res://.godot/imported/nails.png-f7c6421b8c35f549511a2fabd599cf56.ctex"
+uid="uid://cpdl3b70ou8kr"
+path="res://.godot/imported/interior.png-37ce77e3773d0274be9f976e9afb4277.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TilesMap/nails.png"
-dest_files=["res://.godot/imported/nails.png-f7c6421b8c35f549511a2fabd599cf56.ctex"]
+source_file="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png"
+dest_files=["res://.godot/imported/interior.png-37ce77e3773d0274be9f976e9afb4277.ctex"]
 
 [params]
 
