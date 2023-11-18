@@ -1,13 +1,135 @@
-[gd_scene load_steps=25 format=3 uid="uid://bm7ec18tqn4rt"]
+[gd_scene load_steps=37 format=3 uid="uid://bm7ec18tqn4rt"]
 
-[ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="1_bc022"]
-[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="2_vk5h4"]
-[ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="3_pkhbo"]
-[ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="4_ts6vy"]
-[ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="5_akupj"]
+[ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="1_elroj"]
+[ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_kkvqk"]
+[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="2_lv8lv"]
+[ext_resource type="Script" path="res://Morse's room/Scripts/Player/player.cs" id="3_lsvtg"]
+[ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="3_ppehi"]
+[ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="4_21a25"]
+[ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="5_53qku"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xymv1"]
+texture = ExtResource("1_kkvqk")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wqny8"]
-texture = ExtResource("1_bc022")
+texture = ExtResource("1_elroj")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -515,69 +637,70 @@ texture = ExtResource("1_bc022")
 
 [sub_resource type="TileSet" id="TileSet_hw6lk"]
 sources/1 = SubResource("TileSetAtlasSource_wqny8")
+sources/0 = SubResource("TileSetAtlasSource_xymv1")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pewfi"]
-atlas = ExtResource("2_vk5h4")
+atlas = ExtResource("2_lv8lv")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wevjy"]
-atlas = ExtResource("2_vk5h4")
+atlas = ExtResource("2_lv8lv")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1j87i"]
-atlas = ExtResource("2_vk5h4")
+atlas = ExtResource("2_lv8lv")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tny4r"]
-atlas = ExtResource("2_vk5h4")
+atlas = ExtResource("2_lv8lv")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ha0a5"]
-atlas = ExtResource("3_pkhbo")
+atlas = ExtResource("3_ppehi")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e5hov"]
-atlas = ExtResource("3_pkhbo")
+atlas = ExtResource("3_ppehi")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4vohx"]
-atlas = ExtResource("3_pkhbo")
+atlas = ExtResource("3_ppehi")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11ar8"]
-atlas = ExtResource("3_pkhbo")
+atlas = ExtResource("3_ppehi")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hgvji"]
-atlas = ExtResource("4_ts6vy")
+atlas = ExtResource("4_21a25")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yuaih"]
-atlas = ExtResource("4_ts6vy")
+atlas = ExtResource("4_21a25")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12cix"]
-atlas = ExtResource("4_ts6vy")
+atlas = ExtResource("4_21a25")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eg7mt"]
-atlas = ExtResource("4_ts6vy")
+atlas = ExtResource("4_21a25")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nyynv"]
-atlas = ExtResource("5_akupj")
+atlas = ExtResource("5_53qku")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wiliw"]
-atlas = ExtResource("5_akupj")
+atlas = ExtResource("5_53qku")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ot10c"]
-atlas = ExtResource("5_akupj")
+atlas = ExtResource("5_53qku")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ojig6"]
-atlas = ExtResource("5_akupj")
+atlas = ExtResource("5_53qku")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nt4nf"]
@@ -651,6 +774,39 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ugnq"]
+size = Vector2(14, 4)
+
+[sub_resource type="Gradient" id="Gradient_h1fqx"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wuyhw"]
+gradient = SubResource("Gradient_h1fqx")
+fill = 1
+fill_from = Vector2(0.49569, 0.5)
+fill_to = Vector2(0.306034, 0.228448)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asbx4"]
+size = Vector2(63, 63)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_duxdd"]
+a = Vector2(97, 2)
+b = Vector2(-98, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2x45o"]
+size = Vector2(206, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xvs2h"]
+size = Vector2(20, 198)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gveyk"]
+size = Vector2(79, 72)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3vi"]
+radius = 47.0
+height = 186.0
+
 [node name="MorseScene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -664,22 +820,75 @@ layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array(327686, 262145, 4, 262150, 262145, 4, -393221, 393217, 5, -393220, 393217, 5, -393219, 393217, 5, -393218, 393217, 5, -393217, 393217, 5, -458752, 393217, 5, -458751, 393217, 5, -458749, 393217, 5, -458750, 393217, 5, -458748, 393217, 5, -458747, 393217, 5, -393222, 393217, 5, -196601, 393217, 5, -196600, 393217, 5, -196599, 393217, 5, -196602, 262145, 5, -262138, 262145, 4, -327674, 262145, 4, -393210, 262145, 4, -458746, 1, 5, -393223, 196609, 5, -327687, 589825, 3, -262151, 589825, 3, -196615, 589825, 3, -131079, 589825, 3, -65543, 589825, 3, -7, 589825, 3, 65529, 589825, 3, 131065, 589825, 3, 196601, 589825, 3, 262137, 589825, 3, 327673, 589825, 3, 393209, 589825, 3, 196614, 262145, 4)
-layer_2/name = "Wall_Front"
+layer_1/tile_data = PackedInt32Array(327686, 262145, 4, 262150, 262145, 4, -393221, 393217, 5, -393220, 393217, 5, -393219, 393217, 5, -393218, 393217, 5, -393217, 393217, 5, -458752, 393217, 5, -458751, 393217, 5, -458749, 393217, 5, -458750, 393217, 5, -458748, 393217, 5, -458747, 393217, 5, -393222, 393217, 5, -196601, 393217, 5, -196600, 393217, 5, -196599, 393217, 5, -196602, 262145, 5, -262138, 262145, 4, -327674, 262145, 4, -393210, 262145, 4, -458746, 1, 5, -393223, 196609, 5, -327687, 589825, 3, -262151, 589825, 3, -196615, 589825, 3, -131079, 589825, 3, -65543, 589825, 3, -7, 589825, 3, 65529, 589825, 3, 131065, 589825, 3, 196601, 589825, 3, 262137, 589825, 3, 327673, 589825, 3, 393209, 589825, 3, 196614, 262145, 4, -196598, 458753, 5, -196597, 458753, 5, -196596, 458753, 5, -196595, 458753, 5)
+layer_2/name = "Object_Touch_The_Floor"
 layer_2/enabled = true
 layer_2/modulate = Color(1, 1, 1, 1)
 layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
-layer_2/tile_data = PackedInt32Array(393221, 458753, 0, 393220, 458753, 0, 393219, 458753, 0, 393218, 458753, 0, 393217, 458753, 0, 393216, 458753, 0, 458751, 458753, 0, 458750, 458753, 0, 458749, 458753, 0, 458748, 458753, 0, 458747, 458753, 0, 458746, 458753, 0, 131078, 262145, 0, 458745, 196609, 2, 131079, 393217, 0, 131080, 393217, 0, 131081, 393217, 0, 65536, 458753, 5, 131071, 458753, 5, 131070, 262145, 5, 65537, 589825, 5, -65537, 327681, 0, -131072, 327681, 0, -65538, 262145, 0, -131071, 589825, 0, -2, 262145, 2, 65534, 262145, 2, -65535, 589825, 3, 1, 589825, 3, -1, 327681, 2, -65536, 327681, 2, 0, 327681, 2, 65535, 327681, 2, 393222, 1, 2, 327686, 262145, 4, 262150, 262145, 4, 196614, 262145, 4)
+layer_2/tile_data = PackedInt32Array(-131068, 458752, 6, -65532, 458752, 7, 4, 458752, 8, 65540, 458752, 9, -131063, 589824, 6, -65527, 589824, 7, 9, 589824, 8, 65545, 589824, 9, -131065, 524288, 6, -65529, 524288, 7, 7, 524288, 8, 65543, 524288, 9, -131064, 524288, 6, -65528, 524288, 7, 8, 524288, 8, 65544, 524288, 9, -131067, 524288, 6, -65531, 524288, 7, 5, 524288, 8, 65541, 524288, 9, -131066, 589824, 6, -65530, 589824, 7, 6, 589824, 8, 65542, 589824, 9, -131062, 524288, 6, -65526, 524288, 7, 10, 524288, 8, 65546, 524288, 9, -131061, 589824, 6, -65525, 589824, 7, 11, 589824, 8, 65547, 589824, 9, -131060, 524288, 6, -65524, 524288, 7, 12, 524288, 8, 65548, 524288, 9, -131059, 589824, 6, -65523, 589824, 7, 13, 589824, 8, 65549, 589824, 9)
+layer_3/name = "Wall_Front"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
+layer_3/tile_data = PackedInt32Array(393221, 458753, 0, 393220, 458753, 0, 393219, 458753, 0, 393218, 458753, 0, 393217, 458753, 0, 393216, 458753, 0, 458751, 458753, 0, 458750, 458753, 0, 458749, 458753, 0, 458748, 458753, 0, 458747, 458753, 0, 458746, 458753, 0, 131078, 262145, 0, 458745, 196609, 2, 131079, 393217, 0, 131080, 393217, 0, 131081, 393217, 0, 65536, 458753, 5, 131071, 458753, 5, 131070, 262145, 5, 65537, 589825, 5, -65537, 327681, 0, -131072, 327681, 0, -65538, 262145, 0, -131071, 589825, 0, -2, 262145, 2, 65534, 262145, 2, -65535, 589825, 3, 1, 589825, 3, -1, 327681, 2, -65536, 327681, 2, 0, 327681, 2, 65535, 327681, 2, 393222, 1, 2, 327686, 262145, 4, 262150, 262145, 4, 196614, 262145, 4, 131082, 458753, 0, 131083, 458753, 0, 131084, 458753, 0, 131085, 458753, 0)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-motion_mode = 1
+position = Vector2(60, -2)
+script = ExtResource("3_lsvtg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(63, -1)
 sprite_frames = SubResource("SpriteFrames_nt4nf")
 animation = &"moveDown"
 
-[node name="Camera2D" type="Camera2D" parent="Player/AnimatedSprite2D"]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_6ugnq")
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+texture = SubResource("GradientTexture2D_wuyhw")
+texture_scale = 2.6
+
+[node name="CollisionShapes" type="RigidBody2D" parent="."]
+
+[node name="CollisionWalls1" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_asbx4")
+
+[node name="CollisionWalls2" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(-1, -99)
+shape = SubResource("SegmentShape2D_duxdd")
+
+[node name="CollisionWalls3" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(-1, 102.5)
+shape = SubResource("RectangleShape2D_2x45o")
+
+[node name="CollisionWalls4" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(-108, 0)
+shape = SubResource("RectangleShape2D_xvs2h")
+
+[node name="CollisionWalls5" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(135.5, -68)
+shape = SubResource("RectangleShape2D_gveyk")
+
+[node name="CollisionWalls6" type="CollisionShape2D" parent="CollisionShapes"]
+position = Vector2(136, 68)
+shape = SubResource("RectangleShape2D_gveyk")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(215, 6)
+shape = SubResource("CapsuleShape2D_vq3vi")
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]

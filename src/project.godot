@@ -12,7 +12,7 @@ config_version=5
 
 config/name="TemporalIT"
 run/main_scene="res://MainScene.tscn"
-config/features=PackedStringArray("4.1", "GL Compatibility")
+config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
@@ -23,6 +23,10 @@ window/size/mode=3
 [dotnet]
 
 project/assembly_name="TemporalIT"
+
+[physics]
+
+2d/default_gravity=0.0
 
 [rendering]
 
