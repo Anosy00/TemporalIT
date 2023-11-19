@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq53abd78opa8"]
+
+[ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
+
+[sub_resource type="SystemFont" id="SystemFont_0rud2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pftp8"]
+bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[node name="InTheBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Book-interfaces" type="Sprite2D" parent="."]
+position = Vector2(0.500031, 0.500015)
+scale = Vector2(1.19687, 1.20185)
+texture = ExtResource("1_83yh0")
+
+[node name="Camera2D" type="Camera2D" parent="Book-interfaces"]
+position = Vector2(-0.41778, -0.416037)
+scale = Vector2(0.835509, 0.832049)
+zoom = Vector2(1.7, 1.7)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = -395.0
+offset_top = 242.0
+offset_right = -304.0
+offset_bottom = 282.0
+theme_override_fonts/font = SubResource("SystemFont_0rud2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pftp8")
+action_mode = 0
+text = "BACK"
