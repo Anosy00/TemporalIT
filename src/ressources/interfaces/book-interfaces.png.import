@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw806urqo3dxx"
-path="res://.godot/imported/Principal_Back_Spirte-Sheet.png-f058658d6765d54d9402881ffc84a7aa.ctex"
+uid="uid://lcpw5hxtii31"
+path="res://.godot/imported/book-interfaces.png-01e17aa9c8a308c1fec2f114496e04e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png"
-dest_files=["res://.godot/imported/Principal_Back_Spirte-Sheet.png-f058658d6765d54d9402881ffc84a7aa.ctex"]
+source_file="res://ressources/interfaces/book-interfaces.png"
+dest_files=["res://.godot/imported/book-interfaces.png-01e17aa9c8a308c1fec2f114496e04e2.ctex"]
 
 [params]
 

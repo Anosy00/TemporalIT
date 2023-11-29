@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw806urqo3dxx"
-path="res://.godot/imported/Principal_Back_Spirte-Sheet.png-f058658d6765d54d9402881ffc84a7aa.ctex"
+uid="uid://c63ynm808tij1"
+path="res://.godot/imported/Arrow_Direction_Left-Sheet.png-2f6de2e138349131733fa9a7b92512bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png"
-dest_files=["res://.godot/imported/Principal_Back_Spirte-Sheet.png-f058658d6765d54d9402881ffc84a7aa.ctex"]
+source_file="res://ressources/arrows-direction-sheets/Arrow_Direction_Left-Sheet.png"
+dest_files=["res://.godot/imported/Arrow_Direction_Left-Sheet.png-2f6de2e138349131733fa9a7b92512bb.ctex"]
 
 [params]
 
