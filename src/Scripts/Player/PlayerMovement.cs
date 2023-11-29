@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class player : CharacterBody2D
+public partial class PlayerMovement : CharacterBody2D
 {
 	private const float SPEED = 3f;
 
@@ -46,15 +46,5 @@ public partial class player : CharacterBody2D
 		}
 
 		MoveAndCollide(velocity);
-	}
-
-	void _on_area_2d_body_entered(CharacterBody2D body)
-	{
-		Global.changeValueOfCanInteraciWithJean();
-	}
-	
-	void _on_area_2d_body_exited(CharacterBody2D body)
-	{
-		Global.changeValueOfCanInteraciWithJean();
 	}
 }
