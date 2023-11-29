@@ -18,7 +18,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Paper
 		{
 			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
 			{
-				GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/InTheBook.tscn");
+				GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/Papers.tscn");
 			}
 		}
 
