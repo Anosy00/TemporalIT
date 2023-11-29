@@ -1,12 +1,13 @@
-[gd_scene load_steps=57 format=3 uid="uid://bm7ec18tqn4rt"]
+[gd_scene load_steps=58 format=3 uid="uid://bm7ec18tqn4rt"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_ypfpe"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_p4xd8"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Player/player.cs" id="3_wr62l"]
+[ext_resource type="Script" path="res://Scripts/Player/PlayerMovement.cs" id="3_r14e8"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="4_73ne1"]
 [ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="5_rrxrc"]
 [ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="6_q3dqy"]
 [ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="7_s847j"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/SceneController/SceneController.cs" id="8_7jlfm"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="8_higbq"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/Book.cs" id="8_nnod5"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/Paper.cs" id="10_tnv0c"]
@@ -937,7 +938,7 @@ layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(60, -2)
-script = ExtResource("3_wr62l")
+script = ExtResource("3_r14e8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_nt4nf")
@@ -1007,6 +1008,7 @@ visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
+script = ExtResource("8_7jlfm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNextLevel"]
 position = Vector2(215, 6)
@@ -1038,11 +1040,12 @@ script = ExtResource("10_tnv0c")
 shape = SubResource("CircleShape2D_jykik")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaPaper"]
+visible = false
 position = Vector2(19, -4)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[connection signal="body_entered" from="AreaNextLevel" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="AreaNextLevel" to="AreaNextLevel" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="AreaBook" to="AreaBook" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaBook" to="AreaBook" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaPaper" to="AreaPaper" method="_on_body_entered"]

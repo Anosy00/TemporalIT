@@ -3,7 +3,7 @@ using System;
 
 public partial class PlayerMovement : CharacterBody2D
 {
-	private const float SPEED = 3f;
+	private const float SPEED = 2f;
 
 	private AnimatedSprite2D animateSprite;
 
