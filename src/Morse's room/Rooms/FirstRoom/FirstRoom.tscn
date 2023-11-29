@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bm7ec18tqn4rt"]
+[gd_scene load_steps=57 format=3 uid="uid://bm7ec18tqn4rt"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_ypfpe"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_p4xd8"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="6_q3dqy"]
 [ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="7_s847j"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="8_higbq"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Book/book.cs" id="8_nqkjs"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/Book.cs" id="8_nnod5"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/Paper.cs" id="10_tnv0c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xymv1"]
 texture = ExtResource("1_ypfpe")
@@ -790,23 +791,22 @@ fill_from = Vector2(0.49569, 0.5)
 fill_to = Vector2(0.306034, 0.228448)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_asbx4"]
-size = Vector2(63, 128)
+size = Vector2(63, 129)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_duxdd"]
-a = Vector2(1, 2)
-b = Vector2(-98, 2)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hofts"]
+size = Vector2(98, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2x45o"]
 size = Vector2(206, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvs2h"]
-size = Vector2(20, 81)
+size = Vector2(22, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gveyk"]
 size = Vector2(79, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqxaq"]
-size = Vector2(30, 127)
+size = Vector2(31, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pskiv"]
 size = Vector2(30, 31)
@@ -830,7 +830,7 @@ height = 186.0
 gradient = SubResource("Gradient_7optn")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j8mde"]
-radius = 39.2938
+radius = 36.1248
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_53yqj"]
 atlas = ExtResource("8_higbq")
@@ -889,6 +889,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_jykik"]
+radius = 26.6271
+
 [node name="MorseScene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -923,14 +926,14 @@ layer_4/modulate = Color(1, 1, 1, 1)
 layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
-layer_4/tile_data = PackedInt32Array(-524284, 1835009, 0, -458748, 1835009, 1, -393212, 1835009, 2, -327676, 1835009, 3, -262140, 1835009, 4, -196604, 1835009, 5, -524283, 1900545, 0, -458747, 1900545, 1, -393211, 1900545, 2, -327675, 1900545, 3, -262139, 1900545, 4, -196603, 1900545, 5, -524294, 1, 12, -458758, 1, 13, -393222, 1, 14, -327686, 1, 15, -524293, 65537, 12, -458757, 65537, 13, -393221, 65537, 14, -327685, 65537, 15, -524292, 131073, 12, -458756, 131073, 13, -393220, 131073, 14, -327684, 131073, 15, -524291, 196609, 12, -458755, 196609, 13, -393219, 196609, 14, -327683, 196609, 15, -524290, 262145, 12, -458754, 262145, 13, -393218, 262145, 14, -327682, 262145, 15, -524289, 327681, 12, -458753, 327681, 13, -393217, 327681, 14, -327681, 327681, 15, -458750, 1703937, 4, -393214, 1703937, 5, -458749, 1769473, 4, -393213, 1769473, 5, -524288, 524289, 13, -458752, 524289, 14, -393216, 524289, 15, -524287, 589825, 13, -458751, 589825, 14, -393215, 589825, 15, -65542, 1703937, 0, -6, 1703937, 1, 65530, 1703937, 2, 131066, 1703937, 3, -65541, 1769473, 0, -5, 1769473, 1, 65531, 1769473, 2, 131067, 1769473, 3, 262147, 327680, 10, 327683, 327680, 11, 262148, 393216, 10, 327684, 393216, 11, 262149, 458752, 10, 327685, 458752, 11)
+layer_4/tile_data = PackedInt32Array(-524284, 1835009, 0, -458748, 1835009, 1, -393212, 1835009, 2, -327676, 1835009, 3, -262140, 1835009, 4, -196604, 1835009, 5, -524283, 1900545, 0, -458747, 1900545, 1, -393211, 1900545, 2, -327675, 1900545, 3, -262139, 1900545, 4, -196603, 1900545, 5, -524294, 1, 12, -458758, 1, 13, -393222, 1, 14, -327686, 1, 15, -524293, 65537, 12, -458757, 65537, 13, -393221, 65537, 14, -327685, 65537, 15, -524292, 131073, 12, -458756, 131073, 13, -393220, 131073, 14, -327684, 131073, 15, -524291, 196609, 12, -458755, 196609, 13, -393219, 196609, 14, -327683, 196609, 15, -524290, 262145, 12, -458754, 262145, 13, -393218, 262145, 14, -327682, 262145, 15, -524289, 327681, 12, -458753, 327681, 13, -393217, 327681, 14, -327681, 327681, 15, -458750, 1703937, 4, -393214, 1703937, 5, -458749, 1769473, 4, -393213, 1769473, 5, -524288, 524289, 13, -458752, 524289, 14, -393216, 524289, 15, -524287, 589825, 13, -458751, 589825, 14, -393215, 589825, 15, -65542, 1703937, 0, -6, 1703937, 1, 65530, 1703937, 2, 131066, 1703937, 3, -65541, 1769473, 0, -5, 1769473, 1, 65531, 1769473, 2, 131067, 1769473, 3, 196612, 1179649, 4, 262148, 1179649, 5, 196613, 1245185, 4, 262149, 1245185, 5)
 layer_5/name = "Small_Decoration"
 layer_5/enabled = true
 layer_5/modulate = Color(1, 1, 1, 1)
 layer_5/y_sort_enabled = false
 layer_5/y_sort_origin = 0
 layer_5/z_index = 0
-layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602, 655361, 8, 262138, 655361, 9, 327674, 655361, 10, 393210, 655361, 11, 65531, 720897, 6, 131067, 720897, 7, 196603, 720897, 8, 262139, 720897, 9, 327675, 720897, 10, 393211, 720897, 11, -655356, 917505, 12, -589820, 917505, 13, -655355, 983041, 12, -589819, 983041, 13, -458749, 196608, 8)
+layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602, 655361, 8, 262138, 655361, 9, 327674, 655361, 10, 393210, 655361, 11, 65531, 720897, 6, 131067, 720897, 7, 196603, 720897, 8, 262139, 720897, 9, 327675, 720897, 10, 393211, 720897, 11, -655356, 917505, 12, -589820, 917505, 13, -655355, 983041, 12, -589819, 983041, 13, -458749, 196608, 8, 131076, 131073, 22, 131077, 196609, 22, 262148, 393216, 10, 327684, 393216, 11, 262149, 458752, 10, 327685, 458752, 11, 262146, 327680, 10, 327682, 327680, 11, 262147, 393216, 10, 327683, 393216, 11)
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(60, -2)
@@ -950,25 +953,25 @@ shape = SubResource("RectangleShape2D_6ugnq")
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
 texture = SubResource("GradientTexture2D_wuyhw")
-texture_scale = 4.83
+texture_scale = 4.0
 
 [node name="CollisionShapes" type="RigidBody2D" parent="."]
 visible = false
 
 [node name="CollisionWalls1" type="CollisionShape2D" parent="CollisionShapes"]
-position = Vector2(-0.5, 33)
+position = Vector2(-0.5, 32.5)
 shape = SubResource("RectangleShape2D_asbx4")
 
 [node name="CollisionWalls2" type="CollisionShape2D" parent="CollisionShapes"]
-position = Vector2(-1, -82)
-shape = SubResource("SegmentShape2D_duxdd")
+position = Vector2(-49, -91)
+shape = SubResource("RectangleShape2D_hofts")
 
 [node name="CollisionWalls3" type="CollisionShape2D" parent="CollisionShapes"]
 position = Vector2(-1, 102.5)
 shape = SubResource("RectangleShape2D_2x45o")
 
 [node name="CollisionWalls4" type="CollisionShape2D" parent="CollisionShapes"]
-position = Vector2(-108, -58.5)
+position = Vector2(-107, -58.5)
 shape = SubResource("RectangleShape2D_xvs2h")
 
 [node name="CollisionWalls5" type="CollisionShape2D" parent="CollisionShapes"]
@@ -980,7 +983,7 @@ position = Vector2(136, 68)
 shape = SubResource("RectangleShape2D_gveyk")
 
 [node name="DecorationCollision1" type="CollisionShape2D" parent="CollisionShapes"]
-position = Vector2(-81, 32.5)
+position = Vector2(-80.5, 32.5)
 shape = SubResource("RectangleShape2D_hqxaq")
 
 [node name="DecorationCollision2" type="CollisionShape2D" parent="CollisionShapes"]
@@ -1000,6 +1003,7 @@ position = Vector2(71, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
@@ -1014,7 +1018,7 @@ scale = Vector2(1.34375, 1.04688)
 texture = SubResource("GradientTexture2D_sqoig")
 
 [node name="AreaBook" type="Area2D" parent="."]
-script = ExtResource("8_nqkjs")
+script = ExtResource("8_nnod5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBook"]
 position = Vector2(56, -101)
@@ -1026,6 +1030,20 @@ position = Vector2(56, -118)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
+[node name="AreaPaper" type="Area2D" parent="."]
+position = Vector2(81, 59)
+script = ExtResource("10_tnv0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPaper"]
+shape = SubResource("CircleShape2D_jykik")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaPaper"]
+position = Vector2(19, -4)
+scale = Vector2(0.4375, 0.453125)
+sprite_frames = SubResource("SpriteFrames_1apjx")
+
 [connection signal="body_entered" from="AreaNextLevel" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="AreaBook" to="AreaBook" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaBook" to="AreaBook" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaPaper" to="AreaPaper" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaPaper" to="AreaPaper" method="_on_body_exited"]

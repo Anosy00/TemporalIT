@@ -16,4 +16,6 @@ Global
 		{C698BA4D-82AA-4A93-81D2-EC43F3ACC143}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
 		{C698BA4D-82AA-4A93-81D2-EC43F3ACC143}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
 EndGlobal

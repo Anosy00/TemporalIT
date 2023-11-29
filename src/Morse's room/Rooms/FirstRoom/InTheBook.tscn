@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bq53abd78opa8"]
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Book/buttonBack.cs" id="2_1m7m2"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/ButtonBack.cs" id="2_wfwvj"]
 
 [sub_resource type="SystemFont" id="SystemFont_0rud2"]
 
@@ -48,7 +48,7 @@ theme_override_fonts/font = SubResource("SystemFont_0rud2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pftp8")
 action_mode = 0
 text = "BACK"
-script = ExtResource("2_1m7m2")
+script = ExtResource("2_wfwvj")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -59,7 +59,7 @@ offset_bottom = 201.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("SystemFont_spdk6")
 theme_override_font_sizes/normal_font_size = 12
-text = "La clé de cette invention réside également dans l'utilisation d'un dispositif de transmission, que j'ai appelé le télégraphe Morse. Ce dispositif permet la conversion des signaux Morse en impulsions électriques qui peuvent être transmises sur de longues distances via des câbles. Cela ouvre la voie à une communication instantanée, même à travers des étendues considérables de terre.
+text = "La clé de cette invention réside dans l'utilisation d'un dispositif de transmission, que j'ai appelé le télégraphe Morse. Ce dispositif permet la conversion des signaux Morse en impulsions électriques qui peuvent être transmises sur de longues distances via des câbles. Cela ouvre la voie à une communication instantanée, même à travers des étendues considérables de terre.
 
 Je suis convaincu que le code Morse sera adopté à travers le monde, offrant à l'humanité une méthode révolutionnaire de communication rapide et efficace. Ce journal témoigne des premiers pas de cette invention, et j'espère qu'il restera comme un témoignage de l'impact que le code Morse aura sur le futur de la communication.
 

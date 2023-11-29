@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class buttonBack : Button
+public partial class ButtonBack : Button
 {
 	// Called when the node enters the scene tree for the first time.
 	private Button _buttonBack;

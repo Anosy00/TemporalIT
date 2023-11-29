@@ -32,6 +32,11 @@ button_e={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Back"
+2d_render/layer_2="Front"
+
 [physics]
 
 2d/default_gravity=0.0
