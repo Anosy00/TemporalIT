@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1iroer1genb1"]
 
-[ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://TilesMap/medieval tileset interior.png" id="1_tbaut"]
-[ext_resource type="Texture2D" uid="uid://c85k8bt2hi4e1" path="res://TilesMap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
+[ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
+[ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
 texture = ExtResource("1_tbaut")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=24 format=3 uid="uid://8wky70epxhd3"]
 
-[ext_resource type="Script" path="res://player.cs" id="1_m8j1b"]
-[ext_resource type="Texture2D" uid="uid://cworfhhsrxyxl" path="res://Character/Principal_Face_Spirte-Sheet.png" id="2_nod0j"]
-[ext_resource type="Texture2D" uid="uid://cejaa28jn6r5r" path="res://Character/Principal_Left_Sprite.png" id="3_27ldp"]
-[ext_resource type="Texture2D" uid="uid://bjx8hewk02gee" path="res://Character/Principal_Right_Sprite.png" id="4_3254f"]
-[ext_resource type="Texture2D" uid="uid://bmv5tnpi2iuy6" path="res://Character/Principal_Back_Spirte-Sheet.png" id="5_rgdbk"]
+[ext_resource type="Script" path="res://Scripts/Player/player.cs" id="1_m8j1b"]
+[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="2_nod0j"]
+[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="3_27ldp"]
+[ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="4_3254f"]
+[ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="5_rgdbk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2iflp"]
 size = Vector2(15.6667, 5.33333)
