@@ -15,10 +15,6 @@ run/main_scene="res://tile_map.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[autoload]
-
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-
 [dotnet]
 
 project/assembly_name="FinalProjetEscapeGame"
