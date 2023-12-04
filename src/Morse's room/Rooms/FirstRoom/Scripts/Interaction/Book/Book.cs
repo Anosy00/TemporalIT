@@ -6,7 +6,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 	public partial class Book : Node
 	{
 		// Called when the node enters the scene tree for the first time.
-		public AnimatedSprite2D _keyboardInteration;
+		private AnimatedSprite2D _keyboardInteration;
 
 		public override void _Ready()
 		{
