@@ -14,7 +14,7 @@ config/name="TemporalIT"
 run/main_scene="res://MainScene.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://icon.svg"
+config/icon="res://icon_TemporalIT.png"
 
 [display]
 
