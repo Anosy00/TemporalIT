@@ -159,5 +159,10 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8.66667, -16)
 sprite_frames = SubResource("SpriteFrames_ryidw")
+<<<<<<< HEAD
 animation = &"moveDown"
+=======
+animation = &"moveRight"
+frame_progress = 0.95288
+>>>>>>> 07b48d800074676fdd8e525c9926cb489cea98b5
 metadata/_edit_group_ = true
