@@ -1008,6 +1008,7 @@ position = Vector2(71, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
@@ -1030,7 +1031,6 @@ position = Vector2(56, -101)
 shape = SubResource("CircleShape2D_j8mde")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaBook"]
-visible = false
 position = Vector2(56, -118)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
@@ -1043,7 +1043,6 @@ script = ExtResource("10_tnv0c")
 shape = SubResource("CircleShape2D_jykik")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaPaper"]
-visible = false
 position = Vector2(19, -4)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")

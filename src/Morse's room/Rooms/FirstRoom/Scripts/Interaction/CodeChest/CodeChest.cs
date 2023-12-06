@@ -18,6 +18,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
         public override void _Ready()
         {
             _keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
+            _keyboardInteration.disable();
         }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.

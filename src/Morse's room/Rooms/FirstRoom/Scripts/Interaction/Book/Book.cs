@@ -11,10 +11,11 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 		
 		private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/InTheBook.tscn";
 		private const String _E_BUTTON = "button_e";
-
+		private const String _NAME_OF_THE_ANIMATION = "default";
 		public override void _Ready()
 		{
 			_keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
+			_keyboardInteration.disable();
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,7 +26,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 
 		public void _on_body_entered(CharacterBody2D body)
 		{
-			_keyboardInteration.available("default");
+			_keyboardInteration.available(_NAME_OF_THE_ANIMATION);
 		}
 
 		public void _on_body_exited(CharacterBody2D body)

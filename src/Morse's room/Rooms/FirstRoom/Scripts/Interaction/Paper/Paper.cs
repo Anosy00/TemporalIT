@@ -1,39 +1,39 @@
 using Godot;
 using System;
+using TemporalIT.Scripts.KeyboardInteraction;
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Paper
 {
 	public partial class Paper : Node
 	{
+		private KeyboardInteraction _keyboardInteration;
+		
+		private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/Papers.tscn";
+		private const String _E_BUTTON = "button_e";
+		private const String _NAME_OF_THE_ANIMATION = "default";
+        
 		// Called when the node enters the scene tree for the first time.
-		private AnimatedSprite2D _keyboardInteration;
 
 		public override void _Ready()
 		{
-			_keyboardInteration = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+			_keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
+			_keyboardInteration.disable();
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta)
 		{
-			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
-			{
-				GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/Papers.tscn");
-			}
+			_keyboardInteration.makeInteraction(GetTree(),_E_BUTTON, _NEXT_SCENE_PATH);
 		}
 
 		public void _on_body_entered(CharacterBody2D body)
 		{
-			// Replace with function body.
-			_keyboardInteration.Visible = true;
-			_keyboardInteration.Play("default");
+			_keyboardInteration.available(_NAME_OF_THE_ANIMATION);
 		}
 
 		public void _on_body_exited(CharacterBody2D body)
 		{
-			// Replace with function body.
-			_keyboardInteration.Visible = false;
-			_keyboardInteration.Stop();
+			_keyboardInteration.disable();
 		}
 	}
 }
