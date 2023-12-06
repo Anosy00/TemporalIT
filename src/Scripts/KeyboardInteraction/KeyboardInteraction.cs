@@ -29,11 +29,11 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 			return this._keyInteraction.IsVisibleInTree();
 		}
 		
-		public void makeInteraction(String key,String nextScenePth)
+		public void makeInteraction(SceneTree tree,String key,String nextScenePath)
 		{
 			if (Input.IsActionPressed(key) && isVisible())
 			{
-				GetTree().ChangeSceneToFile(nextScenePth);
+				tree.ChangeSceneToFile(nextScenePath);
 			}
 		}
 	}

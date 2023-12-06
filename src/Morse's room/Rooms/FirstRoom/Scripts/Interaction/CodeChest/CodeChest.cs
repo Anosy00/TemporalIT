@@ -23,7 +23,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
         // Called every frame. 'delta' is the elapsed time since the previous frame.
         public override void _Process(double delta)
         {
-            _keyboardInteration.makeInteraction(_E_BUTTON, _NEXT_SCENE_PATH);
+            _keyboardInteration.makeInteraction(GetTree(),_E_BUTTON, _NEXT_SCENE_PATH);
         }
 
         public void _on_body_entered(CharacterBody2D body)
