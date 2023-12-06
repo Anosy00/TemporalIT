@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="TemporalIT"
 
+[physics]
+
+2d/default_gravity=0.0
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
