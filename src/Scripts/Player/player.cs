@@ -54,13 +54,6 @@ public partial class player : CharacterBody2D
 		GetTree().ChangeSceneToFile("res://TilesMapMusee/mapMusee.tscn");
 	}*/
 	
-<<<<<<< HEAD
-=======
-	void _on_area_2d_body_exited(CharacterBody2D body)
-	{
-		Global.changeValueOfCanInteraciWithJean();
-	}*/
->>>>>>> 07b48d800074676fdd8e525c9926cb489cea98b5
 }
 
 
