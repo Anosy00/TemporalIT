@@ -5,7 +5,7 @@ using TemporalIT.Scripts.KeyboardInteraction;
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
 {
-    public partial class Book : Node
+    public partial class CodeChest : Node
     {
         private KeyboardInteraction _keyboardInteration;
 		
