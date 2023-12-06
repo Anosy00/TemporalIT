@@ -941,7 +941,7 @@ layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602, 655361, 8, 262138, 655361, 9, 327674, 655361, 10, 393210, 655361, 11, 65531, 720897, 6, 131067, 720897, 7, 196603, 720897, 8, 262139, 720897, 9, 327675, 720897, 10, 393211, 720897, 11, -655356, 917505, 12, -589820, 917505, 13, -655355, 983041, 12, -589819, 983041, 13, -458749, 196608, 8, 131076, 131073, 22, 131077, 196609, 22, 262148, 393216, 10, 327684, 393216, 11, 262149, 458752, 10, 327685, 458752, 11, 262146, 327680, 10, 327682, 327680, 11, 262147, 393216, 10, 327683, 393216, 11)
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(60, -2)
+position = Vector2(-48, 69)
 script = ExtResource("3_r14e8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
@@ -1053,7 +1053,7 @@ sprite_frames = SubResource("SpriteFrames_1apjx")
 script = ExtResource("12_85a2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChest"]
-position = Vector2(-68, -9)
+position = Vector2(-63, -10)
 shape = SubResource("CapsuleShape2D_j3f4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]

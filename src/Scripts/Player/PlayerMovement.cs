@@ -16,6 +16,7 @@ public partial class PlayerMovement : CharacterBody2D
 
 	public override void _PhysicsProcess(double d)
 	{
+		//TODO Need to Refactor, maybe use the Pattern Commande?
 		Vector2 velocity = new Vector2();
 		float directionX = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
 		float directionY = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
