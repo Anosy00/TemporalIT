@@ -3,7 +3,7 @@ using System;
 
 namespace TemporalIT.Scripts.EButton
 {
-	public class EButton
+	public partial class EButton : Node
 	{
 		private AnimatedSprite2D _keyInteraction;
 		
@@ -27,6 +27,14 @@ namespace TemporalIT.Scripts.EButton
 		public bool isVisible()
 		{
 			return this._keyInteraction.IsVisibleInTree();
+		}
+		
+		public void makeInteraction(String key,String nextScenePth)
+		{
+			if (Input.IsActionPressed(key) && isVisible())
+			{
+				GetTree().ChangeSceneToFile(nextScenePth);
+			}
 		}
 	}
 }
