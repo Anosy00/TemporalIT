@@ -1008,7 +1008,6 @@ position = Vector2(71, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
@@ -1057,8 +1056,7 @@ position = Vector2(-63, -10)
 shape = SubResource("CapsuleShape2D_j3f4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]
-visible = false
-position = Vector2(19, -4)
+position = Vector2(-83, -11)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
