@@ -1,4 +1,13 @@
-[gd_scene format=3 uid="uid://dhadae3bsghao"]
+[gd_scene load_steps=3 format=3 uid="uid://dhadae3bsghao"]
+
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="1_2b6ls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mia1d"]
+bg_color = Color(0.00784314, 0.00784314, 0.0509804, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="CodeChest" type="Control"]
 layout_mode = 3
@@ -7,6 +16,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -130.0
+offset_top = -74.0
+offset_right = 128.0
+offset_bottom = 77.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mia1d")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 0
@@ -17,23 +34,32 @@ offset_bottom = 349.0
 
 [node name="Camera2D" type="Camera2D" parent="CenterContainer"]
 position = Vector2(543, 348)
-zoom = Vector2(6, 6)
+zoom = Vector2(5.5, 5.5)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme_override_constants/separation = 6
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2b6ls")
 text = "Tap a code :"
 horizontal_alignment = 1
 
 [node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-placeholder_text = "_ _ _ _"
+theme_override_fonts/font = ExtResource("1_2b6ls")
+placeholder_text = "____ "
 alignment = 1
 max_length = 4
 
 [node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "OK"
+theme_override_fonts/font = ExtResource("1_2b6ls")
+text = "SUBMIT"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_2b6ls")
+text = "BACK"
