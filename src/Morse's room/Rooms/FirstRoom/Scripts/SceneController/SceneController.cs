@@ -1,6 +1,6 @@
 using Godot;
 using System;
-using TemporalIT.Scripts.EButton;
+using TemporalIT.Scripts.KeyboardInteraction;
 
 public partial class SceneController : Node
 {
@@ -14,7 +14,7 @@ public partial class SceneController : Node
 	{
 	}
 
-	public void makeInteraction(String key,EButton _keyboardInteration,String nextScenePth)
+	public void makeInteraction(String key,KeyboardInteraction _keyboardInteration,String nextScenePth)
 	{
 		if (Input.IsActionPressed(key) && _keyboardInteration.isVisible())
 		{

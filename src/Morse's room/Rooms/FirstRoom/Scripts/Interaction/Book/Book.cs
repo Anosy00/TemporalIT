@@ -1,20 +1,20 @@
 using Godot;
 using System;
-using TemporalIT.Scripts.EButton;
+using TemporalIT.Scripts.KeyboardInteraction;
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 {
 	public partial class Book : Node
 	{
 		// Called when the node enters the scene tree for the first time.
-		private EButton _keyboardInteration;
+		private KeyboardInteraction _keyboardInteration;
 		
 		private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/InTheBook.tscn";
 		private const String _E_BUTTON = "button_e";
 
 		public override void _Ready()
 		{
-			_keyboardInteration = new EButton(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
+			_keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.

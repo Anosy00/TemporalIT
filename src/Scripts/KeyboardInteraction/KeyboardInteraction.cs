@@ -1,13 +1,13 @@
 using Godot;
 using System;
 
-namespace TemporalIT.Scripts.EButton
+namespace TemporalIT.Scripts.KeyboardInteraction
 {
-	public partial class EButton : Node
+	public partial class KeyboardInteraction : Node
 	{
 		private AnimatedSprite2D _keyInteraction;
 		
-		public EButton(AnimatedSprite2D keyInteraction)
+		public KeyboardInteraction(AnimatedSprite2D keyInteraction)
 		{
 			this._keyInteraction = keyInteraction;
 		}
