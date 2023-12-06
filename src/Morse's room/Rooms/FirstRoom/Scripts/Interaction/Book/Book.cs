@@ -20,10 +20,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta)
 		{
-			if (Input.IsActionPressed(_E_BUTTON) && _keyboardInteration.isVisible())
-			{
-				GetTree().ChangeSceneToFile(_NEXT_SCENE_PATH);
-			}
+			_keyboardInteration.makeInteraction(_E_BUTTON,_NEXT_SCENE_PATH);
 		}
 
 		public void _on_body_entered(CharacterBody2D body)
