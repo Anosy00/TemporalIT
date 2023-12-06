@@ -6,6 +6,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
     {
         private int _correcAnswer;
         private int _playerAnswer;
+        private bool _isOpened = false;
         
         public CodeVerfication(int correctAnswer, int playerAnswer)
         {
@@ -15,7 +16,13 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
 
         public bool verfication()
         {
+            this._isOpened = false;
             return _correcAnswer==_playerAnswer;
+        }
+
+        public bool chestIsOpened()
+        {
+            return _isOpened;
         }
         
     }

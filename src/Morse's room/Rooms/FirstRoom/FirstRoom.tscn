@@ -1055,7 +1055,7 @@ position = Vector2(-63, -10)
 shape = SubResource("CapsuleShape2D_j3f4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]
-position = Vector2(-83, -11)
+position = Vector2(-80, -11)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 

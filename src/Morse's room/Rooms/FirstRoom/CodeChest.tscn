@@ -7,3 +7,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = -543.0
+offset_top = -348.0
+offset_right = 538.0
+offset_bottom = 349.0
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
+position = Vector2(543, 348)
+zoom = Vector2(6, 6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Tap a code :"
+horizontal_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+placeholder_text = "_ _ _ _"
+alignment = 1
+max_length = 4
