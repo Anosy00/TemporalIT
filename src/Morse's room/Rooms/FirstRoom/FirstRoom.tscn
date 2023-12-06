@@ -1045,6 +1045,16 @@ position = Vector2(19, -4)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
+[node name="AreaChest" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChest"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]
+visible = false
+position = Vector2(19, -4)
+scale = Vector2(0.4375, 0.453125)
+sprite_frames = SubResource("SpriteFrames_1apjx")
+
 [connection signal="body_entered" from="AreaNextLevel" to="AreaNextLevel" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="AreaBook" to="AreaBook" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaBook" to="AreaBook" method="_on_body_exited"]
