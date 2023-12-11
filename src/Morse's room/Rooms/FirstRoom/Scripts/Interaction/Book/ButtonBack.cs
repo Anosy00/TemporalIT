@@ -9,12 +9,6 @@ public partial class ButtonBack : Button
 	{
 		_buttonBack = GetNode<Button>("ButtonBack");
 	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-		
-	}
     
 	void _on_pressed()
 	{

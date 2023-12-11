@@ -1,17 +1,24 @@
 using Godot;
 using System;
+using TemporalIT.Transition;
 
 namespace TemporalIT.Scripts.KeyboardInteraction
 {
-	public partial class KeyboardInteraction : Node
+	public partial class KeyboardInteraction : Node 
 	{
 		private AnimatedSprite2D _keyInteraction;
+		private AnimationPlayer _transitionAnimation;
 		
 		public KeyboardInteraction(AnimatedSprite2D keyInteraction)
 		{
-			this._keyInteraction = keyInteraction;
+			_keyInteraction = keyInteraction;
 		}
-		
+
+		public override void _Ready()
+		{
+			_transitionAnimation = GetNode<CanvasLayer>("/root/TransitionScene").GetNode<AnimationPlayer>("AnimationPlayer");
+		}
+
 		public void available(String nameOfTheAnimation)
 		{
 			_keyInteraction.Visible = true;

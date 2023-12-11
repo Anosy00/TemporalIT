@@ -45,6 +45,7 @@ public partial class PlayerMovement : CharacterBody2D
 		{
 			animateSprite.Stop();
 		}
+		//TODO refactor?
 
 		MoveAndCollide(velocity);
 	}

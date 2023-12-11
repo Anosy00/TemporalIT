@@ -2,22 +2,20 @@
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
 {
-    public class CodeVerfication
+    public class CodeVerification
     {
         private int _correcAnswer;
-        private int _playerAnswer;
         private bool _isOpened = false;
         
-        public CodeVerfication(int correctAnswer, int playerAnswer)
+        public CodeVerification(int correctAnswer)
         {
             this._correcAnswer = correctAnswer;
-            this._playerAnswer = playerAnswer;
         }
 
-        public bool verfication()
+        public bool verfication(int playerAnswer)
         {
-            this._isOpened = false;
-            return _correcAnswer==_playerAnswer;
+            _isOpened = (_correcAnswer == playerAnswer);
+            return _isOpened;
         }
 
         public bool chestIsOpened()
