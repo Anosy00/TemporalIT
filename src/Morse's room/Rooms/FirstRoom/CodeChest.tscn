@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="1_2b6ls"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/SubmitButton.cs" id="2_2fsd8"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/BackButton.cs" id="3_smy60"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/BackButtonCodeChest.cs" id="3_c4n8e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mia1d"]
 bg_color = Color(0.00784314, 0.00784314, 0.0509804, 1)
@@ -68,7 +68,7 @@ text = "SUBMIT"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_2b6ls")
 text = "BACK"
-script = ExtResource("3_smy60")
+script = ExtResource("3_c4n8e")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer" method="_on_submit_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]

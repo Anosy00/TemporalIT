@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bq53abd78opa8"]
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/ButtonBack.cs" id="2_wfwvj"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="2_tpswv"]
 
 [sub_resource type="SystemFont" id="SystemFont_rkpd7"]
 font_names = PackedStringArray("Georgia")
@@ -90,6 +90,6 @@ theme_override_fonts/font = SubResource("SystemFont_0rud2")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pftp8")
 action_mode = 0
 text = "BACK"
-script = ExtResource("2_wfwvj")
+script = ExtResource("2_tpswv")
 
 [connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_pressed"]
