@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp8nfdgppjtvj"]
+
+[ext_resource type="Texture2D" uid="uid://t0qt24hot81l" path="res://ressources/interfaces/dickens_carte_perforee - Copie.jpg" id="1_ywlfx"]
+[ext_resource type="Script" path="res://Scripts/Card/ButtonPunshedCard.cs" id="2_j1h0e"]
+
+[node name="PunshedCard" type="Node2D"]
+
+[node name="ButtonPunshedCard" type="Button" parent="."]
+offset_left = 219.0
+offset_top = 64.0
+offset_right = 722.0
+offset_bottom = 299.0
+script = ExtResource("2_j1h0e")
+
+[node name="DickensCartePerforee" type="Sprite2D" parent="ButtonPunshedCard"]
+position = Vector2(253, 118)
+texture = ExtResource("1_ywlfx")
+
+[node name="Camera2D" type="Camera2D" parent="ButtonPunshedCard/DickensCartePerforee"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 237.0
+offset_top = 97.0
+offset_right = 402.0
+offset_bottom = 137.0
+text = "echap pour quitter"
+
+[connection signal="pressed" from="ButtonPunshedCard" to="ButtonPunshedCard" method="_on_pressed"]

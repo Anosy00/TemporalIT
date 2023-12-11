@@ -17,14 +17,14 @@ namespace TemporalIT.Scripts.Card
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
-		/*public override void _Process(double delta)
+		public override void _Process(double delta)
 		{
 			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
 			{
-				GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/InTheBook.tscn");
+				GetTree().ChangeSceneToFile("res://TilesMapMusee/PunshedCard.tscn");
 				
 			}
-		}*/
+		}
 
 		public void _on_interactive_zone_of_the_punched_card_body_entered(CharacterBody2D body)
 		{
@@ -42,11 +42,7 @@ namespace TemporalIT.Scripts.Card
 
 
 
-		public void _on_interactive_zone_of_the_punched_card_body_init()
-		{
-			_keyboardInteration.Visible = false;
-			_keyboardInteration.Stop();
-		}
+		
 	}
 }
 
