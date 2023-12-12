@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bun2w2ahn4oyw"]
+[gd_scene load_steps=33 format=3 uid="uid://bun2w2ahn4oyw"]
 
 [ext_resource type="Texture2D" uid="uid://lngbjo08vofg" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/preview.png" id="1_1bxyw"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_blvob"]
@@ -4241,6 +4241,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_s6grh"]
 radius = 63.1981
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1e13b"]
+size = Vector2(8.5, 945)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebqo2"]
+size = Vector2(948, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36ea6"]
+size = Vector2(4, 967.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kyt5"]
+size = Vector2(952, 5)
+
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
@@ -4274,6 +4286,25 @@ frame_progress = 0.522997
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/InteractiveZoneOfThePunshedCard"]
 position = Vector2(91, 90)
 shape = SubResource("CircleShape2D_s6grh")
+
+[node name="WallCollision" type="RigidBody2D" parent="TileMap"]
+visible = false
+position = Vector2(484, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/WallCollision"]
+position = Vector2(-470.25, 483.5)
+shape = SubResource("RectangleShape2D_1e13b")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/WallCollision"]
+shape = SubResource("RectangleShape2D_ebqo2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/WallCollision"]
+position = Vector2(475, 473.25)
+shape = SubResource("RectangleShape2D_36ea6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/WallCollision"]
+position = Vector2(1, 954.5)
+shape = SubResource("RectangleShape2D_5kyt5")
 
 [node name="Player" parent="TileMap" instance=ExtResource("4_cawxn")]
 position = Vector2(151, 244)
