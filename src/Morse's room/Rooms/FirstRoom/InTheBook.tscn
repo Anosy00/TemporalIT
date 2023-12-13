@@ -1,6 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bq53abd78opa8"]
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_7t21w"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="2_tpswv"]
 
 [sub_resource type="SystemFont" id="SystemFont_rkpd7"]
@@ -8,8 +9,6 @@ font_names = PackedStringArray("Georgia")
 
 [sub_resource type="SystemFont" id="SystemFont_spdk6"]
 font_names = PackedStringArray("Georgia")
-
-[sub_resource type="SystemFont" id="SystemFont_0rud2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pftp8"]
 bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
@@ -82,11 +81,11 @@ fit_content = true
 scroll_active = false
 
 [node name="ButtonBack" type="Button" parent="CenterContainer/Book-interfaces/Camera2D"]
-offset_left = -395.002
-offset_top = 242.0
-offset_right = -351.002
+offset_left = -395.0
+offset_top = 220.0
+offset_right = -289.0
 offset_bottom = 267.0
-theme_override_fonts/font = SubResource("SystemFont_0rud2")
+theme_override_fonts/font = ExtResource("2_7t21w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pftp8")
 action_mode = 0
 text = "BACK"
