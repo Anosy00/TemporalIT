@@ -11,7 +11,7 @@ public partial class SubmitButton : Node
 	
 	//CONSTs
 	private const int _CORRECT_ANSWER = 2023;
-	private const String _PATH_CHEST_IS_OPENED = "res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/MorseInstruction.tscn";
+	private const String _PATH_CHEST_IS_OPENED = "res://Morse's room/Rooms/FirstRoom/MorseInstruction.tscn";
 	private const String _PATH_SUBMIT_BUTTON = "SubmitButton";
 	private const String _PATH_CODE_ENTERED_LINE_EDIT = "CodeEntered";
 	

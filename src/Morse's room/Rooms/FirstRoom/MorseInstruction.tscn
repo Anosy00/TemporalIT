@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc1hfoxtf6aoi"]
+
+[ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_gdbnx"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_8r5e0"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="3_hh2y5"]
+[ext_resource type="Texture2D" uid="uid://ck3mmdq5jr0d3" path="res://ressources/images/cardinal-point.png" id="4_k67oa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvbue"]
+bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_size = 5
+
+[sub_resource type="SystemFont" id="SystemFont_3godf"]
+font_names = PackedStringArray("Georgia")
+
+[node name="MorseInstruction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 42.0
+offset_bottom = 35.0
+
+[node name="Book-interfaces" type="Sprite2D" parent="CenterContainer"]
+position = Vector2(-1.49997, 5.50002)
+scale = Vector2(1.19687, 1.20185)
+texture = ExtResource("1_gdbnx")
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/Book-interfaces"]
+position = Vector2(-0.41778, -0.416037)
+scale = Vector2(0.835509, 0.832049)
+zoom = Vector2(1.7, 1.7)
+
+[node name="ButtonBack" type="Button" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = -395.0
+offset_top = 220.0
+offset_right = -289.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("2_8r5e0")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yvbue")
+action_mode = 0
+text = "BACK"
+script = ExtResource("3_hh2y5")
+
+[node name="Title" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = -395.002
+offset_top = -92.0002
+offset_right = -49.0017
+offset_bottom = 33.9998
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 50
+text = "MORSE
+INSTRUCTION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Author" type="Label" parent="CenterContainer/Book-interfaces/Camera2D/Title"]
+offset_top = 141.0
+offset_right = 346.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 25
+text = "Samuel Morse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="O" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = 80.0004
+offset_top = -59.0001
+offset_right = 426.0
+offset_bottom = -5.00012
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 40
+text = "- - - = O"
+vertical_alignment = 1
+
+[node name="N" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = 80.0003
+offset_right = 426.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 40
+text = "- · = N"
+vertical_alignment = 1
+
+[node name="E" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = 80.0004
+offset_top = 70.0001
+offset_right = 426.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 40
+text = "· = E"
+vertical_alignment = 1
+
+[node name="S" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
+offset_left = 80.0004
+offset_top = -120.0
+offset_right = 426.0
+offset_bottom = -66.0002
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_font_sizes/font_size = 40
+text = "· · · = S"
+vertical_alignment = 1
+
+[node name="Cardinal-point" type="Sprite2D" parent="CenterContainer/Book-interfaces/Camera2D"]
+position = Vector2(272.655, 215.646)
+rotation = 0.225147
+scale = Vector2(0.300001, 0.300001)
+texture = ExtResource("4_k67oa")
+
+[connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_pressed"]

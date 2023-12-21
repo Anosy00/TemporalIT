@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://csm36uw5bykdm"]
+[gd_scene load_steps=11 format=3 uid="uid://csm36uw5bykdm"]
 
 [ext_resource type="Texture2D" uid="uid://b33lgun5kcg7x" path="res://ressources/interfaces/table_interface.png" id="1_jcdfr"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/PaperIntercation.cs" id="2_qma1g"]
@@ -6,9 +6,20 @@
 [ext_resource type="Texture2D" uid="uid://b3xrkihpriahp" path="res://ressources/papers/paper_2.png" id="4_tl80n"]
 [ext_resource type="Texture2D" uid="uid://d1w6j2vfipg83" path="res://ressources/papers/paper_3.png" id="5_fh07i"]
 [ext_resource type="Texture2D" uid="uid://c4hpcwewaqayi" path="res://ressources/papers/paper_4.png" id="6_7bqov"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="7_gds26"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="8_iaytc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7lle"]
-size = Vector2(220, 316)
+size = Vector2(220, 315.573)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_152q6"]
+bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+shadow_size = 5
 
 [node name="Papers" type="Control"]
 layout_mode = 3
@@ -34,8 +45,7 @@ script = ExtResource("2_qma1g")
 position = Vector2(0.111023, -0.0939655)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper1/Area2D"]
-position = Vector2(-0.0812073, 0.0739918)
-scale = Vector2(1, 1)
+position = Vector2(-0.0812073, -1.47288)
 shape = SubResource("RectangleShape2D_i7lle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Paper1/Area2D"]
@@ -45,9 +55,7 @@ texture = ExtResource("3_d2o1g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper1"]
 position = Vector2(0.0226135, -0.0939655)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_i7lle")
-disabled = true
 
 [node name="Paper2" type="CharacterBody2D" parent="."]
 position = Vector2(-175.362, 0.0561256)
@@ -57,7 +65,7 @@ script = ExtResource("2_qma1g")
 position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper2/Area2D"]
-position = Vector2(-1, 2)
+position = Vector2(-1, -2.55612)
 shape = SubResource("RectangleShape2D_i7lle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Paper2/Area2D"]
@@ -68,7 +76,6 @@ texture = ExtResource("4_tl80n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper2"]
 position = Vector2(-0.106262, -0.101398)
 shape = SubResource("RectangleShape2D_i7lle")
-disabled = true
 
 [node name="Paper4" type="CharacterBody2D" parent="."]
 position = Vector2(-452, 0)
@@ -78,7 +85,7 @@ script = ExtResource("2_qma1g")
 position = Vector2(-0.41217, -0.116722)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper4/Area2D"]
-position = Vector2(-1.0517, 2.04408)
+position = Vector2(-1.0517, 1.3304)
 shape = SubResource("RectangleShape2D_i7lle")
 
 [node name="Sprite2D" type="Sprite2D" parent="Paper4/Area2D"]
@@ -89,7 +96,6 @@ texture = ExtResource("6_7bqov")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper4"]
 position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_i7lle")
-disabled = true
 
 [node name="Paper3" type="CharacterBody2D" parent="."]
 position = Vector2(147.149, -0.0443954)
@@ -110,7 +116,18 @@ texture = ExtResource("5_fh07i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paper3"]
 position = Vector2(-0.106262, -0.101398)
 shape = SubResource("RectangleShape2D_i7lle")
-disabled = true
+
+[node name="ButtonBack" type="Button" parent="."]
+offset_left = -675.0
+offset_top = 260.0
+offset_right = -471.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("7_gds26")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_152q6")
+action_mode = 0
+text = "BACK"
+script = ExtResource("8_iaytc")
 
 [connection signal="mouse_entered" from="Paper1/Area2D" to="Paper1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Paper1/Area2D" to="Paper1" method="_on_mouse_exited"]
@@ -120,3 +137,4 @@ disabled = true
 [connection signal="mouse_exited" from="Paper4/Area2D" to="Paper4" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Paper3/Area2D" to="Paper3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Paper3/Area2D" to="Paper3" method="_on_mouse_exited"]
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_pressed"]
