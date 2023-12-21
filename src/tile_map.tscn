@@ -6,8 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="4_pyvd6"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="5_x8otr"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://player.tscn" id="6_n2xgf"]
+[ext_resource type="Script" path="res://Scripts/EButton/EButton.cs" id="6_vrew7"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
-[ext_resource type="Script" path="res://Scripts/EButton.cs" id="8_yvocd"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 
@@ -1266,7 +1266,7 @@ position = Vector2(258, 496.25)
 shape = SubResource("RectangleShape2D_t480g")
 
 [node name="LadderArea" type="Area2D" parent="."]
-script = ExtResource("8_yvocd")
+script = ExtResource("6_vrew7")
 
 [node name="Ladder" type="Sprite2D" parent="LadderArea"]
 position = Vector2(627, 169)
@@ -1290,9 +1290,8 @@ position = Vector2(626, 188)
 shape = SubResource("CircleShape2D_e3d6i")
 
 [node name="EButtonSprite" type="AnimatedSprite2D" parent="LadderArea"]
-visible = false
-position = Vector2(590, 149)
-scale = Vector2(0.8875, 0.9125)
+position = Vector2(577, 148)
+scale = Vector2(1.2, 1.236)
 sprite_frames = SubResource("SpriteFrames_l6to6")
 animation = &"animation"
 

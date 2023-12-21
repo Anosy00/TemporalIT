@@ -5,6 +5,6 @@ public partial class ButtonClose : Button
 {
 	public void _on_pressed()
 	{
-		EButtonPaper.closeNewsPaper();
+		NewsPaper.setInvisibleNewsPaper();
 	}
 }
