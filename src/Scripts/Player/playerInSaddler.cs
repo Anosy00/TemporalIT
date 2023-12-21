@@ -1,17 +1,19 @@
 using Godot;
-using System;
 
 public partial class playerInSaddler : CharacterBody2D
 {
-	private const float SPEED = 1.3f;
+	private const float SPEED = 4f;
 
 	private AnimatedSprite2D animateSprite;
+
+	
 
 	public override void _Ready()
 	{
 		base._Ready();
 		animateSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		
+
 	}
 
 	public override void _PhysicsProcess(double d)
@@ -47,4 +49,6 @@ public partial class playerInSaddler : CharacterBody2D
 
 		MoveAndCollide(velocity);
 	}
+    
+    
 }

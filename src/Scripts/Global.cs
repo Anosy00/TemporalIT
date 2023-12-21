@@ -1,12 +1,12 @@
 using Godot;
 using System;
 
-public static partial class Global 
+public static class Global
 {
-	public static bool canInteractWithJean = false;
+	public static bool hadInteractedWithNewsPaper = false;
 
-	public static void changeValueOfCanInteraciWithJean()
+	public static void changeToTruehadInteractedWithNewsPaper()
 	{
-		canInteractWithJean = !canInteractWithJean;
+		hadInteractedWithNewsPaper = true;
 	}
 }

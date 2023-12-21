@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=36 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="4_pyvd6"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="5_x8otr"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://player.tscn" id="6_n2xgf"]
+[ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
+[ext_resource type="Script" path="res://Scripts/EButton.cs" id="8_yvocd"]
+[ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
@@ -1123,6 +1126,66 @@ size = Vector2(70, 50)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t480g"]
 size = Vector2(57.5, 222.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e3d6i"]
+radius = 54.0833
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3xcs"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad00a"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy515"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l7sch"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xjkb"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35qqb"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qv2q"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l6to6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3xcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ad00a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy515")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l7sch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xjkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35qqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qv2q")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjsma"]
 radius = 35.0
 height = 88.0
@@ -1202,7 +1265,36 @@ shape = SubResource("RectangleShape2D_1rgwv")
 position = Vector2(258, 496.25)
 shape = SubResource("RectangleShape2D_t480g")
 
-[node name="Player" parent="." instance=ExtResource("6_n2xgf")]
+[node name="LadderArea" type="Area2D" parent="."]
+script = ExtResource("8_yvocd")
+
+[node name="Ladder" type="Sprite2D" parent="LadderArea"]
+position = Vector2(627, 169)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_jhrpl")
+
+[node name="Ladder" type="Sprite2D" parent="LadderArea/Ladder"]
+position = Vector2(-0.000488281, -370)
+texture = ExtResource("8_jhrpl")
+
+[node name="Ladder2" type="Sprite2D" parent="LadderArea/Ladder"]
+position = Vector2(-0.000488281, -740)
+texture = ExtResource("8_jhrpl")
+
+[node name="Ladder3" type="Sprite2D" parent="LadderArea/Ladder"]
+position = Vector2(-0.000488281, -1090)
+texture = ExtResource("8_jhrpl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]
+position = Vector2(626, 188)
+shape = SubResource("CircleShape2D_e3d6i")
+
+[node name="EButtonSprite" type="AnimatedSprite2D" parent="LadderArea"]
+visible = false
+position = Vector2(590, 149)
+scale = Vector2(0.8875, 0.9125)
+sprite_frames = SubResource("SpriteFrames_l6to6")
+animation = &"animation"
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -1214,3 +1306,8 @@ texture = ExtResource("11_j0p0o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(264, 292)
 shape = SubResource("CapsuleShape2D_cjsma")
+
+[node name="Player" parent="." instance=ExtResource("6_n2xgf")]
+
+[connection signal="body_entered" from="LadderArea" to="LadderArea" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="LadderArea" to="LadderArea" method="_on_body_exited"]
