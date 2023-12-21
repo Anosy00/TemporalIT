@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_gdbnx"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_8r5e0"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="3_hh2y5"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_7otuf"]
 [ext_resource type="Texture2D" uid="uid://ck3mmdq5jr0d3" path="res://ressources/images/cardinal-point.png" id="4_k67oa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvbue"]
@@ -26,6 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_left = 2.0
 offset_top = -5.0
 offset_right = 42.0
@@ -50,7 +51,7 @@ theme_override_fonts/font = ExtResource("2_8r5e0")
 theme_override_styles/normal = SubResource("StyleBoxFlat_yvbue")
 action_mode = 0
 text = "BACK"
-script = ExtResource("3_hh2y5")
+script = ExtResource("3_7otuf")
 
 [node name="Title" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]
 offset_left = -395.002
@@ -66,6 +67,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Author" type="Label" parent="CenterContainer/Book-interfaces/Camera2D/Title"]
+layout_mode = 0
 offset_top = 141.0
 offset_right = 346.0
 offset_bottom = 267.0
@@ -125,4 +127,4 @@ rotation = 0.225147
 scale = Vector2(0.300001, 0.300001)
 texture = ExtResource("4_k67oa")
 
-[connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_back_button_pressed"]

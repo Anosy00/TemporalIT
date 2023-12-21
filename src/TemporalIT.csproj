@@ -13,4 +13,7 @@
     <PackageReference Update="GodotSharp" Version="4.2.0-rc.2" />
     <PackageReference Update="Godot.SourceGenerators" Version="4.2.0-rc.2" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Morse's room\Rooms\FirstRoom\Scripts\Interaction\Radio\" />
+  </ItemGroup>
 </Project>

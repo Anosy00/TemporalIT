@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bm7ec18tqn4rt"]
+[gd_scene load_steps=63 format=3 uid="uid://bm7ec18tqn4rt"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_ypfpe"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_p4xd8"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/Book.cs" id="8_nnod5"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/Paper.cs" id="10_tnv0c"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/CodeChest.cs" id="12_85a2x"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Radio/Radio.cs" id="13_bt0ll"]
+[ext_resource type="Texture2D" uid="uid://dwgnimxjegxm" path="res://ressources/images/radio-morse.png" id="14_3xi8c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xymv1"]
 texture = ExtResource("1_ypfpe")
@@ -820,7 +822,7 @@ size = Vector2(29, 31)
 size = Vector2(32, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dxw4t"]
-size = Vector2(44, 31)
+size = Vector2(62, 31)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vq3vi"]
 radius = 47.0
@@ -892,10 +894,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jykik"]
-radius = 26.6271
+radius = 17.0294
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j3f4j"]
 height = 44.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ivcdt"]
+radius = 11.0
+height = 38.0
 
 [node name="MorseScene" type="Node2D"]
 
@@ -1004,17 +1010,19 @@ position = Vector2(79, -70)
 shape = SubResource("RectangleShape2D_avcss")
 
 [node name="TableCollision" type="CollisionShape2D" parent="CollisionShapes"]
-position = Vector2(71, 80.5)
+position = Vector2(62, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
+position = Vector2(212.871, -1.1898)
 script = ExtResource("8_7jlfm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNextLevel"]
-position = Vector2(215, 6)
+position = Vector2(-0.870911, 1.1898)
 shape = SubResource("CapsuleShape2D_vq3vi")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -1023,38 +1031,59 @@ scale = Vector2(1.34375, 1.04688)
 texture = SubResource("GradientTexture2D_sqoig")
 
 [node name="AreaBook" type="Area2D" parent="."]
+position = Vector2(56.25, -101)
 script = ExtResource("8_nnod5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBook"]
-position = Vector2(56, -101)
+position = Vector2(-0.58997, -0.46611)
 shape = SubResource("CircleShape2D_j8mde")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaBook"]
-position = Vector2(56, -118)
+position = Vector2(-1.25, -19)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
 [node name="AreaPaper" type="Area2D" parent="."]
-position = Vector2(81, 59)
+position = Vector2(91.1393, 65.5947)
 script = ExtResource("10_tnv0c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPaper"]
+position = Vector2(-5.13933, -9.59467)
 shape = SubResource("CircleShape2D_jykik")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaPaper"]
-position = Vector2(19, -4)
+position = Vector2(3.68785, -16.5312)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
 [node name="AreaChest" type="Area2D" parent="."]
+position = Vector2(-68.8704, -9.73071)
 script = ExtResource("12_85a2x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChest"]
-position = Vector2(-63, -10)
+position = Vector2(-0.129581, -0.269291)
 shape = SubResource("CapsuleShape2D_j3f4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]
-position = Vector2(-80, -11)
+position = Vector2(-23.8638, -3.34095)
+scale = Vector2(0.4375, 0.453125)
+sprite_frames = SubResource("SpriteFrames_1apjx")
+
+[node name="AreaRadio" type="Area2D" parent="."]
+position = Vector2(46, 76)
+script = ExtResource("13_bt0ll")
+
+[node name="Radio-morse" type="Sprite2D" parent="AreaRadio"]
+position = Vector2(4, -1.00001)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("14_3xi8c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRadio"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ivcdt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaRadio"]
+position = Vector2(1, 18)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
@@ -1064,3 +1093,5 @@ sprite_frames = SubResource("SpriteFrames_1apjx")
 [connection signal="body_exited" from="AreaPaper" to="AreaPaper" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaChest" to="AreaChest" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaChest" to="AreaChest" method="_on_body_exited"]
+[connection signal="body_entered" from="AreaRadio" to="AreaRadio" method="_on_body_entered"]
+[connection signal="body_exited" from="AreaRadio" to="AreaRadio" method="_on_body_exited"]

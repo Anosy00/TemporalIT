@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_7t21w"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="2_tpswv"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_oyoys"]
 
 [sub_resource type="SystemFont" id="SystemFont_rkpd7"]
 font_names = PackedStringArray("Georgia")
@@ -89,6 +89,6 @@ theme_override_fonts/font = ExtResource("2_7t21w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pftp8")
 action_mode = 0
 text = "BACK"
-script = ExtResource("2_tpswv")
+script = ExtResource("3_oyoys")
 
-[connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_pressed"]
+[connection signal="pressed" from="CenterContainer/Book-interfaces/Camera2D/ButtonBack" to="CenterContainer/Book-interfaces/Camera2D/ButtonBack" method="_on_back_button_pressed"]

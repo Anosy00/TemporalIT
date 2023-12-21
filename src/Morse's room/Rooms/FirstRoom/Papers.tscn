@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d1w6j2vfipg83" path="res://ressources/papers/paper_3.png" id="5_fh07i"]
 [ext_resource type="Texture2D" uid="uid://c4hpcwewaqayi" path="res://ressources/papers/paper_4.png" id="6_7bqov"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="7_gds26"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/BackButtonBook.cs" id="8_iaytc"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="8_86s7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7lle"]
 size = Vector2(220, 315.573)
@@ -118,6 +118,7 @@ position = Vector2(-0.106262, -0.101398)
 shape = SubResource("RectangleShape2D_i7lle")
 
 [node name="ButtonBack" type="Button" parent="."]
+layout_mode = 0
 offset_left = -675.0
 offset_top = 260.0
 offset_right = -471.0
@@ -127,7 +128,7 @@ theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_152q6")
 action_mode = 0
 text = "BACK"
-script = ExtResource("8_iaytc")
+script = ExtResource("8_86s7m")
 
 [connection signal="mouse_entered" from="Paper1/Area2D" to="Paper1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Paper1/Area2D" to="Paper1" method="_on_mouse_exited"]
@@ -137,4 +138,4 @@ script = ExtResource("8_iaytc")
 [connection signal="mouse_exited" from="Paper4/Area2D" to="Paper4" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Paper3/Area2D" to="Paper3" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Paper3/Area2D" to="Paper3" method="_on_mouse_exited"]
-[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_pressed"]
+[connection signal="pressed" from="ButtonBack" to="ButtonBack" method="_on_back_button_pressed"]

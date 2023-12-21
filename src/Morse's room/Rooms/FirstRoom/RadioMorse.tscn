@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfimniwhuqi58"]
+
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/SubmitButton.cs" id="1_as173"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_cfvho"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_5i8xi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w0k8"]
+bg_color = Color(0.00784314, 0.00784314, 0.0509804, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="RadioMorse" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -130.0
+offset_top = -74.0
+offset_right = 128.0
+offset_bottom = 77.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3w0k8")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = -543.0
+offset_top = -348.0
+offset_right = 538.0
+offset_bottom = 349.0
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
+position = Vector2(543, 348)
+zoom = Vector2(5.5, 5.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+script = ExtResource("1_as173")
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cfvho")
+text = "Listen and
+take notes"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "▶️️"
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cfvho")
+text = "||"
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cfvho")
+text = "BACK"
+script = ExtResource("3_5i8xi")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]
