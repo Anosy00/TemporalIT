@@ -1511,39 +1511,12 @@ font = ExtResource("14_h46hr")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Animation" id="Animation_gq3ot"]
-resource_name = "displayText"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Label:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Label2:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_mq1xr"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/path = NodePath("LabelText:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -1555,7 +1528,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Label2:visible_ratio")
+tracks/1/path = NodePath("LabelName:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -1563,6 +1536,33 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_gq3ot"]
+resource_name = "displayText"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgbd8"]
@@ -1658,13 +1658,13 @@ freeze = true
 position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
-[node name="Sprite2D" type="Sprite2D" parent="TileMap"]
+[node name="DialogBox" type="Sprite2D" parent="TileMap"]
 position = Vector2(9.75, 51.25)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
 texture = ExtResource("13_4g0i2")
 
-[node name="Label" type="Label" parent="TileMap/Sprite2D"]
+[node name="LabelText" type="Label" parent="TileMap/DialogBox"]
 offset_left = -750.0
 offset_top = -24.0
 offset_right = 740.0
@@ -1676,7 +1676,7 @@ autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label2" type="Label" parent="TileMap/Sprite2D"]
+[node name="LabelName" type="Label" parent="TileMap/DialogBox"]
 offset_left = -753.451
 offset_top = -84.0058
 offset_right = -479.451
@@ -1688,7 +1688,7 @@ autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/Sprite2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/DialogBox"]
 libraries = {
 "": SubResource("AnimationLibrary_fgbd8")
 }
