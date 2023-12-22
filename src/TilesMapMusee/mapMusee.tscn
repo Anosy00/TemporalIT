@@ -4283,7 +4283,7 @@ script = ExtResource("9_k5mni")
 position = Vector2(28.75, -32)
 scale = Vector2(0.84375, 0.84375)
 sprite_frames = SubResource("SpriteFrames_ifv23")
-frame_progress = 0.723114
+frame_progress = 0.970853
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/InteractiveZoneOfThePunshedCard"]
 position = Vector2(-7.5, 10)
@@ -4341,10 +4341,6 @@ position = Vector2(11, -19)
 scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("11_kbfh1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_TI99"]
-position = Vector2(11, -14.25)
-shape = SubResource("RectangleShape2D_y7e2p")
-
 [node name="RigidBody2D_Applemac" type="RigidBody2D" parent="TileMap"]
 position = Vector2(90, 399.25)
 
@@ -4360,10 +4356,6 @@ shape = SubResource("RectangleShape2D_y7e2p")
 position = Vector2(11, -19)
 scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("12_dib7y")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_Applemac"]
-position = Vector2(11, -14.25)
-shape = SubResource("RectangleShape2D_y7e2p")
 
 [node name="RigidBody2D_IBM5150" type="RigidBody2D" parent="TileMap"]
 position = Vector2(94, 238)
@@ -4381,10 +4373,6 @@ position = Vector2(11, -19)
 scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("11_giaum")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5150"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
-
 [node name="RigidBody2D_PC" type="RigidBody2D" parent="TileMap"]
 position = Vector2(431, 78)
 
@@ -4401,10 +4389,6 @@ position = Vector2(10, -19)
 scale = Vector2(0.0996527, 0.0840277)
 texture = ExtResource("14_1l3mk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_PC"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
-
 [node name="RigidBody2D_IBM5151" type="RigidBody2D" parent="TileMap"]
 position = Vector2(429, 236)
 
@@ -4420,10 +4404,6 @@ shape = SubResource("RectangleShape2D_y7e2p")
 position = Vector2(11, -19)
 scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("14_nl8w4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5151"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
 
 [node name="Player" parent="." instance=ExtResource("4_cawxn")]
 position = Vector2(547, 566)
