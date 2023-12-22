@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wai8wxgh36wr"
-path="res://.godot/imported/ibm5150.png-bbdcc45b20268cae8261b29e796a6762.ctex"
+uid="uid://blnokcr4licbj"
+path="res://.godot/imported/PC.png-69d820e47d3d7df435c867a031205f2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/tilesmap/IMG_ordinateurs/ibm5150.png"
-dest_files=["res://.godot/imported/ibm5150.png-bbdcc45b20268cae8261b29e796a6762.ctex"]
+source_file="res://ressources/tilesmap/Images/PC.png"
+dest_files=["res://.godot/imported/PC.png-69d820e47d3d7df435c867a031205f2c.ctex"]
 
 [params]
 

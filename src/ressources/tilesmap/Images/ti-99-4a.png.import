@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck67pcrfx3it"
-path="res://.godot/imported/oldcomps.png-6eadd10a6a860ee1c4c830e2d5dcc54a.ctex"
+uid="uid://b4rqr3g7rwn2p"
+path="res://.godot/imported/ti-99-4a.png-718dcb894808e57c12f7a84f066b05a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/tilesmap/IMG_ordinateurs/oldcomps.png"
-dest_files=["res://.godot/imported/oldcomps.png-6eadd10a6a860ee1c4c830e2d5dcc54a.ctex"]
+source_file="res://ressources/tilesmap/Images/ti-99-4a.png"
+dest_files=["res://.godot/imported/ti-99-4a.png-718dcb894808e57c12f7a84f066b05a0.ctex"]
 
 [params]
 

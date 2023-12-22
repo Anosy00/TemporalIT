@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xjfma2elxdca"
-path="res://.godot/imported/84applemac.png-285edbfc0e8ddfa546629072c10ebb0a.ctex"
+uid="uid://dck67pcrfx3it"
+path="res://.godot/imported/oldcomps.png-e55344db7411c51489c8962c37e18b6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ressources/tilesmap/IMG_ordinateurs/84applemac.png"
-dest_files=["res://.godot/imported/84applemac.png-285edbfc0e8ddfa546629072c10ebb0a.ctex"]
+source_file="res://ressources/tilesmap/Images/oldcomps.png"
+dest_files=["res://.godot/imported/oldcomps.png-e55344db7411c51489c8962c37e18b6f.ctex"]
 
 [params]
 
