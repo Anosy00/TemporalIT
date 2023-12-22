@@ -4430,26 +4430,6 @@ texture = ExtResource("14_nl8w4")
 position = Vector2(11, -14)
 shape = SubResource("RectangleShape2D_y7e2p")
 
-[node name="RigidBody2D_Pet2001" type="RigidBody2D" parent="RigidBody2D_IBM5150"]
-position = Vector2(797, 559)
-
-[node name="Table" type="Sprite2D" parent="RigidBody2D_IBM5150/RigidBody2D_Pet2001"]
-position = Vector2(11, -14)
-texture = ExtResource("10_y3mrn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D_IBM5150/RigidBody2D_Pet2001"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
-
-[node name="pet2001" type="Sprite2D" parent="RigidBody2D_IBM5150/RigidBody2D_Pet2001"]
-position = Vector2(11, -19)
-scale = Vector2(0.84375, 0.8125)
-texture = ExtResource("14_nl8w4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D_IBM5150/RigidBody2D_Pet2001"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
-
 [node name="Player" parent="." instance=ExtResource("4_cawxn")]
 position = Vector2(547, 566)
 scale = Vector2(2, 2)
