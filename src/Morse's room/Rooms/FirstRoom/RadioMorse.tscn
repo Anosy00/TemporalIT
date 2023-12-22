@@ -21,6 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_left = -130.0
 offset_top = -74.0
 offset_right = 128.0
@@ -28,6 +29,7 @@ offset_bottom = 77.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3w0k8")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
 offset_left = -543.0
 offset_top = -348.0
 offset_right = 538.0
@@ -80,4 +82,7 @@ theme_override_fonts/font = ExtResource("2_cfvho")
 text = "BACK"
 script = ExtResource("3_5i8xi")
 
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonPlayPauseRetry/Play" to="CenterContainer/VBoxContainer" method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonPlayPauseRetry/Pause" to="CenterContainer/VBoxContainer" method="_on_pause_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonPlayPauseRetry/Retry" to="CenterContainer/VBoxContainer" method="_on_retry_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]

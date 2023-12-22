@@ -8,23 +8,43 @@ public partial class RadioSFXController : VBoxContainer
 	private Button _pauseButton;
 	private Button _retryButton;
 	private AudioStreamPlayer _morseCodeSound;
+	private float _timePosition;
+	private ProgressBar _progressBar;
 	
 	//Const
-	private const String _PLAY_BUTTON_PATH = "ButtonPlayPauseRetry/Play";
-	private const String _PAUSE_BUTTON_PATH = "ButtonPlayPauseRetry/Pause";
-	private const String _RETRY_BUTTON_PATH = "ButtonPlayPauseRetry/Retry";
 	private const String _MORSE_CODE_SOUND_PATH = "AudioStreamPlayer";
+	private const String _PROGRESS_BAR_PATH = "ProgressMorseCodeSFX";
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_playButton = GetNode<Button>(_PLAY_BUTTON_PATH);
-		_pauseButton = GetNode<Button>(_PAUSE_BUTTON_PATH);
-		_retryButton = GetNode<Button>(_RETRY_BUTTON_PATH);
 		_morseCodeSound = GetNode<AudioStreamPlayer>(_MORSE_CODE_SOUND_PATH);
+		_progressBar = GetNode<ProgressBar>(_PROGRESS_BAR_PATH);
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (_morseCodeSound.Playing == true)
+		{
+			_timePosition = _morseCodeSound.GetPlaybackPosition();
+			_progressBar.Value = (_timePosition / 16) * 100;
+		}
+		_progressBar.Value = (_timePosition/16)*100;
+	}
+
+	public void _on_play_pressed()
+	{
+		_morseCodeSound.Play(_timePosition);
+	}
+	
+	public void _on_pause_pressed()
+	{
+		_timePosition = _morseCodeSound.GetPlaybackPosition();
+		_morseCodeSound.Playing = false;
+	}
+	
+	public void _on_retry_pressed()
+	{
+		_morseCodeSound.Playing = true;
 	}
 }
