@@ -13,7 +13,16 @@ config_version=5
 config/name="TemporalIT"
 run/main_scene="res://TilesMapMusee/mapMusee.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/bg_color=Color(0, 0, 0, 1)
+config/icon="res://icon_TemporalIT.png"
+
+[autoload]
+
+TransitionScene="*res://Transition/TransitionScene.tscn"
+
+[display]
+
+window/size/mode=3
 
 [dotnet]
 
