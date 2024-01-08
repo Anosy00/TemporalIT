@@ -1,4 +1,4 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
+Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemporalIT", "TemporalIT.csproj", "{C698BA4D-82AA-4A93-81D2-EC43F3ACC143}"
 EndProject
