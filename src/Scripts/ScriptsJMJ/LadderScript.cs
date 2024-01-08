@@ -14,9 +14,4 @@ public partial class SaddlerScript : Node
 		_dialogBox.disable();
 	}
 
-	public void displayTextIfNotInteractedWithPaper()
-	{
-		_dialogBox.available("displayText");
-		_dialogBox.setTextOfLabel("[Player]", "Mmh, je devrais peut être intéragir avec le journal");
-	}
 }

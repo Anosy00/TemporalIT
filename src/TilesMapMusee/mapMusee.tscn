@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_blvob"]
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="3_gqoq5"]
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="4_bp5af"]
-[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="4_cawxn"]
+[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="4_cawxn"]
 [ext_resource type="Texture2D" uid="uid://byu1q00a5nu8f" path="res://ressources/tilesmap/Seamless-Brick-Textures.jpg" id="4_saio3"]
 [ext_resource type="Texture2D" uid="uid://crenx25debmj1" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior_walls.png" id="5_xgcf6"]
 [ext_resource type="Texture2D" uid="uid://t0qt24hot81l" path="res://ressources/interfaces/dickens_carte_perforee - Copie.jpg" id="8_7rtwb"]

@@ -5,14 +5,12 @@ public partial class playerInSaddler : CharacterBody2D
 	private const float SPEED = 4f;
 
 	private AnimatedSprite2D animateSprite;
-	private LadderScript _ladderSaddler;
 	
 
 	public override void _Ready()
 	{
 		base._Ready();
 		animateSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-		_ladderSaddler = new LadderSaddler();
 
 	}
 
@@ -21,10 +19,7 @@ public partial class playerInSaddler : CharacterBody2D
 		Vector2 velocity = new Vector2();
 		float directionX = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
 		float directionY = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
-		if (!Global.hadInteractedWithNewsPaper && Input.IsActionPressed("button_e"))
-		{
-			_ladderSaddler.
-		}
+		
 		if (!Global.isDialogActive)
 		{
 			if (Input.IsActionPressed("ui_down"))
