@@ -5,8 +5,8 @@ namespace TemporalIT.Scripts.Player;
 public partial class player : CharacterBody2D
 {
 	private const float SPEED = 3f;
-
 	private AnimatedSprite2D animateSprite;
+	public static bool playerCanMove = true;
 
 	public override void _Ready()
 	{
@@ -20,31 +20,34 @@ public partial class player : CharacterBody2D
 		Vector2 velocity = new Vector2();
 		float directionX = Input.GetActionStrength("ui_right") - Input.GetActionStrength("ui_left");
 		float directionY = Input.GetActionStrength("ui_down") - Input.GetActionStrength("ui_up");
-
-		if (Input.IsActionPressed("ui_down"))
+		if (!Global.isDialogActive)
 		{
-			velocity.Y = directionY * SPEED;
-			animateSprite.Play("moveDown");
+			if (Input.IsActionPressed("ui_down"))
+			{
+				velocity.Y = directionY * SPEED;
+				animateSprite.Play("moveDown");
+			}
+			else if (Input.IsActionPressed("ui_up"))
+			{
+				velocity.Y -= SPEED;
+				animateSprite.Play("moveUp");
+			}
+			else if (Input.IsActionPressed("ui_right"))
+			{
+				velocity.X = directionX * SPEED;
+				animateSprite.Play("moveRight");
+			}
+			else if (Input.IsActionPressed("ui_left"))
+			{
+				velocity.X -= SPEED;
+				animateSprite.Play("moveLeft");
+			}
+			else
+			{
+				animateSprite.Stop();
+			}
 		}
-		else if (Input.IsActionPressed("ui_up"))
-		{
-			velocity.Y -= SPEED;
-			animateSprite.Play("moveUp");
-		}
-		else if (Input.IsActionPressed("ui_right"))
-		{
-			velocity.X = directionX * SPEED;
-			animateSprite.Play("moveRight");
-		}
-		else if (Input.IsActionPressed("ui_left"))
-		{
-			velocity.X -= SPEED;
-			animateSprite.Play("moveLeft");
-		}
-		else
-		{
-			animateSprite.Stop();
-		}
+		
 
 		MoveAndCollide(velocity);
 	}

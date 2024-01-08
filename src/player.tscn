@@ -10,35 +10,35 @@
 size = Vector2(15.6667, 5.33333)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_430s4"]
-atlas = ExtResource("2_nod0j")
+atlas = ExtResource("3_27ldp")
 region = Rect2(0, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_janys"]
-atlas = ExtResource("2_nod0j")
+atlas = ExtResource("3_27ldp")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ga31n"]
-atlas = ExtResource("2_nod0j")
+atlas = ExtResource("3_27ldp")
 region = Rect2(32, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c2g4r"]
-atlas = ExtResource("2_nod0j")
+atlas = ExtResource("3_27ldp")
 region = Rect2(48, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0nr6x"]
-atlas = ExtResource("3_27ldp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4akg"]
+atlas = ExtResource("3_ol41s")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p74mb"]
-atlas = ExtResource("3_27ldp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj2e1"]
+atlas = ExtResource("3_ol41s")
 region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fmspe"]
-atlas = ExtResource("3_27ldp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1br0"]
+atlas = ExtResource("3_ol41s")
 region = Rect2(32, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hst8o"]
-atlas = ExtResource("3_27ldp")
+[sub_resource type="AtlasTexture" id="AtlasTexture_76run"]
+atlas = ExtResource("3_ol41s")
 region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4rjem"]
@@ -94,16 +94,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0nr6x")
+"texture": SubResource("AtlasTexture_w4akg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p74mb")
+"texture": SubResource("AtlasTexture_hj2e1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fmspe")
+"texture": SubResource("AtlasTexture_s1br0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hst8o")
+"texture": SubResource("AtlasTexture_76run")
 }],
 "loop": true,
 "name": &"moveLeft",
