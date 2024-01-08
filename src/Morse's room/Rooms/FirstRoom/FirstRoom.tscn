@@ -784,12 +784,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ugnq"]
 size = Vector2(14, 4)
 
-[sub_resource type="Gradient" id="Gradient_h1fqx"]
+[sub_resource type="Gradient" id="Gradient_l0wa5"]
 interpolation_mode = 2
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wuyhw"]
-gradient = SubResource("Gradient_h1fqx")
+gradient = SubResource("Gradient_l0wa5")
 fill = 1
 fill_from = Vector2(0.49569, 0.5)
 fill_to = Vector2(0.306034, 0.228448)
@@ -1014,7 +1014,6 @@ position = Vector2(62, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="."]
@@ -1025,8 +1024,8 @@ script = ExtResource("8_7jlfm")
 position = Vector2(-0.870911, 1.1898)
 shape = SubResource("CapsuleShape2D_vq3vi")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(181, -3)
+[node name="PointLight2D" type="PointLight2D" parent="AreaNextLevel"]
+position = Vector2(-31.871, -1.8102)
 scale = Vector2(1.34375, 1.04688)
 texture = SubResource("GradientTexture2D_sqoig")
 
@@ -1087,6 +1086,7 @@ position = Vector2(1, 18)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
+[connection signal="body_entered" from="AreaNextLevel" to="AreaNextLevel" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaBook" to="AreaBook" method="_on_body_entered"]
 [connection signal="body_exited" from="AreaBook" to="AreaBook" method="_on_body_exited"]
 [connection signal="body_entered" from="AreaPaper" to="AreaPaper" method="_on_body_entered"]
