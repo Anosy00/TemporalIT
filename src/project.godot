@@ -26,6 +26,7 @@ window/size/mode=3
 
 [dotnet]
 
+project/assembly_name="TemporalIT"
 enabled=PackedStringArray()
 
 [input]
