@@ -52,6 +52,6 @@ public partial class playerInSaddler : CharacterBody2D
 		}
 		
 	}
-    
-    
+	
+	
 }

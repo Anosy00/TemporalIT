@@ -1,14 +1,14 @@
-[gd_scene load_steps=39 format=3 uid="uid://bun2w2ahn4oyw"]
+[gd_scene load_steps=40 format=3 uid="uid://bun2w2ahn4oyw"]
 
 [ext_resource type="Texture2D" uid="uid://lngbjo08vofg" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/preview.png" id="1_1bxyw"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_blvob"]
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="3_gqoq5"]
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="4_bp5af"]
-[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://player.tscn" id="4_cawxn"]
+[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="4_cawxn"]
 [ext_resource type="Texture2D" uid="uid://byu1q00a5nu8f" path="res://ressources/tilesmap/Seamless-Brick-Textures.jpg" id="4_saio3"]
 [ext_resource type="Texture2D" uid="uid://crenx25debmj1" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior_walls.png" id="5_xgcf6"]
 [ext_resource type="Texture2D" uid="uid://t0qt24hot81l" path="res://ressources/interfaces/dickens_carte_perforee - Copie.jpg" id="8_7rtwb"]
-[ext_resource type="Script" path="res://Scripts/Card/Card.cs" id="9_k5mni"]
+[ext_resource type="Script" path="res://Scripts/ScriptsMuseum/Card/Card.cs" id="9_k5mni"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u3mfn"]
 [ext_resource type="Texture2D" uid="uid://dfptywg5vd0uj" path="res://ressources/tilesmap/Images/table.png" id="10_y3mrn"]
 [ext_resource type="Texture2D" uid="uid://wai8wxgh36wr" path="res://ressources/tilesmap/Images/ibm5150.png" id="11_giaum"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://xjfma2elxdca" path="res://ressources/tilesmap/Images/84applemac.png" id="12_dib7y"]
 [ext_resource type="Texture2D" uid="uid://blnokcr4licbj" path="res://ressources/tilesmap/Images/PC.png" id="14_1l3mk"]
 [ext_resource type="Texture2D" uid="uid://bo4osni1sychb" path="res://ressources/tilesmap/Images/pet2001-8.png" id="14_nl8w4"]
+[ext_resource type="Script" path="res://Scripts/Player/ScriptMuseum/player.cs" id="17_wibkn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_md302"]
 
@@ -4408,6 +4409,7 @@ texture = ExtResource("14_nl8w4")
 [node name="Player" parent="." instance=ExtResource("4_cawxn")]
 position = Vector2(547, 566)
 scale = Vector2(2, 2)
+script = ExtResource("17_wibkn")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-7.875, -14.625)
