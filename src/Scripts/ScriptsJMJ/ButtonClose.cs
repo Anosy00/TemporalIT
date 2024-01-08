@@ -16,6 +16,7 @@ public partial class ButtonClose : Button
 	public void _on_pressed()
 	{
 		NewsPaper.setInvisibleNewsPaper();
+		_dialogBox.setTextOfLabel("[Player]", "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023");
 		_dialogBox.available("displayText");
 	}
 }

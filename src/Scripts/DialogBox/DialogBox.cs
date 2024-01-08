@@ -42,9 +42,10 @@ public partial class DialogBox : Node
 		return _dialogBox.IsVisibleInTree();
 	}
 
-	public void setText(String name, String text)
+	public void setTextOfLabel(String name, String text)
 	{
 		_labelName.Text = name;
+		_labelText.Text = text;
 	}
 
 	public AnimationPlayer getAnimationPlayer()
