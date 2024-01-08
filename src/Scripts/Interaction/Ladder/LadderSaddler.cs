@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Ladder : Node
+public partial class LadderSaddler : Node
 {
 	private EButton _keyboardInteration;
 	private const String _E_BUTTON = "button_e";

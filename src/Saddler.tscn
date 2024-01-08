@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=40 format=3 uid="uid://c1iroer1genb1"]
 
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bi3xa5oktu2ao" path="res://ressources/media/NewsPaper.png" id="11_q87uh"]
 [ext_resource type="Script" path="res://ButtonClose.cs" id="12_4pf8n"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="13_4g0i2"]
+[ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="14_48mms"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_h46hr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
@@ -1525,18 +1526,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LabelName:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
 
 [sub_resource type="Animation" id="Animation_gq3ot"]
 resource_name = "displayText"
@@ -1659,10 +1648,12 @@ position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
 [node name="DialogBox" type="Sprite2D" parent="TileMap"]
+visible = false
 position = Vector2(9.75, 51.25)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
 texture = ExtResource("13_4g0i2")
+script = ExtResource("14_48mms")
 
 [node name="LabelText" type="Label" parent="TileMap/DialogBox"]
 offset_left = -750.0
@@ -1685,13 +1676,13 @@ text = "[Player]"
 label_settings = SubResource("LabelSettings_c3aj7")
 vertical_alignment = 1
 autowrap_mode = 2
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/DialogBox"]
 libraries = {
 "": SubResource("AnimationLibrary_fgbd8")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap"]
 
 [connection signal="body_entered" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_body_exited"]

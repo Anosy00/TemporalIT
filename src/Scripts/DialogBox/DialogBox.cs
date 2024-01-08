@@ -4,19 +4,20 @@ using System.Data;
 
 public partial class DialogBox : Node
 {
-	static private Sprite2D _dialogBox;
+	private Sprite2D _dialogBox;
 	private Label _labelText;
 	private Label _labelName;
-	static private AnimationPlayer _animationPlayer;
+	private AnimationPlayer _animationPlayer;
 
-	public DialogBox(Sprite2D dialogBox, Label labelText, Label labelName)
+	public DialogBox(Sprite2D dialogBox, Label labelText, Label labelName, AnimationPlayer animationPlayer)
 	{
 		_dialogBox = dialogBox;
 		_labelText = labelText;
 		_labelName = labelName;
+		_animationPlayer = animationPlayer;
 	}
 	
-	public static void disable()
+	public void disable()
 	{
 		_dialogBox.Visible = false;
 		_animationPlayer.Stop();
@@ -44,5 +45,10 @@ public partial class DialogBox : Node
 	public void setText(String name, String text)
 	{
 		_labelName.Text = name;
+	}
+
+	public AnimationPlayer getAnimationPlayer()
+	{
+		return _animationPlayer;
 	}
 }
