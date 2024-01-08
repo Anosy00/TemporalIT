@@ -1,0 +1,147 @@
+[gd_scene load_steps=10 format=3 uid="uid://mtbnnlb01rhq"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen/ExitButton.cs" id="2_lpjt5"]
+[ext_resource type="FontFile" uid="uid://bhyv4xfbeluqu" path="res://ressources/Font/Dhurjati-Regular.ttf" id="2_pbwa0"]
+[ext_resource type="Texture2D" uid="uid://clmv73awd4e10" path="res://ressources/1920x1080-black.jpg" id="2_s2vvk"]
+
+[sub_resource type="Theme" id="Theme_x17g7"]
+default_font_size = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0urwa"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b7ql"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pougm"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.666667, 0.717647, 0.721569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+shadow_color = Color(1, 1, 1, 0.6)
+anti_aliasing_size = 0.115
+
+[sub_resource type="Theme" id="Theme_n7x07"]
+default_font_size = 50
+Button/styles/focus = SubResource("StyleBoxFlat_0urwa")
+Button/styles/hover = SubResource("StyleBoxFlat_1b7ql")
+Button/styles/normal = SubResource("StyleBoxFlat_pougm")
+
+[sub_resource type="CSharpScript" id="CSharpScript_y4jf6"]
+script/source = "using System;
+
+namespace TemporalIT.Scripts.TitleScreen;
+
+public partial class titleScreenStartButton : Godot.Control {
+	public void _on_start_button_pressed()
+	{
+		GetTree().ChangeSceneToFile(\"res://MainScene.tscn\");
+	}
+}"
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s2vvk")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Options" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Options/CenterContainer"]
+custom_minimum_size = Vector2(800, 450)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_x17g7")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+theme_override_font_sizes/font_size = 120
+text = "TemporalIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartButton" type="Button" parent="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_n7x07")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+text = "PLAY"
+script = SubResource("CSharpScript_y4jf6")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+
+[node name="OptionsButton" type="Button" parent="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_n7x07")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+text = "OPTIONS"
+script = SubResource("CSharpScript_y4jf6")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_n7x07")
+theme_override_fonts/font = ExtResource("2_pbwa0")
+text = "EXIT"
+script = ExtResource("2_lpjt5")
+
+[connection signal="pressed" from="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" to="CanvasLayer/Options/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ExitButton" method="_on_exit_button_pressed"]
