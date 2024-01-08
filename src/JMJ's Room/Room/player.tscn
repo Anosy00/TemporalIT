@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://8wky70epxhd3"]
+[gd_scene load_steps=23 format=3 uid="uid://8wky70epxhd3"]
 
-[ext_resource type="Script" path="res://Scripts/Player/player.cs" id="1_m8j1b"]
-[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="2_nod0j"]
-[ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="3_27ldp"]
+[ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="3_27ldp"]
+[ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="3_ol41s"]
 [ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="4_3254f"]
 [ext_resource type="Texture2D" uid="uid://cw806urqo3dxx" path="res://ressources/principal-character-sheets/Principal_Back_Spirte-Sheet.png" id="5_rgdbk"]
 
@@ -147,10 +146,9 @@ animations = [{
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(564, 426)
 scale = Vector2(3, 3)
-script = ExtResource("1_m8j1b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8.83333, -6.33333)
+position = Vector2(-8.83334, -6.33333)
 shape = SubResource("RectangleShape2D_2iflp")
 metadata/_edit_group_ = true
 
@@ -159,5 +157,5 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8.66667, -16)
 sprite_frames = SubResource("SpriteFrames_ryidw")
-animation = &"moveDown"
+animation = &"moveLeft"
 metadata/_edit_group_ = true
