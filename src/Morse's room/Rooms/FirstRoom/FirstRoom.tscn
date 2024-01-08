@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_ypfpe"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_p4xd8"]
-[ext_resource type="Script" path="res://Scripts/Player/PlayerMovement.cs" id="3_r14e8"]
+[ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="3_r14e8"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="4_73ne1"]
 [ext_resource type="Texture2D" uid="uid://5fwunysh57eq" path="res://ressources/principal-character-sheets/Principal_Left_Sprite-Sheet.png" id="5_rrxrc"]
 [ext_resource type="Texture2D" uid="uid://dlxvh8g8sx82b" path="res://ressources/principal-character-sheets/Principal_Right_Sprite-Sheet.png" id="6_q3dqy"]
