@@ -5,7 +5,7 @@ public partial class playerInSaddler : CharacterBody2D
 	private const float SPEED = 4f;
 
 	private AnimatedSprite2D animateSprite;
-
+	private LadderScript _ladderScript;
 	
 
 	public override void _Ready()
@@ -46,6 +46,11 @@ public partial class playerInSaddler : CharacterBody2D
 			else
 			{
 				animateSprite.Stop();
+			}
+			
+			if (!Global.hadInteractedWithNewsPaper && Input.IsActionPressed("button_e"))
+			{
+				
 			}
 
 			MoveAndCollide(velocity);
