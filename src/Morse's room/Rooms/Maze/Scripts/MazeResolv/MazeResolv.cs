@@ -1,15 +1,19 @@
 using Godot;
 using System;
 
-public partial class MazeResolv : Node
+namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
+	public class MazeResolv
 	{
-	}
+		private int[][] _maze;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
+		private const int _FREE_CASE = 0;
+		private const int _PLAYER_POSITION = 1;
+		private const int _MONSTER_POSITION = 2;
+
+		public MazeResolv()
+		{
+			
+		}
 	}
 }

@@ -86,7 +86,7 @@ offset_bottom = -5.00012
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_3godf")
 theme_override_font_sizes/font_size = 40
-text = "- - - = O"
+text = "· - - = W"
 vertical_alignment = 1
 
 [node name="N" type="Label" parent="CenterContainer/Book-interfaces/Camera2D"]

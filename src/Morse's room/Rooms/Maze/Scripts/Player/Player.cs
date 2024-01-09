@@ -1,11 +1,14 @@
 using Godot;
 using System;
 
-public partial class Player : CharacterBody2D
+namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Player
 {
-	private const String _ARROW_UP = "";
-	private const String _ARROW_DOWN = "default";
-	private const String _ARROW_RIGHT = "default";
-	private const String _ARROW_LEFT = "default";
-	
+	public partial class Player : CharacterBody2D
+	{
+		private const String _ARROW_UP = "";
+		private const String _ARROW_DOWN = "default";
+		private const String _ARROW_RIGHT = "default";
+		private const String _ARROW_LEFT = "default";
+
+	}
 }

@@ -27,9 +27,9 @@ public partial class RadioSFXController : VBoxContainer
 		if (_morseCodeSound.Playing == true)
 		{
 			_timePosition = _morseCodeSound.GetPlaybackPosition();
-			_progressBar.Value = (_timePosition / 16) * 100;
+			_progressBar.Value = (_timePosition / 19) * 100;
 		}
-		_progressBar.Value = (_timePosition/16)*100;
+		_progressBar.Value = (_timePosition/19)*100;
 	}
 
 	public void _on_play_pressed()
@@ -45,6 +45,7 @@ public partial class RadioSFXController : VBoxContainer
 	
 	public void _on_retry_pressed()
 	{
-		_morseCodeSound.Playing = true;
+		_morseCodeSound.Playing = false;
+		_timePosition = 0;
 	}
 }
