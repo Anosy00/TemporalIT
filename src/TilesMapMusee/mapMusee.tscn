@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bun2w2ahn4oyw"]
+[gd_scene load_steps=41 format=3 uid="uid://bun2w2ahn4oyw"]
 
 [ext_resource type="Texture2D" uid="uid://lngbjo08vofg" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/preview.png" id="1_1bxyw"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_blvob"]
@@ -4261,7 +4261,10 @@ size = Vector2(495, 20)
 size = Vector2(7, 481)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kyt5"]
-size = Vector2(496.5, 16.5)
+size = Vector2(216.125, 16.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fffx7"]
+size = Vector2(90, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7e2p"]
 size = Vector2(48, 47.5)
@@ -4307,8 +4310,16 @@ position = Vector2(31.5, 252.5)
 shape = SubResource("RectangleShape2D_36ea6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/WallCollision"]
-position = Vector2(-212, 500.25)
+position = Vector2(-352.125, 500.25)
 shape = SubResource("RectangleShape2D_5kyt5")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/WallCollision"]
+position = Vector2(-72, 500)
+shape = SubResource("RectangleShape2D_5kyt5")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap/WallCollision"]
+position = Vector2(-211, 517)
+shape = SubResource("RectangleShape2D_fffx7")
 
 [node name="RigidBody2D_PunchedCard" type="RigidBody2D" parent="TileMap"]
 position = Vector2(94, 77.75)
