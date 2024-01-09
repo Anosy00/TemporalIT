@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_8r5e0"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_7otuf"]
 [ext_resource type="Texture2D" uid="uid://ck3mmdq5jr0d3" path="res://ressources/images/cardinal-point.png" id="4_k67oa"]
+[ext_resource type="FontFile" uid="uid://dkldcuqkmpba4" path="res://ressources/system-font/georgia/Georgia Regular font.ttf" id="4_v4fg7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yvbue"]
 bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
@@ -13,9 +14,6 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0, 0, 0, 1)
 shadow_size = 5
-
-[sub_resource type="SystemFont" id="SystemFont_3godf"]
-font_names = PackedStringArray("Georgia")
 
 [node name="MorseInstruction" type="Control"]
 layout_mode = 3
@@ -59,7 +57,7 @@ offset_top = -92.0002
 offset_right = -49.0017
 offset_bottom = 33.9998
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 50
 text = "MORSE
 INSTRUCTION"
@@ -72,7 +70,7 @@ offset_top = 141.0
 offset_right = 346.0
 offset_bottom = 267.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 25
 text = "Samuel Morse"
 horizontal_alignment = 1
@@ -84,7 +82,7 @@ offset_top = -59.0001
 offset_right = 426.0
 offset_bottom = -5.00012
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 40
 text = "· - - = W"
 vertical_alignment = 1
@@ -94,7 +92,7 @@ offset_left = 80.0003
 offset_right = 426.0
 offset_bottom = 54.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 40
 text = "- · = N"
 vertical_alignment = 1
@@ -105,7 +103,7 @@ offset_top = 70.0001
 offset_right = 426.0
 offset_bottom = 124.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 40
 text = "· = E"
 vertical_alignment = 1
@@ -116,7 +114,7 @@ offset_top = -120.0
 offset_right = 426.0
 offset_bottom = -66.0002
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_3godf")
+theme_override_fonts/font = ExtResource("4_v4fg7")
 theme_override_font_sizes/font_size = 40
 text = "· · · = S"
 vertical_alignment = 1

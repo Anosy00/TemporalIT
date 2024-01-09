@@ -1,14 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq53abd78opa8"]
+[gd_scene load_steps=6 format=3 uid="uid://bq53abd78opa8"]
 
 [ext_resource type="Texture2D" uid="uid://lcpw5hxtii31" path="res://ressources/interfaces/book-interfaces.png" id="1_83yh0"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_7t21w"]
+[ext_resource type="FontFile" uid="uid://dkldcuqkmpba4" path="res://ressources/system-font/georgia/Georgia Regular font.ttf" id="2_e212j"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_oyoys"]
-
-[sub_resource type="SystemFont" id="SystemFont_rkpd7"]
-font_names = PackedStringArray("Georgia")
-
-[sub_resource type="SystemFont" id="SystemFont_spdk6"]
-font_names = PackedStringArray("Georgia")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pftp8"]
 bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
@@ -50,7 +45,7 @@ offset_top = -139.0
 offset_right = -30.0015
 offset_bottom = 268.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = SubResource("SystemFont_rkpd7")
+theme_override_fonts/normal_font = ExtResource("2_e212j")
 theme_override_font_sizes/normal_font_size = 12
 text = "Cher journal,
 
@@ -68,7 +63,7 @@ offset_top = -110.0
 offset_right = 403.0
 offset_bottom = 201.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = SubResource("SystemFont_spdk6")
+theme_override_fonts/normal_font = ExtResource("2_e212j")
 theme_override_font_sizes/normal_font_size = 12
 text = "La clé de cette invention réside dans l'utilisation d'un dispositif de transmission, que j'ai appelé le télégraphe Morse. Ce dispositif permet la conversion des signaux Morse en impulsions électriques qui peuvent être transmises sur de longues distances via des câbles. Cela ouvre la voie à une communication instantanée, même à travers des étendues considérables de terre.
 
