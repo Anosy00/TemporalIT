@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
-[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="3_80n8l"]
+[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="3_80n8l"]
 [ext_resource type="Texture2D" uid="uid://c8d6o04ixppxh" path="res://ressources/tilesmap/Pixel Art Top Down - Basic/Texture/TX Props.png" id="3_d8c21"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/playerInSaddler.cs" id="4_i0vk7"]
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="4_j42it"]
@@ -1648,7 +1648,6 @@ position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
 [node name="DialogBox" type="Sprite2D" parent="TileMap"]
-visible = false
 position = Vector2(9.75, 51.25)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
