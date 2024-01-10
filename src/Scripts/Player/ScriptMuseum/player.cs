@@ -48,23 +48,8 @@ public partial class player : CharacterBody2D
 		MoveAndCollide(velocity);
 	}
 
-	/*void _on_area_2d_body_entered(CharacterBody2D body)
-	{
-		// Replace with function body.
-		GetTree().ChangeSceneToFile("res://TilesMapMusee/mapMusee.tscn");
-	}*/
+
 	
 }
 
 
-
-/*public void _on_interactive_zone_of_the_punched_card_body_entered(Node2D body)
-{
-	// Replace with function body.
-}
-
-
-public void _on_interactive_zone_of_the_punched_card_body_exited(Node2D body)
-{
-	// Replace with function body.
-}*/

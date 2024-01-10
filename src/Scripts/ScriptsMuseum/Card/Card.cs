@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace TemporalIT.Scripts.Card
+namespace TemporalIT.Scripts.ScriptsMuseum.Card
 {
 	public partial class Card : Node
 	{

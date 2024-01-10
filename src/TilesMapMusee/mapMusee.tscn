@@ -4333,6 +4333,7 @@ position = Vector2(-11.5, 1)
 shape = SubResource("CircleShape2D_s6grh")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/InteractiveZoneOfThePunshedCard"]
+visible = false
 position = Vector2(-3.05176e-05, 0)
 script = ExtResource("13_1xry4")
 
@@ -4397,6 +4398,7 @@ scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("11_kbfh1")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_TI99"]
+visible = false
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_TI99/TheDialogBox"]
@@ -4434,6 +4436,7 @@ scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("12_dib7y")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_Applemac"]
+visible = false
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_Applemac/TheDialogBox"]
@@ -4471,6 +4474,7 @@ scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("11_giaum")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_IBM5150"]
+visible = false
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox"]
@@ -4508,6 +4512,7 @@ scale = Vector2(0.0996527, 0.0840277)
 texture = ExtResource("14_1l3mk")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_PC"]
+visible = false
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_PC/TheDialogBox"]
@@ -4545,6 +4550,7 @@ scale = Vector2(0.84375, 0.8125)
 texture = ExtResource("14_nl8w4")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_IBM5151"]
+visible = false
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_IBM5151/TheDialogBox"]
