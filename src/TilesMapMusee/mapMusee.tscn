@@ -4274,7 +4274,7 @@ radius = 82.0549
 
 [sub_resource type="LabelSettings" id="LabelSettings_oik7s"]
 font = ExtResource("14_6pbfr")
-font_size = 32
+font_size = 18
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7e2p"]
@@ -4400,17 +4400,28 @@ texture = ExtResource("11_kbfh1")
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_TI99/TheDialogBox"]
-position = Vector2(89, -16)
-scale = Vector2(0.0951299, 0.182943)
+position = Vector2(100.188, -9.78128)
+scale = Vector2(0.124188, 0.247721)
 texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_TI99/TheDialogBox/bubble"]
-offset_left = -210.239
-offset_top = -27.3308
-offset_right = 205.761
-offset_bottom = 7.66919
-text = "Test de label"
+anchors_preset = -1
+anchor_left = -0.0212475
+anchor_top = -0.0569763
+anchor_right = -3.00177
+anchor_bottom = 0.60969
+offset_left = -363.639
+offset_top = -76.0605
+offset_right = 2696.36
+offset_bottom = -32.0605
+text = "Produit par Texas Instruments en 1979, 
+le TI-99/4 était destiné à un usage 
+domestique et éducatif, il était
+notamment capable de jouer à des jeux 
+vidéo. "
 label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_TI99/TheDialogBox"]
@@ -4437,17 +4448,30 @@ texture = ExtResource("12_dib7y")
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_Applemac/TheDialogBox"]
-position = Vector2(-69, -19.25)
-scale = Vector2(0.0951299, 0.182943)
+position = Vector2(-75.6875, -13.0313)
+scale = Vector2(0.1125, 0.247721)
 texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_Applemac/TheDialogBox/bubble"]
-offset_left = -210.239
-offset_top = -27.3308
-offset_right = 205.761
-offset_bottom = 7.66919
-text = "Test de label"
+anchors_preset = -1
+anchor_left = 0.852698
+anchor_top = 0.0565045
+anchor_right = -0.843406
+anchor_bottom = 0.374213
+offset_left = -1018.58
+offset_top = -95.8489
+offset_right = 1029.42
+offset_bottom = 20.1511
+text = "Produit par Apple en 1984, 
+Le Macintosh 128k est connu pour 
+être le premier ordinateur 
+personnel avec de bonnes 
+performances graphiques à un 
+prix accessible pour la 
+classe moyenne."
 label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_Applemac/TheDialogBox"]
@@ -4474,17 +4498,29 @@ texture = ExtResource("11_giaum")
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox"]
-position = Vector2(-69, -19.25)
-scale = Vector2(0.0951299, 0.182943)
+position = Vector2(-77.6875, -19.4063)
+scale = Vector2(0.117695, 0.181315)
 texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox/bubble"]
-offset_left = -210.239
-offset_top = -27.3308
-offset_right = 205.761
-offset_bottom = 7.66919
-text = "Test de label"
+anchors_preset = -1
+anchor_left = 0.000275847
+anchor_top = -0.0687968
+anchor_right = -3.64128
+anchor_bottom = 0.16037
+offset_left = -376.212
+offset_top = -72.791
+offset_right = 3183.79
+offset_bottom = 59.209
+text = "L’IBM Personnal Computer, modèle 5150, 
+est un ordinateur produit par IBM en 
+1981 en plusieurs millions d’exemplaires, 
+il utilise notement un processeur X86, 
+révolutionnaire pour lépoque et encore 
+utilisé de nos jours."
 label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox"]
@@ -4553,12 +4589,24 @@ scale = Vector2(0.0951299, 0.182943)
 texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_IBM5151/TheDialogBox/bubble"]
-offset_left = -210.239
-offset_top = -27.3308
-offset_right = 205.761
-offset_bottom = 7.66919
-text = "Test de label"
+anchors_preset = -1
+anchor_left = -0.000181679
+anchor_top = -0.000428597
+anchor_right = -3.5859
+anchor_bottom = 0.78603
+offset_left = -388.86
+offset_top = -92.9177
+offset_right = 3139.14
+offset_bottom = -57.9177
+text = "Commercialisé en 1977 par Commodore
+International, le PET 2001 (acronyme de 
+Personal Electronic Transactor) est un
+ des premiers ordinateurs personnels. 
+Il disposait du célèbre processeur 
+MOS 6502."
 label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5151/TheDialogBox"]
