@@ -4406,12 +4406,12 @@ texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_TI99/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -0.0212475
-anchor_top = -0.0569763
+anchor_left = -3.00177
+anchor_top = 0.047
 anchor_right = -3.00177
 anchor_bottom = 0.60969
-offset_left = -363.639
-offset_top = -76.0605
+offset_left = 1931.36
+offset_top = -96.024
 offset_right = 2696.36
 offset_bottom = -32.0605
 text = "Produit par Texas Instruments en 1979, 
@@ -4425,6 +4425,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_TI99/TheDialogBox"]
+visible = false
 position = Vector2(12, -7.25)
 shape = SubResource("CircleShape2D_cn6ey")
 
@@ -4454,14 +4455,14 @@ texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_Applemac/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = 0.852698
+anchor_left = -0.843406
 anchor_top = 0.0565045
 anchor_right = -0.843406
-anchor_bottom = 0.374213
-offset_left = -1018.58
+anchor_bottom = 0.921
+offset_left = 287.422
 offset_top = -95.8489
 offset_right = 1029.42
-offset_bottom = 20.1511
+offset_bottom = -84.832
 text = "Produit par Apple en 1984, 
 Le Macintosh 128k est connu pour 
 être le premier ordinateur 
@@ -4475,6 +4476,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_Applemac/TheDialogBox"]
+visible = false
 position = Vector2(12, -7.25)
 shape = SubResource("CircleShape2D_cn6ey")
 
@@ -4504,12 +4506,12 @@ texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = 0.000275847
-anchor_top = -0.0687968
+anchor_left = -3.64128
+anchor_top = 0.052
 anchor_right = -3.64128
 anchor_bottom = 0.16037
-offset_left = -376.212
-offset_top = -72.791
+offset_left = 2427.79
+offset_top = -95.984
 offset_right = 3183.79
 offset_bottom = 59.209
 text = "L’IBM Personnal Computer, modèle 5150, 
@@ -4524,6 +4526,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5150/TheDialogBox"]
+visible = false
 position = Vector2(10, -14)
 shape = SubResource("CircleShape2D_cn6ey")
 
@@ -4558,9 +4561,12 @@ offset_right = 205.761
 offset_bottom = 7.66919
 text = "Test de label"
 label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_PC/TheDialogBox"]
+visible = false
 position = Vector2(13, -19)
 shape = SubResource("CircleShape2D_cn6ey")
 
@@ -4590,14 +4596,13 @@ texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_IBM5151/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -0.000181679
-anchor_top = -0.000428597
-anchor_right = -3.5859
-anchor_bottom = 0.78603
-offset_left = -388.86
-offset_top = -92.9177
-offset_right = 3139.14
-offset_bottom = -57.9177
+anchor_left = -3.58648
+anchor_right = -3.58648
+anchor_bottom = 0.790497
+offset_left = 2404.19
+offset_top = -87.4592
+offset_right = 3106.19
+offset_bottom = -58.2346
 text = "Commercialisé en 1977 par Commodore
 International, le PET 2001 (acronyme de 
 Personal Electronic Transactor) est un
@@ -4610,6 +4615,7 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D_IBM5151/TheDialogBox"]
+visible = false
 position = Vector2(12, -12)
 shape = SubResource("CircleShape2D_cn6ey")
 
