@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://3sruyfr7thmm"]
+[gd_scene load_steps=65 format=3 uid="uid://3sruyfr7thmm"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_4lwpa"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="2_1tfik"]
@@ -382,8 +382,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_ugsky"]
 resource_name = "moveDown"
-length = 0.4
-loop_mode = 1
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -403,10 +402,10 @@ tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -421,49 +420,9 @@ tracks/2/keys = {
 "values": [1.5]
 }
 
-[sub_resource type="Animation" id="Animation_si24s"]
-resource_name = "moveUp"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"moveUp"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:speed_scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5]
-}
-
 [sub_resource type="Animation" id="Animation_qsw3p"]
 resource_name = "moveLeft"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -483,10 +442,10 @@ tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -503,7 +462,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_km4v1"]
 resource_name = "moveRight"
-length = 0.4
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -523,10 +482,78 @@ tracks/1/path = NodePath(".:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_si24s"]
+resource_name = "moveUp"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"moveUp"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:speed_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5]
+}
+
+[sub_resource type="Animation" id="Animation_a2hxd"]
+resource_name = "scared"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"scared"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 7, 8, 0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_u7sf5"]
@@ -535,7 +562,8 @@ _data = {
 "moveDown": SubResource("Animation_ugsky"),
 "moveLeft": SubResource("Animation_qsw3p"),
 "moveRight": SubResource("Animation_km4v1"),
-"moveUp": SubResource("Animation_si24s")
+"moveUp": SubResource("Animation_si24s"),
+"scared": SubResource("Animation_a2hxd")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7o51"]
@@ -550,45 +578,6 @@ gradient = SubResource("Gradient_h1fqx")
 fill = 1
 fill_from = Vector2(0.49569, 0.5)
 fill_to = Vector2(0.306034, 0.228448)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1sc2u"]
-size = Vector2(11, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uevqg"]
-atlas = ExtResource("8_0kfj0")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4ai57"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uevqg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aw71q"]
-size = Vector2(11, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hbmlk"]
-atlas = ExtResource("9_3yqwy")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6fipb"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hbmlk")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_42ds4"]
-size = Vector2(16, 11)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fked1"]
 atlas = ExtResource("11_1kb1k")
@@ -605,8 +594,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3nbcj"]
-size = Vector2(16, 11)
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbmlk"]
+atlas = ExtResource("9_3yqwy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6fipb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbmlk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xafyv"]
 atlas = ExtResource("10_mmnn1")
@@ -617,6 +618,21 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_xafyv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uevqg"]
+atlas = ExtResource("8_0kfj0")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ai57"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uevqg")
 }],
 "loop": true,
 "name": &"default",
@@ -694,55 +710,54 @@ position = Vector2(0.349426, 3.61345)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
-[node name="Timer" type="Timer" parent="Player"]
-wait_time = 2.0
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.152941, 0.152941, 0.152941, 1)
 
 [node name="Arrow" type="CanvasGroup" parent="."]
 script = ExtResource("9_2yvcd")
 
-[node name="ArrowLeft" type="Area2D" parent="Arrow"]
-position = Vector2(-25.1216, 0.0475845)
+[node name="Timer" type="Timer" parent="Arrow"]
+one_shot = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowLeft"]
-position = Vector2(-0.378426, -0.0475845)
-shape = SubResource("RectangleShape2D_1sc2u")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arrow/ArrowLeft"]
-sprite_frames = SubResource("SpriteFrames_4ai57")
-
-[node name="ArrowRight" type="Area2D" parent="Arrow"]
-position = Vector2(24.8544, 0.00836372)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowRight"]
-position = Vector2(0.645552, -0.00836372)
-shape = SubResource("RectangleShape2D_aw71q")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arrow/ArrowRight"]
-sprite_frames = SubResource("SpriteFrames_6fipb")
-
-[node name="ArrowDown" type="Area2D" parent="Arrow"]
+[node name="AnimatedSpriteArrowDown" type="AnimatedSprite2D" parent="Arrow"]
 position = Vector2(0.101763, 24.876)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowDown"]
-position = Vector2(-0.101763, 0.62396)
-shape = SubResource("RectangleShape2D_42ds4")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arrow/ArrowDown"]
 sprite_frames = SubResource("SpriteFrames_7fb1h")
 
-[node name="ArrowUp" type="Area2D" parent="Arrow"]
-position = Vector2(0.0520096, -24.5558)
+[node name="AnimatedSpriteArrowRight" type="AnimatedSprite2D" parent="Arrow"]
+position = Vector2(24.8544, 0.00836372)
+sprite_frames = SubResource("SpriteFrames_6fipb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrow/ArrowUp"]
-position = Vector2(0.94799, 0.0558243)
-shape = SubResource("RectangleShape2D_3nbcj")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Arrow/ArrowUp"]
-position = Vector2(0.94799, 0.555824)
+[node name="AnimatedSpriteArrowUp" type="AnimatedSprite2D" parent="Arrow"]
+position = Vector2(1.25028, -20.9977)
 sprite_frames = SubResource("SpriteFrames_isn4b")
+
+[node name="AnimatedSpriteArrowLeft" type="AnimatedSprite2D" parent="Arrow"]
+position = Vector2(-25.1216, 0.0475845)
+sprite_frames = SubResource("SpriteFrames_4ai57")
+
+[node name="ArrowDownButton" type="TextureButton" parent="Arrow"]
+offset_left = -8.11433
+offset_top = 19.6802
+offset_right = 7.88567
+offset_bottom = 30.6802
+
+[node name="ArrowUpButton" type="TextureButton" parent="Arrow"]
+offset_left = -6.48635
+offset_top = -26.7731
+offset_right = 9.51365
+offset_bottom = -15.7731
+
+[node name="ArrowRightButton" type="TextureButton" parent="Arrow"]
+offset_left = 20.0
+offset_top = -8.0
+offset_right = 31.0
+offset_bottom = 8.0
+
+[node name="ArrowLeftButton" type="TextureButton" parent="Arrow"]
+offset_left = -31.0
+offset_top = -8.0
+offset_right = -20.0
+offset_bottom = 8.0
 
 [node name="Monster" type="CanvasGroup" parent="."]
 script = ExtResource("13_8rur6")
@@ -759,6 +774,7 @@ texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="Monster2" type="AnimatedSprite2D" parent="Monster"]
+visible = false
 position = Vector2(58.2665, -6.03585)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
@@ -771,6 +787,7 @@ texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="Monster3" type="AnimatedSprite2D" parent="Monster"]
+visible = false
 position = Vector2(-5.50658, -48.4286)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
@@ -782,12 +799,19 @@ texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="Monster4" type="AnimatedSprite2D" parent="Monster"]
+visible = false
 position = Vector2(-0.138771, 40.7207)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
 
 [node name="PointLight2D" type="PointLight2D" parent="Monster/Monster4"]
-position = Vector2(6.17248, 5.37411)
+position = Vector2(6.42347, 15.3491)
 color = Color(0.952941, 0.952941, 0.952941, 1)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
+
+[connection signal="timeout" from="Arrow/Timer" to="Arrow" method="_on_timer_timeout"]
+[connection signal="pressed" from="Arrow/ArrowDownButton" to="Arrow" method="_on_arrow_down_button_pressed"]
+[connection signal="pressed" from="Arrow/ArrowUpButton" to="Arrow" method="_on_arrow_up_button_pressed"]
+[connection signal="pressed" from="Arrow/ArrowRightButton" to="Arrow" method="_on_arrow_right_button_pressed"]
+[connection signal="pressed" from="Arrow/ArrowLeftButton" to="Arrow" method="_on_arrow_left_button_pressed"]

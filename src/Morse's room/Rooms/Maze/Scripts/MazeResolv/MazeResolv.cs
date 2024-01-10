@@ -1,21 +1,76 @@
 using Godot;
-using System;
-using TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv;
 
 namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 {
 	public class MazeResolv
 	{
 		private int[][] _maze;
-
-		private const int _LIMIT_COLUMN_MAX = 7;
-		private const int _FREE_CASE = 0;
-		private const int _PLAYER_POSITION = 1;
-		private const int _MONSTER_POSITION = 2;
+		private int _indexPlayerX;
+		private int _indexPlayerY;
+		private int nextCase;
 
 		public MazeResolv()
 		{
 			_maze = MazeConstants.fill();
+			_indexPlayerX = 1;
+			_indexPlayerY = 1;
+		}
+		
+		private void changeValue(int player,int caseToGo)
+		{
+			int temp = player;
+			player = caseToGo;
+			caseToGo = temp;
+		}
+		public void moveRight()
+		{
+			nextCase = _maze[_indexPlayerX][_indexPlayerY + 1];
+			if (verficationCase())
+			{
+				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+				_indexPlayerY++;
+			}
+			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
+		}
+
+		public void moveLeft()
+		{
+			nextCase = _maze[_indexPlayerX][_indexPlayerY - 1];
+			if (verficationCase())
+			{
+				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+				_indexPlayerY--;
+			}
+			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
+		}
+		public void moveUp()
+		{
+			nextCase = _maze[_indexPlayerX + 1][_indexPlayerY];
+			if (verficationCase())
+			{
+				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+				_indexPlayerX++;
+			}
+			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
+		}
+		public void moveDown()
+		{
+			nextCase = _maze[_indexPlayerX - 1][_indexPlayerY];
+			if (verficationCase())
+			{
+				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+				_indexPlayerX--;
+			}
+			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
+		}
+
+		public bool verficationCase()
+		{
+			if (nextCase == MazeConstants.MONSTER_CASE)
+			{
+				return false;
+			}
+			return true;
 		}
 		
 	}
