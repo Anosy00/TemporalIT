@@ -4352,6 +4352,7 @@ position = Vector2(-3.05176e-05, 0)
 script = ExtResource("13_1xry4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/InteractiveZoneOfThePunshedCard/TheDialogBox"]
+visible = false
 position = Vector2(-11.5, 1)
 shape = SubResource("CircleShape2D_cn6ey")
 

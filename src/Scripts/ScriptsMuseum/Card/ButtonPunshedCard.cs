@@ -6,6 +6,8 @@ public partial class ButtonPunshedCard : Node
 	// Called when the node enters the scene tree for the first time.
 	private Button _buttonPunshedCard;
 	private String sceneSuivante = "res://TilesMapMusee/mapMusee.tscn";
+	public AnimatedSprite2D _keyboardInteration;
+	
 	public override void _Ready()
 	{
 		_buttonPunshedCard = GetNode<Button>("ButtonPunshedCard");
@@ -14,6 +16,9 @@ public partial class ButtonPunshedCard : Node
 			// Simulate releasing the E button to disable the action
 			Input.ActionRelease("button_e");
 		}
+		_keyboardInteration = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		_keyboardInteration.Visible = true;
+		_keyboardInteration.Play("default");
 		
 	}
 
@@ -21,7 +26,7 @@ public partial class ButtonPunshedCard : Node
 	public override void _Process(double delta)
 	{
 		
-		if (Input.IsActionPressed("echap") || Input.IsActionPressed("button_e") ) 
+		if (Input.IsActionPressed("button_e") ) 
 		{
 			GetTree().ChangeSceneToFile(sceneSuivante);
 				

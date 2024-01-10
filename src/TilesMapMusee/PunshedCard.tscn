@@ -1,7 +1,70 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp8nfdgppjtvj"]
+[gd_scene load_steps=14 format=3 uid="uid://bp8nfdgppjtvj"]
 
 [ext_resource type="Texture2D" uid="uid://t0qt24hot81l" path="res://ressources/interfaces/dickens_carte_perforee - Copie.jpg" id="1_ywlfx"]
 [ext_resource type="Script" path="res://Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" id="2_j1h0e"]
+[ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="3_5n64p"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="4_xga6v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8nu74"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwc0b"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23s2j"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utnsd"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvpl1"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v7yl2"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jyrm"]
+atlas = ExtResource("3_5n64p")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07ak0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8nu74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwc0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23s2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utnsd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvpl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v7yl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jyrm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dea37"]
+font = ExtResource("4_xga6v")
+font_size = 27
 
 [node name="PunshedCard" type="Node2D"]
 
@@ -17,12 +80,19 @@ position = Vector2(253, 118)
 texture = ExtResource("1_ywlfx")
 
 [node name="Camera2D" type="Camera2D" parent="ButtonPunshedCard/DickensCartePerforee"]
+zoom = Vector2(1.5, 1.5)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 237.0
-offset_top = 97.0
-offset_right = 402.0
-offset_bottom = 137.0
-text = "echap pour quitter"
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonPunshedCard"]
+position = Vector2(118, 272)
+scale = Vector2(1.73437, 1.67188)
+sprite_frames = SubResource("SpriteFrames_07ak0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 391.0
+offset_top = 325.0
+offset_right = 634.0
+offset_bottom = 355.0
+text = "Continuer"
+label_settings = SubResource("LabelSettings_dea37")
 
 [connection signal="pressed" from="ButtonPunshedCard" to="ButtonPunshedCard" method="_on_pressed"]
