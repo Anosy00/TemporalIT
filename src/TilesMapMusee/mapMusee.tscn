@@ -4533,7 +4533,7 @@ text = "L’IBM Personnal Computer, modèle 5150,
 est un ordinateur produit par IBM en 
 1981 en plusieurs millions d’exemplaires, 
 il utilise notement un processeur X86, 
-révolutionnaire pour lépoque et encore 
+révolutionnaire pour l'époque et encore 
 utilisé de nos jours."
 label_settings = SubResource("LabelSettings_wft34")
 horizontal_alignment = 1
