@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TemporalIT;
 
 public partial class EButton : Node
 {
@@ -33,11 +34,28 @@ public partial class EButton : Node
 		return _keyInteraction.IsVisibleInTree();
 	}
 		
-	public void makeInteraction(SceneTree tree,String key,String nextScenePath)
+	public int makeInteraction(SceneTree tree,String key,String nextScenePath)
 	{
-		if (Input.IsActionPressed(key) && isVisible())
+		if (Input.IsActionPressed(key) && isVisible() && GlobalJMJ.hadInteractedWithNewsPaper)
 		{
 			tree.ChangeSceneToFile(nextScenePath);
+			return 0;
 		}
+		else if (Input.IsActionPressed(key) && isVisible() && !GlobalJMJ.hadInteractedWithNewsPaper)
+		{
+			return 1;
+		}
+
+		return 2;
+	}
+
+	public int makeTalking()
+	{
+		if (Input.IsActionPressed("button_e") && isVisible())
+		{
+			return 0;
+		}
+
+		return 1;
 	}
 }

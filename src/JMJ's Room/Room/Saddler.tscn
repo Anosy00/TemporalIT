@@ -1526,6 +1526,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
 
 [sub_resource type="Animation" id="Animation_gq3ot"]
 resource_name = "displayText"
@@ -1576,7 +1588,7 @@ b = Vector2(80.25, 70.5)
 a = Vector2(79.25, -56)
 b = Vector2(80.75, 70.5)
 
-[node name="Node2D" type="Node2D"]
+[node name="Saddler" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(554, 320)
@@ -1601,6 +1613,11 @@ position = Vector2(56.5, 56.5)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LadderRigid"]
 position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
+
+[node name="Player" parent="TileMap" instance=ExtResource("3_80n8l")]
+position = Vector2(17, -23)
+scale = Vector2(1, 1)
+script = ExtResource("4_i0vk7")
 
 [node name="EButtonLadder" type="Area2D" parent="TileMap"]
 position = Vector2(55, 55.25)
@@ -1630,6 +1647,7 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("7_h2qro")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonPaper"]
+visible = false
 position = Vector2(-6.5, 0.25)
 shape = SubResource("CapsuleShape2D_s6fuo")
 
@@ -1683,6 +1701,7 @@ offset_left = -753.451
 offset_top = -84.0058
 offset_right = -479.451
 offset_bottom = -35.0058
+theme_override_fonts/font = ExtResource("14_h46hr")
 text = "[Player]"
 label_settings = SubResource("LabelSettings_c3aj7")
 vertical_alignment = 1
@@ -1711,11 +1730,6 @@ shape = SubResource("SegmentShape2D_rue2f")
 [node name="BorderRight" type="CollisionShape2D" parent="TileMap/Border"]
 position = Vector2(-11.25, -5.25)
 shape = SubResource("SegmentShape2D_5ict7")
-
-[node name="Player" parent="TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(17, -23)
-scale = Vector2(1, 1)
-script = ExtResource("4_i0vk7")
 
 [connection signal="body_entered" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_body_exited"]

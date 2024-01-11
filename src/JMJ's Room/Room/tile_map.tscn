@@ -1,15 +1,20 @@
-[gd_scene load_steps=36 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=55 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
 [ext_resource type="Texture2D" uid="uid://d0rbnur7ylkkv" path="res://ressources/tilesmap/nails/nails.png" id="3_evf35"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="4_pyvd6"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="5_x8otr"]
+[ext_resource type="Script" path="res://Scripts/Interaction/Ladder/LadderScript.cs" id="6_iittg"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="6_n2xgf"]
-[ext_resource type="Script" path="res://Scripts/EButton/EButton.cs" id="6_vrew7"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
+[ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
+[ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
+[ext_resource type="Script" path="res://JMJ.cs" id="12_lpl3b"]
+[ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="13_k26hm"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_ubub2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
 texture = ExtResource("1_e7p8e")
@@ -1095,6 +1100,76 @@ sources/2 = SubResource("TileSetAtlasSource_nr5ak")
 sources/3 = SubResource("TileSetAtlasSource_r2hqt")
 sources/4 = SubResource("TileSetAtlasSource_8pr14")
 
+[sub_resource type="LabelSettings" id="LabelSettings_r0tkg"]
+font = ExtResource("14_ubub2")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a3xhp"]
+font = ExtResource("14_ubub2")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_mq1xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gq3ot"]
+resource_name = "displayText"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgbd8"]
+_data = {
+"RESET": SubResource("Animation_mq1xr"),
+"displayText": SubResource("Animation_gq3ot")
+}
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_erjla"]
 a = Vector2(-307, 70)
 b = Vector2(313, 69)
@@ -1187,12 +1262,71 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjsma"]
-radius = 35.0
-height = 88.0
+radius = 48.0
+height = 118.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meakv"]
+size = Vector2(43, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6odq"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv5wp"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxdxs"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8r1o"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvu4i"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfovj"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8shiw"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o4oc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6odq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hv5wp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxdxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8r1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvu4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfovj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8shiw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(10, 2)
-metadata/_edit_vertical_guides_ = [236.0, 863.0]
 metadata/_edit_horizontal_guides_ = [940.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1224,89 +1358,158 @@ layer_3/y_sort_origin = 0
 layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(65529, 1179651, 65538)
 
-[node name="Border" type="RigidBody2D" parent="."]
-position = Vector2(-2, 4)
+[node name="Camera2D" type="Camera2D" parent="TileMap"]
+position = Vector2(3, -35.3333)
+zoom = Vector2(1.2, 1.2)
 
-[node name="BorderTop" type="CollisionShape2D" parent="Border" groups=["Border"]]
+[node name="DialogBox" type="Sprite2D" parent="TileMap"]
+position = Vector2(-8, 42)
+rotation = 0.000841907
+scale = Vector2(0.15, 0.25)
+texture = ExtResource("12_8t5ke")
+script = ExtResource("13_k26hm")
+metadata/_edit_group_ = true
+
+[node name="LabelText" type="Label" parent="TileMap/DialogBox"]
+offset_left = -750.0
+offset_top = -24.0
+offset_right = 740.0
+offset_bottom = 91.0
+text = "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023"
+label_settings = SubResource("LabelSettings_r0tkg")
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelName" type="Label" parent="TileMap/DialogBox"]
+offset_left = -753.0
+offset_top = -84.0
+offset_right = -506.0
+offset_bottom = -35.0
+theme_override_fonts/font = ExtResource("14_ubub2")
+text = "[Player]"
+label_settings = SubResource("LabelSettings_a3xhp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/DialogBox"]
+libraries = {
+"": SubResource("AnimationLibrary_fgbd8")
+}
+
+[node name="Border" type="RigidBody2D" parent="TileMap"]
+position = Vector2(-188.667, -140.667)
+scale = Vector2(0.333333, 0.333333)
+
+[node name="BorderTop" type="CollisionShape2D" parent="TileMap/Border" groups=["Border"]]
 position = Vector2(541, 113)
 shape = SubResource("SegmentShape2D_erjla")
 
-[node name="BorderLeft" type="CollisionShape2D" parent="Border" groups=["Border"]]
+[node name="BorderLeft" type="CollisionShape2D" parent="TileMap/Border" groups=["Border"]]
 position = Vector2(217.5, 403)
 shape = SubResource("SegmentShape2D_24q58")
 
-[node name="BorderBottom" type="CollisionShape2D" parent="Border" groups=["Border"]]
+[node name="BorderBottom" type="CollisionShape2D" parent="TileMap/Border" groups=["Border"]]
 position = Vector2(538.25, 622)
 shape = SubResource("SegmentShape2D_jr8s2")
 
-[node name="BorderRight" type="CollisionShape2D" parent="Border" groups=["Border"]]
+[node name="BorderRight" type="CollisionShape2D" parent="TileMap/Border" groups=["Border"]]
 position = Vector2(862, 406)
 shape = SubResource("SegmentShape2D_tqw65")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="RigidBody2D" type="RigidBody2D" parent="TileMap"]
+position = Vector2(-188, -142)
+scale = Vector2(0.333333, 0.333333)
 
-[node name="Bookshelf" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="Bookshelf" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(803.5, 212.25)
 shape = SubResource("RectangleShape2D_cd7sb")
 
-[node name="WoodPlank2" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="WoodPlank2" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(728, 220)
 shape = SubResource("RectangleShape2D_5b8h0")
 
-[node name="Etablished" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="Etablished" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(298.25, 220.5)
 shape = SubResource("RectangleShape2D_8aslk")
 
-[node name="WoodPlank1" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="WoodPlank1" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(403, 212)
 shape = SubResource("RectangleShape2D_1rgwv")
 
-[node name="Closet" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="Closet" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(258, 496.25)
 shape = SubResource("RectangleShape2D_t480g")
 
-[node name="LadderArea" type="Area2D" parent="."]
-script = ExtResource("6_vrew7")
+[node name="LadderArea" type="Area2D" parent="TileMap"]
+position = Vector2(-188, -142)
+scale = Vector2(0.333333, 0.333333)
+script = ExtResource("6_iittg")
 
-[node name="Ladder" type="Sprite2D" parent="LadderArea"]
+[node name="Ladder" type="Sprite2D" parent="TileMap/LadderArea"]
 position = Vector2(627, 169)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_jhrpl")
 
-[node name="Ladder" type="Sprite2D" parent="LadderArea/Ladder"]
+[node name="Ladder" type="Sprite2D" parent="TileMap/LadderArea/Ladder"]
 position = Vector2(-0.000488281, -370)
 texture = ExtResource("8_jhrpl")
 
-[node name="Ladder2" type="Sprite2D" parent="LadderArea/Ladder"]
+[node name="Ladder2" type="Sprite2D" parent="TileMap/LadderArea/Ladder"]
 position = Vector2(-0.000488281, -740)
 texture = ExtResource("8_jhrpl")
 
-[node name="Ladder3" type="Sprite2D" parent="LadderArea/Ladder"]
+[node name="Ladder3" type="Sprite2D" parent="TileMap/LadderArea/Ladder"]
 position = Vector2(-0.000488281, -1090)
 texture = ExtResource("8_jhrpl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LadderArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LadderArea"]
 position = Vector2(626, 188)
 shape = SubResource("CircleShape2D_e3d6i")
 
-[node name="EButtonSprite" type="AnimatedSprite2D" parent="LadderArea"]
+[node name="EButtonLadderSprite" type="AnimatedSprite2D" parent="TileMap/LadderArea"]
 position = Vector2(577, 148)
 scale = Vector2(1.2, 1.236)
 sprite_frames = SubResource("SpriteFrames_l6to6")
 animation = &"animation"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="JMJ" type="Area2D" parent="."]
+position = Vector2(-6, 0)
+script = ExtResource("12_lpl3b")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+[node name="Sprite2D" type="Sprite2D" parent="JMJ"]
 position = Vector2(265, 301)
 scale = Vector2(2.25, 2.78125)
 texture = ExtResource("11_j0p0o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JMJ"]
 position = Vector2(264, 292)
 shape = SubResource("CapsuleShape2D_cjsma")
 
-[node name="Player" parent="." instance=ExtResource("6_n2xgf")]
+[node name="RigidBodyJMJ" type="RigidBody2D" parent="JMJ"]
 
-[connection signal="body_entered" from="LadderArea" to="LadderArea" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="LadderArea" to="LadderArea" method="_on_body_exited"]
+[node name="CollisionShapeJMJ" type="CollisionShape2D" parent="JMJ/RigidBodyJMJ"]
+position = Vector2(267, 289.5)
+shape = SubResource("RectangleShape2D_meakv")
+
+[node name="EButtonJMJSprite" type="AnimatedSprite2D" parent="JMJ"]
+position = Vector2(258, 231)
+scale = Vector2(1.28125, 1.3125)
+sprite_frames = SubResource("SpriteFrames_o4oc4")
+
+[node name="Timer" type="Timer" parent="JMJ"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Player" parent="." instance=ExtResource("6_n2xgf")]
+position = Vector2(551, 419)
+script = ExtResource("11_uayp2")
+
+[connection signal="body_entered" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_body_exited"]
+[connection signal="body_entered" from="JMJ" to="JMJ" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="JMJ" to="JMJ" method="_on_body_exited"]
+[connection signal="timeout" from="JMJ/Timer" to="JMJ" method="_on_timer_timeout"]

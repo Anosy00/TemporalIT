@@ -21,6 +21,7 @@ public partial class DialogBox : Node
 	{
 		_dialogBox.Visible = false;
 		_animationPlayer.Stop();
+		Global.isDialogActive = false;
 	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -33,6 +34,7 @@ public partial class DialogBox : Node
 	{
 		_dialogBox.Visible = true;
 		_animationPlayer.Play(nameOfTheAnimation);
+		Global.isDialogActive = true;
 	}
 
 	
@@ -52,4 +54,16 @@ public partial class DialogBox : Node
 	{
 		return _animationPlayer;
 	}
+
+	public int closeDialogBox()
+	{
+		if (Input.IsActionPressed("closeDialog") && isVisible())
+		{
+			disable();
+			return 0;
+		}
+
+		return 1;
+	}
+	
 }

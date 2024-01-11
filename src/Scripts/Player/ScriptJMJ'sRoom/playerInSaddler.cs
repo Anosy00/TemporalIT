@@ -48,10 +48,6 @@ public partial class playerInSaddler : CharacterBody2D
 				animateSprite.Stop();
 			}
 			
-			if (!Global.hadInteractedWithNewsPaper && Input.IsActionPressed("button_e"))
-			{
-				
-			}
 
 			MoveAndCollide(velocity);
 		}
