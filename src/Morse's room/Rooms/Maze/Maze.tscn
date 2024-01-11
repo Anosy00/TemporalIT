@@ -675,8 +675,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_vertical_guides_ = [20.0, 8.0]
-metadata/_edit_horizontal_guides_ = [20.0, 13.0]
+metadata/_edit_vertical_guides_ = [85.0, -132.0]
+metadata/_edit_horizontal_guides_ = [69.0, -51.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ctqyn")
@@ -716,7 +716,7 @@ color = Color(0.152941, 0.152941, 0.152941, 1)
 [node name="Arrow" type="CanvasGroup" parent="."]
 script = ExtResource("9_2yvcd")
 
-[node name="Timer" type="Timer" parent="Arrow"]
+[node name="TimerDeplacement" type="Timer" parent="Arrow"]
 one_shot = true
 
 [node name="AnimatedSpriteArrowDown" type="AnimatedSprite2D" parent="Arrow"]
@@ -728,7 +728,7 @@ position = Vector2(24.8544, 0.00836372)
 sprite_frames = SubResource("SpriteFrames_6fipb")
 
 [node name="AnimatedSpriteArrowUp" type="AnimatedSprite2D" parent="Arrow"]
-position = Vector2(1.25028, -20.9977)
+position = Vector2(0.112892, -20.5118)
 sprite_frames = SubResource("SpriteFrames_isn4b")
 
 [node name="AnimatedSpriteArrowLeft" type="AnimatedSprite2D" parent="Arrow"]
@@ -742,10 +742,10 @@ offset_right = 7.88567
 offset_bottom = 30.6802
 
 [node name="ArrowUpButton" type="TextureButton" parent="Arrow"]
-offset_left = -6.48635
-offset_top = -26.7731
-offset_right = 9.51365
-offset_bottom = -15.7731
+offset_left = -8.0
+offset_top = -26.0
+offset_right = 8.0
+offset_bottom = -15.0
 
 [node name="ArrowRightButton" type="TextureButton" parent="Arrow"]
 offset_left = 20.0
@@ -762,56 +762,56 @@ offset_bottom = 8.0
 [node name="Monster" type="CanvasGroup" parent="."]
 script = ExtResource("13_8rur6")
 
-[node name="Monster1" type="AnimatedSprite2D" parent="Monster"]
+[node name="MonsterLeft" type="AnimatedSprite2D" parent="Monster"]
 position = Vector2(-55.5001, -4.66624)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
 
-[node name="PointLight2D" type="PointLight2D" parent="Monster/Monster1"]
+[node name="PointLight2D" type="PointLight2D" parent="Monster/MonsterLeft"]
 position = Vector2(6.17248, 5.37411)
 color = Color(0.952941, 0.952941, 0.952941, 1)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
-[node name="Monster2" type="AnimatedSprite2D" parent="Monster"]
-visible = false
+[node name="MonsterRight" type="AnimatedSprite2D" parent="Monster"]
 position = Vector2(58.2665, -6.03585)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
 flip_h = true
 
-[node name="PointLight2D" type="PointLight2D" parent="Monster/Monster2"]
+[node name="PointLight2D" type="PointLight2D" parent="Monster/MonsterRight"]
 position = Vector2(4.58544, 8.05397)
 color = Color(0.952941, 0.952941, 0.952941, 1)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
-[node name="Monster3" type="AnimatedSprite2D" parent="Monster"]
-visible = false
+[node name="MonsterUp" type="AnimatedSprite2D" parent="Monster"]
 position = Vector2(-5.50658, -48.4286)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
 
-[node name="PointLight2D" type="PointLight2D" parent="Monster/Monster3"]
+[node name="PointLight2D" type="PointLight2D" parent="Monster/MonsterUp"]
 position = Vector2(6.17248, 5.37411)
 color = Color(0.952941, 0.952941, 0.952941, 1)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
-[node name="Monster4" type="AnimatedSprite2D" parent="Monster"]
-visible = false
+[node name="MonsterDown" type="AnimatedSprite2D" parent="Monster"]
 position = Vector2(-0.138771, 40.7207)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
 
-[node name="PointLight2D" type="PointLight2D" parent="Monster/Monster4"]
+[node name="PointLight2D" type="PointLight2D" parent="Monster/MonsterDown"]
 position = Vector2(6.42347, 15.3491)
 color = Color(0.952941, 0.952941, 0.952941, 1)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
-[connection signal="timeout" from="Arrow/Timer" to="Arrow" method="_on_timer_timeout"]
+[node name="TimerMonster" type="Timer" parent="Monster"]
+
+[connection signal="timeout" from="Arrow/TimerDeplacement" to="Arrow" method="_on_timer_deplacement_timeout"]
 [connection signal="pressed" from="Arrow/ArrowDownButton" to="Arrow" method="_on_arrow_down_button_pressed"]
 [connection signal="pressed" from="Arrow/ArrowUpButton" to="Arrow" method="_on_arrow_up_button_pressed"]
 [connection signal="pressed" from="Arrow/ArrowRightButton" to="Arrow" method="_on_arrow_right_button_pressed"]
 [connection signal="pressed" from="Arrow/ArrowLeftButton" to="Arrow" method="_on_arrow_left_button_pressed"]
+[connection signal="timeout" from="Monster/TimerMonster" to="Monster" method="_on_timer_monster_timeout"]

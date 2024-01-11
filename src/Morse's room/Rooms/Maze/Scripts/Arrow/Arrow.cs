@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using NUnit.Framework.Constraints;
 using TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv;
 
 
@@ -20,6 +21,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 
 		private Timer _timer;
 
+		private int direction;
+
 		private MazeResolv.MazeResolv _mazeResolv;
 		
 		//Const
@@ -32,10 +35,14 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private const String _PATH_DOWN_ANIMATION = "AnimatedSpriteArrowDown";
 		private const String _PATH_RIGHT_ANIMATION = "AnimatedSpriteArrowRight";
 		private const String _PATH_LEFT_ANIMATION = "AnimatedSpriteArrowLeft";
-
-		private const String _PATH_BACK_SCENE = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
 		
-		private const String _PATH_TIMER = "Timer";
+		private const String _PATH_TIMER = "TimerDeplacement";
+		
+		private const int _DIRECTION_UP = 1;
+		private const int _DIRECTION_DOWN = 2;
+		private const int _DIRECTION_LEFT = 3;
+		private const int _DIRECTION_RIGHT = 4;
+		
 		
 
 		public override void _Ready()
@@ -55,14 +62,6 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_mazeResolv = new MazeResolv.MazeResolv();
 		}
 
-		public override void _Process(double delta)
-		{
-			if (!_mazeResolv.verficationCase())
-			{
-				GetTree().ChangeSceneToFile(_PATH_BACK_SCENE);
-			}
-		}
-
 		public void disableAllArrows(bool boolean)
 		{
 			_arrowDownButton.Disabled = boolean;
@@ -78,11 +77,22 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_arrowUpImage.Visible = !boolean;
 		}
 
+		private void _setDirection(int value)
+		{
+			direction = value;
+		}
+		
+		private int _getDirection()
+		{
+			return direction;
+		}
+
 		public void _on_arrow_left_button_pressed()
 		{
 			disableAllArrows(true);
 			_mazeResolv.moveLeft();
 			Player.Player.moveLeftAnimation();
+			_setDirection(_DIRECTION_LEFT);
 			_timer.Start();
 		}
 		public void _on_arrow_right_button_pressed()
@@ -90,6 +100,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			disableAllArrows(true);
 			_mazeResolv.moveRight();
 			Player.Player.moveRightAnimation();
+			_setDirection(_DIRECTION_RIGHT);
 			_timer.Start();
 		}
 		public void _on_arrow_up_button_pressed()
@@ -97,6 +108,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			disableAllArrows(true);
 			_mazeResolv.moveUp();
 			Player.Player.moveUpAnimation();
+			_setDirection(_DIRECTION_UP);
 			_timer.Start();
 		}
 		public void _on_arrow_down_button_pressed()
@@ -104,12 +116,37 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			disableAllArrows(true);
 			_mazeResolv.moveDown();
 			Player.Player.moveDownAnimation();
+			_setDirection(_DIRECTION_DOWN);
 			_timer.Start();
 		}
 
-		public void _on_timer_timeout()
+		public void _on_timer_deplacement_timeout()
 		{
-			disableAllArrows(false);
+			if (!_mazeResolv.verficationCase())
+			{
+				switch (_getDirection())
+				{
+					case _DIRECTION_UP:
+						Monster.Monster.activeMonsterUpAnimation();
+						break;
+					case _DIRECTION_DOWN:
+						Monster.Monster.activeMonsterDownAnimation();
+						break;
+					case _DIRECTION_LEFT:
+						Monster.Monster.activeMonsterLeftAnimation();
+						break;
+					case _DIRECTION_RIGHT:
+						Monster.Monster.activeMonsterRightAnimation();
+						break;
+					default:
+						GD.Print("Error");
+						break;
+				}
+			}
+			else
+			{
+				disableAllArrows(false);
+			}
 		}
 	}
 }
