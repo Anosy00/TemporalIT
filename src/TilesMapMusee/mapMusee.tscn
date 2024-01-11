@@ -16,9 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://xjfma2elxdca" path="res://ressources/tilesmap/Images/84applemac.png" id="12_dib7y"]
 [ext_resource type="Script" path="res://Scripts/ScriptsMuseum/TheDialogBox.cs" id="13_1xry4"]
 [ext_resource type="Texture2D" uid="uid://sx16c50i5nov" path="res://ressources/media/cartoonBubble.png" id="13_tv8xg"]
-[ext_resource type="Texture2D" uid="uid://blnokcr4licbj" path="res://ressources/tilesmap/Images/PC.png" id="14_1l3mk"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_6pbfr"]
 [ext_resource type="Texture2D" uid="uid://bo4osni1sychb" path="res://ressources/tilesmap/Images/pet2001-8.png" id="14_nl8w4"]
+[ext_resource type="Texture2D" uid="uid://cr2d2np7s8c1b" path="res://ressources/tilesmap/Images/Laptop.png" id="17_1oyx3"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptMuseum/player.cs" id="17_wibkn"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_md302"]
@@ -4290,9 +4290,9 @@ font = ExtResource("14_6pbfr")
 font_size = 18
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_t5115"]
+[sub_resource type="LabelSettings" id="LabelSettings_c3qll"]
 font = ExtResource("14_6pbfr")
-font_size = 24
+font_size = 18
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
@@ -4558,25 +4558,37 @@ position = Vector2(11, -14)
 shape = SubResource("RectangleShape2D_y7e2p")
 
 [node name="PC" type="Sprite2D" parent="TileMap/RigidBody2D_PC"]
-position = Vector2(10, -19)
-scale = Vector2(0.0996527, 0.0840277)
-texture = ExtResource("14_1l3mk")
+position = Vector2(48, 1)
+scale = Vector2(0.111913, 0.10034)
+texture = ExtResource("17_1oyx3")
 
 [node name="TheDialogBox" type="Area2D" parent="TileMap/RigidBody2D_PC"]
 script = ExtResource("13_1xry4")
 
 [node name="bubble" type="Sprite2D" parent="TileMap/RigidBody2D_PC/TheDialogBox"]
-position = Vector2(111, -17.5)
-scale = Vector2(0.171429, 0.359375)
+position = Vector2(122.75, -18)
+scale = Vector2(0.205844, 0.463542)
 texture = ExtResource("13_tv8xg")
 
 [node name="LabelText" type="Label" parent="TileMap/RigidBody2D_PC/TheDialogBox/bubble"]
-offset_left = -210.239
-offset_top = -27.3308
-offset_right = 205.761
-offset_bottom = 7.66919
-text = "Test de label"
-label_settings = SubResource("LabelSettings_t5115")
+anchors_preset = -1
+anchor_left = -6.8159
+anchor_top = -0.102868
+anchor_right = -6.8159
+anchor_bottom = -0.102868
+offset_left = 4871.24
+offset_top = -68.2494
+offset_right = 5628.24
+offset_bottom = 111.751
+text = "Lancé par Apple en 1995, le 
+PowerBook 5300 est le premier 
+ordinateur portable avec un design
+proche de ce que nous connaissons
+aujourd'hui. Il avait de nombreux 
+problèmes techniques et valurent à 
+Apple la réputation de vendre des 
+produits défectueux."
+label_settings = SubResource("LabelSettings_c3qll")
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -4637,7 +4649,7 @@ position = Vector2(12, -12)
 shape = SubResource("CircleShape2D_cn6ey")
 
 [node name="Player" parent="." instance=ExtResource("4_cawxn")]
-position = Vector2(547, 566)
+position = Vector2(661, 595)
 scale = Vector2(2, 2)
 script = ExtResource("17_wibkn")
 
