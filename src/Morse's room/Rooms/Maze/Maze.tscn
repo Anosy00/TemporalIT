@@ -808,6 +808,7 @@ texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="TimerMonster" type="Timer" parent="Monster"]
+wait_time = 2.0
 
 [connection signal="timeout" from="Arrow/TimerDeplacement" to="Arrow" method="_on_timer_deplacement_timeout"]
 [connection signal="pressed" from="Arrow/ArrowDownButton" to="Arrow" method="_on_arrow_down_button_pressed"]
