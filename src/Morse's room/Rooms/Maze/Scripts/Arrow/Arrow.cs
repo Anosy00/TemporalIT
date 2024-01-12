@@ -44,8 +44,6 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private const int _DIRECTION_RIGHT = 4;
 
 		private const String _PATH_LAST_SCENE = "res://Morse's room/Rooms/LastScene/LastScene.tscn";
-		
-		
 
 		public override void _Ready()
 		{
@@ -124,10 +122,6 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 
 		public void _on_timer_deplacement_timeout()
 		{
-			if (_mazeResolv.verficationCase(MazeConstants.EXIT_CASE))
-			{
-				GetTree().ChangeSceneToFile(_PATH_LAST_SCENE);
-			}
 			if (!_mazeResolv.verficationCase(MazeConstants.MONSTER_CASE))
 			{
 				switch (_getDirection())

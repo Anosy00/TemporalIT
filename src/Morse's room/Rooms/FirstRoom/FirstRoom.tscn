@@ -907,7 +907,7 @@ height = 38.0
 [node name="MorseScene" type="Node2D"]
 
 [node name="FirstRoom" type="Node2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(-1, -1)
 script = ExtResource("1_88deq")
 
 [node name="TileMap" type="TileMap" parent="FirstRoom"]
@@ -952,7 +952,7 @@ layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602, 655361, 8, 262138, 655361, 9, 327674, 655361, 10, 393210, 655361, 11, 65531, 720897, 6, 131067, 720897, 7, 196603, 720897, 8, 262139, 720897, 9, 327675, 720897, 10, 393211, 720897, 11, -655356, 917505, 12, -589820, 917505, 13, -655355, 983041, 12, -589819, 983041, 13, -458749, 196608, 8, 131076, 131073, 22, 131077, 196609, 22, 262148, 393216, 10, 327684, 393216, 11, 262149, 458752, 10, 327685, 458752, 11, 262146, 327680, 10, 327682, 327680, 11, 262147, 393216, 10, 327683, 393216, 11)
 
 [node name="Player" type="CharacterBody2D" parent="FirstRoom"]
-position = Vector2(118.102, -0.975533)
+position = Vector2(117.323, 0.804863)
 script = ExtResource("3_r14e8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/Player"]
@@ -1093,6 +1093,7 @@ sprite_frames = SubResource("SpriteFrames_1apjx")
 
 [node name="Node2D" type="Node2D" parent="FirstRoom"]
 
+[connection signal="tree_exited" from="FirstRoom" to="FirstRoom" method="_on_tree_exited"]
 [connection signal="body_entered" from="FirstRoom/AreaNextLevel" to="FirstRoom/AreaNextLevel" method="_on_body_entered"]
 [connection signal="body_entered" from="FirstRoom/AreaBook" to="FirstRoom/AreaBook" method="_on_body_entered"]
 [connection signal="body_exited" from="FirstRoom/AreaBook" to="FirstRoom/AreaBook" method="_on_body_exited"]

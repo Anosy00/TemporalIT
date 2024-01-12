@@ -25,7 +25,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 		public void moveRight()
 		{
 			nextCase = _maze[_indexPlayerX][_indexPlayerY + 1];
-			if (verficationCase(MazeConstants.MONSTER_CASE) && !verficationCase(MazeConstants.EXIT_CASE))
+			if (verficationCase(MazeConstants.MONSTER_CASE))
 			{
 				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
 				_indexPlayerY++;
@@ -36,7 +36,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 		public void moveLeft()
 		{
 			nextCase = _maze[_indexPlayerX][_indexPlayerY - 1];
-			if (verficationCase(MazeConstants.MONSTER_CASE) && !verficationCase(MazeConstants.EXIT_CASE))
+			if (verficationCase(MazeConstants.MONSTER_CASE))
 			{
 				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
 				_indexPlayerY--;
@@ -46,7 +46,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 		public void moveUp()
 		{
 			nextCase = _maze[_indexPlayerX + 1][_indexPlayerY];
-			if (verficationCase(MazeConstants.MONSTER_CASE) && !verficationCase(MazeConstants.EXIT_CASE))
+			if (verficationCase(MazeConstants.MONSTER_CASE))
 			{
 				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
 				_indexPlayerX++;
@@ -56,7 +56,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 		public void moveDown()
 		{
 			nextCase = _maze[_indexPlayerX - 1][_indexPlayerY];
-			if (verficationCase(MazeConstants.MONSTER_CASE) && !verficationCase(MazeConstants.EXIT_CASE))
+			if (verficationCase(MazeConstants.MONSTER_CASE))
 			{
 				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
 				_indexPlayerX--;
