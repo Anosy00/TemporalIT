@@ -20,7 +20,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
             };
             _maze[2] = new int[LIMIT_COLUMN_MAX]
             {
-                MONSTER_CASE,FREE_CASE,FREE_CASE,MONSTER_CASE,FREE_CASE,FREE_CASE,EXIT_CASE
+                MONSTER_CASE,FREE_CASE,FREE_CASE,MONSTER_CASE,FREE_CASE,EXIT_CASE,MONSTER_CASE
             };
             _maze[3] = new int[LIMIT_COLUMN_MAX]
             {

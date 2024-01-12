@@ -708,13 +708,12 @@ position = Vector2(0, -1.69328)
 shape = SubResource("RectangleShape2D_m7o51")
 
 [node name="PointLight2D" type="PointLight2D" parent="Player"]
-visible = false
 position = Vector2(0.349426, 3.61345)
 texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.152941, 0.152941, 0.152941, 1)
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
 
 [node name="Arrow" type="CanvasGroup" parent="."]
 script = ExtResource("9_2yvcd")
@@ -803,6 +802,8 @@ texture_scale = 4.0
 position = Vector2(-0.138771, 40.7207)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xm6tt")
+frame = 1
+frame_progress = 0.640225
 
 [node name="PointLight2D" type="PointLight2D" parent="Monster/MonsterDown"]
 position = Vector2(6.42347, 15.3491)
