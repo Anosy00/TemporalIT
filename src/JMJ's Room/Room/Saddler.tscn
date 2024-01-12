@@ -1665,6 +1665,7 @@ vertical_alignment = 1
 autowrap_mode = 2
 visible_characters = 0
 visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelName" type="Label" parent="TileMap/DialogBox"]
 offset_left = -753.451

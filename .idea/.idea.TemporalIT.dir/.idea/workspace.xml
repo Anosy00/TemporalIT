@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1700b7c3-fb94-4147-9f8a-00de0794581b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Museum/MuseumMap.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Museum/PunshedCard.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/GlobalMuseum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Museum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TemporalIT.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TemporalIT.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/Player/ScriptMuseum/player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/Player/ScriptMuseum/player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TilesMapMusee/mapMusee.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/src/TilesMapMusee/mapMusee.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/JMJ's Room/Room/Saddler.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/src/JMJ's Room/Room/Saddler.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/DialogBox/DialogBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/DialogBox/DialogBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scripts/Player/ScriptMuseum/player.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TilesMapMusee/PunshedCard.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TilesMapMusee/mapMusee.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/src/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ressources/media/Sans_titre.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/media/Sans_titre.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +30,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Scripts/DialogBox/DialogBox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/Global.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Scripts/Player/ScriptMuseum/player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/GlobalMuseum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Museum.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/TheDialogBox.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -75,6 +84,7 @@
       <workItem from="1704789100750" duration="147000" />
       <workItem from="1704792383459" duration="2031000" />
       <workItem from="1704881196706" duration="1819000" />
+      <workItem from="1705069873247" duration="952000" />
     </task>
     <servers />
   </component>

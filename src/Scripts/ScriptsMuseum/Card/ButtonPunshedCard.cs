@@ -5,7 +5,7 @@ public partial class ButtonPunshedCard : Node
 {
 	// Called when the node enters the scene tree for the first time.
 	private Button _buttonPunshedCard;
-	private String sceneSuivante = "res://TilesMapMusee/mapMusee.tscn";
+	private String sceneSuivante = "res://Museum/MuseumMap.tscn";
 	public AnimatedSprite2D _keyboardInteration;
 	
 	public override void _Ready()

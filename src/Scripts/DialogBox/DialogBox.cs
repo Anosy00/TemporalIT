@@ -21,6 +21,16 @@ public partial class DialogBox : Node
 	{
 		_dialogBox.Visible = false;
 		_animationPlayer.Stop();
+		Global.isDialogActive = false;
+		try
+		{
+			
+		}
+		catch (Exception e)
+		{
+			Console.WriteLine(e);
+			throw;
+		}
 	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -33,6 +43,7 @@ public partial class DialogBox : Node
 	{
 		_dialogBox.Visible = true;
 		_animationPlayer.Play(nameOfTheAnimation);
+		Global.isDialogActive = true;
 	}
 
 	
@@ -42,13 +53,26 @@ public partial class DialogBox : Node
 		return _dialogBox.IsVisibleInTree();
 	}
 
-	public void setText(String name, String text)
+	public void setTextOfLabel(String name, String text)
 	{
 		_labelName.Text = name;
+		_labelText.Text = text;
 	}
 
 	public AnimationPlayer getAnimationPlayer()
 	{
 		return _animationPlayer;
 	}
+
+	public int closeDialogBox()
+	{
+		if (Input.IsActionPressed("closeDialog") && isVisible())
+		{
+			disable();
+			return 0;
+		}
+
+		return 1;
+	}
+	
 }

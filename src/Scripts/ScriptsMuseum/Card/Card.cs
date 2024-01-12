@@ -21,7 +21,7 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 		{
 			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
 			{
-				GetTree().ChangeSceneToFile("res://TilesMapMusee/PunshedCard.tscn");
+				GetTree().ChangeSceneToFile("res://Museum/PunshedCard.tscn");
 				
 			}
 		}
