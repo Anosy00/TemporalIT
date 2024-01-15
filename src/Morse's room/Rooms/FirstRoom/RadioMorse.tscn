@@ -47,8 +47,8 @@ script = ExtResource("1_1p22v")
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_cfvho")
-text = "Listen and
-take notes"
+text = "Ecoute et
+prend des notes"
 horizontal_alignment = 1
 
 [node name="ProgressMorseCodeSFX" type="ProgressBar" parent="CenterContainer/VBoxContainer"]
@@ -79,7 +79,7 @@ text = "  ↻  "
 [node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_cfvho")
-text = "BACK"
+text = "RETOUR"
 script = ExtResource("3_5i8xi")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ButtonPlayPauseRetry/Play" to="CenterContainer/VBoxContainer" method="_on_play_pressed"]
