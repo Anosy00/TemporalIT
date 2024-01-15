@@ -18,7 +18,7 @@ config/icon="res://icon_TemporalIT.png"
 
 [autoload]
 
-TransitionScene="*res://Transition/TransitionScene.tscn"
+MusicController="*res://Morse's room/Rooms/FirstRoom/Music.tscn"
 
 [display]
 

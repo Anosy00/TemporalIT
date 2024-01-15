@@ -4,22 +4,10 @@ using TemporalIT.Scripts.KeyboardInteraction;
 
 public partial class SceneController : Node
 {
-	
-	public override void _Ready()
+	private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/Maze/Maze.tscn";
+	public void _on_body_entered(CharacterBody2D player)
 	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-
-	public void makeInteraction(String key,KeyboardInteraction _keyboardInteration,String nextScenePth)
-	{
-		if (Input.IsActionPressed(key) && _keyboardInteration.isVisible())
-		{
-			GetTree().ChangeSceneToFile(nextScenePth);
-		}
+		GetTree().ChangeSceneToFile(_NEXT_SCENE_PATH);
 	}
 
 }

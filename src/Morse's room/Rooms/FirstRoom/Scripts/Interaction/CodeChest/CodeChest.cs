@@ -2,7 +2,6 @@ using Godot;
 using System;
 
 using TemporalIT.Scripts.KeyboardInteraction;
-using TemporalIT.Transition;
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
 {

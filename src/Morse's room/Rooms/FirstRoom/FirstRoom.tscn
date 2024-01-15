@@ -1,5 +1,6 @@
-[gd_scene load_steps=63 format=3 uid="uid://bm7ec18tqn4rt"]
+[gd_scene load_steps=64 format=3 uid="uid://bm7ec18tqn4rt"]
 
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/FirstRoomController.cs" id="1_88deq"]
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_ypfpe"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_p4xd8"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="3_hgj6y"]
@@ -784,12 +785,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6ugnq"]
 size = Vector2(14, 4)
 
-[sub_resource type="Gradient" id="Gradient_h1fqx"]
+[sub_resource type="Gradient" id="Gradient_l0wa5"]
 interpolation_mode = 2
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wuyhw"]
-gradient = SubResource("Gradient_h1fqx")
+gradient = SubResource("Gradient_l0wa5")
 fill = 1
 fill_from = Vector2(0.49569, 0.5)
 fill_to = Vector2(0.306034, 0.228448)
@@ -905,7 +906,11 @@ height = 38.0
 
 [node name="MorseScene" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="FirstRoom" type="Node2D" parent="."]
+position = Vector2(-1, -1)
+script = ExtResource("1_88deq")
+
+[node name="TileMap" type="TileMap" parent="FirstRoom"]
 tile_set = SubResource("TileSet_hw6lk")
 format = 2
 layer_0/name = "Floor"
@@ -946,151 +951,155 @@ layer_5/y_sort_origin = 0
 layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array(65530, 655361, 6, 131066, 655361, 7, 196602, 655361, 8, 262138, 655361, 9, 327674, 655361, 10, 393210, 655361, 11, 65531, 720897, 6, 131067, 720897, 7, 196603, 720897, 8, 262139, 720897, 9, 327675, 720897, 10, 393211, 720897, 11, -655356, 917505, 12, -589820, 917505, 13, -655355, 983041, 12, -589819, 983041, 13, -458749, 196608, 8, 131076, 131073, 22, 131077, 196609, 22, 262148, 393216, 10, 327684, 393216, 11, 262149, 458752, 10, 327685, 458752, 11, 262146, 327680, 10, 327682, 327680, 11, 262147, 393216, 10, 327683, 393216, 11)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(-48, 69)
-script = ExtResource("3_hgj6y")
+[node name="Player" type="CharacterBody2D" parent="FirstRoom"]
+position = Vector2(117.323, 0.804863)
+script = ExtResource("3_r14e8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/Player"]
 sprite_frames = SubResource("SpriteFrames_nt4nf")
 animation = &"moveDown"
 speed_scale = 1.5
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="FirstRoom/Player"]
 zoom = Vector2(4, 4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/Player"]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_6ugnq")
 
-[node name="PointLight2D" type="PointLight2D" parent="Player"]
+[node name="PointLight2D" type="PointLight2D" parent="FirstRoom/Player"]
 texture = SubResource("GradientTexture2D_wuyhw")
 texture_scale = 4.0
 
-[node name="CollisionShapes" type="RigidBody2D" parent="."]
+[node name="CollisionShapes" type="RigidBody2D" parent="FirstRoom"]
 visible = false
 
-[node name="CollisionWalls1" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls1" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(-0.5, 32.5)
 shape = SubResource("RectangleShape2D_asbx4")
 
-[node name="CollisionWalls2" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls2" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(-49, -91)
 shape = SubResource("RectangleShape2D_hofts")
 
-[node name="CollisionWalls3" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls3" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(-1, 102.5)
 shape = SubResource("RectangleShape2D_2x45o")
 
-[node name="CollisionWalls4" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls4" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(-107, -58.5)
 shape = SubResource("RectangleShape2D_xvs2h")
 
-[node name="CollisionWalls5" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls5" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(135.5, -68)
 shape = SubResource("RectangleShape2D_gveyk")
 
-[node name="CollisionWalls6" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="CollisionWalls6" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(136, 68)
 shape = SubResource("RectangleShape2D_gveyk")
 
-[node name="DecorationCollision1" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="DecorationCollision1" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(-80.5, 32.5)
 shape = SubResource("RectangleShape2D_hqxaq")
 
-[node name="DecorationCollision2" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="DecorationCollision2" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(16, -100.5)
 shape = SubResource("RectangleShape2D_pskiv")
 
-[node name="DecorationCollision3" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="DecorationCollision3" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(47.5, -94.5)
 shape = SubResource("RectangleShape2D_8udqp")
 
-[node name="BedCollision" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="BedCollision" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(79, -70)
 shape = SubResource("RectangleShape2D_avcss")
 
-[node name="TableCollision" type="CollisionShape2D" parent="CollisionShapes"]
+[node name="TableCollision" type="CollisionShape2D" parent="FirstRoom/CollisionShapes"]
 position = Vector2(62, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="FirstRoom"]
 color = Color(0, 0, 0, 1)
 
-[node name="AreaNextLevel" type="Area2D" parent="."]
+[node name="AreaNextLevel" type="Area2D" parent="FirstRoom"]
 position = Vector2(212.871, -1.1898)
 script = ExtResource("8_7jlfm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNextLevel"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/AreaNextLevel"]
 position = Vector2(-0.870911, 1.1898)
 shape = SubResource("CapsuleShape2D_vq3vi")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(181, -3)
+[node name="PointLight2D" type="PointLight2D" parent="FirstRoom/AreaNextLevel"]
+position = Vector2(-31.871, -1.8102)
 scale = Vector2(1.34375, 1.04688)
 texture = SubResource("GradientTexture2D_sqoig")
 
-[node name="AreaBook" type="Area2D" parent="."]
+[node name="AreaBook" type="Area2D" parent="FirstRoom"]
 position = Vector2(56.25, -101)
 script = ExtResource("8_nnod5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaBook"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/AreaBook"]
 position = Vector2(-0.58997, -0.46611)
 shape = SubResource("CircleShape2D_j8mde")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaBook"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/AreaBook"]
 position = Vector2(-1.25, -19)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[node name="AreaPaper" type="Area2D" parent="."]
+[node name="AreaPaper" type="Area2D" parent="FirstRoom"]
 position = Vector2(91.1393, 65.5947)
 script = ExtResource("10_tnv0c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPaper"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/AreaPaper"]
 position = Vector2(-5.13933, -9.59467)
 shape = SubResource("CircleShape2D_jykik")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaPaper"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/AreaPaper"]
 position = Vector2(3.68785, -16.5312)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[node name="AreaChest" type="Area2D" parent="."]
+[node name="AreaChest" type="Area2D" parent="FirstRoom"]
 position = Vector2(-68.8704, -9.73071)
 script = ExtResource("12_85a2x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaChest"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/AreaChest"]
 position = Vector2(-0.129581, -0.269291)
 shape = SubResource("CapsuleShape2D_j3f4j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaChest"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/AreaChest"]
 position = Vector2(-23.8638, -3.34095)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[node name="AreaRadio" type="Area2D" parent="."]
+[node name="AreaRadio" type="Area2D" parent="FirstRoom"]
 position = Vector2(46, 76)
 script = ExtResource("13_bt0ll")
 
-[node name="Radio-morse" type="Sprite2D" parent="AreaRadio"]
+[node name="Radio-morse" type="Sprite2D" parent="FirstRoom/AreaRadio"]
 position = Vector2(4, -1.00001)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("14_3xi8c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRadio"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FirstRoom/AreaRadio"]
 position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_ivcdt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AreaRadio"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirstRoom/AreaRadio"]
 position = Vector2(1, 18)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[connection signal="body_entered" from="AreaBook" to="AreaBook" method="_on_body_entered"]
-[connection signal="body_exited" from="AreaBook" to="AreaBook" method="_on_body_exited"]
-[connection signal="body_entered" from="AreaPaper" to="AreaPaper" method="_on_body_entered"]
-[connection signal="body_exited" from="AreaPaper" to="AreaPaper" method="_on_body_exited"]
-[connection signal="body_entered" from="AreaChest" to="AreaChest" method="_on_body_entered"]
-[connection signal="body_exited" from="AreaChest" to="AreaChest" method="_on_body_exited"]
-[connection signal="body_entered" from="AreaRadio" to="AreaRadio" method="_on_body_entered"]
-[connection signal="body_exited" from="AreaRadio" to="AreaRadio" method="_on_body_exited"]
+[node name="Node2D" type="Node2D" parent="FirstRoom"]
+
+[connection signal="tree_exited" from="FirstRoom" to="FirstRoom" method="_on_tree_exited"]
+[connection signal="body_entered" from="FirstRoom/AreaNextLevel" to="FirstRoom/AreaNextLevel" method="_on_body_entered"]
+[connection signal="body_entered" from="FirstRoom/AreaBook" to="FirstRoom/AreaBook" method="_on_body_entered"]
+[connection signal="body_exited" from="FirstRoom/AreaBook" to="FirstRoom/AreaBook" method="_on_body_exited"]
+[connection signal="body_entered" from="FirstRoom/AreaPaper" to="FirstRoom/AreaPaper" method="_on_body_entered"]
+[connection signal="body_exited" from="FirstRoom/AreaPaper" to="FirstRoom/AreaPaper" method="_on_body_exited"]
+[connection signal="body_entered" from="FirstRoom/AreaChest" to="FirstRoom/AreaChest" method="_on_body_entered"]
+[connection signal="body_exited" from="FirstRoom/AreaChest" to="FirstRoom/AreaChest" method="_on_body_exited"]
+[connection signal="body_entered" from="FirstRoom/AreaRadio" to="FirstRoom/AreaRadio" method="_on_body_entered"]
+[connection signal="body_exited" from="FirstRoom/AreaRadio" to="FirstRoom/AreaRadio" method="_on_body_exited"]

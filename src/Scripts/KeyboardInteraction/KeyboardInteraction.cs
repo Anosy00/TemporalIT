@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using TemporalIT.Transition;
 
 namespace TemporalIT.Scripts.KeyboardInteraction
 {

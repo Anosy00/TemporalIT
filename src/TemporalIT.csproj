@@ -16,4 +16,10 @@
   <ItemGroup>
     <Folder Include="Morse's room\Rooms\FirstRoom\Scripts\Interaction\Radio\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Morse's room\Rooms\Maze\Arrow\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Morse's room\Rooms\Maze\Arrow\**" />
+  </ItemGroup>
 </Project>

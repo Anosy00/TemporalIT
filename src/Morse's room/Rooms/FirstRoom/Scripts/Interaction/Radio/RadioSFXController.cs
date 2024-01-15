@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts;
 
 public partial class RadioSFXController : VBoxContainer
 {
@@ -18,6 +19,7 @@ public partial class RadioSFXController : VBoxContainer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Music.stopMusic();
 		_morseCodeSound = GetNode<AudioStreamPlayer>(_MORSE_CODE_SOUND_PATH);
 		_progressBar = GetNode<ProgressBar>(_PROGRESS_BAR_PATH);
 	}
@@ -27,9 +29,9 @@ public partial class RadioSFXController : VBoxContainer
 		if (_morseCodeSound.Playing == true)
 		{
 			_timePosition = _morseCodeSound.GetPlaybackPosition();
-			_progressBar.Value = (_timePosition / 16) * 100;
+			_progressBar.Value = (_timePosition / 19) * 100;
 		}
-		_progressBar.Value = (_timePosition/16)*100;
+		_progressBar.Value = (_timePosition/19)*100;
 	}
 
 	public void _on_play_pressed()
@@ -45,6 +47,7 @@ public partial class RadioSFXController : VBoxContainer
 	
 	public void _on_retry_pressed()
 	{
-		_morseCodeSound.Playing = true;
+		_morseCodeSound.Playing = false;
+		_timePosition = 0;
 	}
 }
