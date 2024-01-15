@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://3sruyfr7thmm"]
+[gd_scene load_steps=68 format=3 uid="uid://3sruyfr7thmm"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_4lwpa"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/MazeControllerScene.cs" id="1_i0bwn"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://08f5uxme0eu0" path="res://ressources/arrows-direction-sheets/Arrow_Direction_Up-Sheet.png" id="10_mmnn1"]
 [ext_resource type="Texture2D" uid="uid://c787ylyyc6yd7" path="res://ressources/arrows-direction-sheets/Arrow_Direction_Down-Sheet.png" id="11_1kb1k"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/Monster/Monster.cs" id="13_8rur6"]
+[ext_resource type="Texture2D" uid="uid://ckrxifr1e8xcv" path="res://ressources/images/computer-mouse.png" id="16_tdsbg"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="17_1ph22"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mqxq"]
 texture = ExtResource("1_4lwpa")
@@ -813,6 +815,29 @@ texture_scale = 4.0
 
 [node name="TimerMonster" type="Timer" parent="Monster"]
 wait_time = 2.0
+
+[node name="ComputerMouse" type="Sprite2D" parent="."]
+position = Vector2(71, 45)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_tdsbg")
+
+[node name="PointLight2D" type="PointLight2D" parent="ComputerMouse"]
+position = Vector2(9.99976, 80)
+scale = Vector2(8.53516, 4.53125)
+color = Color(0.952941, 0.952941, 0.952941, 1)
+texture = SubResource("GradientTexture2D_h8okd")
+texture_scale = 4.0
+
+[node name="Label" type="Label" parent="ComputerMouse"]
+offset_left = -350.0
+offset_top = 70.0
+offset_right = 350.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("17_1ph22")
+theme_override_font_sizes/font_size = 50
+text = "Use your mouse"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="timeout" from="Arrow/TimerDeplacement" to="Arrow" method="_on_timer_deplacement_timeout"]

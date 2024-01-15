@@ -21,6 +21,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 
 		private Timer _timer;
 
+		private Sprite2D _computerMouse;
+
 		private int direction;
 
 		private MazeResolv.MazeResolv _mazeResolv;
@@ -35,6 +37,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private const String _PATH_DOWN_ANIMATION = "AnimatedSpriteArrowDown";
 		private const String _PATH_RIGHT_ANIMATION = "AnimatedSpriteArrowRight";
 		private const String _PATH_LEFT_ANIMATION = "AnimatedSpriteArrowLeft";
+
+		private const String _PATH_COMPUTER_MOUSE = "../ComputerMouse";
 		
 		private const String _PATH_TIMER = "TimerDeplacement";
 		
@@ -56,6 +60,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_arrowLeftImage = GetNode<AnimatedSprite2D>(_PATH_LEFT_ANIMATION);
 			_arrowRightImage = GetNode<AnimatedSprite2D>(_PATH_RIGHT_ANIMATION);
 			_arrowUpImage = GetNode<AnimatedSprite2D>(_PATH_UP_ANIMATION);
+			
+			_computerMouse = GetNode<Sprite2D>(_PATH_COMPUTER_MOUSE);
 
 			_timer = GetNode<Timer>(_PATH_TIMER);
 
@@ -64,6 +70,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 
 		public void disableAllArrows(bool boolean)
 		{
+			_computerMouse.Visible = !boolean;
+			
 			_arrowDownButton.Disabled = boolean;
 			_arrowDownImage.Visible = !boolean;
 
