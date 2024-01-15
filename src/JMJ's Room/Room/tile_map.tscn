@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="4_pyvd6"]
 [ext_resource type="Texture2D" uid="uid://c3wech4vfwa3r" path="res://ressources/principal-character-sheets/Principal_Face_Spirte-Sheet.png" id="5_x8otr"]
 [ext_resource type="Script" path="res://Scripts/Interaction/Ladder/LadderScript.cs" id="6_iittg"]
-[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="6_n2xgf"]
+[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="6_n2xgf"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank.cs" id="9_iqolm"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
