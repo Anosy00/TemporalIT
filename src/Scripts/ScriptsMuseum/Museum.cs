@@ -19,6 +19,8 @@ public partial class Museum : TileMap
 	private DialogBox _dialogBox;
 	private Timer _timer;
 	private int nbTimer = -1;
+	private CollisionShape2D player;
+	private Vector2 playerPosition;
 
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
@@ -37,7 +39,8 @@ public partial class Museum : TileMap
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
-		
+		GD.Print("",get_PosX_player());
+		GD.Print("",get_PosY_player());
 		_timer.EmitSignal("timeout");
 	}
 	
@@ -70,6 +73,36 @@ public partial class Museum : TileMap
 			_timer.Start(6);
 		}
 		
+	}
+	
+	private Vector2 posPlayer()
+	{
+		player = GetNode<CollisionShape2D>("Player/CollisionShape2D");
+		if (player != null)
+		{
+			// Obtenez les coordonnées globales de l'élément
+			playerPosition = player.GlobalPosition;
+
+			// Affichez les coordonnées
+			GD.Print("Coordonnées du joueur : (", playerPosition[0]-323,", ", playerPosition[1]-323,")");
+			return playerPosition;
+		}
+		else
+		{
+			GD.Print("L'élément n'a pas été correctement référencé.");
+			return new Vector2(-1f ,-1f);
+			
+		}
+	}
+	public float get_PosX_player()
+	{
+		Vector2 coordinate = posPlayer();
+		return coordinate[0]-323;
+	}
+		
+	public float get_PosY_player()
+	{
+		return posPlayer()[1]-323;
 	}
 }
 
