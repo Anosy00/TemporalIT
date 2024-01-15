@@ -1,14 +1,14 @@
 using Godot;
 using System;
 
-public partial class LadderSaddler : Node
+public partial class LadderScript : Node
 {
 	private EButton _keyboardInteration;
 	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
 
-	private const String _nextScene = "res://JMJ's Room/Room/tile_map.tscn";
+	private const String _nextScene = "res://JMJ's Room/Room/Saddler.tscn";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -44,7 +44,11 @@ public partial class LadderSaddler : Node
 			_dialogBox.available("displayText");
 			
 		}
-		
-		_dialogBox.closeDialogBox();
+
+		if (_dialogBox.isVisible())
+		{
+			_dialogBox.closeDialogBox();
+		}
 	}
+	
 }

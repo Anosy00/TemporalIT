@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=44 format=3 uid="uid://c1iroer1genb1"]
 
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
@@ -1526,6 +1526,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
 
 [sub_resource type="Animation" id="Animation_gq3ot"]
 resource_name = "displayText"
@@ -1560,7 +1572,23 @@ _data = {
 "displayText": SubResource("Animation_gq3ot")
 }
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uasm4"]
+a = Vector2(71.75, 1)
+b = Vector2(-72.5, -0.25)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3w3o0"]
+a = Vector2(-64.5, 71.25)
+b = Vector2(-65.75, -56)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rue2f"]
+a = Vector2(-65, 72.75)
+b = Vector2(80.25, 70.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5ict7"]
+a = Vector2(79.25, -56)
+b = Vector2(80.75, 70.5)
+
+[node name="Saddler" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(554, 320)
@@ -1586,6 +1614,11 @@ position = Vector2(56.5, 56.5)
 position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
 
+[node name="Player" parent="TileMap" instance=ExtResource("3_80n8l")]
+position = Vector2(17, -23)
+scale = Vector2(1, 1)
+script = ExtResource("4_i0vk7")
+
 [node name="EButtonLadder" type="Area2D" parent="TileMap"]
 position = Vector2(55, 55.25)
 script = ExtResource("5_fi31q")
@@ -1598,11 +1631,6 @@ shape = SubResource("CapsuleShape2D_wy1np")
 position = Vector2(0, -19.5)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_2xg2s")
-
-[node name="Player" parent="TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(17, -23)
-scale = Vector2(1, 1)
-script = ExtResource("4_i0vk7")
 
 [node name="EButtonPaper" type="Area2D" parent="TileMap"]
 position = Vector2(-1.5, 12.25)
@@ -1619,6 +1647,7 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("7_h2qro")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonPaper"]
+visible = false
 position = Vector2(-6.5, 0.25)
 shape = SubResource("CapsuleShape2D_s6fuo")
 
@@ -1639,11 +1668,11 @@ position = Vector2(8.5, -9.25)
 scale = Vector2(0.075, 0.075)
 texture = ExtResource("11_q87uh")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="TileMap"]
+[node name="Table" type="RigidBody2D" parent="TileMap"]
 position = Vector2(14.75, 14)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Table"]
 position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
@@ -1672,6 +1701,7 @@ offset_left = -753.451
 offset_top = -84.0058
 offset_right = -479.451
 offset_bottom = -35.0058
+theme_override_fonts/font = ExtResource("14_h46hr")
 text = "[Player]"
 label_settings = SubResource("LabelSettings_c3aj7")
 vertical_alignment = 1
@@ -1682,7 +1712,24 @@ libraries = {
 "": SubResource("AnimationLibrary_fgbd8")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap"]
+[node name="Border" type="RigidBody2D" parent="TileMap"]
+position = Vector2(11.75, 6)
+
+[node name="BorderTop" type="CollisionShape2D" parent="TileMap/Border"]
+position = Vector2(-4, -62)
+shape = SubResource("SegmentShape2D_uasm4")
+
+[node name="BorderLeft" type="CollisionShape2D" parent="TileMap/Border"]
+position = Vector2(-10.5, -6)
+shape = SubResource("SegmentShape2D_3w3o0")
+
+[node name="BorderBottom" type="CollisionShape2D" parent="TileMap/Border"]
+position = Vector2(-9.75, -6.75)
+shape = SubResource("SegmentShape2D_rue2f")
+
+[node name="BorderRight" type="CollisionShape2D" parent="TileMap/Border"]
+position = Vector2(-11.25, -5.25)
+shape = SubResource("SegmentShape2D_5ict7")
 
 [connection signal="body_entered" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_body_exited"]

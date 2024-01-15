@@ -46,6 +46,7 @@ public partial class playerInSaddler : CharacterBody2D
 			{
 				animateSprite.Stop();
 			}
+			
 
 			MoveAndCollide(velocity);
 		}
