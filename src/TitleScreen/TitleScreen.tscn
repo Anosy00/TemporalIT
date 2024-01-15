@@ -9,7 +9,7 @@
 [sub_resource type="Theme" id="Theme_x17g7"]
 default_font_size = 0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvgr8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l4a7"]
 bg_color = Color(0.282353, 0.32549, 0.32549, 0.752941)
 border_width_left = 5
 border_width_top = 5
@@ -25,7 +25,7 @@ expand_margin_top = 1.0
 expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixe1f"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6bx6p"]
 bg_color = Color(0.509804, 0.509804, 0.509804, 1)
 border_width_left = 3
 border_width_top = 3
@@ -36,7 +36,7 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_keo60"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwfp8"]
 content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
@@ -55,7 +55,7 @@ corner_detail = 10
 shadow_color = Color(1, 1, 1, 0.6)
 anti_aliasing_size = 0.115
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmgrw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pygmo"]
 bg_color = Color(0.435294, 0.435294, 0.435294, 1)
 border_width_left = 3
 border_width_top = 3
@@ -68,10 +68,10 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_n7x07"]
 default_font_size = 30
-Button/styles/focus = SubResource("StyleBoxFlat_jvgr8")
-Button/styles/hover = SubResource("StyleBoxFlat_ixe1f")
-Button/styles/normal = SubResource("StyleBoxFlat_keo60")
-Button/styles/pressed = SubResource("StyleBoxFlat_gmgrw")
+Button/styles/focus = SubResource("StyleBoxFlat_2l4a7")
+Button/styles/hover = SubResource("StyleBoxFlat_6bx6p")
+Button/styles/normal = SubResource("StyleBoxFlat_qwfp8")
+Button/styles/pressed = SubResource("StyleBoxFlat_pygmo")
 
 [node name="Node" type="Node"]
 
