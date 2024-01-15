@@ -4,9 +4,10 @@
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\matia\.nuget\packages\microsoft.netcore.app.ref\6.0.20\ref\net6.0\System.Reflection.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=35507721_002D65d6_002D483d_002D903b_002D68940128cab3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;TestBook&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\matia\Documents\TemporalIT\src\Morse's room\Rooms\FirstRoom\Scripts\Book\TestBook" Presentation="&amp;lt;TestBook&amp;gt;" /&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3fb593a0_002D305c_002D4794_002D992f_002D0e75c81e006b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;TemporalITTest&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\matia\Documents\TemporalIT\src\TemporalITTest" Presentation="&amp;lt;TemporalITTest&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
 	
 	
 	
