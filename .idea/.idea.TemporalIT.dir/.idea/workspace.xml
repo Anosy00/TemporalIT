@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1700b7c3-fb94-4147-9f8a-00de0794581b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Museum/MuseumMap.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Museum/PunshedCard.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/GlobalMuseum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Museum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Scripts/ScriptsMuseum/player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TemporalIT.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TemporalIT.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JMJ's Room/Room/Saddler.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/src/JMJ's Room/Room/Saddler.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/DialogBox/DialogBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scripts/DialogBox/DialogBox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scripts/Player/ScriptMuseum/player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TilesMapMusee/PunshedCard.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TilesMapMusee/mapMusee.tscn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/src/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ressources/media/Sans_titre.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/ressources/media/Sans_titre.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +21,7 @@
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Card/Card.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/GlobalMuseum.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Museum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/Museum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Scripts/ScriptsMuseum/TheDialogBox.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -50,29 +38,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;introduction'sRoom&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Rémi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Rémi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Rémi\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Rémi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Rémi\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\Rémi\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,6 +73,7 @@
       <workItem from="1704792383459" duration="2031000" />
       <workItem from="1704881196706" duration="1819000" />
       <workItem from="1705069873247" duration="952000" />
+      <workItem from="1705306281441" duration="571000" />
     </task>
     <servers />
   </component>

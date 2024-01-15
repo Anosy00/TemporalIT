@@ -1,2 +1,5 @@
-
-src/firstRoomSavePostionPlayer.txt
+# Godot 4+ specific ignores
+/src/.godot/
+/src/.idea/
+/.idea/
+/Solution1/
