@@ -18,7 +18,7 @@ public partial class Museum : TileMap
 {
 	private DialogBox _dialogBox;
 	private Timer _timer;
-	private int nbTimer = 0;
+	private int nbTimer = -1;
 
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
@@ -38,36 +38,23 @@ public partial class Museum : TileMap
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
 		
-		/*GD.Print(""+_dialog1[0]._name);
-		GD.Print(""+_dialog1[0]._text);
-		GD.Print(""+_dialogBox, _timer);*/
 		
-		GlobalMuseum.displayDialogBox(_dialog1[0]._name, _dialog1[0]._text, _dialogBox, _timer);
-		_timer.Start(6);
+		
+		/*_timer.Start(6);
+		_timer.Stop();*/
+		_timer.EmitSignal("timeout");
 	}
 
 	private void _on_timer_timeout()
 	{
-		nbTimer++;
-		switch (nbTimer)
-		{
-			case 1:
-				GlobalMuseum.displayDialogBox(_dialog1[1]._name, _dialog1[1]._text, _dialogBox, _timer);
-				_timer.Start(6);
-				break;
-			case 2:
-				GlobalMuseum.displayDialogBox(_dialog1[2]._name, _dialog1[2]._text, _dialogBox, _timer);
-				_timer.Start(6);
-				break;
-			case 3:
-				GlobalMuseum.displayDialogBox(_dialog1[3]._name, _dialog1[3]._text, _dialogBox, _timer);
-				_timer.Start(6);
-				break;
-			case 4:
-				_timer.Stop();
-				_dialogBox.disable();
-				break;
-	}
+		nbTimer ++;
+		if (nbTimer == _dialog1.Count ) {
+			_timer.Stop();
+			_dialogBox.disable();
+		} else {
+			GlobalMuseum.displayDialogBox(_dialog1[nbTimer]._name, _dialog1[nbTimer]._text, _dialogBox, _timer);
+			_timer.Start(6);
+		}
 		
 	}
 }
