@@ -25,42 +25,30 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv
 		public void moveRight()
 		{
 			nextCase = _maze[_indexPlayerX][_indexPlayerY + 1];
-			if (verficationCase(MazeConstants.MONSTER_CASE))
-			{
-				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
-				_indexPlayerY++;
-			}
+			changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+			_indexPlayerY++;
 			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
 		}
 
 		public void moveLeft()
 		{
 			nextCase = _maze[_indexPlayerX][_indexPlayerY - 1];
-			if (verficationCase(MazeConstants.MONSTER_CASE))
-			{
-				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
-				_indexPlayerY--;
-			}
+			changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+			_indexPlayerY--;
 			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
 		}
 		public void moveUp()
 		{
 			nextCase = _maze[_indexPlayerX + 1][_indexPlayerY];
-			if (verficationCase(MazeConstants.MONSTER_CASE))
-			{
-				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
-				_indexPlayerX++;
-			}
+			changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+			_indexPlayerX++;
 			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
 		}
 		public void moveDown()
 		{
 			nextCase = _maze[_indexPlayerX - 1][_indexPlayerY];
-			if (verficationCase(MazeConstants.MONSTER_CASE))
-			{
-				changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
-				_indexPlayerX--;
-			}
+			changeValue(_maze[_indexPlayerX][_indexPlayerY], nextCase);
+			_indexPlayerX--;
 			GD.Print("x = "+_indexPlayerX+" - y = "+_indexPlayerY + " value = "+_maze[_indexPlayerX][_indexPlayerY]);
 		}
 

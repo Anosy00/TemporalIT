@@ -143,6 +143,10 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 						break;
 				}
 			}
+			else if (!_mazeResolv.verficationCase(MazeConstants.EXIT_CASE))
+			{
+				GetTree().ChangeSceneToFile(_PATH_LAST_SCENE);
+			}
 			else
 			{
 				disableAllArrows(false);
