@@ -10,6 +10,8 @@ public partial class JMJ : Area2D
 	private DialogBox _dialogBox;
 	private Timer _timer;
 	private int nbTimer = 0;
+	private Sprite2D _objectif;
+	private Label _labelObjectif;
 
 	private const String _nextScene = "res://JMJ's Room/Room/Saddler.tscn";
 	// Called when the node enters the scene tree for the first time.
@@ -24,6 +26,8 @@ public partial class JMJ : Area2D
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
 		_dialogBox.setCanCloseDialogBox(false);
+		_objectif = GetNode<Sprite2D>("../TileMap/Objectif");
+		_labelObjectif = GetNode<Label>("../TileMap/Objectif/Label");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -61,24 +65,31 @@ public partial class JMJ : Area2D
 	
 	private void _on_timer_timeout()
 	{
+		_dialogBox.disable();
 		GlobalJMJ.canInteractWithPlanks = true;
-		if (nbTimer == DialogJMJ._dialog1.Count ) {
+		if (nbTimer == DialogJMJ._dialog1.Count || nbTimer == 4 && GlobalJMJ.nbPlanks < 2 || nbTimer == 6 && !GlobalJMJ.hasString) {
 			_timer.Stop();
 			_dialogBox.disable();
+			if (nbTimer == 6)
+			{
+				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
+			}
+			_objectif.Visible = true;
 		} else {
 			
-			if (nbTimer == 5 && GlobalJMJ.nbPlanks < 2)
-			{
-				nbTimer--;
-			}
-			else if (nbTimer != 4)
+			if (nbTimer != 4)
 			{
 				_timer.Start(3);
 				
 			}
+			if (nbTimer == 6)
+			{
+				_dialogBox.setCanCloseDialogBox(true);
+			}
 			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._name, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
+			nbTimer ++;
 		}
-		nbTimer ++;
+		
 
 	}
 

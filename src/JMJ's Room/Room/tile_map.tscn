@@ -1662,6 +1662,42 @@ position = Vector2(57.3333, -92)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_xf0om")
 
+[node name="Objectif" type="Sprite2D" parent="TileMap"]
+visible = false
+position = Vector2(-154.333, -104.667)
+scale = Vector2(0.05, 0.2)
+texture = ExtResource("12_8t5ke")
+
+[node name="LabelObjectif" type="Label" parent="TileMap/Objectif"]
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.248
+anchor_right = 0.194
+anchor_bottom = 0.248
+offset_left = -1065.43
+offset_top = -137.616
+offset_right = 494.572
+offset_bottom = -65.616
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ubub2")
+theme_override_font_sizes/font_size = 50
+text = "Objectif"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="LabelText" type="Label" parent="TileMap/Objectif"]
+offset_left = -753.0
+offset_top = -25.0
+offset_right = 740.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ubub2")
+theme_override_font_sizes/font_size = 50
+text = "Récupérer les planches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="JMJ" type="Area2D" parent="."]
 position = Vector2(-6, 0)
 script = ExtResource("14_fy0ia")
