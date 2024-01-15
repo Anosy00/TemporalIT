@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace TemporalIT.Scripts.Card
+namespace TemporalIT.Scripts.ScriptsMuseum.Card
 {
 	public partial class Card : Node
 	{
@@ -21,7 +21,7 @@ namespace TemporalIT.Scripts.Card
 		{
 			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
 			{
-				GetTree().ChangeSceneToFile("res://TilesMapMusee/PunshedCard.tscn");
+				GetTree().ChangeSceneToFile("res://Museum/PunshedCard.tscn");
 				
 			}
 		}
