@@ -17,7 +17,7 @@ public struct Sentence
 public partial class Museum : TileMap
 {
 	private DialogBox _dialogBox;
-	private Timer _timer;
+	private Godot.Timer _timer;
 	private int nbTimer = 0;
 
 	private List<Sentence>_dialog1 = new List<Sentence>
@@ -36,7 +36,7 @@ public partial class Museum : TileMap
 			GetNode<Label>("Player/DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
-		_timer = GetNode<Timer>("Timer");
+		_timer = GetNode<Godot.Timer>("Timer");
 		
 		/*GD.Print(""+_dialog1[0]._name);
 		GD.Print(""+_dialog1[0]._text);

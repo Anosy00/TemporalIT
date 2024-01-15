@@ -8,7 +8,7 @@ public partial class JMJ : Area2D
 	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
-	private Timer _timer;
+	private Godot.Timer _timer;
 	private int nbTimer = 0;
 
 	private const String _nextScene = "res://JMJ's Room/Room/Saddler.tscn";
@@ -22,7 +22,7 @@ public partial class JMJ : Area2D
 			GetNode<Label>("../TileMap/DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../TileMap/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
-		_timer = GetNode<Timer>("Timer");
+		_timer = GetNode<Godot.Timer>("Timer");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)

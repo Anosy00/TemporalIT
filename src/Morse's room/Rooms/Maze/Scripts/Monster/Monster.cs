@@ -10,7 +10,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		private static AnimatedSprite2D _monsterDown;
 		private static AnimatedSprite2D _monsterRight;
 		private static AnimatedSprite2D _monsterLeft;
-		private static Timer _timer;
+		private static Godot.Timer _timer;
 		private static AudioStreamPlayer _screamMonster;
 		
 		//Consts
@@ -34,7 +34,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 			_monsterDown = GetNode<AnimatedSprite2D>(_PATH_MONSTER_DOWN_ANIMATION);
 			_monsterRight = GetNode<AnimatedSprite2D>(_PATH_MONSTER_RIGHT_ANIMATION);
 			_monsterLeft = GetNode<AnimatedSprite2D>(_PATH_MONSTER_LEFT_ANIMATION);
-			_timer = GetNode<Timer>(_PATH_TIMER);
+			_timer = GetNode<Godot.Timer>(_PATH_TIMER);
 			_screamMonster = GetNode<AudioStreamPlayer>(_PATH_SCREAM_MONSTER);
 
 			_monsterUp.Visible = false;

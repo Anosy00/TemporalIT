@@ -18,7 +18,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private AnimatedSprite2D _arrowUpImage;
 		private AnimatedSprite2D _arrowDownImage;
 
-		private Timer _timer;
+		private Godot.Timer _timer;
 
 		private Sprite2D _computerMouse;
 
@@ -62,7 +62,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			
 			_computerMouse = GetNode<Sprite2D>(_PATH_COMPUTER_MOUSE);
 
-			_timer = GetNode<Timer>(_PATH_TIMER);
+			_timer = GetNode<Godot.Timer>(_PATH_TIMER);
 
 			_mazeResolv = new MazeResolv.MazeResolv();
 		}

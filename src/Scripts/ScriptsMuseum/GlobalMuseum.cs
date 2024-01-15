@@ -6,7 +6,7 @@ public static class GlobalMuseum
 {
 	public static int nbOfInteractionWithNarrator = 0;
 	
-	public static void displayDialogBox(string name, string text, DialogBox dialogBox, Timer timer)
+	public static void displayDialogBox(string name, string text, DialogBox dialogBox, Godot.Timer timer)
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
