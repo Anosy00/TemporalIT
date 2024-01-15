@@ -44,7 +44,7 @@ public partial class LadderSaddler : Node
 			_dialogBox.available("displayText");
 			
 		}
-		
+		_dialogBox.setCanCloseDialogBox(true);
 		_dialogBox.closeDialogBox();
 	}
 }

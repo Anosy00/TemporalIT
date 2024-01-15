@@ -51,7 +51,7 @@ public partial class EButton : Node
 
 	public int makeTalking()
 	{
-		if (Input.IsActionPressed("button_e") && isVisible())
+		if (Input.IsActionJustPressed("button_e") && isVisible())
 		{
 			return 0;
 		}
