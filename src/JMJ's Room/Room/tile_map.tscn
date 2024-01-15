@@ -14,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
-[ext_resource type="Script" path="res://JMJ.cs" id="12_lpl3b"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="13_k26hm"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/JMJ.cs" id="14_fy0ia"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_ubub2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
@@ -1664,7 +1664,7 @@ sprite_frames = SubResource("SpriteFrames_xf0om")
 
 [node name="JMJ" type="Area2D" parent="."]
 position = Vector2(-6, 0)
-script = ExtResource("12_lpl3b")
+script = ExtResource("14_fy0ia")
 
 [node name="Sprite2D" type="Sprite2D" parent="JMJ"]
 position = Vector2(265, 301)
