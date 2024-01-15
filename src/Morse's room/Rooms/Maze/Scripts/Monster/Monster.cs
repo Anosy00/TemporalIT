@@ -11,6 +11,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		private static AnimatedSprite2D _monsterRight;
 		private static AnimatedSprite2D _monsterLeft;
 		private static Timer _timer;
+		private static AudioStreamPlayer _screamMonster;
 		
 		//Consts
 		private const String _PATH_MONSTER_UP_ANIMATION = "MonsterUp";
@@ -20,6 +21,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		private const String _NAME_OF_THE_ANIMATION = "default";
 		
 		private const String _PATH_TIMER = "TimerMonster";
+
+		private const String _PATH_SCREAM_MONSTER = "MonsterScream";
 		
 		private const String _PATH_BACK_SCENE = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
 		
@@ -32,16 +35,18 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 			_monsterRight = GetNode<AnimatedSprite2D>(_PATH_MONSTER_RIGHT_ANIMATION);
 			_monsterLeft = GetNode<AnimatedSprite2D>(_PATH_MONSTER_LEFT_ANIMATION);
 			_timer = GetNode<Timer>(_PATH_TIMER);
+			_screamMonster = GetNode<AudioStreamPlayer>(_PATH_SCREAM_MONSTER);
 
 			_monsterUp.Visible = false;
 			_monsterDown.Visible = false;
 			_monsterLeft.Visible = false;
 			_monsterRight.Visible = false;
 		}
-
+		
 		public static void activeMonsterUpAnimation()
 		{
 			_monsterUp.Visible = true;
+			_screamMonster.Play();
 			_monsterUp.Play(_NAME_OF_THE_ANIMATION);
 			Player.Player.scaredAnimation();
 			_timer.Start();
@@ -49,6 +54,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		public static void activeMonsterDownAnimation()
 		{
 			_monsterDown.Visible = true;
+			_screamMonster.Play();
 			_monsterDown.Play(_NAME_OF_THE_ANIMATION);
 			Player.Player.scaredAnimation();
 			_timer.Start();
@@ -56,6 +62,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		public static void activeMonsterRightAnimation()
 		{
 			_monsterRight.Visible = true;
+			_screamMonster.Play();
 			_monsterRight.Play(_NAME_OF_THE_ANIMATION);
 			Player.Player.scaredAnimation();
 			_timer.Start();
@@ -63,6 +70,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		public static void activeMonsterLeftAnimation()
 		{
 			_monsterLeft.Visible = true;
+			_screamMonster.Play();
 			_monsterLeft.Play(_NAME_OF_THE_ANIMATION);
 			Player.Player.scaredAnimation();
 			_timer.Start();
