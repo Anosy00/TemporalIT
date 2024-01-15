@@ -38,13 +38,27 @@ public partial class Museum : TileMap
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
 		
-		
-		
-		/*_timer.Start(6);
-		_timer.Stop();*/
 		_timer.EmitSignal("timeout");
 	}
-
+	
+	public override void _Process(double delta)
+	{
+		if (Input.IsActionPressed("closeDialog") && _dialogBox.isVisible())
+		{
+			_timer.Stop();
+			Input.ActionRelease("closeDialog");
+			_timer.EmitSignal("timeout");
+		}
+	}
+	
+	
+	
+	
+	public static void displayDialogBox(string name, string text, DialogBox dialogBox)
+	{
+		dialogBox.setTextOfLabel(name, text);
+		dialogBox.available("display_text");
+	}
 	private void _on_timer_timeout()
 	{
 		nbTimer ++;
@@ -52,7 +66,7 @@ public partial class Museum : TileMap
 			_timer.Stop();
 			_dialogBox.disable();
 		} else {
-			GlobalMuseum.displayDialogBox(_dialog1[nbTimer]._name, _dialog1[nbTimer]._text, _dialogBox, _timer);
+			displayDialogBox(_dialog1[nbTimer]._name, _dialog1[nbTimer]._text, _dialogBox);
 			_timer.Start(6);
 		}
 		
