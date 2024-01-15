@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using NUnit.Framework.Constraints;
 using TemporalIT.Morse_s_room.Rooms.Maze.Scripts.MazeResolv;
 
 
@@ -67,7 +66,6 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 
 			_mazeResolv = new MazeResolv.MazeResolv();
 		}
-
 		public void disableAllArrows(bool boolean)
 		{
 			_computerMouse.Visible = !boolean;
@@ -84,48 +82,51 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_arrowUpButton.Disabled = boolean;
 			_arrowUpImage.Visible = !boolean;
 		}
-
 		private void _setDirection(int value)
 		{
 			direction = value;
 		}
-		
 		private int _getDirection()
 		{
 			return direction;
 		}
-
+		private void _startAnimation()
+		{
+			_mazeResolv.move();
+			_timer.Start();
+		}
 		public void _on_arrow_left_button_pressed()
 		{
 			disableAllArrows(true);
-			_mazeResolv.moveLeft();
-			Player.Player.moveLeftAnimation();
 			_setDirection(_DIRECTION_LEFT);
-			_timer.Start();
+			_mazeResolv.setStrategy(new MazeMovementLeft());
+			Player.Player.moveLeftAnimation();
+			_startAnimation();
 		}
+
 		public void _on_arrow_right_button_pressed()
 		{
 			disableAllArrows(true);
-			_mazeResolv.moveRight();
-			Player.Player.moveRightAnimation();
 			_setDirection(_DIRECTION_RIGHT);
-			_timer.Start();
+			_mazeResolv.setStrategy(new MazeMovementRight());
+			Player.Player.moveRightAnimation();
+			_startAnimation();
 		}
 		public void _on_arrow_up_button_pressed()
 		{
 			disableAllArrows(true);
-			_mazeResolv.moveUp();
-			Player.Player.moveUpAnimation();
 			_setDirection(_DIRECTION_UP);
-			_timer.Start();
+			_mazeResolv.setStrategy(new MazeMovementUp());
+			Player.Player.moveUpAnimation();
+			_startAnimation();
 		}
 		public void _on_arrow_down_button_pressed()
 		{
 			disableAllArrows(true);
-			_mazeResolv.moveDown();
-			Player.Player.moveDownAnimation();
 			_setDirection(_DIRECTION_DOWN);
-			_timer.Start();
+			_mazeResolv.setStrategy(new MazeMovementDown());
+			Player.Player.moveDownAnimation();
+			_startAnimation();
 		}
 
 		public void _on_timer_deplacement_timeout()
