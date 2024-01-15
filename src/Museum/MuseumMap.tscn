@@ -4409,14 +4409,14 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/InteractiveZoneOfThePunshedCard/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -5.52023
-anchor_top = 0.5
-anchor_right = -5.50595
-anchor_bottom = 0.792087
-offset_left = 3870.58
-offset_top = -190.0
-offset_right = 4619.58
-offset_bottom = -59.0808
+anchor_left = 0.006
+anchor_top = 0.01
+anchor_right = 0.994
+anchor_bottom = 1.0
+offset_left = -384.62
+offset_top = -95.92
+offset_right = -385.38
+offset_bottom = -99.0
 text = "Inventé par Charles Babbages en 1728, la carte perforée est un morceau de papier qui est lu par un dispositif repérant la présence ou l'absence de trou. Elle permettra d'afficher votre progression dans le jeu."
 label_settings = SubResource("LabelSettings_40ce7")
 horizontal_alignment = 1
