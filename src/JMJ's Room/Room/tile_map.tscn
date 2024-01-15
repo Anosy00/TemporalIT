@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=75 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
@@ -8,7 +8,9 @@
 [ext_resource type="Script" path="res://Scripts/Interaction/Ladder/LadderScript.cs" id="6_iittg"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://JMJ's Room/Room/player.tscn" id="6_n2xgf"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank.cs" id="9_iqolm"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
+[ext_resource type="Texture2D" uid="uid://bucg1laq6vekg" path="res://ressources/tilesmap/woodplank.png" id="10_pgfv6"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
@@ -1189,20 +1191,15 @@ b = Vector2(-11, 208)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7sb"]
 size = Vector2(95, 43.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8h0"]
-size = Vector2(52, 68)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8aslk"]
 size = Vector2(139.5, 59)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rgwv"]
-size = Vector2(70, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t480g"]
 size = Vector2(57.5, 222.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_e3d6i"]
-radius = 54.0833
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10oa7"]
+radius = 47.0
+height = 94.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3xcs"]
 atlas = ExtResource("9_u6vnd")
@@ -1257,7 +1254,135 @@ animations = [{
 "texture": SubResource("AtlasTexture_4qv2q")
 }],
 "loop": true,
-"name": &"animation",
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rgwv"]
+size = Vector2(70, 67.0003)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0ny8"]
+radius = 57.0
+height = 114.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gq2ak"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppo6t"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hthdu"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fgb2"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jamb3"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6c85"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kekw0"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dquc4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gq2ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppo6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hthdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fgb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jamb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6c85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kekw0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5b8h0"]
+size = Vector2(60.0001, 73.0001)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_owgma"]
+radius = 50.0001
+height = 132.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8u4s"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwn2w"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2gvhr"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pgjf"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_061sb"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_saq13"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpw3b"]
+atlas = ExtResource("9_u6vnd")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xf0om"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8u4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwn2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2gvhr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7pgjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_061sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_saq13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpw3b")
+}],
+"loop": true,
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -1363,20 +1488,21 @@ layer_4/modulate = Color(1, 1, 1, 1)
 layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
-layer_4/tile_data = PackedInt32Array(-262148, 131074, 65536)
+layer_4/tile_data = PackedInt32Array()
 layer_5/name = "WoodPlank2"
 layer_5/enabled = true
 layer_5/modulate = Color(1, 1, 1, 1)
 layer_5/y_sort_enabled = false
 layer_5/y_sort_origin = 0
 layer_5/z_index = 0
-layer_5/tile_data = PackedInt32Array(-327677, 131074, 131072)
+layer_5/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="TileMap"]
 position = Vector2(3, -35.3333)
 zoom = Vector2(1.2, 1.2)
 
 [node name="DialogBox" type="Sprite2D" parent="TileMap"]
+visible = false
 position = Vector2(-8, 42)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
@@ -1442,17 +1568,9 @@ scale = Vector2(0.333333, 0.333333)
 position = Vector2(803.5, 212.25)
 shape = SubResource("RectangleShape2D_cd7sb")
 
-[node name="WoodPlank2" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
-position = Vector2(728, 220)
-shape = SubResource("RectangleShape2D_5b8h0")
-
 [node name="Etablished" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(298.25, 220.5)
 shape = SubResource("RectangleShape2D_8aslk")
-
-[node name="WoodPlank1" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
-position = Vector2(403, 212)
-shape = SubResource("RectangleShape2D_1rgwv")
 
 [node name="Closet" type="CollisionShape2D" parent="TileMap/RigidBody2D"]
 position = Vector2(258, 496.25)
@@ -1481,14 +1599,68 @@ position = Vector2(-0.000488281, -1090)
 texture = ExtResource("8_jhrpl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LadderArea"]
-position = Vector2(626, 188)
-shape = SubResource("CircleShape2D_e3d6i")
+position = Vector2(588.001, 179)
+shape = SubResource("CapsuleShape2D_10oa7")
 
 [node name="EButtonLadderSprite" type="AnimatedSprite2D" parent="TileMap/LadderArea"]
-position = Vector2(577, 148)
+position = Vector2(574.001, 130)
 scale = Vector2(1.2, 1.236)
 sprite_frames = SubResource("SpriteFrames_l6to6")
-animation = &"animation"
+
+[node name="Plank1" type="Area2D" parent="TileMap"]
+script = ExtResource("9_iqolm")
+
+[node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank1"]
+position = Vector2(-188, -142)
+scale = Vector2(0.333333, 0.333333)
+
+[node name="WoodPlankCollision" type="CollisionShape2D" parent="TileMap/Plank1/WoodPlank"]
+position = Vector2(403, 220.5)
+shape = SubResource("RectangleShape2D_1rgwv")
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap/Plank1/WoodPlank"]
+position = Vector2(396, 217)
+rotation = -4.26384
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_pgfv6")
+
+[node name="InteractionPlank1" type="CollisionShape2D" parent="TileMap/Plank1"]
+position = Vector2(-52, -68.6667)
+scale = Vector2(0.333333, 0.333333)
+shape = SubResource("CapsuleShape2D_v0ny8")
+
+[node name="EButtonSpritePlank" type="AnimatedSprite2D" parent="TileMap/Plank1"]
+position = Vector2(-64, -86.6667)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_dquc4")
+
+[node name="Plank2" type="Area2D" parent="TileMap"]
+position = Vector2(0.333328, -4.33333)
+script = ExtResource("9_iqolm")
+metadata/_edit_group_ = true
+
+[node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank2"]
+position = Vector2(-188, -142)
+scale = Vector2(0.333333, 0.333333)
+
+[node name="WoodPlankCollision" type="CollisionShape2D" parent="TileMap/Plank2/WoodPlank"]
+position = Vector2(730.001, 205.5)
+shape = SubResource("RectangleShape2D_5b8h0")
+
+[node name="Sprite2D" type="Sprite2D" parent="TileMap/Plank2/WoodPlank"]
+position = Vector2(738.001, 206)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("10_pgfv6")
+
+[node name="InteractionPlank2" type="CollisionShape2D" parent="TileMap/Plank2"]
+position = Vector2(56, -71)
+scale = Vector2(0.333333, 0.333333)
+shape = SubResource("CapsuleShape2D_owgma")
+
+[node name="EButtonSpritePlank" type="AnimatedSprite2D" parent="TileMap/Plank2"]
+position = Vector2(57.3333, -92)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_xf0om")
 
 [node name="JMJ" type="Area2D" parent="."]
 position = Vector2(-6, 0)
@@ -1515,15 +1687,19 @@ scale = Vector2(1.28125, 1.3125)
 sprite_frames = SubResource("SpriteFrames_o4oc4")
 
 [node name="Timer" type="Timer" parent="JMJ"]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 
 [node name="Player" parent="." instance=ExtResource("6_n2xgf")]
-position = Vector2(551, 419)
+position = Vector2(674, 249)
 script = ExtResource("11_uayp2")
 
 [connection signal="body_entered" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Plank1" to="TileMap/Plank1" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Plank1" to="TileMap/Plank1" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Plank2" to="TileMap/Plank2" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Plank2" to="TileMap/Plank2" method="_on_body_exited"]
 [connection signal="body_entered" from="JMJ" to="JMJ" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="JMJ" to="JMJ" method="_on_body_exited"]
 [connection signal="timeout" from="JMJ/Timer" to="JMJ" method="_on_timer_timeout"]

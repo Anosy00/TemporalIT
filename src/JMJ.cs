@@ -45,6 +45,7 @@ public partial class JMJ : Area2D
 				_dialogBox.setTextOfLabel("???", "Mais qui êtes vous ? Que faites vous ici ?");
 				_dialogBox.available("displayText");
 				_timer.Start();
+				GlobalJMJ.nbOfInteractionWithJMJ++;
 			}
 			
 		}
@@ -57,8 +58,16 @@ public partial class JMJ : Area2D
 		switch (nbTimer)
 		{
 			case 1:
-				GlobalJMJ.displayDialogBox(Global.playerName, "Je m'appelle " + Global.playerName + " il me semble que j'ai été envoyé dans le temps !", _dialogBox, _timer);
-				_timer.Start();
+				if (GlobalJMJ.nbPlanks < 2)
+				{
+					GlobalJMJ.displayDialogBox(Global.playerName, "Je m'appelle " + Global.playerName + " il me semble que j'ai été envoyé dans le temps !", _dialogBox, _timer);
+					_timer.Start();
+				}
+				else
+				{
+					nbTimer = 4;
+					_timer.EmitSignal("timeout");
+				}
 				break;
 			case 2:
 				GlobalJMJ.displayDialogBox("???", "Le voyage dans le temps ?! C'est impossible, mais bon passons j'ai un problème plus important. ", _dialogBox, _timer);
@@ -71,6 +80,9 @@ public partial class JMJ : Area2D
 			case 4:
 				GlobalJMJ.displayDialogBox("Jacquard", "Récupère moi les deux planches qui traînent dans mon atelier s'il te plaït", _dialogBox, _timer);
 				nbTimer = 0;
+				GlobalJMJ.canInteractWithPlanks = true;
+				break;
+			case 5:
 				break;
 		}
 		
