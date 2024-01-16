@@ -5,35 +5,35 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts
 {
 	public partial class Music : Node
 	{
-		private static AudioStreamPlayer _music;
+		public static AudioStreamPlayer backgroundMusic;
 		private static float _seconds;
 
 		private const String _PATH_MUSIC = "Music";
 
 		public override void _Ready()
 		{
-			_music = GetNode<AudioStreamPlayer>(_PATH_MUSIC);
-			_music.Autoplay = true;
+			backgroundMusic = GetNode<AudioStreamPlayer>(_PATH_MUSIC);
+			backgroundMusic.Autoplay = true;
 		}
 
 		public override void _Process(double delta)
 		{
-			_seconds = _music.GetPlaybackPosition();
+			_seconds = backgroundMusic.GetPlaybackPosition();
 		}
 
 		public static void playMusic()
 		{
-			_music.Play(_seconds);
+			backgroundMusic.Play(_seconds);
 		}
 		
 		public static void stopMusic()
 		{
-			_music.Stop();
+			backgroundMusic.Stop();
 		}
 
-		public void finished()
+		public void _on_music_finished()
 		{
-			_music.Play();
+			backgroundMusic.Play();
 		}
 	}
 }
