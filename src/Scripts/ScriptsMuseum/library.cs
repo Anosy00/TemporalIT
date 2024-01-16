@@ -10,11 +10,12 @@ public partial class library : Node
 	private CollisionShape2D player;
 	private Vector2 playerPosition;
 	private int zIndexPlayer;
+	Sprite2D librarySprite2D;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		librarySprite2D = GetNode<Sprite2D>("Libraries");
 		zIndexPlayer = getZIndexPlayer();
 		zIndexLibrary = getZIndexLibrary();
 		collisionShape = GetNode<CollisionShape2D>("CollisionShape2D");
@@ -86,7 +87,13 @@ public partial class library : Node
 	
 	private void plan_selection()
 	{
-		
+		if (get_PosY_player() > getY()){
+			setZIndexLibrary(-1);
+			
+		} else {
+			setZIndexLibrary(1);
+			
+		}
 	}
 	private int getZIndexPlayer()
 	{
@@ -97,16 +104,11 @@ public partial class library : Node
 	
 	private int getZIndexLibrary()
 	{
-		
-		Sprite2D librarySprite2D = GetNode<Sprite2D>("Libraries");
 		return librarySprite2D.ZIndex;
 	}
 	
 	private void setZIndexLibrary(int number)
 	{
-		
-		Sprite2D librarySprite2D = GetNode<Sprite2D>("Libraries");
-		librarySprite2D.ZIndex += number;
+		librarySprite2D.ZIndex = number;
 	}
-	//Museum.getCharacterBody2D
 }
