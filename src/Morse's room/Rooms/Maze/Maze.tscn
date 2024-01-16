@@ -819,7 +819,7 @@ texture = SubResource("GradientTexture2D_h8okd")
 texture_scale = 4.0
 
 [node name="TimerMonster" type="Timer" parent="Monster"]
-wait_time = 2.0
+wait_time = 1.5
 
 [node name="MonsterScream" type="AudioStreamPlayer" parent="Monster"]
 stream = ExtResource("16_a6qdv")
