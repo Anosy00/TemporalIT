@@ -5,7 +5,6 @@ using TemporalIT;
 public partial class JMJ : Area2D
 {
 	private EButton _keyboardInteration;
-	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
 	private Timer _timer;
@@ -24,8 +23,8 @@ public partial class JMJ : Area2D
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
 		_dialogBox.setCanCloseDialogBox(false);
-		_objectif = GetNode<Sprite2D>("../TileMap/Objectif");
-		_labelObjectif = GetNode<Label>("../TileMap/Objectif/Label");
+		_objectif = GetNode<Sprite2D>("../../Objectif");
+		_labelObjectif = GetNode<Label>("../../Objectif/LabelText");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -70,7 +69,10 @@ public partial class JMJ : Area2D
 			_dialogBox.disable();
 			if (nbTimer == 6)
 			{
+				_objectif.Visible = false;
 				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
+				_labelObjectif.AddThemeFontSizeOverride("font_size", 30);
+				_objectif.Visible = true;
 			}
 			_objectif.Visible = true;
 		} else {

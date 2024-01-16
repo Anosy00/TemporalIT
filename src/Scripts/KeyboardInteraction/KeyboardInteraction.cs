@@ -6,6 +6,7 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 	public partial class KeyboardInteraction : Node 
 	{
 		private AnimatedSprite2D _keyInteraction;
+		
 		private AnimationPlayer _transitionAnimation;
 		
 		public KeyboardInteraction(AnimatedSprite2D keyInteraction)
@@ -50,5 +51,13 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 				node.Visible = true;
 			}
 		}
+		public void onButtonPress(Node2D node)
+		{
+			if (Input.IsActionPressed("button_e") && isVisible())
+			{
+				node.Visible = true;
+			}
+		}
+		
 	}
 }

@@ -18,7 +18,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
         {
             _keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
             _keyboardInteration.disable();
-            _INTERFACE_TO_SHOW = GetNode<Control>("../../CodeChest");
+            _INTERFACE_TO_SHOW = GetNode<Control>("../../../CodeChest");
             _INTERFACE_TO_SHOW.Visible = false;
         }
 

@@ -14,7 +14,7 @@ public partial class SubmitButtonJMJ : Node
 	private int _CORRECT_ANSWER;
 	private Control _INTERFACE_TO_CLOSE;
 	private Area2D _area2D;
-	private const String _PATH_SUBMIT_BUTTON = "SubmitButton";
+	private const String _PATH_SUBMIT_BUTTON = "../SubmitButton";
 	private const String _PATH_CODE_ENTERED_LINE_EDIT = "../CodeEntered";
 	
 	// Called when the node enters the scene tree for the first time.
@@ -25,7 +25,7 @@ public partial class SubmitButtonJMJ : Node
 		_INTERFACE_TO_CLOSE = GetNode<Control>("../../../../CodeChest");
 		_submitButton = GetNode<Button>(_PATH_SUBMIT_BUTTON);
 		_codeEntered = GetNode<LineEdit>(_PATH_CODE_ENTERED_LINE_EDIT);
-		_area2D = GetNode<Area2D>("../../../../TileMap/StringFound");
+		_area2D = GetNode<Area2D>("../../../../Saddler/TileMap/StringFound");
 	}
 
 	public void _on_submit_pressed()
