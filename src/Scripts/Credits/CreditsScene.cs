@@ -2,15 +2,16 @@ using System;
 using Godot;
 namespace TemporalIT.Scripts.CreditsScene;
 
-public partial class Player : CharacterBody2D
+public partial class CreditsScene : VBoxContainer
 {
     private const float Speed = 6f;
     private Vector2I _screenSize;
     private AnimatedSprite2D _animateSprite;
     private RichTextLabel _label;
     private TextureRect _textureRect;
-    private int _index = 0;
-    private AnimationPlayer _animationPlayer;
+    private int _index;
+    private CharacterBody2D _characterBody2D;
+    private AnimationPlayer _animationLabel;
     private readonly string[][] _text = 
     {
         new[]
@@ -39,39 +40,43 @@ public partial class Player : CharacterBody2D
     public override void _Ready()
     {
         base._Ready();
+        _characterBody2D = GetNode<CharacterBody2D>("Player");
         _screenSize = DisplayServer.WindowGetSize();
-        _animateSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        _label = GetParent().GetNode<RichTextLabel>("RichTextLabel");
-        _textureRect = GetParent().GetNode<TextureRect>("TextureRect");
-        _animationPlayer = _label.GetNode<AnimationPlayer>("AnimationPlayer");
-        reset_position();
+        _animateSprite = _characterBody2D.GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        _label = GetNode<RichTextLabel>("RichTextLabel");
+        _textureRect = GetNode<TextureRect>("TextureRect");
+        _animationLabel = _label.GetNode<AnimationPlayer>("AnimationPlayer");
+        ResetPlayerResetPosition();
     }
 
     public override void _PhysicsProcess(double d)
     {
         var velocity = new Vector2
         {
-            X = 1 * Speed
+            X = Speed
         };
         _animateSprite.Play("moveRight");
-        MoveAndCollide(velocity);
-        if (Position.X > _screenSize.X * 0.8)
+        _characterBody2D.MoveAndCollide(velocity);
+        if (_characterBody2D.Position.X > _screenSize.X * 0.8)
         {
-            GD.Print(Position.X);
-            reset_position();
+            ResetPlayerResetPosition();
         }
     }
 
-    private void reset_position()
+    private void ResetPlayerResetPosition()
     {
-        reload_label(_index);
+        if (_index == 3)
+        {
+            GetTree().ChangeSceneToFile("res://TitleScreen/TitleScreen.tscn");
+            return;
+        }
+        ReloadLabel(_index);
         _index += 1;
-        Position = new Vector2((float)Math.Round(_screenSize.X * -0.3), (int)Math.Round(_screenSize.Y * 0.7));
+        _characterBody2D.Position = new Vector2((float)Math.Round(_screenSize.X * -0.3), (int)Math.Round(_screenSize.Y * 0.7));
     }
     
-    private void reload_label(int index)
+    private void ReloadLabel(int index)
     {
-        GD.Print(index);
         _label.Clear();
         foreach (var j in _text[index])
         {
@@ -81,6 +86,6 @@ public partial class Player : CharacterBody2D
                 _textureRect.Show();
             }
         }
-        _animationPlayer.Play("reset");
+        _animationLabel.Play("reset");
     }
 }

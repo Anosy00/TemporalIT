@@ -20,7 +20,6 @@ public partial class VolumeSlideBar : HSlider
     
     private void _on_value_changed(float value)
     {
-        GD.Print("Volume changed to " + value);
         AudioServer.SetBusVolumeDb(_masterBus, _linear_to_db(value));
     }
 }

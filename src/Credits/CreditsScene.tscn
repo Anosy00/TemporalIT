@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dc8b0rimiy6lw"]
 
+[ext_resource type="Script" path="res://Scripts/Credits/CreditsScene.cs" id="1_ex7rh"]
 [ext_resource type="Texture2D" uid="uid://bwbkfthuufh4a" path="res://icon_TemporalIT.png" id="1_rlsb2"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="1_y2hpx"]
-[ext_resource type="Script" path="res://Scripts/CreditsScene/Player.cs" id="2_1g04g"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="3_yuybn"]
 
 [sub_resource type="Animation" id="Animation_6ir7u"]
@@ -54,17 +54,18 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(1100, 600)
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer"]
+[node name="CreditsScene" type="VBoxContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer"]
 layout_mode = 2
+script = ExtResource("1_ex7rh")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene"]
 visible = false
 layout_mode = 2
 texture = ExtResource("1_rlsb2")
 expand_mode = 5
 stretch_mode = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene"]
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
@@ -74,14 +75,13 @@ theme_override_fonts/bold_font = ExtResource("1_y2hpx")
 bbcode_enabled = true
 fit_content = true
 visible_characters = 0
-visible_ratio = 0.04
+visible_ratio = 0.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/RichTextLabel"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene/RichTextLabel"]
 libraries = {
 "": SubResource("AnimationLibrary_v351f")
 }
 
-[node name="Player" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer" instance=ExtResource("3_yuybn")]
+[node name="Player" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene" instance=ExtResource("3_yuybn")]
 position = Vector2(-402, 624)
 scale = Vector2(6, 6)
-script = ExtResource("2_1g04g")
