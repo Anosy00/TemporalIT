@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dywv3buv3ivmr"]
+[gd_scene load_steps=15 format=3 uid="uid://dywv3buv3ivmr"]
 
 [ext_resource type="VideoStream" path="res://ressources/media/Vecteezy-Multicolored-Wire-Mesh-Glow-With-Center-Flare-Light-3385051.ogv" id="1_jrs4m"]
 [ext_resource type="Script" path="res://Scripts/TitleScreen/BackgroundVideo.cs" id="2_nlixo"]
@@ -10,6 +10,8 @@
 
 [sub_resource type="Theme" id="Theme_qms2j"]
 default_font_size = 0
+
+[sub_resource type="Theme" id="Theme_ls5sq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3osj"]
 bg_color = Color(0.282353, 0.32549, 0.32549, 0.752941)
@@ -130,10 +132,12 @@ vertical_alignment = 1
 
 [node name="WindowMode" type="Label" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tnpm2")
 text = "Window Mode:"
 
 [node name="WindowMenu" type="OptionButton" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tnpm2")
 item_count = 3
 selected = 0
 popup/item_0/text = "Fullscreen"
@@ -146,10 +150,12 @@ script = ExtResource("5_6eba5")
 
 [node name="ResolutionLabel" type="Label" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tnpm2")
 text = "Resolution:"
 
 [node name="ResolutionMenu" type="OptionButton" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tnpm2")
 item_count = 3
 popup/item_0/text = "1280x720"
 popup/item_0/id = 1
@@ -161,6 +167,7 @@ script = ExtResource("4_p5edt")
 
 [node name="VolumeLabel" type="Label" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_tnpm2")
 text = "Volume:"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
@@ -170,6 +177,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme = SubResource("Theme_ls5sq")
 max_value = 1.0
 step = 0.01
 script = ExtResource("6_q4ygv")

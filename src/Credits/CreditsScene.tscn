@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=3 uid="uid://dc8b0rimiy6lw"]
+
+[ext_resource type="Script" path="res://Scripts/Credits/CreditsScene.cs" id="1_ex7rh"]
+[ext_resource type="Texture2D" uid="uid://bwbkfthuufh4a" path="res://icon_TemporalIT.png" id="1_rlsb2"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="1_y2hpx"]
+[ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="3_yuybn"]
+
+[sub_resource type="Animation" id="Animation_6ir7u"]
+resource_name = "reset"
+length = 3.0
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v351f"]
+_data = {
+"reset": SubResource("Animation_6ir7u")
+}
+
+[node name="CreditsScene" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Options" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Options"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Options/CenterContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1100, 600)
+layout_mode = 2
+
+[node name="CreditsScene" type="VBoxContainer" parent="CanvasLayer/Options/CenterContainer/PanelContainer"]
+layout_mode = 2
+script = ExtResource("1_ex7rh")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene"]
+visible = false
+layout_mode = 2
+texture = ExtResource("1_rlsb2")
+expand_mode = 5
+stretch_mode = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene"]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 48
+theme_override_fonts/normal_font = ExtResource("1_y2hpx")
+theme_override_fonts/bold_font = ExtResource("1_y2hpx")
+bbcode_enabled = true
+fit_content = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene/RichTextLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_v351f")
+}
+
+[node name="Player" parent="CanvasLayer/Options/CenterContainer/PanelContainer/CreditsScene" instance=ExtResource("3_yuybn")]
+position = Vector2(-402, 624)
+scale = Vector2(6, 6)

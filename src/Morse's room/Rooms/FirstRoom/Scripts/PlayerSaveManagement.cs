@@ -4,8 +4,8 @@ using System.IO;
 
 public class PlayerSaveManager
 {
-    private float postionX;
-    private float postionY;
+    private float positionX;
+    private float positionY;
     private const String _NAME_FILE = "firstRoomSavePostionPlayer.txt";
     
     public void save(float valueX, float valueY)
@@ -18,17 +18,17 @@ public class PlayerSaveManager
     {
         string[] lignes = File.ReadAllLines(_NAME_FILE);
 
-        postionX = Convert.ToSingle(lignes[0]);
-        postionY = Convert.ToSingle(lignes[1]);
+        positionX = Convert.ToSingle(lignes[0]);
+        positionY = Convert.ToSingle(lignes[1]);
     }
 
     public float getX()
     {
-        return postionX;
+        return positionX;
     }
 
     public float getY()
     {
-        return postionY;
+        return positionY;
     }
 }
