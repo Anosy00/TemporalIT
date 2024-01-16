@@ -42,6 +42,8 @@ public partial class Museum : TileMap
 		GD.Print(""+_dialog1[0]._text);
 		GD.Print(""+_dialogBox, _timer);*/
 		
+		setZIndex(0);
+		GD.Print("Le ZIndex de la scene est "+getZIndex());
 		GlobalMuseum.displayDialogBox(_dialog1[0]._name, _dialog1[0]._text, _dialogBox, _timer);
 		_timer.Start(6);
 	}
@@ -87,7 +89,14 @@ public partial class Museum : TileMap
 		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CharacterBody2D>(path);
 	}
-	
+	private int getZIndex()
+	{
+		return this.ZIndex;
+	}
+	private void setZIndex(int number)
+	{
+		this.ZIndex = number;
+	}
 	
 }
 

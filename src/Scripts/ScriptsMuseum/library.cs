@@ -25,13 +25,13 @@ public partial class library : Node
 			collisionShapePosition = collisionShape.GlobalPosition;
 
 			// Affichez les coordonnées
-			GD.Print("Coordonnées de l'élément : (", getX(),", ", getY(),")");
+			//GD.Print("Coordonnées de l'élément : (", getX(),", ", getY(),")");
 		}
 		else
 		{
 			GD.Print("L'élément n'a pas été correctement référencé.");
 		}
-		GD.Print(get_PosY_player());
+		//GD.Print(getZIndexPlayer());
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -88,10 +88,10 @@ public partial class library : Node
 	private void plan_selection()
 	{
 		if (get_PosY_player() > getY()){
-			setZIndexLibrary(-1);
+			setZIndexLibrary(1);
 			
 		} else {
-			setZIndexLibrary(1);
+			setZIndexLibrary(3);
 			
 		}
 	}
