@@ -19,8 +19,8 @@ public partial class Museum : TileMap
 	private DialogBox _dialogBox;
 	private Timer _timer;
 	private int nbTimer = -1;
-	private CollisionShape2D player;
-	private Vector2 playerPosition;
+	private static CollisionShape2D player;
+	private  static Vector2 playerPosition;
 
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
@@ -39,8 +39,8 @@ public partial class Museum : TileMap
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
-		GD.Print("",get_PosX_player());
-		GD.Print("",get_PosY_player());
+		/*GD.Print("",get_PosX_player());
+		GD.Print("",get_PosY_player());*/
 		_timer.EmitSignal("timeout");
 	}
 	
@@ -75,35 +75,13 @@ public partial class Museum : TileMap
 		
 	}
 	
-	private Vector2 posPlayer()
+	public static CollisionShape2D getCollisionShapePlayer(Node rootNode, string path)
 	{
-		player = GetNode<CollisionShape2D>("Player/CollisionShape2D");
-		if (player != null)
-		{
-			// Obtenez les coordonnées globales de l'élément
-			playerPosition = player.GlobalPosition;
-
-			// Affichez les coordonnées
-			GD.Print("Coordonnées du joueur : (", playerPosition[0]-323,", ", playerPosition[1]-323,")");
-			return playerPosition;
-		}
-		else
-		{
-			GD.Print("L'élément n'a pas été correctement référencé.");
-			return new Vector2(-1f ,-1f);
-			
-		}
+		// Utilisez la référence rootNode pour accéder au sous-noeud
+		return rootNode.GetNode<CollisionShape2D>(path);
 	}
-	public float get_PosX_player()
-	{
-		Vector2 coordinate = posPlayer();
-		return coordinate[0]-323;
-	}
-		
-	public float get_PosY_player()
-	{
-		return posPlayer()[1]-323;
-	}
+	
+	
 }
 
 

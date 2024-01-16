@@ -22,6 +22,7 @@ public partial class library : Node
 		{
 			GD.Print("L'élément n'a pas été correctement référencé.");
 		}
+		getPlayer();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -37,4 +38,9 @@ public partial class library : Node
 	{
 		return collisionShapePosition[0]-323;
 	}
+	
+	public void getPlayer(){
+		GD.Print(Museum.getCollisionShapePlayer(this.GetParent(),"Player/CollisionShape2D"));
+	}
+	//Museum.getCollisionShapePlayer(GetNode<TileMap>("Museum"),"Player/CollisionShape2D")
 }
