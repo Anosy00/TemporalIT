@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TemporalIT;
 using TemporalIT.Scripts.KeyboardInteraction;
 
 public partial class LadderScript : Node
@@ -10,14 +11,20 @@ public partial class LadderScript : Node
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private Node2D _saddler;
 	private Node2D _tileMap;
+	private Camera2D _cameraSaddler;
+	private Sprite2D _objectif;
+
+	private Camera2D _camera;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_keyInteration = new EButton(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_keyInteration.disable();
 		_tileMap = GetNode<Node2D>("../../../Node2D");
-		_saddler.GetNode<Node2D>("../../../Saddler/TileMap");
-		_tileMap.ProcessMode = ProcessModeEnum.Pausable;
+		_saddler = GetNode<Node2D>("../../../Saddler");
+		_cameraSaddler = GetNode<Camera2D>("../../../Saddler/TileMap/Camera2D");
+		_camera = GetNode<Camera2D>("../Camera2D");
+		_objectif = GetNode<Sprite2D>("../../../Objectif");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -33,10 +40,23 @@ public partial class LadderScript : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionPressed("button_e") && _keyInteration.isVisible())
+		if (Input.IsActionJustReleased("button_e") && _keyInteration.isVisible())
 		{
-			_tileMap.GetTree().Paused = true;
-			_saddler.GetTree().Paused = false;
+			_tileMap.ProcessMode = ProcessModeEnum.Disabled;
+			_tileMap.Hide();
+			_saddler.ProcessMode = ProcessModeEnum.Inherit;
+			_saddler.Show();
+			_saddler.Visible = true;
+			_cameraSaddler.Enabled = true;
+			_camera.Enabled = false;
+		}
+		if (GlobalJMJ.isObjActive)
+		{
+			_objectif.Visible = true;
+		}
+		else
+		{
+			_objectif.Visible = false;
 		}
 	}
 	

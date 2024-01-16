@@ -9,6 +9,7 @@ public static class GlobalJMJ
     public static bool canInteractWithPlanks = false;
     public static int nbPlanks = 0;
     public static bool hasString = false;
+    public static bool isObjActive = false;
     
     public static void displayDialogBox(string name, string text, DialogBox dialogBox)
     {

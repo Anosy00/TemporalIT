@@ -6,15 +6,14 @@ using TemporalIT.Scripts.KeyboardInteraction;
 public partial class LadderSaddler : Node
 {
 	private EButton _keyInteration;
-	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
 	private KeyboardInteraction _keyboardInteraction;
 	private Node2D _tileMap;
 	private Camera2D _camera;
+	private Camera2D _cameraTileMap;
 	private Node2D _saddler;
-
-	private const String _nextScene = "res://JMJ's Room/Room/tile_map.tscn";
+	private Sprite2D _objectif;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -28,8 +27,11 @@ public partial class LadderSaddler : Node
 		_tileMap = GetNode<Node2D>("../../../Node2D");
 		_keyboardInteraction = new KeyboardInteraction(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_camera = GetNode<Camera2D>("../Camera2D");
-		_saddler = GetNode<Node2D>("../../../Saddler/TileMap");
-		_saddler.ProcessMode = ProcessModeEnum.Pausable;
+		_saddler = GetNode<Node2D>("../../../Saddler");
+		_cameraTileMap = GetNode<Camera2D>("../../../Node2D/TileMap/Camera2D");
+		_saddler.ProcessMode = ProcessModeEnum.Inherit;
+		_saddler.Show();
+		_objectif = GetNode<Sprite2D>("../../../ObjectifSaddler");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -45,19 +47,30 @@ public partial class LadderSaddler : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (GlobalJMJ.hadInteractedWithNewsPaper && Input.IsActionPressed("button_e") && _keyInteration.isVisible())
+		if (GlobalJMJ.hadInteractedWithNewsPaper && Input.IsActionJustReleased("button_e") && _keyInteration.isVisible())
 		{
+			_objectif.Visible = false;
+			GD.Print("J'ai effacé l'obj");
 			_camera.Enabled = false;
-			_saddler.Visible = false;
-			_saddler.GetTree().Paused = true;
-			_tileMap.GetTree().Paused = false;
+			_saddler.ProcessMode = ProcessModeEnum.Disabled;
+			_tileMap.ProcessMode = ProcessModeEnum.Inherit;
+			_tileMap.Show();
+			_cameraTileMap.Enabled = true;
 		}
-		else if (_keyInteration.isVisible() && Input.IsActionPressed("button_e")){
+		else if (_keyInteration.isVisible() && Input.IsActionJustReleased("button_e")){
 			_dialogBox.setTextOfLabel("[Player]", "Je devrais peut-être aller voir le journal avant");
 			_dialogBox.available("displayText");
 			
 		}
 		_dialogBox.setCanCloseDialogBox(true);
 		_dialogBox.closeDialogBox();
+		if (GlobalJMJ.isObjActive && _camera.Enabled)
+		{
+			_objectif.Visible = true;
+		}
+		else
+		{
+			_objectif.Visible = false;
+		}
 	}
 }

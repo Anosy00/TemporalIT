@@ -1451,7 +1451,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(10, 2)
+position = Vector2(10, 3)
 metadata/_edit_horizontal_guides_ = [940.0]
 
 [node name="TileMap" type="TileMap" parent="."]

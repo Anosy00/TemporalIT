@@ -11,6 +11,7 @@ public partial class JMJ : Area2D
 	private int nbTimer = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
+	private Label _labelObjectifSaddler;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -25,6 +26,7 @@ public partial class JMJ : Area2D
 		_dialogBox.setCanCloseDialogBox(false);
 		_objectif = GetNode<Sprite2D>("../../Objectif");
 		_labelObjectif = GetNode<Label>("../../Objectif/LabelText");
+		_labelObjectifSaddler = GetNode<Label>("../../ObjectifSaddler/LabelText");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -69,12 +71,14 @@ public partial class JMJ : Area2D
 			_dialogBox.disable();
 			if (nbTimer == 6)
 			{
-				_objectif.Visible = false;
+				GlobalJMJ.isObjActive = false;
 				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
-				_labelObjectif.AddThemeFontSizeOverride("font_size", 30);
-				_objectif.Visible = true;
+				_labelObjectifSaddler.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
+				_labelObjectif.AddThemeFontSizeOverride("font_size", 35);
+				_labelObjectifSaddler.AddThemeFontSizeOverride("font_size", 30);
+				GlobalJMJ.isObjActive = true;
 			}
-			_objectif.Visible = true;
+			GlobalJMJ.isObjActive = true;
 		} else {
 			
 			if (nbTimer != 4)
