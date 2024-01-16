@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=60 format=3 uid="uid://c1iroer1genb1"]
 
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="13_4g0i2"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="14_48mms"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_h46hr"]
-[ext_resource type="Script" path="res://Global/CodeChest.cs" id="17_0xoo0"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/CodeChestJMJ.cs" id="16_lcuyh"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/StringFound.cs" id="17_86gx4"]
 [ext_resource type="Texture2D" uid="uid://cvq3g3xe4lfcm" path="res://ressources/images/string.png" id="18_5pkao"]
+[ext_resource type="PackedScene" uid="uid://chxm6dp2xi7v1" path="res://JMJ's Room/Room/code_chest.tscn" id="19_wa0x1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
 texture = ExtResource("1_tbaut")
@@ -1491,16 +1493,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6fuo"]
-radius = 17.0
-height = 48.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tyqt"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_01rwb"]
-Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvh3q"]
 size = Vector2(60, 26.5)
 
@@ -1656,6 +1648,18 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1chkm"]
 size = Vector2(7.75, 9)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iv6ib"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6fuo"]
+radius = 17.0
+height = 48.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tyqt"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_01rwb"]
+Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
+
 [node name="Saddler" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1700,42 +1704,6 @@ shape = SubResource("CapsuleShape2D_wy1np")
 position = Vector2(0, -19.5)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_2xg2s")
-
-[node name="EButtonPaper" type="Area2D" parent="TileMap"]
-position = Vector2(-1.5, 12.25)
-script = ExtResource("8_qsyls")
-
-[node name="EButtonPaperSprite" type="AnimatedSprite2D" parent="TileMap/EButtonPaper"]
-position = Vector2(0, -16.25)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_2xg2s")
-
-[node name="SpriteNewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
-position = Vector2(0.25, 0.5)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_h2qro")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonPaper"]
-visible = false
-position = Vector2(-6.5, 0.25)
-shape = SubResource("CapsuleShape2D_s6fuo")
-
-[node name="ButtonClose" type="Button" parent="TileMap/EButtonPaper"]
-visible = false
-offset_left = -136.25
-offset_top = 47.75
-offset_right = -53.25
-offset_bottom = 68.75
-theme = SubResource("Theme_01rwb")
-theme_override_font_sizes/font_size = 8
-text = "Fermer le journal"
-script = ExtResource("12_4pf8n")
-
-[node name="NewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
-visible = false
-position = Vector2(8.5, -9.25)
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("11_q87uh")
 
 [node name="Table" type="RigidBody2D" parent="TileMap"]
 position = Vector2(14.75, 14)
@@ -1802,7 +1770,7 @@ shape = SubResource("SegmentShape2D_5ict7")
 
 [node name="Chest" type="Area2D" parent="TileMap"]
 position = Vector2(-49.5, -40.25)
-script = ExtResource("17_0xoo0")
+script = ExtResource("16_lcuyh")
 
 [node name="Chest" type="RigidBody2D" parent="TileMap/Chest"]
 position = Vector2(2.75, -0.5)
@@ -1830,8 +1798,9 @@ shape = SubResource("RectangleShape2D_1chkm")
 
 [node name="StringFound" type="Area2D" parent="TileMap"]
 visible = false
+script = ExtResource("17_86gx4")
 
-[node name="Sprite2D" type="Sprite2D" parent="TileMap/StringFound"]
+[node name="StringFound" type="Sprite2D" parent="TileMap/StringFound"]
 position = Vector2(-61, -78)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("18_5pkao")
@@ -1844,10 +1813,57 @@ offset_bottom = -59.0
 scale = Vector2(0.8, 0.8)
 text = "Les fils ont été trouvés"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/StringFound"]
+shape = SubResource("SegmentShape2D_iv6ib")
+
+[node name="EButtonPaper" type="Area2D" parent="TileMap"]
+position = Vector2(-1.5, 12.25)
+script = ExtResource("8_qsyls")
+
+[node name="EButtonPaperSprite" type="AnimatedSprite2D" parent="TileMap/EButtonPaper"]
+position = Vector2(0, -16.25)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_2xg2s")
+
+[node name="SpriteNewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
+position = Vector2(0.25, 0.5)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_h2qro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonPaper"]
+visible = false
+position = Vector2(-6.5, 0.25)
+shape = SubResource("CapsuleShape2D_s6fuo")
+
+[node name="ButtonClose" type="Button" parent="TileMap/EButtonPaper"]
+visible = false
+offset_left = -136.25
+offset_top = 47.75
+offset_right = -53.25
+offset_bottom = 68.75
+theme = SubResource("Theme_01rwb")
+theme_override_font_sizes/font_size = 8
+text = "Fermer le journal"
+script = ExtResource("12_4pf8n")
+
+[node name="NewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
+visible = false
+position = Vector2(8.5, -9.25)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("11_q87uh")
+
+[node name="CodeChest" parent="." instance=ExtResource("19_wa0x1")]
+visible = false
+offset_left = 562.0
+offset_top = 317.0
+offset_right = 562.0
+offset_bottom = 317.0
+scale = Vector2(1.5, 1.5)
+
 [connection signal="body_entered" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_body_exited"]
+[connection signal="body_entered" from="TileMap/Chest" to="TileMap/Chest" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/Chest" to="TileMap/Chest" method="_on_body_exited"]
 [connection signal="body_entered" from="TileMap/EButtonPaper" to="TileMap/EButtonPaper" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/EButtonPaper" to="TileMap/EButtonPaper" method="_on_body_exited"]
 [connection signal="pressed" from="TileMap/EButtonPaper/ButtonClose" to="TileMap/EButtonPaper/ButtonClose" method="_on_pressed"]
-[connection signal="body_entered" from="TileMap/Chest" to="TileMap/Chest" method="_on_body_entered"]
-[connection signal="body_exited" from="TileMap/Chest" to="TileMap/Chest" method="_on_body_exited"]

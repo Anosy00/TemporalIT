@@ -12,8 +12,6 @@ public partial class JMJ : Area2D
 	private int nbTimer = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
-
-	private const String _nextScene = "res://JMJ's Room/Room/Saddler.tscn";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

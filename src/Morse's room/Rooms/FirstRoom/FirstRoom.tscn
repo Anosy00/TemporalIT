@@ -1019,7 +1019,6 @@ position = Vector2(62, 80.5)
 shape = SubResource("RectangleShape2D_dxw4t")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="FirstRoom"]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AreaNextLevel" type="Area2D" parent="FirstRoom"]

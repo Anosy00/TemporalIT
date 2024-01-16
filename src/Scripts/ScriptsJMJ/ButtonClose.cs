@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TemporalIT;
 
 public partial class ButtonClose : Button
 {
@@ -16,7 +17,17 @@ public partial class ButtonClose : Button
 	public void _on_pressed()
 	{
 		NewsPaper.setInvisibleNewsPaper();
-		_dialogBox.setTextOfLabel("[Player]", "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023");
-		_dialogBox.available("displayText");
+		if (!GlobalJMJ.hadInteractedWithNewsPaper)
+		{
+			_dialogBox.setTextOfLabel("[Player]", "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023");
+			_dialogBox.available("displayText");
+			GlobalJMJ.hadInteractedWithNewsPaper = true;
+		}
+		else
+		{
+			Global.isDialogActive = false;
+		}
+		
+
 	}
 }

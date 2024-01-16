@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bouulsjh5h3ar"]
+[gd_scene load_steps=5 format=3 uid="uid://fbmcrf7pgj7u"]
 
 [ext_resource type="Script" path="res://Global/SubmitButton.cs" id="1_d11om"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_aik0l"]

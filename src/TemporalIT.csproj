@@ -14,6 +14,7 @@
     <PackageReference Update="Godot.SourceGenerators" Version="4.2.0-rc.2" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Global\" />
     <Folder Include="Morse's room\Rooms\FirstRoom\Scripts\Interaction\Radio\" />
   </ItemGroup>
   <ItemGroup>
@@ -21,5 +22,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="Morse's room\Rooms\Maze\Arrow\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Morse's room\Rooms\FirstRoom\CodeChest.tscn" />
   </ItemGroup>
 </Project>

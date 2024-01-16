@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bouulsjh5h3ar"]
+[gd_scene load_steps=5 format=3 uid="uid://chxm6dp2xi7v1"]
 
-[ext_resource type="Script" path="res://Global/SubmitButton.cs" id="1_d11om"]
-[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_aik0l"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="3_v13ty"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_l5vjp"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/BackButtonJMJ.cs" id="2_t7epg"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/SubmitButtonJMJ.cs" id="2_yh1vv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mia1d"]
 bg_color = Color(0.00784314, 0.00784314, 0.0509804, 1)
@@ -34,25 +34,20 @@ offset_top = -348.0
 offset_right = 538.0
 offset_bottom = 349.0
 
-[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
-position = Vector2(543, 348)
-zoom = Vector2(5.5, 5.5)
-
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 6
-script = ExtResource("1_d11om")
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_aik0l")
+theme_override_fonts/font = ExtResource("2_l5vjp")
 text = "Tap a code :"
 horizontal_alignment = 1
 
 [node name="CodeEntered" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("2_aik0l")
+theme_override_fonts/font = ExtResource("2_l5vjp")
 placeholder_text = "____ "
 alignment = 1
 max_length = 4
@@ -61,14 +56,15 @@ virtual_keyboard_type = 2
 
 [node name="SubmitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_aik0l")
+theme_override_fonts/font = ExtResource("2_l5vjp")
 text = "SUBMIT"
+script = ExtResource("2_yh1vv")
 
 [node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_aik0l")
+theme_override_fonts/font = ExtResource("2_l5vjp")
 text = "BACK"
-script = ExtResource("3_v13ty")
+script = ExtResource("2_t7epg")
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer" method="_on_submit_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer/SubmitButton" method="_on_submit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed" flags=18]

@@ -8,7 +8,6 @@ public static class GlobalJMJ
     public static bool hadInteractedWithNewsPaper = false;
     public static bool canInteractWithPlanks = false;
     public static int nbPlanks = 0;
-    public static bool canOpenChest = true;
     public static bool hasString = false;
     
     public static void displayDialogBox(string name, string text, DialogBox dialogBox)

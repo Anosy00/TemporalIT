@@ -42,7 +42,6 @@ public partial class NewsPaper : Node
 			_newsPaper.Visible = true;
 			_button.Visible = true;
 			Global.isDialogActive = true;
-			GlobalJMJ.hadInteractedWithNewsPaper = true;
 		}
 		
 		

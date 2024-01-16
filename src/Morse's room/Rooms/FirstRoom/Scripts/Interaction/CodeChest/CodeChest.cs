@@ -9,7 +9,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
     {
         private KeyboardInteraction _keyboardInteration;
 		
-        private const String _NEXT_SCENE_PATH = "res://Global/CodeChest.tscn";
+        private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/CodeChest.tscn";
         private const String _E_BUTTON = "button_e";
         private const String _NAME_OF_THE_ANIMATION = "default";
         

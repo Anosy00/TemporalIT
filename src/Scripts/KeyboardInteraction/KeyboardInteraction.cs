@@ -42,5 +42,13 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 				tree.ChangeSceneToFile(nextScenePath);
 			}
 		}
+
+		public void onButtonPress(Control node)
+		{
+			if (Input.IsActionPressed("button_e") && isVisible())
+			{
+				node.Visible = true;
+			}
+		}
 	}
 }
