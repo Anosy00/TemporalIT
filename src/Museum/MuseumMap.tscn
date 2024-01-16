@@ -4760,7 +4760,7 @@ wait_time = 4.0
 [node name="RigidBody2Dleft1" type="RigidBody2D" parent="Museum"]
 position = Vector2(128, 304)
 
-[node name="LibrariesLeft" type="Sprite2D" parent="Museum/RigidBody2Dleft1"]
+[node name="Libraries" type="Sprite2D" parent="Museum/RigidBody2Dleft1"]
 position = Vector2(0, -160)
 texture = ExtResource("24_1hmkm")
 
@@ -4770,7 +4770,7 @@ shape = SubResource("RectangleShape2D_ofouw")
 
 [node name="RigidBody2Dleft2" type="RigidBody2D" parent="Museum"]
 
-[node name="LibrariesLeft2" type="Sprite2D" parent="Museum/RigidBody2Dleft2"]
+[node name="Libraries" type="Sprite2D" parent="Museum/RigidBody2Dleft2"]
 position = Vector2(128, 304)
 texture = ExtResource("24_1hmkm")
 
@@ -4780,7 +4780,7 @@ shape = SubResource("RectangleShape2D_ofouw")
 
 [node name="RigidBody2DRight1" type="RigidBody2D" parent="Museum"]
 
-[node name="LibrariesRight1" type="Sprite2D" parent="Museum/RigidBody2DRight1"]
+[node name="Libraries" type="Sprite2D" parent="Museum/RigidBody2DRight1"]
 position = Vector2(416, 144)
 texture = ExtResource("25_adk5d")
 
@@ -4791,7 +4791,7 @@ shape = SubResource("RectangleShape2D_ofouw")
 [node name="RigidBody2Right2" type="RigidBody2D" parent="Museum"]
 script = ExtResource("24_itifs")
 
-[node name="LibrariesRight2" type="Sprite2D" parent="Museum/RigidBody2Right2"]
+[node name="Libraries" type="Sprite2D" parent="Museum/RigidBody2Right2"]
 position = Vector2(416, 304)
 texture = ExtResource("25_adk5d")
 

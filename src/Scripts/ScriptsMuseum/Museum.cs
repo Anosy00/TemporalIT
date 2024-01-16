@@ -19,9 +19,7 @@ public partial class Museum : TileMap
 	private DialogBox _dialogBox;
 	private Timer _timer;
 	private int nbTimer = -1;
-	private static CollisionShape2D player;
-	private  static Vector2 playerPosition;
-
+	
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
 		new Sentence("Narrateur", "Bienvenue au Musée de l’informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes."),
@@ -79,6 +77,11 @@ public partial class Museum : TileMap
 	{
 		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CollisionShape2D>(path);
+	}
+	public static CharacterBody2D getCharacterBody2D(Node rootNode, string path)
+	{
+		// Utilisez la référence rootNode pour accéder au sous-noeud
+		return rootNode.GetNode<CharacterBody2D>(path);
 	}
 	
 	
