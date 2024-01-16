@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://bp8nfdgppjtvj"]
 
-[ext_resource type="Texture2D" uid="uid://t0qt24hot81l" path="res://ressources/interfaces/dickens_carte_perforee - Copie.jpg" id="1_ywlfx"]
 [ext_resource type="Script" path="res://Scripts/ScriptsMuseum/Card/ButtonPunshedCard.cs" id="2_j1h0e"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="3_5n64p"]
+[ext_resource type="PackedScene" uid="uid://bjl588ndnpdl8" path="res://Museum/view_of_PunshedCard.tscn" id="3_27k61"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="4_xga6v"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8nu74"]
@@ -69,23 +69,24 @@ font_size = 27
 [node name="PunshedCard" type="Node2D"]
 
 [node name="ButtonPunshedCard" type="Button" parent="."]
-offset_left = 219.0
-offset_top = 64.0
-offset_right = 722.0
-offset_bottom = 299.0
+offset_left = 66.0
+offset_top = -66.0
+offset_right = 865.0
+offset_bottom = 287.0
 script = ExtResource("2_j1h0e")
 
-[node name="DickensCartePerforee" type="Sprite2D" parent="ButtonPunshedCard"]
-position = Vector2(253, 118)
-texture = ExtResource("1_ywlfx")
-
-[node name="Camera2D" type="Camera2D" parent="ButtonPunshedCard/DickensCartePerforee"]
-zoom = Vector2(1.5, 1.5)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ButtonPunshedCard"]
-position = Vector2(118, 272)
+position = Vector2(280, 402)
 scale = Vector2(1.73437, 1.67188)
 sprite_frames = SubResource("SpriteFrames_07ak0")
+
+[node name="Node2D" parent="ButtonPunshedCard" instance=ExtResource("3_27k61")]
+position = Vector2(-8, -20)
+scale = Vector2(0.7, 0.7)
+
+[node name="Camera2D" type="Camera2D" parent="ButtonPunshedCard/Node2D"]
+position = Vector2(553.333, 303.333)
+zoom = Vector2(1.2, 1.2)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 391.0

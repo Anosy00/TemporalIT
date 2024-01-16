@@ -10,6 +10,7 @@ public partial class player : CharacterBody2D
 	public override void _Ready()
 	{
 		base._Ready();
+		setZIndex(2);
 		animateSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		
 	}
@@ -47,6 +48,10 @@ public partial class player : CharacterBody2D
 		}
 
 		MoveAndCollide(velocity);
+	}
+	private void setZIndex(int number)
+	{
+		this.ZIndex = number;
 	}
 
 
