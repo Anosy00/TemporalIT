@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjl588ndnpdl8"]
+
+[ext_resource type="Texture2D" uid="uid://d1j7fbpx5q4oj" path="res://ressources/tilesmap/perfored-card.png" id="1_100dd"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_s5ja8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wf7a1"]
+font = ExtResource("2_s5ja8")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Perfored-card" type="Sprite2D" parent="."]
+position = Vector2(576, 283.5)
+scale = Vector2(8.82813, 7.82812)
+texture = ExtResource("1_100dd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 95.0
+offset_right = 394.0
+offset_bottom = 140.0
+text = "Introduction"
+label_settings = SubResource("LabelSettings_wf7a1")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 96.0
+offset_right = 614.0
+offset_bottom = 141.0
+text = "Salle 1"
+label_settings = SubResource("LabelSettings_wf7a1")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 666.0
+offset_top = 96.0
+offset_right = 848.0
+offset_bottom = 131.0
+text = "Salle 2"
+label_settings = SubResource("LabelSettings_wf7a1")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 896.0
+offset_top = 96.0
+offset_right = 1087.0
+offset_bottom = 141.0
+text = "Salle 3"
+label_settings = SubResource("LabelSettings_wf7a1")
