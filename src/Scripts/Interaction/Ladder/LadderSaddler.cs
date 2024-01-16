@@ -13,7 +13,6 @@ public partial class LadderSaddler : Node
 	private Node2D _tileMap;
 	private Camera2D _camera;
 	private Node2D _saddler;
-	private Node2D _root;
 
 	private const String _nextScene = "res://JMJ's Room/Room/tile_map.tscn";
 	// Called when the node enters the scene tree for the first time.
@@ -29,7 +28,8 @@ public partial class LadderSaddler : Node
 		_tileMap = GetNode<Node2D>("../../../Node2D");
 		_keyboardInteraction = new KeyboardInteraction(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_camera = GetNode<Camera2D>("../Camera2D");
-		_saddler = GetNode<Node2D>("../../../Saddler");
+		_saddler = GetNode<Node2D>("../../../Saddler/TileMap");
+		_saddler.ProcessMode = ProcessModeEnum.Pausable;
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -50,7 +50,7 @@ public partial class LadderSaddler : Node
 			_keyboardInteraction.onButtonPress(_tileMap);
 			_camera.Enabled = false;
 			_saddler.Visible = false;
-			_saddler.ProcessMode = ProcessModeEnum.Disabled;
+			_saddler.GetTree().Paused = true;
 		}
 		else if (_keyInteration.isVisible() && Input.IsActionPressed("button_e")){
 			_dialogBox.setTextOfLabel("[Player]", "Je devrais peut-être aller voir le journal avant");

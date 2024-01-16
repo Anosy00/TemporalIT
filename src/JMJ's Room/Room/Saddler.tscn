@@ -1664,6 +1664,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
 [node name="Root" type="Node2D"]
 
 [node name="Saddler" type="Node2D" parent="."]
+position = Vector2(0, 1)
 
 [node name="TileMap" type="TileMap" parent="Saddler"]
 position = Vector2(554, 320)
@@ -1867,10 +1868,10 @@ scale = Vector2(1.5, 1.5)
 visible = false
 
 [node name="Objectif" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-192.083, -104.667)
-scale = Vector2(0.0990262, 0.2)
+position = Vector2(80, 106)
+scale = Vector2(0.15, 0.433)
 texture = ExtResource("13_4g0i2")
+metadata/_edit_group_ = true
 
 [node name="LabelObjectif" type="Label" parent="Objectif"]
 anchors_preset = -1
@@ -1889,8 +1890,46 @@ text = "Objectif"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+metadata/_edit_use_anchors_ = true
 
 [node name="LabelText" type="Label" parent="Objectif"]
+offset_left = -753.0
+offset_top = -25.0
+offset_right = 740.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_h46hr")
+theme_override_font_sizes/font_size = 50
+text = "Récupérer les planches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ObjectifSaddler" type="Sprite2D" parent="."]
+position = Vector2(400, 272)
+scale = Vector2(0.1, 0.2)
+texture = ExtResource("13_4g0i2")
+metadata/_edit_group_ = true
+
+[node name="LabelObjectif" type="Label" parent="ObjectifSaddler"]
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.248
+anchor_right = 0.194
+anchor_bottom = 0.248
+offset_left = -1065.43
+offset_top = -137.616
+offset_right = 494.572
+offset_bottom = -65.616
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_h46hr")
+theme_override_font_sizes/font_size = 50
+text = "Objectif"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelText" type="Label" parent="ObjectifSaddler"]
 offset_left = -753.0
 offset_top = -25.0
 offset_right = 740.0

@@ -8,14 +8,16 @@ public partial class LadderScript : Node
 	private KeyboardInteraction _keyboardInteraction;
 	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
-
 	private Node2D _saddler;
+	private Node2D _tileMap;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_keyInteration = new EButton(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_keyInteration.disable();
-		_saddler = GetNode<Node2D>("../../../Node2D");
+		_tileMap = GetNode<Node2D>("../../../Node2D");
+		_saddler.GetNode<Node2D>("../../../Saddler/TileMap");
+		_tileMap.ProcessMode = ProcessModeEnum.Pausable;
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -33,7 +35,8 @@ public partial class LadderScript : Node
 	{
 		if (Input.IsActionPressed("button_e") && _keyInteration.isVisible())
 		{
-			_saddler.Visible = false;
+			_saddler.GetTree().Paused = false;
+			_tileMap.GetTree().Paused = true;
 		}
 	}
 	
