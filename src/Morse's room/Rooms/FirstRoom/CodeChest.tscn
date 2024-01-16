@@ -46,7 +46,7 @@ script = ExtResource("2_2fsd8")
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "Tapez un code:"
+text = "Taper un code:"
 horizontal_alignment = 1
 
 [node name="CodeEntered" type="LineEdit" parent="CenterContainer/VBoxContainer"]
