@@ -30,6 +30,19 @@ public partial class SubmitButton : Node
 		changeSceneWhenCodeIsGood();
 	}
 	
+	public void _on_code_entered_text_changed(string newText)
+	{
+		if (!IsNumber(newText))
+		{
+			_codeEntered.Text = _codeEntered.Text.Substring(0, _codeEntered.Text.Length - 1);
+		}
+	}
+
+	private bool IsNumber(string text)
+	{
+		return float.TryParse(text, out _);
+	}
+	
 	private void changeSceneWhenCodeIsGood()
 	{
 		if (_codeVerification.chestIsOpened())

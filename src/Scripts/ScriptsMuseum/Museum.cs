@@ -17,9 +17,9 @@ public struct Sentence
 public partial class Museum : TileMap
 {
 	private DialogBox _dialogBox;
-	private Timer _timer;
-	private int nbTimer = -1;
-	
+	private Godot.Timer _timer;
+	private int nbTimer = 0;
+
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
 		new Sentence("Narrateur", "Bienvenue au Musée de l’informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes."),
@@ -36,10 +36,14 @@ public partial class Museum : TileMap
 			GetNode<Label>("Player/DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
-		_timer = GetNode<Timer>("Timer");
-		/*GD.Print("",get_PosX_player());
-		GD.Print("",get_PosY_player());*/
-		_timer.EmitSignal("timeout");
+		_timer = GetNode<Godot.Timer>("Timer");
+		
+		/*GD.Print(""+_dialog1[0]._name);
+		GD.Print(""+_dialog1[0]._text);
+		GD.Print(""+_dialogBox, _timer);*/
+		
+		GlobalMuseum.displayDialogBox(_dialog1[0]._name, _dialog1[0]._text, _dialogBox, _timer);
+		_timer.Start(6);
 	}
 	
 	public override void _Process(double delta)

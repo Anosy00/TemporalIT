@@ -22,12 +22,12 @@ border_color = Color(0, 0, 0, 1)
 shadow_size = 5
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k12sb"]
-a = Vector2(57.2211, -316.272)
+a = Vector2(47.9999, -610)
 b = Vector2(57.2211, 445.728)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_n4qe5"]
 a = Vector2(-9.41327, -9.185)
-b = Vector2(1398.59, -9.185)
+b = Vector2(1700, -4)
 
 [node name="Papers" type="Control"]
 layout_mode = 3
@@ -128,33 +128,33 @@ shape = SubResource("RectangleShape2D_i7lle")
 [node name="ButtonBack" type="Button" parent="."]
 layout_mode = 0
 offset_left = -675.0
-offset_top = 260.0
-offset_right = -471.0
+offset_top = 243.0
+offset_right = -427.0
 offset_bottom = 337.0
 theme_override_fonts/font = ExtResource("7_gds26")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_152q6")
 action_mode = 0
-text = "BACK"
+text = "RETOUR"
 script = ExtResource("8_86s7m")
 
 [node name="Border" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Border"]
-position = Vector2(628, -76)
+position = Vector2(746, 48)
 shape = SubResource("SegmentShape2D_k12sb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Border"]
-position = Vector2(-765.221, -69.7284)
+position = Vector2(-945, 60)
 shape = SubResource("SegmentShape2D_k12sb")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Border"]
-position = Vector2(-714, -368)
+position = Vector2(-900, -501)
 shape = SubResource("SegmentShape2D_n4qe5")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Border"]
-position = Vector2(-703.587, 380.185)
+position = Vector2(-888, 496)
 shape = SubResource("SegmentShape2D_n4qe5")
 
 [connection signal="mouse_entered" from="Paper1/Area2D" to="Paper1" method="_on_mouse_entered"]

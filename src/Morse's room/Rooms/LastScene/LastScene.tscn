@@ -1,3 +1,103 @@
-[gd_scene format=3 uid="uid://cfkw4h2ykuhps"]
+[gd_scene load_steps=6 format=3 uid="uid://cfkw4h2ykuhps"]
+
+[ext_resource type="Script" path="res://Morse's room/Rooms/LastScene/Scripts/FinalText.cs" id="1_yy806"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_j1ql0"]
+
+[sub_resource type="Animation" id="Animation_bhuy5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["You find the way 
+to understand
+my language.
+Thank you!
+
+Samuel Morse."]
+}
+
+[sub_resource type="Animation" id="Animation_pgf10"]
+resource_name = "text-animation"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 7, 8, 13, 15, 16, 21, 23, 24, 28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8, 16, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["You find the way 
+to understand
+my language.
+Thank you!", "Now you need to
+go to your world.", "Bye!
+
+Samuel Morse", "THE END"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8w430"]
+_data = {
+"RESET": SubResource("Animation_bhuy5"),
+"text-animation": SubResource("Animation_pgf10")
+}
 
 [node name="LastScene" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yy806")
+
+[node name="AnimationText" type="AnimationPlayer" parent="CenterContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_8w430")
+}
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
+position = Vector2(2.22772, -1.07955)
+zoom = Vector2(4, 4)
+
+[node name="Label" type="Label" parent="CenterContainer/Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_j1ql0")
+text = "You find the way 
+to understand
+my language.
+Thank you!
+
+Samuel Morse."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[connection signal="animation_finished" from="CenterContainer/AnimationText" to="CenterContainer" method="_on_animation_text_finished"]

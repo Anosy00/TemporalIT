@@ -46,7 +46,7 @@ script = ExtResource("2_2fsd8")
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "Tap a code :"
+text = "Tapez un code:"
 horizontal_alignment = 1
 
 [node name="CodeEntered" type="LineEdit" parent="CenterContainer/VBoxContainer"]
@@ -58,17 +58,19 @@ alignment = 1
 max_length = 4
 virtual_keyboard_enabled = false
 virtual_keyboard_type = 2
+text_direction = 1
 
 [node name="SubmitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "SUBMIT"
+text = "ENVOYER"
 
 [node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "BACK"
+text = "RETOUR"
 script = ExtResource("3_4lslq")
 
+[connection signal="text_changed" from="CenterContainer/VBoxContainer/CodeEntered" to="CenterContainer/VBoxContainer" method="_on_code_entered_text_changed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer" method="_on_submit_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]
