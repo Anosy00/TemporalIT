@@ -48,13 +48,15 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 8, 16, 24),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": ["You find the way 
-to understand
-my language.
-Thank you!", "Now you need to
-go to your world.", "Bye!
+"values": ["Tu as compris 
+le langage 
+que j'ai crée.
+Je t'en remercie !", "Tu sembles ne pas être
+de notre époque...
+je pense qu'il est grand
+temps de rentrer chez toi", "Merci, porte toi bien!
 
-Samuel Morse", "THE END"]
+Samuel Morse", "FIN"]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8w430"]
