@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://mtbnnlb01rhq"]
+[gd_scene load_steps=13 format=3 uid="uid://mtbnnlb01rhq"]
 
 [ext_resource type="VideoStream" path="res://ressources/media/Vecteezy-Multicolored-Wire-Mesh-Glow-With-Center-Flare-Light-3385051.ogv" id="1_kr5bl"]
 [ext_resource type="Script" path="res://Scripts/TitleScreen/BackgroundVideo.cs" id="2_8gbs1"]
 [ext_resource type="Script" path="res://Scripts/TitleScreen/ExitButton.cs" id="2_lpjt5"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_mpks6"]
 [ext_resource type="Script" path="res://Scripts/TitleScreen/OptionButton.cs" id="4_f0rql"]
+[ext_resource type="Script" path="res://Scripts/TitleScreen/CreditsButton.cs" id="6_uwlox"]
 
 [sub_resource type="Theme" id="Theme_x17g7"]
 default_font_size = 0
@@ -135,7 +136,7 @@ size_flags_stretch_ratio = 1.5
 theme = SubResource("Theme_n7x07")
 theme_override_fonts/font = ExtResource("2_mpks6")
 theme_override_font_sizes/font_size = 30
-text = "PLAY"
+text = "JOUER"
 
 [node name="OptionsButton" type="Button" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
@@ -156,9 +157,21 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 1.5
 theme = SubResource("Theme_n7x07")
 theme_override_fonts/font = ExtResource("2_mpks6")
-text = "EXIT"
+text = "QUITTER"
 script = ExtResource("2_lpjt5")
+
+[node name="CreditsButton" type="Button" parent="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+theme = SubResource("Theme_n7x07")
+theme_override_fonts/font = ExtResource("2_mpks6")
+text = "CREDITS"
+script = ExtResource("6_uwlox")
 
 [connection signal="finished" from="BackgroundVideo" to="BackgroundVideo" method="_on_finished"]
 [connection signal="pressed" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/OptionsButton" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/OptionsButton" method="_on_options_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ExitButton" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ExitButton" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/CreditsButton" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/CreditsButton" method="_on_pressed"]

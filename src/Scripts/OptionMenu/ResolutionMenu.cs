@@ -32,7 +32,7 @@ public partial class ResolutionMenu : OptionButton
                 break;
             default:
                 if (ItemCount == CustomResolutionIndex)
-                    AddItem("Custom Size", CustomResolutionIndex);
+                    AddItem("Personnalisé", CustomResolutionIndex);
                 if (DisplayServer.WindowGetSize() != Resolutions[0] &&
                     DisplayServer.WindowGetSize() != Resolutions[1] &&
                     DisplayServer.WindowGetSize() != Resolutions[2])
