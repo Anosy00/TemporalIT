@@ -47,10 +47,10 @@ public partial class LadderSaddler : Node
 	{
 		if (GlobalJMJ.hadInteractedWithNewsPaper && Input.IsActionPressed("button_e") && _keyInteration.isVisible())
 		{
-			_keyboardInteraction.onButtonPress(_tileMap);
 			_camera.Enabled = false;
 			_saddler.Visible = false;
 			_saddler.GetTree().Paused = true;
+			_tileMap.GetTree().Paused = false;
 		}
 		else if (_keyInteration.isVisible() && Input.IsActionPressed("button_e")){
 			_dialogBox.setTextOfLabel("[Player]", "Je devrais peut-être aller voir le journal avant");

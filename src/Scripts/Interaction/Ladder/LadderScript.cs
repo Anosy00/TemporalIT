@@ -35,8 +35,8 @@ public partial class LadderScript : Node
 	{
 		if (Input.IsActionPressed("button_e") && _keyInteration.isVisible())
 		{
-			_saddler.GetTree().Paused = false;
 			_tileMap.GetTree().Paused = true;
+			_saddler.GetTree().Paused = false;
 		}
 	}
 	

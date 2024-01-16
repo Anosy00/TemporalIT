@@ -55,7 +55,7 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 		{
 			if (Input.IsActionPressed("button_e") && isVisible())
 			{
-				node.Visible = true;
+				node.GetTree().Paused = false;
 			}
 		}
 		
