@@ -43,7 +43,7 @@ public partial class Museum : TileMap
 		GD.Print(""+_dialogBox, _timer);*/
 		
 		setZIndex(0);
-		GD.Print("Le ZIndex de la scene est "+getZIndex());
+		//GD.Print("Le ZIndex de la scene est "+getZIndex());
 		GlobalMuseum.displayDialogBox(_dialog1[0]._name, _dialog1[0]._text, _dialogBox, _timer);
 		_timer.Start(6);
 	}
