@@ -9,7 +9,7 @@ public partial class FinalText : CenterContainer
 
 	private const String _PATH_ANIMATION = "AnimationText";
 	private const String _PATH_TEXT = "Label";
-	private const String _PATH_CREDITS_SCENE = "";
+	private const String _PATH_CREDITS_SCENE = "res://Credits/CreditsScene.tscn";
 	
 	private const String _NAME_OF_THE_ANIMATION = "text-animation";
 	// Called when the node enters the scene tree for the first time.
