@@ -1,18 +1,20 @@
 using Godot;
 using System;
 using TemporalIT;
+using Environment = Godot.Environment;
 
 public partial class BackButtonJMJ : Button
 {
-	private Control _INTERFACE_TO_CLOSE;
+	private const String _PATH_NEXT_SCENE = "res://JMJ's Room/Room/Saddler.tscn";
+	private EButton _keyInteration;
 
 	public override void _Ready()
 	{
-		_INTERFACE_TO_CLOSE = GetNode<Control>("../../../../CodeChest");
+		_keyInteration = new EButton();
 	}
 
 	public void _on_back_button_pressed()
 	{
-		_INTERFACE_TO_CLOSE.Visible = false;
+		_keyInteration.makeInteraction(GetTree(), "button_e", _PATH_NEXT_SCENE);
 	}
 }

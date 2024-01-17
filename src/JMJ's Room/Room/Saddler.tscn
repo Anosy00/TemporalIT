@@ -1690,7 +1690,7 @@ position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
 
 [node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(22, -25)
+position = Vector2(40, 57)
 scale = Vector2(1, 1)
 script = ExtResource("4_i0vk7")
 
@@ -1783,6 +1783,7 @@ shape = SubResource("RectangleShape2D_mbuma")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Chest"]
 position = Vector2(7.25, 4)
+rotation = -0.00355689
 shape = SubResource("RectangleShape2D_4pt2v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Saddler/TileMap/Chest"]

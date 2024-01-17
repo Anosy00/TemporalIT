@@ -19,6 +19,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_left = -130.0
