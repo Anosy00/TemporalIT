@@ -26,6 +26,8 @@ public partial class Museum : TileMap
 		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique."),
 		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour intéragir avec les éléments."),
 	};
+
+	private AudioStreamPlayer _narrator;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -35,6 +37,7 @@ public partial class Museum : TileMap
 			GetNode<Label>("Player/DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
+		_narrator = GetNode<AudioStreamPlayer>("Narrator");
 		_timer = GetNode<Godot.Timer>("Timer");
 		
 		/*GD.Print(""+_dialog1[0]._name);
@@ -44,6 +47,7 @@ public partial class Museum : TileMap
 		SetIndex(0);
 		//GD.Print("Le ZIndex de la scene est "+getZIndex());
 		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox);
+		_narrator.Play();
 		_timer.Start(6);
 	}
 	
