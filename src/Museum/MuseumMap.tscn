@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://sx16c50i5nov" path="res://ressources/media/cartoonBubble.png" id="11_3ubsv"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="12_top77"]
 [ext_resource type="Texture2D" uid="uid://dfptywg5vd0uj" path="res://ressources/tilesmap/Images/table.png" id="13_fjorn"]
-[ext_resource type="PackedScene" uid="uid://bjl588ndnpdl8" path="res://Museum/view_of_PunshedCard.tscn" id="14_cr3fu"]
+[ext_resource type="PackedScene" uid="uid://bjl588ndnpdl8" path="res://Museum/view_of_PunchedCard.tscn" id="14_cr3fu"]
 [ext_resource type="Texture2D" uid="uid://b4rqr3g7rwn2p" path="res://ressources/tilesmap/Images/ti-99-4a.png" id="15_l1f1n"]
 [ext_resource type="Texture2D" uid="uid://xjfma2elxdca" path="res://ressources/tilesmap/Images/84applemac.png" id="16_02ftn"]
 [ext_resource type="Texture2D" uid="uid://wai8wxgh36wr" path="res://ressources/tilesmap/Images/ibm5150.png" id="17_pa7ia"]

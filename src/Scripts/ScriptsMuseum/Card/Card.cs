@@ -6,22 +6,22 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 	public partial class Card : Node
 	{
 		// Called when the node enters the scene tree for the first time.
-		public AnimatedSprite2D _keyboardInteration;
+		public AnimatedSprite2D KeyboardInteration;
 		
 		
 
 		public override void _Ready()
 		{
-			_keyboardInteration = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-			_keyboardInteration.Visible = false;
+			KeyboardInteration = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+			KeyboardInteration.Visible = false;
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta)
 		{
-			if (Input.IsActionPressed("button_e") && _keyboardInteration.IsVisibleInTree())
+			if (Input.IsActionPressed("button_e") && KeyboardInteration.IsVisibleInTree())
 			{
-				GetTree().ChangeSceneToFile("res://Museum/PunshedCard.tscn");
+				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
 				
 			}
 		}
@@ -29,15 +29,15 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 		public void _on_interactive_zone_of_the_punched_card_body_entered(CharacterBody2D body)
 		{
 			// Replace with function body.
-			_keyboardInteration.Visible = true;
-			_keyboardInteration.Play("default");
+			KeyboardInteration.Visible = true;
+			KeyboardInteration.Play("default");
 		}
 
 		public void _on_interactive_zone_of_the_punched_card_body_exited(CharacterBody2D body)
 		{
 			// Replace with function body.
-			_keyboardInteration.Visible = false;
-			_keyboardInteration.Stop();
+			KeyboardInteration.Visible = false;
+			KeyboardInteration.Stop();
 		}
 
 

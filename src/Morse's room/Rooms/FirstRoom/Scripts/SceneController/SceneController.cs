@@ -1,13 +1,12 @@
 using Godot;
-using System;
-using TemporalIT.Scripts.KeyboardInteraction;
+namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.SceneController;
 
 public partial class SceneController : Node
 {
-	private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/Maze/Maze.tscn";
-	public void _on_body_entered(CharacterBody2D player)
-	{
-		GetTree().ChangeSceneToFile(_NEXT_SCENE_PATH);
-	}
+	private const string NextScenePath = "res://Morse's room/Rooms/Maze/Maze.tscn";
 
+	private void _on_body_entered(CharacterBody2D player)
+	{
+		GetTree().ChangeSceneToFile(NextScenePath);
+	}
 }

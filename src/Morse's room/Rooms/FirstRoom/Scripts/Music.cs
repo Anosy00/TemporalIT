@@ -1,39 +1,38 @@
 using Godot;
-using System;
 
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts
 {
 	public partial class Music : Node
 	{
-		public static AudioStreamPlayer backgroundMusic;
+		private static AudioStreamPlayer _backgroundMusic;
 		private static float _seconds;
 
-		private const String _PATH_MUSIC = "Music";
+		private const string PathMusic = "Music";
 
 		public override void _Ready()
 		{
-			backgroundMusic = GetNode<AudioStreamPlayer>(_PATH_MUSIC);
-			backgroundMusic.Autoplay = true;
+			_backgroundMusic = GetNode<AudioStreamPlayer>(PathMusic);
+			_backgroundMusic.Autoplay = true;
 		}
 
 		public override void _Process(double delta)
 		{
-			_seconds = backgroundMusic.GetPlaybackPosition();
+			_seconds = _backgroundMusic.GetPlaybackPosition();
 		}
 
-		public static void playMusic()
+		public static void PlayMusic()
 		{
-			backgroundMusic.Play(_seconds);
+			_backgroundMusic.Play(_seconds);
 		}
 		
-		public static void stopMusic()
+		public static void StopMusic()
 		{
-			backgroundMusic.Stop();
+			_backgroundMusic.Stop();
 		}
 
-		public void _on_music_finished()
+		private void _on_music_finished()
 		{
-			backgroundMusic.Play();
+			_backgroundMusic.Play();
 		}
 	}
 }

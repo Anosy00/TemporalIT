@@ -1,34 +1,37 @@
-using System;
-using System.IO;
-
+namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts;
 
 public class PlayerSaveManager
 {
-    private float positionX;
-    private float positionY;
-    private const String _NAME_FILE = "firstRoomSavePostionPlayer.txt";
+    private float _positionX;
+    private float _positionY;
+    private const string NameFile = "firstRoomSavePostionPlayer.txt";
     
-    public void save(float valueX, float valueY)
+    public void Save(float valueX, float valueY)
     {
-        string[] valueToInsert = new string[] {Convert.ToString(valueX),Convert.ToString(valueY),};
-        File.WriteAllLines(_NAME_FILE,valueToInsert);
+        var valueToInsert = new string[] {Convert.ToString(valueX),Convert.ToString(valueY),};
+        File.WriteAllLines(NameFile,valueToInsert);
     }
 
-    public void load()
+    public void Load()
     {
-        string[] lignes = File.ReadAllLines(_NAME_FILE);
+        string[] lines = File.ReadAllLines(NameFile);
 
-        positionX = Convert.ToSingle(lignes[0]);
-        positionY = Convert.ToSingle(lignes[1]);
+        _positionX = Convert.ToSingle(lines[0]);
+        _positionY = Convert.ToSingle(lines[1]);
     }
 
-    public float getX()
+    public float GetX()
     {
-        return positionX;
+        return _positionX;
     }
 
-    public float getY()
+    public float GetY()
     {
-        return positionY;
+        return _positionY;
+    }
+    
+    public void Reset()
+    {
+        File.Delete(NameFile);
     }
 }

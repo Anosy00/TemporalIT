@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="TemporalIT"
-run/main_scene="res://Museum/MuseumMap.tscn"
+run/main_scene="res://TitleScreen/TitleScreen.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon_TemporalIT.png"

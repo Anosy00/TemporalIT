@@ -51,7 +51,7 @@ public partial class library : Node
 	
 	public CollisionShape2D getPlayer(){
 		//GD.Print(Museum.getCollisionShapePlayer(this.GetParent(),"Player/CollisionShape2D"));
-		return Museum.getCollisionShapePlayer(this.GetParent(),"Player/CollisionShape2D");
+		return TemporalIT.Scripts.ScriptsMuseum.Museum.GetCollisionShapePlayer(this.GetParent(),"Player/CollisionShape2D");
 	}
 	
 	private Vector2 posPlayer()
@@ -98,7 +98,7 @@ public partial class library : Node
 	private int getZIndexPlayer()
 	{
 		
-		CharacterBody2D playerCharacterBody2D = Museum.getCharacterBody2D(this.GetParent(),"Player");
+		CharacterBody2D playerCharacterBody2D = TemporalIT.Scripts.ScriptsMuseum.Museum.GetCharacterBody2D(this.GetParent(),"Player");
 		return playerCharacterBody2D.ZIndex;
 	}
 	

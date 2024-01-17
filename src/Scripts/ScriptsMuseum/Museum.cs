@@ -1,16 +1,15 @@
 using Godot;
-using System;
-using System.Collections.Generic;
-using TemporalIT;
+
+namespace TemporalIT.Scripts.ScriptsMuseum;
 
 public struct Sentence
 {
-	public string _name;
-	public string _text;
+	public readonly string Name;
+	public readonly string Text;
 	
 	public Sentence(string name, string text){
-		_name = name;
-		_text = text;
+		Name = name;
+		Text = text;
 	}
 }
 
@@ -18,7 +17,7 @@ public partial class Museum : TileMap
 {
 	private DialogBox _dialogBox;
 	private Godot.Timer _timer;
-	private int nbTimer = 0;
+	private int _nbTimer;
 
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
@@ -42,9 +41,9 @@ public partial class Museum : TileMap
 		GD.Print(""+_dialog1[0]._text);
 		GD.Print(""+_dialogBox, _timer);*/
 		
-		setZIndex(0);
+		SetIndex(0);
 		//GD.Print("Le ZIndex de la scene est "+getZIndex());
-		GlobalMuseum.displayDialogBox(_dialog1[0]._name, _dialog1[0]._text, _dialogBox, _timer);
+		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox);
 		_timer.Start(6);
 	}
 	
@@ -61,44 +60,41 @@ public partial class Museum : TileMap
 	
 	
 	
-	public static void displayDialogBox(string name, string text, DialogBox dialogBox)
+	public static void DisplayDialogBox(string name, string text, DialogBox dialogBox)
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
 	}
 	private void _on_timer_timeout()
 	{
-		nbTimer ++;
-		if (nbTimer == _dialog1.Count ) {
+		_nbTimer ++;
+		if (_nbTimer == _dialog1.Count ) {
 			_timer.Stop();
 			_dialogBox.disable();
 		} else {
-			displayDialogBox(_dialog1[nbTimer]._name, _dialog1[nbTimer]._text, _dialogBox);
+			DisplayDialogBox(_dialog1[_nbTimer].Name, _dialog1[_nbTimer].Text, _dialogBox);
 			_timer.Start(6);
 		}
 		
 	}
 	
-	public static CollisionShape2D getCollisionShapePlayer(Node rootNode, string path)
+	public static CollisionShape2D GetCollisionShapePlayer(Node rootNode, string path)
 	{
 		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CollisionShape2D>(path);
 	}
-	public static CharacterBody2D getCharacterBody2D(Node rootNode, string path)
+	public static CharacterBody2D GetCharacterBody2D(Node rootNode, string path)
 	{
 		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CharacterBody2D>(path);
 	}
-	private int getZIndex()
+	private int GetIndex()
 	{
-		return this.ZIndex;
+		return ZIndex;
 	}
-	private void setZIndex(int number)
+	private void SetIndex(int number)
 	{
-		this.ZIndex = number;
+		ZIndex = number;
 	}
 	
 }
-
-
-

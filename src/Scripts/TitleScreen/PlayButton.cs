@@ -4,8 +4,13 @@ namespace TemporalIT.Scripts.TitleScreen;
 
 public partial class PlayButton : Button
 {
-    public void _on_play_button_pressed()
+    private void _on_start_button_pressed()
     {
-        throw new System.NotImplementedException();
+        if (GetTree().ChangeSceneToFile("res://Museum/MuseumMap.tscn") != Error.Ok)
+            GD.PrintErr("Failed to change scene to MuseumMap.tscn");
+        else
+        {
+            GetTree().ChangeSceneToFile("res://Museum/MuseumMap.tscn");
+        }
     }
 }
