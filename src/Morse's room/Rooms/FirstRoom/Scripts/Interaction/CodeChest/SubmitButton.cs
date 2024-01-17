@@ -1,6 +1,6 @@
 using Godot;
-using System;
-using TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest;
+
+namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest;
 
 public partial class SubmitButton : Node
 {
@@ -10,27 +10,27 @@ public partial class SubmitButton : Node
 	private LineEdit _codeEntered;
 	
 	//CONSTs
-	private const int _CORRECT_ANSWER = 2023;
-	private const String _PATH_CHEST_IS_OPENED = "res://Morse's room/Rooms/FirstRoom/MorseInstruction.tscn";
-	private const String _PATH_SUBMIT_BUTTON = "SubmitButton";
-	private const String _PATH_CODE_ENTERED_LINE_EDIT = "CodeEntered";
+	private const int CorrectAnswer = 2023;
+	private const string PathChestIsOpened = "res://Morse's room/Rooms/FirstRoom/MorseInstruction.tscn";
+	private const string PathSubmitButton = "SubmitButton";
+	private const string PathCodeEnteredLineEdit = "CodeEntered";
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 
-		_submitButton = GetNode<Button>(_PATH_SUBMIT_BUTTON);
-		_codeEntered = GetNode<LineEdit>(_PATH_CODE_ENTERED_LINE_EDIT);
+		_submitButton = GetNode<Button>(PathSubmitButton);
+		_codeEntered = GetNode<LineEdit>(PathCodeEnteredLineEdit);
 	}
-	
-	public void _on_submit_pressed()
+
+	private void _on_submit_pressed()
 	{
-		_codeVerification = new CodeVerification(_CORRECT_ANSWER);
-		_codeVerification.verfication(int.Parse(_codeEntered.Text));
-		changeSceneWhenCodeIsGood();
+		_codeVerification = new CodeVerification(CorrectAnswer);
+		_codeVerification.Verification(int.Parse(_codeEntered.Text));
+		ChangeSceneWhenCodeIsGood();
 	}
-	
-	public void _on_code_entered_text_changed(string newText)
+
+	private void _on_code_entered_text_changed(string newText)
 	{
 		if (!IsNumber(newText))
 		{
@@ -38,16 +38,16 @@ public partial class SubmitButton : Node
 		}
 	}
 
-	private bool IsNumber(string text)
+	private static bool IsNumber(string text)
 	{
 		return float.TryParse(text, out _);
 	}
 	
-	private void changeSceneWhenCodeIsGood()
+	private void ChangeSceneWhenCodeIsGood()
 	{
-		if (_codeVerification.chestIsOpened())
+		if (_codeVerification.ChestIsOpened())
 		{
-			GetTree().ChangeSceneToFile(_PATH_CHEST_IS_OPENED);
+			GetTree().ChangeSceneToFile(PathChestIsOpened);
 		}
 		else
 		{

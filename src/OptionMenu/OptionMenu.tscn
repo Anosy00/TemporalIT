@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://dywv3buv3ivmr"]
+[gd_scene load_steps=14 format=3 uid="uid://dywv3buv3ivmr"]
 
-[ext_resource type="VideoStream" path="res://ressources/media/Vecteezy-Multicolored-Wire-Mesh-Glow-With-Center-Flare-Light-3385051.ogv" id="1_jrs4m"]
-[ext_resource type="Script" path="res://Scripts/TitleScreen/BackgroundVideo.cs" id="2_nlixo"]
+[ext_resource type="Texture2D" uid="uid://byp26o0jyt83e" path="res://ressources/media/image.png" id="1_rp47s"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="3_tnpm2"]
 [ext_resource type="Script" path="res://Scripts/OptionMenu/ReturnButton.cs" id="4_nhjgg"]
 [ext_resource type="Script" path="res://Scripts/OptionMenu/ResolutionMenu.cs" id="4_p5edt"]
@@ -30,7 +29,7 @@ expand_margin_right = 1.0
 expand_margin_bottom = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1b7ql"]
-bg_color = Color(0.509804, 0.509804, 0.509804, 1)
+bg_color = Color(0.321569, 0.458824, 0.74902, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -45,7 +44,7 @@ content_margin_left = 0.0
 content_margin_top = 0.0
 content_margin_right = 0.0
 content_margin_bottom = 0.0
-bg_color = Color(0.666667, 0.717647, 0.721569, 1)
+bg_color = Color(0.141176, 0.427451, 0.588235, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -60,7 +59,7 @@ shadow_color = Color(1, 1, 1, 0.6)
 anti_aliasing_size = 0.115
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb5c6"]
-bg_color = Color(0.435294, 0.435294, 0.435294, 1)
+bg_color = Color(0.321569, 0.458824, 0.74902, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -79,18 +78,18 @@ Button/styles/pressed = SubResource("StyleBoxFlat_nb5c6")
 
 [node name="OptionMenu" type="Node"]
 
-[node name="BackgroundVideo" type="VideoStreamPlayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -33.8824
+offset_right = 33.8823
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("1_jrs4m")
-autoplay = true
-expand = true
-script = ExtResource("2_nlixo")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+texture = ExtResource("1_rp47s")
+expand_mode = 3
 
 [node name="Options" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -201,7 +200,6 @@ theme_override_fonts/font = ExtResource("3_tnpm2")
 text = "RETOUR"
 script = ExtResource("4_nhjgg")
 
-[connection signal="finished" from="BackgroundVideo" to="BackgroundVideo" method="_on_finished"]
 [connection signal="item_selected" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/WindowMenu" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/WindowMenu" method="_on_item_selected"]
 [connection signal="item_selected" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ResolutionMenu" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ResolutionMenu" method="_on_resolution_selected"]
 [connection signal="resized" from="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ResolutionMenu" to="CanvasLayer/Options/CenterContainer/PanelContainer/VBoxContainer/ResolutionMenu" method="_on_resized"]

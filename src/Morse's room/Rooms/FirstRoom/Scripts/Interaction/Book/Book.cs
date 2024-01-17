@@ -1,37 +1,35 @@
 using Godot;
-using System;
 using TemporalIT.Scripts.KeyboardInteraction;
-
 namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Book
 {
 	public partial class Book : Node
 	{
 		// Called when the node enters the scene tree for the first time.
-		private KeyboardInteraction _keyboardInteration;
+		private KeyboardInteraction _keyboardInteraction;
 		
-		private const String _NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/InTheBook.tscn";
-		private const String _E_BUTTON = "button_e";
-		private const String _NAME_OF_THE_ANIMATION = "default";
+		private const string NextScenePath = "res://Morse's room/Rooms/FirstRoom/InTheBook.tscn";
+		private const string EButton = "button_e";
+		private const string NameOfTheAnimation = "default";
 		public override void _Ready()
 		{
-			_keyboardInteration = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
-			_keyboardInteration.disable();
+			_keyboardInteraction = new KeyboardInteraction(GetNode<AnimatedSprite2D>("AnimatedSprite2D"));
+			_keyboardInteraction.disable();
 		}
 
 		// Called every frame. 'delta' is the elapsed time since the previous frame.
 		public override void _Process(double delta)
 		{
-			_keyboardInteration.makeInteraction(GetTree(),_E_BUTTON,_NEXT_SCENE_PATH);
+			_keyboardInteraction.makeInteraction(GetTree(),EButton,NextScenePath);
 		}
 
-		public void _on_body_entered(CharacterBody2D body)
+		private void _on_body_entered(CharacterBody2D body)
 		{
-			_keyboardInteration.available(_NAME_OF_THE_ANIMATION);
+			_keyboardInteraction.available(NameOfTheAnimation);
 		}
 
-		public void _on_body_exited(CharacterBody2D body)
+		private void _on_body_exited(CharacterBody2D body)
 		{
-			_keyboardInteration.disable();
+			_keyboardInteraction.disable();
 		}
 	}
 }

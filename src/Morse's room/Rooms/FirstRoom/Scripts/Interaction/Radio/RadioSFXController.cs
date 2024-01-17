@@ -20,7 +20,7 @@ public partial class RadioSFXController : VBoxContainer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Music.stopMusic();
+		Music.StopMusic();
 		_morseCodeSound = GetNode<AudioStreamPlayer>(_MORSE_CODE_SOUND_PATH);
 		_progressBar = GetNode<ProgressBar>(_PROGRESS_BAR_PATH);
 		_playButton = GetNode<Button>(_PLAY_BUTTON);
