@@ -28,12 +28,12 @@ Il vous suffit ensuite de cliquer sur l'executable correspondant à votre systè
 
 | Actual Version | Latest version                |
 | :-------- | :------------------------- |
-| v1 |  [v1.0.0.0](https://github.com/Anosy00/TemporalIT/tree/v1.0.0) |
+| v1 |  [v1.0.0](https://github.com/Anosy00/TemporalIT/tree/v1.0.0) |
 
 
 | All Version | Latest version                |
 | :-------- | :------------------------- |
-| v1 |  [v1.0.0.0](https://github.com/Anosy00/TemporalIT/tree/v1.0.0) |
+| v1 |  [v1.0.0](https://github.com/Anosy00/TemporalIT/tree/v1.0.0) |
 
 
 ## Authors
