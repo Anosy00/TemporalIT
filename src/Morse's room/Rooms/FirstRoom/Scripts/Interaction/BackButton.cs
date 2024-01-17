@@ -9,7 +9,7 @@ public partial class BackButton : Button
 	public override void _Ready()
 	{
 		
-		_NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/FirestRoom.tscn";
+		_NEXT_SCENE_PATH = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
 		
 	}
 

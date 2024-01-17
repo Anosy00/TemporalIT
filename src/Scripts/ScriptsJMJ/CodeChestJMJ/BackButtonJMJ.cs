@@ -10,11 +10,10 @@ public partial class BackButtonJMJ : Button
 
 	public override void _Ready()
 	{
-		_keyInteration = new EButton();
 	}
 
-	public void _on_back_button_pressed()
+	public void _on_pressed()
 	{
-		_keyInteration.makeInteraction(GetTree(), "button_e", _PATH_NEXT_SCENE);
+		GetTree().ChangeSceneToFile(_PATH_NEXT_SCENE);
 	}
 }

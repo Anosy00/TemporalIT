@@ -70,4 +70,4 @@ text = "BACK"
 script = ExtResource("2_t7epg")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer/SubmitButton" method="_on_submit_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed" flags=18]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_pressed"]

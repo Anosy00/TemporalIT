@@ -1,5 +1,6 @@
-[gd_scene load_steps=59 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=60 format=3 uid="uid://c1iroer1genb1"]
 
+[ext_resource type="Script" path="res://JMJ's Room/Room/Saddler.cs" id="1_b0nxv"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="3_80n8l"]
@@ -1663,6 +1664,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
 
 [node name="Saddler" type="Node2D" parent="."]
 position = Vector2(0, 1)
+script = ExtResource("1_b0nxv")
 
 [node name="TileMap" type="TileMap" parent="Saddler"]
 position = Vector2(554, 320)
@@ -1690,7 +1692,7 @@ position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
 
 [node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(40, 57)
+position = Vector2(-34, -5)
 scale = Vector2(1, 1)
 script = ExtResource("4_i0vk7")
 
@@ -1716,6 +1718,7 @@ position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
 [node name="DialogBox" type="Sprite2D" parent="Saddler/TileMap"]
+visible = false
 position = Vector2(9.75, 51.25)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
@@ -1893,6 +1896,7 @@ text = "Récupérer les planches"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="tree_exited" from="Saddler" to="Saddler" method="_on_tree_exited"]
 [connection signal="body_entered" from="Saddler/TileMap/EButtonLadder" to="Saddler/TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Saddler/TileMap/EButtonLadder" to="Saddler/TileMap/EButtonLadder" method="_on_body_exited"]
 [connection signal="body_entered" from="Saddler/TileMap/Chest" to="Saddler/TileMap/Chest" method="_on_body_entered"]

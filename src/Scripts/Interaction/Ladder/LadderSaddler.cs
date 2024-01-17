@@ -11,7 +11,6 @@ public partial class LadderSaddler : Node
 	private const String _PATH_NEXT_SCENE = "res://JMJ's Room/Room/tile_map.tscn";
 	private DialogBox _dialogBox;
 	private KeyboardInteraction _keyboardInteraction;
-	private Sprite2D _objectif;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -23,7 +22,6 @@ public partial class LadderSaddler : Node
 			GetNode<AnimationPlayer>("../DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
 		_keyboardInteraction = new KeyboardInteraction(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
-		_objectif = GetNode<Sprite2D>("../../ObjectifSaddler");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
