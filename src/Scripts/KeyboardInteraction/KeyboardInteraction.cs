@@ -38,7 +38,7 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 		
 		public void makeInteraction(SceneTree tree,String key,String nextScenePath)
 		{
-			if (Input.IsActionPressed(key) && isVisible())
+			if (Input.IsActionJustReleased(key) && isVisible())
 			{
 				tree.ChangeSceneToFile(nextScenePath);
 			}
@@ -46,14 +46,14 @@ namespace TemporalIT.Scripts.KeyboardInteraction
 
 		public void onButtonPress(Control node)
 		{
-			if (Input.IsActionPressed("button_e") && isVisible())
+			if (Input.IsActionJustReleased("button_e") && isVisible())
 			{
 				node.Visible = true;
 			}
 		}
 		public void onButtonPress(Node2D node)
 		{
-			if (Input.IsActionPressed("button_e") && isVisible())
+			if (Input.IsActionJustReleased("button_e") && isVisible())
 			{
 				node.GetTree().Paused = false;
 			}

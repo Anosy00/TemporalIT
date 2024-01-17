@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=59 format=3 uid="uid://c1iroer1genb1"]
 
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
@@ -18,8 +18,6 @@
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/CodeChestJMJ.cs" id="16_lcuyh"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/StringFound.cs" id="17_86gx4"]
 [ext_resource type="Texture2D" uid="uid://cvq3g3xe4lfcm" path="res://ressources/images/string.png" id="18_5pkao"]
-[ext_resource type="PackedScene" uid="uid://chxm6dp2xi7v1" path="res://JMJ's Room/Room/code_chest.tscn" id="19_wa0x1"]
-[ext_resource type="PackedScene" uid="uid://40j8ycjitstb" path="res://JMJ's Room/Room/tile_map.tscn" id="20_uivqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
 texture = ExtResource("1_tbaut")
@@ -1856,55 +1854,8 @@ position = Vector2(8.5, -9.25)
 scale = Vector2(0.075, 0.075)
 texture = ExtResource("11_q87uh")
 
-[node name="CodeChest" parent="." instance=ExtResource("19_wa0x1")]
-visible = false
-offset_left = 562.0
-offset_top = 317.0
-offset_right = 562.0
-offset_bottom = 317.0
-scale = Vector2(1.5, 1.5)
-
-[node name="Node2D" parent="." instance=ExtResource("20_uivqy")]
-visible = false
-
-[node name="Objectif" type="Sprite2D" parent="."]
-position = Vector2(80, 106)
-scale = Vector2(0.15, 0.433)
-texture = ExtResource("13_4g0i2")
-metadata/_edit_group_ = true
-
-[node name="LabelObjectif" type="Label" parent="Objectif"]
-anchors_preset = -1
-anchor_left = 0.194
-anchor_top = 0.248
-anchor_right = 0.194
-anchor_bottom = 0.248
-offset_left = -1065.43
-offset_top = -137.616
-offset_right = 494.572
-offset_bottom = -65.616
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_h46hr")
-theme_override_font_sizes/font_size = 50
-text = "Objectif"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-metadata/_edit_use_anchors_ = true
-
-[node name="LabelText" type="Label" parent="Objectif"]
-offset_left = -753.0
-offset_top = -25.0
-offset_right = 740.0
-offset_bottom = 87.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("14_h46hr")
-theme_override_font_sizes/font_size = 50
-text = "Récupérer les planches"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="ObjectifSaddler" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(400, 272)
 scale = Vector2(0.1, 0.2)
 texture = ExtResource("13_4g0i2")

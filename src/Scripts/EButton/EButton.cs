@@ -36,12 +36,12 @@ public partial class EButton : Node
 		
 	public int makeInteraction(SceneTree tree,String key,String nextScenePath)
 	{
-		if (Input.IsActionPressed(key) && isVisible() && GlobalJMJ.hadInteractedWithNewsPaper)
+		if (Input.IsActionJustReleased(key) && isVisible() && GlobalJMJ.hadInteractedWithNewsPaper)
 		{
 			tree.ChangeSceneToFile(nextScenePath);
 			return 0;
 		}
-		else if (Input.IsActionPressed(key) && isVisible() && !GlobalJMJ.hadInteractedWithNewsPaper)
+		else if (Input.IsActionJustReleased(key) && isVisible() && !GlobalJMJ.hadInteractedWithNewsPaper)
 		{
 			return 1;
 		}
@@ -51,7 +51,7 @@ public partial class EButton : Node
 
 	public int makeTalking()
 	{
-		if (Input.IsActionJustPressed("button_e") && isVisible())
+		if (Input.IsActionJustReleased("button_e") && isVisible())
 		{
 			return 0;
 		}

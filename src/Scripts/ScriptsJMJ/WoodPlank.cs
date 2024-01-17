@@ -17,7 +17,7 @@ public partial class WoodPlank : Area2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionPressed("button_e") && _button.isVisible())
+		if (Input.IsActionJustReleased("button_e") && _button.isVisible())
 		{
 			this.Visible = false;
 			_collisionShape2D.Disabled = true;
