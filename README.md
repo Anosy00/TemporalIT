@@ -19,7 +19,7 @@ L'application fonctionne uniquement sur Windows 10/11 et Linux.
 Si vous voulez installer installer le jeu, vous pouvez simplement clone le git à l'aide de cette commande
 
 ```bash
-    https://github.com/Anosy00/TemporalIT.git
+    git clone https://github.com/Anosy00/TemporalIT.git
 ```
 
 Il vous suffit ensuite de cliquer sur l'executable correspondant à votre système d'exploitation
