@@ -2,16 +2,14 @@ using Godot;
 using TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts;
 
 namespace TemporalIT.Scripts.ScriptsMuseum.Card;
-public partial class ButtonPunchedCard : Node
+public partial class ButtonPunchedCard : Button
 {
 	// Called when the node enters the scene tree for the first time.
-	private Button _buttonPunchedCard;
 	private String _nextScene = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
 	private AnimatedSprite2D _keyboardInteration;
 	private PlayerSaveManager _playerSaveManager;
 	public override void _Ready()
 	{
-		_buttonPunchedCard = GetNode<Button>("ButtonPunchedCard");
 		if (Input.IsActionPressed("button_e"))
 		{
 			// Simulate releasing the E button to disable the action
@@ -29,12 +27,14 @@ public partial class ButtonPunchedCard : Node
 	{
 		if (!Input.IsActionPressed("button_e")) return;
 		GetTree().ChangeSceneToFile(_nextScene);
+		Music.PlayMusic();
 		_playerSaveManager.Reset();
 	}
 
 	private void _on_pressed()
 	{
 		GetTree().ChangeSceneToFile(_nextScene);
+		Music.PlayMusic();
 		_playerSaveManager.Reset();
 	}
 }

@@ -15,7 +15,7 @@ public struct Sentence
 
 public partial class Museum : TileMap
 {
-	private DialogBox _dialogBox;
+	private DialogBox.DialogBox _dialogBox;
 	private Godot.Timer _timer;
 	private int _nbTimer;
 
@@ -30,7 +30,7 @@ public partial class Museum : TileMap
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_dialogBox = new DialogBox(GetNode<Sprite2D>("Player/DialogBox"),
+		_dialogBox = new DialogBox.DialogBox(GetNode<Sprite2D>("Player/DialogBox"),
 			GetNode<Label>("Player/DialogBox/LabelText2"),
 			GetNode<Label>("Player/DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
@@ -60,7 +60,7 @@ public partial class Museum : TileMap
 	
 	
 	
-	public static void DisplayDialogBox(string name, string text, DialogBox dialogBox)
+	public static void DisplayDialogBox(string name, string text, DialogBox.DialogBox dialogBox)
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");

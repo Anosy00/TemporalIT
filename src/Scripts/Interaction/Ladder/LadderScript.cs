@@ -1,20 +1,21 @@
 using Godot;
-using System;
+
+namespace TemporalIT.Scripts.Interaction.Ladder;
 
 public partial class LadderScript : Node
 {
 	private EButton _keyboardInteration;
-	private const String _E_BUTTON = "button_e";
-	private const String _NAME_OF_THE_ANIMATION = "default";
-	private DialogBox _dialogBox;
+	private const String EButton = "button_e";
+	private const String NameOfTheAnimation = "default";
+	private DialogBox.DialogBox _dialogBox;
 
-	private const String _nextScene = "res://JMJ's Room/Room/Saddler.tscn";
+	private const String NextScene = "res://JMJ's Room/Room/Saddler.tscn";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_keyboardInteration = new EButton(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_keyboardInteration.disable();
-		_dialogBox = new DialogBox(GetNode<Sprite2D>("../DialogBox"),
+		_dialogBox = new DialogBox.DialogBox(GetNode<Sprite2D>("../DialogBox"),
 			GetNode<Label>("../DialogBox/LabelText"),
 			GetNode<Label>("../DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../DialogBox/AnimationPlayer"));
@@ -23,7 +24,7 @@ public partial class LadderScript : Node
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
 	{
-		_keyboardInteration.available(_NAME_OF_THE_ANIMATION);
+		_keyboardInteration.available(NameOfTheAnimation);
 	}
 	
 	public void _on_body_exited(CharacterBody2D body)
@@ -34,11 +35,11 @@ public partial class LadderScript : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (_keyboardInteration.makeInteraction(GetTree(), _E_BUTTON, _nextScene) == 0)
+		if (_keyboardInteration.makeInteraction(GetTree(), EButton, NextScene) == 0)
 		{
-			_keyboardInteration.makeInteraction(GetTree(), _E_BUTTON, _nextScene);
+			_keyboardInteration.makeInteraction(GetTree(), EButton, NextScene);
 		}
-		else if (_keyboardInteration.makeInteraction(GetTree(), _E_BUTTON, _nextScene) == 1)
+		else if (_keyboardInteration.makeInteraction(GetTree(), EButton, NextScene) == 1)
 		{
 			_dialogBox.setTextOfLabel("[Player]", "Je devrais peut-être aller voir le journal avant");
 			_dialogBox.available("displayText");

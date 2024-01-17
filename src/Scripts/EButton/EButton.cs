@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using TemporalIT;
+using TemporalIT.Scripts.ScriptsJMJ;
 
 public partial class EButton : Node
 {
@@ -36,12 +37,12 @@ public partial class EButton : Node
 		
 	public int makeInteraction(SceneTree tree,String key,String nextScenePath)
 	{
-		if (Input.IsActionPressed(key) && isVisible() && GlobalJMJ.hadInteractedWithNewsPaper)
+		if (Input.IsActionPressed(key) && isVisible() && GlobalJmj.hadInteractedWithNewsPaper)
 		{
 			tree.ChangeSceneToFile(nextScenePath);
 			return 0;
 		}
-		else if (Input.IsActionPressed(key) && isVisible() && !GlobalJMJ.hadInteractedWithNewsPaper)
+		else if (Input.IsActionPressed(key) && isVisible() && !GlobalJmj.hadInteractedWithNewsPaper)
 		{
 			return 1;
 		}

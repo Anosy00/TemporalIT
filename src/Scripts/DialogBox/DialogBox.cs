@@ -1,6 +1,6 @@
 using Godot;
-using System;
-using System.Data;
+
+namespace TemporalIT.Scripts.DialogBox;
 
 public partial class DialogBox : Node
 {
@@ -16,7 +16,6 @@ public partial class DialogBox : Node
 		_labelName = labelName;
 		_animationPlayer = animationPlayer;
 	}
-	
 	public void disable()
 	{
 		_dialogBox.Visible = false;

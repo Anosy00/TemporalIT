@@ -6,7 +6,7 @@ public partial class LadderSaddler : Node
 	private EButton _keyboardInteration;
 	private const String _E_BUTTON = "button_e";
 	private const String _NAME_OF_THE_ANIMATION = "default";
-	private DialogBox _dialogBox;
+	private TemporalIT.Scripts.DialogBox.DialogBox _dialogBox;
 
 	private const String _nextScene = "res://JMJ's Room/Room/tile_map.tscn";
 	// Called when the node enters the scene tree for the first time.
@@ -14,7 +14,7 @@ public partial class LadderSaddler : Node
 	{
 		_keyboardInteration = new EButton(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_keyboardInteration.disable();
-		_dialogBox = new DialogBox(GetNode<Sprite2D>("../DialogBox"),
+		_dialogBox = new TemporalIT.Scripts.DialogBox.DialogBox(GetNode<Sprite2D>("../DialogBox"),
 			GetNode<Label>("../DialogBox/LabelText"),
 			GetNode<Label>("../DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../DialogBox/AnimationPlayer"));

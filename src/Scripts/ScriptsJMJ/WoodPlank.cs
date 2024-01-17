@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using TemporalIT;
+using TemporalIT.Scripts.ScriptsJMJ;
 
 public partial class WoodPlank : Area2D
 {
@@ -21,13 +22,13 @@ public partial class WoodPlank : Area2D
 		{
 			this.Visible = false;
 			_collisionShape2D.Disabled = true;
-			GlobalJMJ.nbPlanks++;
+			GlobalJmj.nbPlanks++;
 		}
 	}
 
 	public void _on_body_entered(CharacterBody2D body)
 	{
-		if (GlobalJMJ.canInteractWithPlanks)
+		if (GlobalJmj.canInteractWithPlanks)
 		{
 			_button.available("default");
 		}

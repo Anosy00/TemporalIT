@@ -1,5 +1,6 @@
 using Godot;
-using System;
+
+namespace TemporalIT.Scripts.ScriptsMuseum;
 
 public partial class TheDialogBox : Area2D
 {
@@ -29,4 +30,3 @@ public partial class TheDialogBox : Area2D
 		_Interaction.Visible = false;
 	}
 }
-
