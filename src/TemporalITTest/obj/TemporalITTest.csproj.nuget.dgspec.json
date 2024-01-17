@@ -1,34 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {}
+    "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalIT.csproj": {
+    "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalIT.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj",
         "projectName": "TemporalIT",
-        "projectPath": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalIT.csproj",
-        "packagesPath": "C:\\Users\\alexb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alexb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,48 +76,53 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {
+    "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
         "projectName": "TemporalITTest",
-        "projectPath": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
-        "packagesPath": "C:\\Users\\alexb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalITTest\\obj\\",
+        "projectPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
-        ],
         "configFilePaths": [
-          "C:\\Users\\alexb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalIT.csproj": {
-                "projectPath": "C:\\Users\\alexb\\OneDrive\\Documents\\SAE 3.01A\\TemporalIT\\src\\TemporalIT.csproj"
+              "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj"
               }
             }
           }
@@ -173,12 +169,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.20, 6.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }
