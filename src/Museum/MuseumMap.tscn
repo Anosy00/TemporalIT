@@ -4422,7 +4422,7 @@ offset_left = -384.62
 offset_top = -95.92
 offset_right = -385.38
 offset_bottom = -99.0
-text = "Inventé par Charles Babbages en 1728, la carte perforée est un morceau de papier qui est lu par un dispositif repérant la présence ou l'absence de trou. Elle permettra d'afficher votre progression dans le jeu."
+text = "Inventée par Joseph Marie Jacquard au début du XIXe siècle, la carte perforée est un morceau de papier qui est lu par un dispositif repérant la présence ou l'absence de trou. Elle permettra d'afficher votre progression dans le jeu"
 label_settings = SubResource("LabelSettings_40ce7")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -4478,11 +4478,11 @@ offset_left = 1931.36
 offset_top = -96.024
 offset_right = 2696.36
 offset_bottom = -32.0605
-text = "Produit par Texas Instruments en 1979, 
-le TI-99/4 était destiné à un usage 
-domestique et éducatif, il était
-notamment capable de jouer à des jeux 
-vidéo. "
+text = "Produit par Texas Instruments en 1979,
+le TI-99/4 était destiné à un usage
+domestique et éducatif. Il était
+notamment capable de jouer à des jeux
+vidéo."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -4519,20 +4519,20 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_Applemac/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -0.843406
-anchor_top = 0.0565045
-anchor_right = -0.843406
-anchor_bottom = 0.921
-offset_left = 287.422
-offset_top = -95.8489
-offset_right = 1029.42
-offset_bottom = -84.832
-text = "Produit par Apple en 1984, 
-Le Macintosh 128k est connu pour 
-être le premier ordinateur 
-personnel avec de bonnes 
-performances graphiques à un 
-prix accessible pour la 
+anchor_left = 0.03
+anchor_top = 0.057
+anchor_right = 0.994
+anchor_bottom = 0.979
+offset_left = -385.101
+offset_top = -95.944
+offset_right = -385.383
+offset_bottom = -95.968
+text = "Produit par Apple en 1984,
+Le Macintosh 128k est connu pour
+être le premier ordinateur
+personnel avec de bonnes
+performances graphiques à un
+prix accessible pour la
 classe moyenne."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
@@ -4570,14 +4570,14 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_IBM5150/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -3.64128
+anchor_left = 0.012
 anchor_top = 0.052
-anchor_right = -3.64128
-anchor_bottom = 0.16037
-offset_left = 2427.79
+anchor_right = 0.994
+anchor_bottom = 0.969
+offset_left = -385.236
 offset_top = -95.984
-offset_right = 3183.79
-offset_bottom = 59.209
+offset_right = -385.376
+offset_bottom = -96.048
 text = "L’IBM Personnal Computer, modèle 5150, 
 est un ordinateur produit par IBM en 
 1981 en plusieurs millions d’exemplaires, 
@@ -4628,13 +4628,13 @@ offset_left = 4871.24
 offset_top = -68.2494
 offset_right = 5628.24
 offset_bottom = 111.751
-text = "Lancé par Apple en 1995, le 
-PowerBook 5300 est le premier 
+text = "Lancé par Apple en 1995, le
+PowerBook 5300 est le premier
 ordinateur portable avec un design
 proche de ce que nous connaissons
-aujourd'hui. Il avait de nombreux 
-problèmes techniques et valurent à 
-Apple la réputation de vendre des 
+aujourd'hui. Il avait de nombreux
+problèmes techniques qui valurent à
+Apple la réputation de vendre des
 produits défectueux."
 label_settings = SubResource("LabelSettings_c3qll")
 horizontal_alignment = 1
@@ -4672,19 +4672,20 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_IBM5151/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -3.58593
-anchor_top = 0.0377979
-anchor_right = -3.57814
-anchor_bottom = 0.791836
-offset_left = 2388.17
-offset_top = -93.2572
-offset_right = 3129.17
-offset_bottom = -64.0326
+anchor_left = 0.006
+anchor_top = 0.036
+anchor_right = 0.994
+anchor_bottom = 0.964
+offset_left = -384.62
+offset_top = -95.912
+offset_right = -385.38
+offset_bottom = -96.088
 text = "Commercialisé en 1977 par Commodore
-International, le PET 2001 (acronyme de 
-Personal Electronic Transactor) est un
- des premiers ordinateurs personnels. 
-Il disposait du célèbre processeur 
+International, le PET 2001 (acronyme de
+Personal Electronic Transactor) est 
+l'un des premiers ordinateurs 
+personnels.
+Il disposait du célèbre processeur
 MOS 6502."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
