@@ -4069,19 +4069,19 @@
     ]
   },
   "packageFolders": {
-    "/home/anosy0/.nuget/packages/": {}
+    "C:\\Users\\matia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj",
+      "projectUniqueName": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
       "projectName": "TemporalITTest",
-      "projectPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj",
-      "packagesPath": "/home/anosy0/.nuget/packages/",
-      "outputPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/obj/",
+      "projectPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
+      "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/anosy0/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -4093,8 +4093,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj": {
-              "projectPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj"
+            "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj": {
+              "projectPath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalIT.csproj"
             }
           }
         }
@@ -4141,12 +4141,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.20, 6.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
