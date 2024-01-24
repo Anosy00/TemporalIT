@@ -1,14 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjl588ndnpdl8"]
+[gd_scene load_steps=6 format=3 uid="uid://bjl588ndnpdl8"]
 
 [ext_resource type="Texture2D" uid="uid://d1j7fbpx5q4oj" path="res://ressources/tilesmap/perfored-card.png" id="1_100dd"]
+[ext_resource type="Script" path="res://Scripts/PunchedCard/holePunchedCard.cs" id="1_sjmk7"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_s5ja8"]
+[ext_resource type="Texture2D" uid="uid://c5mgboaydbh06" path="res://ressources/tilesmap/holePunshedCard.jpg" id="4_v8yl4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wf7a1"]
 font = ExtResource("2_s5ja8")
-font_size = 26
+font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_sjmk7")
 
 [node name="Perfored-card" type="Sprite2D" parent="."]
 position = Vector2(576, 283.5)
@@ -16,33 +19,42 @@ scale = Vector2(8.82813, 7.82812)
 texture = ExtResource("1_100dd")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 82.0
-offset_top = 95.0
-offset_right = 394.0
-offset_bottom = 140.0
+offset_left = 100.0
+offset_top = 94.0
+offset_right = 484.0
+offset_bottom = 139.0
 text = "Introduction"
 label_settings = SubResource("LabelSettings_wf7a1")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 432.0
-offset_top = 96.0
-offset_right = 614.0
-offset_bottom = 141.0
+offset_left = 538.0
+offset_top = 94.0
+offset_right = 762.0
+offset_bottom = 139.0
 text = "Salle 1"
 label_settings = SubResource("LabelSettings_wf7a1")
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 666.0
-offset_top = 96.0
-offset_right = 848.0
-offset_bottom = 131.0
+offset_left = 827.0
+offset_top = 95.0
+offset_right = 1051.0
+offset_bottom = 141.0
 text = "Salle 2"
 label_settings = SubResource("LabelSettings_wf7a1")
 
-[node name="Label4" type="Label" parent="."]
-offset_left = 896.0
-offset_top = 96.0
-offset_right = 1087.0
-offset_bottom = 141.0
-text = "Salle 3"
-label_settings = SubResource("LabelSettings_wf7a1")
+[node name="TheHoles" type="Node2D" parent="."]
+
+[node name="HolePunshedCard2" type="Sprite2D" parent="TheHoles"]
+position = Vector2(648, 328)
+scale = Vector2(1, 1.59641)
+texture = ExtResource("4_v8yl4")
+
+[node name="HolePunshedCard3" type="Sprite2D" parent="TheHoles"]
+position = Vector2(942, 326.25)
+scale = Vector2(1, 1.59417)
+texture = ExtResource("4_v8yl4")
+
+[node name="HolePunshedCard1" type="Sprite2D" parent="TheHoles"]
+position = Vector2(281, 326.75)
+scale = Vector2(1, 1.59865)
+texture = ExtResource("4_v8yl4")
