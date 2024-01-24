@@ -29,7 +29,7 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 
 ## Versions
 
-# Windows 10/11 : 
+### Windows 10/11 : 
 
 | Actual Version | Latest version                |
 | :-------- | :------------------------- |
@@ -41,7 +41,7 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 | v1 |  [v1.0.1](https://mega.nz/file/onp1SYjS#Alpx-Fyj-r-iUMsLnCbmakkpZi_jl2PRWmSgW1diV4U) |
 | v1 |  [v1.0.0](https://mega.nz/file/A3wXUCTB#v-mPzBCHYeyiizbOeaWQ3s293gnmReaxrn5dvPaPgCo) |
 
-# Linux : 
+### Linux : 
 
 | Actual Version | Latest version                |
 | :-------- | :------------------------- |
