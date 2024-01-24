@@ -1691,11 +1691,6 @@ position = Vector2(56.5, 56.5)
 position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
 
-[node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(-34, -5)
-scale = Vector2(1, 1)
-script = ExtResource("4_i0vk7")
-
 [node name="EButtonLadder" type="Area2D" parent="Saddler/TileMap"]
 position = Vector2(55, 55.25)
 script = ExtResource("5_fi31q")
@@ -1857,6 +1852,11 @@ visible = false
 position = Vector2(8.5, -9.25)
 scale = Vector2(0.075, 0.075)
 texture = ExtResource("11_q87uh")
+
+[node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
+position = Vector2(-34, -5)
+scale = Vector2(1, 1)
+script = ExtResource("4_i0vk7")
 
 [node name="ObjectifSaddler" type="Sprite2D" parent="."]
 visible = false

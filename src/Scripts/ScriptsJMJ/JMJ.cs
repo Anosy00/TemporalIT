@@ -80,17 +80,33 @@ public partial class JMJ : Area2D
 			}
 			GlobalJMJ.isObjActive = true;
 		} else {
-			
-			if (nbTimer != 4)
+
+			if (GlobalJMJ.nbPlanks < 2)
 			{
-				_timer.Start(3);
+				if (nbTimer != 4)
+				{
+					_timer.Start(3);
+				
+				}
+				if (nbTimer == 6)
+				{
+					_dialogBox.setCanCloseDialogBox(true);
+				}
+			}
+
+			else if (!GlobalJMJ.hasString)
+			{
+				nbTimer = 6;
+			}
+
+			else
+			{
 				
 			}
-			if (nbTimer == 6)
-			{
-				_dialogBox.setCanCloseDialogBox(true);
-			}
+			
+			
 			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._name, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
+			_timer.Start();
 			nbTimer ++;
 		}
 		
