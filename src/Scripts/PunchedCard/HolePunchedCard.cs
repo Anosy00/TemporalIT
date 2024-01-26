@@ -24,7 +24,7 @@ public partial class HolePunchedCard : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		initializing();
+		
 	}
 	
 	private void initializing() {
@@ -76,35 +76,15 @@ public partial class HolePunchedCard : Node
 		}
 		//GD.Print("Le signal s'est bien lancé");
 	}
-}
-
-/*using Godot;
-using System;
-
-public class ScriptDeSceneB : Node
-{
-	public override void _Ready()
+	private void _on_ready()
 	{
-		// Récupérer la référence au nœud du bouton PunchedCard dans la hiérarchie
-		Button punchedCardButton = GetNodeOrNull<Button>("/root/PunchedCard/ButtonPunchedCard");
-
-		// Vérifier si le nœud du bouton PunchedCard existe et le connecter au signal si c'est le cas
-		if (punchedCardButton != null)
-		{
-			// Connecter le signal "add_a_hole" du bouton à la méthode de gestion "_addHole" dans SceneB
-			punchedCardButton.Connect("add_a_hole", this, "_addHole");
-		}
-		else
-		{
-			GD.Print("Nœud du bouton PunchedCard non trouvé dans la hiérarchie.");
-		}
+		initializing();
 	}
-
-	// Méthode appelée en réponse au signal "add_a_hole"
-	private void _addHole(uint holeIndex)
-	{
-		GD.Print("SceneB a reçu le signal 'add_a_hole' du bouton PunchedCard avec un trou à l'index :", holeIndex);
+	public static void deleteInstance(){
+		_instance=null;
 	}
 }
-*/
+
+
+
 

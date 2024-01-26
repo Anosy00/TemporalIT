@@ -59,4 +59,5 @@ position = Vector2(281, 326.75)
 scale = Vector2(1, 1.59865)
 texture = ExtResource("4_d356r")
 
+[connection signal="ready" from="." to="." method="_on_ready" flags=6]
 [connection signal="script_changed" from="." to="." method="_addHole"]

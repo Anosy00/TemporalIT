@@ -2,6 +2,7 @@ using Godot;
 using TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts;
 
 namespace TemporalIT.Scripts.ScriptsMuseum.Card;
+
 public partial class ButtonPunchedCard : Button
 {
 	// Called when the node enters the scene tree for the first time.
@@ -10,6 +11,7 @@ public partial class ButtonPunchedCard : Button
 	private PlayerSaveManager _playerSaveManager;
 	public override void _Ready()
 	{
+		ZIndex=-1;
 		if (Input.IsActionPressed("button_e"))
 		{
 			// Simulate releasing the E button to disable the action
