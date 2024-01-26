@@ -6,6 +6,8 @@ public partial class HolePunchedCard : Node
 	private int numberOfHoles;
 	private String nameOfPicture;
 	
+	
+	
 	// Instance du singleton
 	private static HolePunchedCard _instance;
 
@@ -51,11 +53,7 @@ public partial class HolePunchedCard : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		/*if (Input.IsActionPressed("closeDialog"))
-		{
-			Input.ActionRelease("closeDialog");
-			
-		}*/
+		
 	}
 	
 	
@@ -78,11 +76,33 @@ public partial class HolePunchedCard : Node
 	}
 	private void _on_ready()
 	{
+		int i = 0;
 		initializing();
+		if (Global.getRoomNumber() <= numberOfHoles)
+		{
+			while (i != Global.getRoomNumber())
+			{
+				i = i + 1;
+				//GD.Print(i);
+				nameOfPicture = "TheHoles/HolePunchedCard" + i;
+				Sprite2D nodeOfHole = (Sprite2D)GetNode(nameOfPicture);
+				if (nodeOfHole.Visible == false)
+				{
+					nodeOfHole.Visible = true;
+					
+				}
+
+			}
+		}else
+		{
+			GD.Print("Erreur, Le numéro de la scène indiquée ne correspond pas au nombre de trous disponible");
+		}
+		
 	}
 	public static void deleteInstance(){
 		_instance=null;
 	}
+	
 }
 
 

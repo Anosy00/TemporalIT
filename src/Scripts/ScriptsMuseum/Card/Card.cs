@@ -23,7 +23,8 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 			{
 				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
 				HolePunchedCard.deleteInstance();
-				//EmitSignal("Add_a_hole");
+				Global.setRoomNumber(1);
+				
 				//GD.Print("La scene a été changée");
 				
 			}
