@@ -22,7 +22,6 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 			if (Input.IsActionPressed("button_e") && KeyboardInteration.IsVisibleInTree())
 			{
 				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
-				HolePunchedCard.deleteInstance();
 				Global.setRoomNumber(1);
 				
 				//GD.Print("La scene a été changée");
