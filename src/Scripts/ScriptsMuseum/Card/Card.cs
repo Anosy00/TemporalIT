@@ -22,6 +22,8 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 			if (Input.IsActionPressed("button_e") && KeyboardInteration.IsVisibleInTree())
 			{
 				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
+				//EmitSignal("Add_a_hole");
+				//GD.Print("La scene a été changée");
 				
 			}
 		}

@@ -19,6 +19,7 @@ config/icon="res://icon_TemporalIT.png"
 [autoload]
 
 MusicController="*res://Morse's room/Rooms/FirstRoom/Music.tscn"
+ViewOfPunchedCard="*res://Museum/view_of_PunchedCard.tscn"
 
 [display]
 

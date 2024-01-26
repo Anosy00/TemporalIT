@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjl588ndnpdl8"]
+[gd_scene load_steps=6 format=3 uid="uid://c87v2udtwcfq1"]
 
+[ext_resource type="Script" path="res://Scripts/PunchedCard/HolePunchedCard.cs" id="1_1anj4"]
 [ext_resource type="Texture2D" uid="uid://d1j7fbpx5q4oj" path="res://ressources/tilesmap/perfored-card.png" id="1_100dd"]
-[ext_resource type="Script" path="res://Scripts/PunchedCard/holePunchedCard.cs" id="1_sjmk7"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_s5ja8"]
-[ext_resource type="Texture2D" uid="uid://c5mgboaydbh06" path="res://ressources/tilesmap/holePunshedCard.jpg" id="4_v8yl4"]
+[ext_resource type="Texture2D" uid="uid://c5mgboaydbh06" path="res://ressources/tilesmap/holePunchedCard.jpg" id="4_d356r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wf7a1"]
 font = ExtResource("2_s5ja8")
@@ -11,7 +11,7 @@ font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_sjmk7")
+script = ExtResource("1_1anj4")
 
 [node name="Perfored-card" type="Sprite2D" parent="."]
 position = Vector2(576, 283.5)
@@ -44,17 +44,19 @@ label_settings = SubResource("LabelSettings_wf7a1")
 
 [node name="TheHoles" type="Node2D" parent="."]
 
-[node name="HolePunshedCard2" type="Sprite2D" parent="TheHoles"]
+[node name="HolePunchedCard2" type="Sprite2D" parent="TheHoles"]
 position = Vector2(648, 328)
 scale = Vector2(1, 1.59641)
-texture = ExtResource("4_v8yl4")
+texture = ExtResource("4_d356r")
 
-[node name="HolePunshedCard3" type="Sprite2D" parent="TheHoles"]
+[node name="HolePunchedCard3" type="Sprite2D" parent="TheHoles"]
 position = Vector2(942, 326.25)
 scale = Vector2(1, 1.59417)
-texture = ExtResource("4_v8yl4")
+texture = ExtResource("4_d356r")
 
-[node name="HolePunshedCard1" type="Sprite2D" parent="TheHoles"]
+[node name="HolePunchedCard1" type="Sprite2D" parent="TheHoles"]
 position = Vector2(281, 326.75)
 scale = Vector2(1, 1.59865)
-texture = ExtResource("4_v8yl4")
+texture = ExtResource("4_d356r")
+
+[connection signal="script_changed" from="." to="." method="_addHole"]
