@@ -37,7 +37,7 @@ public partial class HolePunchedCard : Node
 				{
 					nodeOfHole.Visible = false;
 				}
-				GD.Print(nameOfPicture,", ",j,", ",nodeOfHole.Visible);
+				//GD.Print(nameOfPicture,", ",j,", ",nodeOfHole.Visible);
 
 			}
 		}else
