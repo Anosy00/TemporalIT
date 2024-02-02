@@ -11,7 +11,6 @@ public partial class JMJ : Area2D
 	private static int nbTimer = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
-	private Label _labelObjectifSaddler;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -68,13 +67,12 @@ public partial class JMJ : Area2D
 		if (nbTimer == DialogJMJ._dialog1.Count || nbTimer == 4 && GlobalJMJ.nbPlanks < 2 || nbTimer == 7 && !GlobalJMJ.hasString) {
 			_timer.Stop();
 			_dialogBox.disable();
-			if (nbTimer == 6)
+			GlobalJMJ.isObjActive = false;
+			if (nbTimer == 7)
 			{
-				GlobalJMJ.isObjActive = false;
+				
 				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
-				_labelObjectifSaddler.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
 				_labelObjectif.AddThemeFontSizeOverride("font_size", 35);
-				_labelObjectifSaddler.AddThemeFontSizeOverride("font_size", 30);
 				GlobalJMJ.isObjActive = true;
 			}
 			GlobalJMJ.isObjActive = true;
@@ -92,6 +90,8 @@ public partial class JMJ : Area2D
 					_dialogBox.setCanCloseDialogBox(true);
 				}
 			}
+			
+			
 
 			else
 			{
