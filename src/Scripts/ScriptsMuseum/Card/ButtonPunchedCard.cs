@@ -6,12 +6,32 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card;
 public partial class ButtonPunchedCard : Button
 {
 	// Called when the node enters the scene tree for the first time.
-	private String _nextScene = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
+	private String _nextScene;
 	private AnimatedSprite2D _keyboardInteration;
 	private PlayerSaveManager _playerSaveManager;
 	public override void _Ready()
 	{
 		ZIndex=-1;
+		switch (Global.getRoomNumber())
+		{
+			case 1:
+				_nextScene = "res://JMJ's Room/Room/tile_map.tscn";
+				break;
+			case 2:
+				_nextScene = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
+				break;
+			case 3:
+				_nextScene = "res://Credits/CreditsScene.tscn";
+				break;
+			default:
+				_nextScene = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
+				GD.Print("Erreur de passage à la scène suivante");
+				break;
+				
+			
+				
+				
+		}
 		if (Input.IsActionPressed("button_e"))
 		{
 			// Simulate releasing the E button to disable the action
