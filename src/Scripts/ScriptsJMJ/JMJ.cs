@@ -8,7 +8,7 @@ public partial class JMJ : Area2D
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
 	private Timer _timer;
-	private int nbTimer = 0;
+	private static int nbTimer = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
 	private Label _labelObjectifSaddler;
@@ -24,9 +24,8 @@ public partial class JMJ : Area2D
 		_dialogBox.disable();
 		_timer = GetNode<Timer>("Timer");
 		_dialogBox.setCanCloseDialogBox(false);
-		_objectif = GetNode<Sprite2D>("../../Objectif");
-		_labelObjectif = GetNode<Label>("../../Objectif/LabelText");
-		_labelObjectifSaddler = GetNode<Label>("../../ObjectifSaddler/LabelText");
+		_objectif = GetNode<Sprite2D>("../Objectif");
+		_labelObjectif = GetNode<Label>("../Objectif/LabelText");
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
@@ -66,7 +65,7 @@ public partial class JMJ : Area2D
 	{
 		_dialogBox.disable();
 		GlobalJMJ.canInteractWithPlanks = true;
-		if (nbTimer == DialogJMJ._dialog1.Count || nbTimer == 4 && GlobalJMJ.nbPlanks < 2 || nbTimer == 6 && !GlobalJMJ.hasString) {
+		if (nbTimer == DialogJMJ._dialog1.Count || nbTimer == 4 && GlobalJMJ.nbPlanks < 2 || nbTimer == 7 && !GlobalJMJ.hasString) {
 			_timer.Stop();
 			_dialogBox.disable();
 			if (nbTimer == 6)
@@ -83,7 +82,7 @@ public partial class JMJ : Area2D
 
 			if (GlobalJMJ.nbPlanks < 2)
 			{
-				if (nbTimer != 4)
+				if (nbTimer != 3)
 				{
 					_timer.Start(3);
 				
@@ -92,11 +91,6 @@ public partial class JMJ : Area2D
 				{
 					_dialogBox.setCanCloseDialogBox(true);
 				}
-			}
-
-			else if (!GlobalJMJ.hasString)
-			{
-				nbTimer = 6;
 			}
 
 			else

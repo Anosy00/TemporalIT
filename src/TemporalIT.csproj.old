@@ -1,0 +1,29 @@
+<Project Sdk="Godot.NET.Sdk/4.1.3">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="4.0.0" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.10.0-beta1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Update="GodotSharp" Version="4.2.0-rc.2" />
+    <PackageReference Update="Godot.SourceGenerators" Version="4.2.0-rc.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Global\" />
+    <Folder Include="Morse's room\Rooms\FirstRoom\Scripts\Interaction\Radio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Morse's room\Rooms\Maze\Arrow\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Morse's room\Rooms\Maze\Arrow\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Morse's room\Rooms\FirstRoom\CodeChest.tscn" />
+  </ItemGroup>
+</Project>

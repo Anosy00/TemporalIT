@@ -34,6 +34,7 @@ public partial class SubmitButtonJMJ : Node
 	{
 		if (_codeVerification.chestIsOpened())
 		{
+			GlobalJMJ.hasString = true;
 			GetTree().ChangeSceneToFile(_PATH_NEXT_SCENE);
 		}
 		else
