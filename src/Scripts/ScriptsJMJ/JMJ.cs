@@ -74,8 +74,15 @@ public partial class JMJ : Area2D
 				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
 				_labelObjectif.AddThemeFontSizeOverride("font_size", 35);
 				GlobalJMJ.isObjActive = true;
+				GlobalJMJ.objectifPlankActive = false;
+				GlobalJMJ.objectifStringActive = true;
 			}
-			GlobalJMJ.isObjActive = true;
+			else
+			{
+				GlobalJMJ.isObjActive = true;
+				GlobalJMJ.objectifPlankActive = true;
+			}
+			
 		} else {
 
 			if (GlobalJMJ.nbPlanks < 2)

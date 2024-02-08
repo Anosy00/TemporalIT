@@ -1707,6 +1707,9 @@ text = "Récupérer les planches"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
 [connection signal="body_entered" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_body_exited"]
 [connection signal="body_entered" from="TileMap/Plank1" to="TileMap/Plank1" method="_on_body_entered"]
@@ -1716,3 +1719,4 @@ vertical_alignment = 1
 [connection signal="body_entered" from="JMJ" to="JMJ" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="JMJ" to="JMJ" method="_on_body_exited"]
 [connection signal="timeout" from="JMJ/Timer" to="JMJ" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="TileMap/LadderArea" method="_on_timer_timeout"]

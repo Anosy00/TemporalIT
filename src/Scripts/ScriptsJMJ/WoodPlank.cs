@@ -5,7 +5,9 @@ using TemporalIT;
 public partial class WoodPlank : Area2D
 {
 	private EButton _button;
-	private CollisionShape2D _collisionShape2D;
+	private static CollisionShape2D _collisionShape2D;
+
+	private bool _isTook = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -14,7 +16,7 @@ public partial class WoodPlank : Area2D
 		_collisionShape2D = GetNode<CollisionShape2D>("WoodPlank/WoodPlankCollision");
 		if (GlobalJMJ.nbPlanks == 2)
 		{
-			this.Visible = false;
+			Visible = false;
 			_collisionShape2D.Disabled = true;
 		}
 	}
@@ -24,9 +26,10 @@ public partial class WoodPlank : Area2D
 	{
 		if (Input.IsActionJustReleased("button_e") && _button.isVisible())
 		{
-			this.Visible = false;
+			Visible = false;
 			_collisionShape2D.Disabled = true;
 			GlobalJMJ.nbPlanks++;
+			_isTook = true;
 		}
 	}
 

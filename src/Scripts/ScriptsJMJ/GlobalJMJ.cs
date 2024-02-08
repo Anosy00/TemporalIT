@@ -11,6 +11,8 @@ public static class GlobalJMJ
     public static bool hasString = false;
     public static bool isObjActive = false;
     public static bool firstEntryInSaddler = true;
+    public static bool objectifStringActive = false;
+    public static bool objectifPlankActive = false;
     
     public static void displayDialogBox(string name, string text, DialogBox dialogBox)
     {
