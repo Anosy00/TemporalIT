@@ -24,7 +24,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 
 		private const String _PATH_SCREAM_MONSTER = "MonsterScream";
 		
-		private const String _PATH_BACK_SCENE = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";
+		private const String _PATH_BACK_SCENE = "res://Morse's room/Rooms/Maze/FirstLooseMaze.tscn";
 		
 		
 		// Called when the node enters the scene tree for the first time.
