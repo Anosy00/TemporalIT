@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://3sruyfr7thmm"]
+[gd_scene load_steps=75 format=3 uid="uid://3sruyfr7thmm"]
 
 [ext_resource type="Texture2D" uid="uid://lhh7arcbmxms" path="res://ressources/tilesmap/tileset_medieval_wall/rpg indoor tileset expansion 1 trans.png" id="1_4lwpa"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/MazeControllerScene.cs" id="1_i0bwn"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://bquvkkrpe8fjf" path="res://ressources/sfx/monster-scream.wav" id="16_a6qdv"]
 [ext_resource type="Texture2D" uid="uid://ckrxifr1e8xcv" path="res://ressources/images/computer-mouse.png" id="16_tdsbg"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="17_1ph22"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/Transition.cs" id="20_b6uet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8mqxq"]
 texture = ExtResource("1_4lwpa")
@@ -574,12 +575,12 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m7o51"]
 size = Vector2(14, 27.3866)
 
-[sub_resource type="Gradient" id="Gradient_h1fqx"]
+[sub_resource type="Gradient" id="Gradient_epxq3"]
 interpolation_mode = 2
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_h8okd"]
-gradient = SubResource("Gradient_h1fqx")
+gradient = SubResource("Gradient_epxq3")
 fill = 1
 fill_from = Vector2(0.49569, 0.5)
 fill_to = Vector2(0.306034, 0.228448)
@@ -673,6 +674,202 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_6l7f5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Monster/MonsterLeft/PointLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Monster/MonsterRight/PointLight2D:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Monster/MonsterUp/PointLight2D:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Monster/MonsterDown/PointLight2D:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player/PointLight2D:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tsk8h"]
+resource_name = "transition-monster"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Monster/MonsterLeft/PointLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Monster/MonsterRight/PointLight2D:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Monster/MonsterUp/PointLight2D:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Monster/MonsterDown/PointLight2D:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player/PointLight2D:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mhidp"]
+resource_name = "transition-exit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Monster/MonsterLeft/PointLight2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Monster/MonsterRight/PointLight2D:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Monster/MonsterUp/PointLight2D:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Monster/MonsterDown/PointLight2D:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.952941, 0.952941, 0.952941, 1), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player/PointLight2D:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uwwub"]
+_data = {
+"RESET": SubResource("Animation_6l7f5"),
+"transition-exit": SubResource("Animation_mhidp"),
+"transition-monster": SubResource("Animation_tsk8h")
+}
+
 [node name="Maze" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -720,7 +917,7 @@ texture_scale = 4.0
 stream = ExtResource("9_ximiu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Arrow" type="CanvasGroup" parent="."]
 script = ExtResource("9_2yvcd")
@@ -849,6 +1046,13 @@ souris"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Transition" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CanvasModulate")
+libraries = {
+"": SubResource("AnimationLibrary_uwwub")
+}
+script = ExtResource("20_b6uet")
+
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="timeout" from="Arrow/TimerDeplacement" to="Arrow" method="_on_timer_deplacement_timeout"]
 [connection signal="pressed" from="Arrow/ArrowDownButton" to="Arrow" method="_on_arrow_down_button_pressed"]
@@ -856,3 +1060,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="Arrow/ArrowRightButton" to="Arrow" method="_on_arrow_right_button_pressed"]
 [connection signal="pressed" from="Arrow/ArrowLeftButton" to="Arrow" method="_on_arrow_left_button_pressed"]
 [connection signal="timeout" from="Monster/TimerMonster" to="Monster" method="_on_timer_monster_timeout"]
+[connection signal="animation_finished" from="Transition" to="Transition" method="_on_animation_finished"]

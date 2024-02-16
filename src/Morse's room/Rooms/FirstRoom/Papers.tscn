@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://csm36uw5bykdm"]
+[gd_scene load_steps=18 format=3 uid="uid://csm36uw5bykdm"]
 
 [ext_resource type="Texture2D" uid="uid://b33lgun5kcg7x" path="res://ressources/interfaces/table_interface.png" id="1_jcdfr"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/PaperIntercation.cs" id="2_qma1g"]
@@ -8,9 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://c4hpcwewaqayi" path="res://ressources/papers/paper_4.png" id="6_7bqov"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="7_gds26"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/BackButton.cs" id="8_86s7m"]
+[ext_resource type="Texture2D" uid="uid://ckrxifr1e8xcv" path="res://ressources/images/computer-mouse.png" id="9_xrlre"]
+[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/SceneEntry.cs" id="10_1aj4d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7lle"]
 size = Vector2(220, 315.573)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k12sb"]
+a = Vector2(47.9999, -610)
+b = Vector2(57.2211, 445.728)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n4qe5"]
+a = Vector2(-9.41327, -9.185)
+b = Vector2(1700, -4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_152q6"]
 bg_color = Color(0.392157, 0.227451, 0.0862745, 1)
@@ -21,13 +31,66 @@ border_width_bottom = 1
 border_color = Color(0, 0, 0, 1)
 shadow_size = 5
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_k12sb"]
-a = Vector2(47.9999, -610)
-b = Vector2(57.2211, 445.728)
+[sub_resource type="Animation" id="Animation_xvuvr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.827451)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_n4qe5"]
-a = Vector2(-9.41327, -9.185)
-b = Vector2(1700, -4)
+[sub_resource type="Animation" id="Animation_q4nsg"]
+resource_name = "instructionCard"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.827451), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6clr0"]
+_data = {
+"RESET": SubResource("Animation_xvuvr"),
+"instructionCard": SubResource("Animation_q4nsg")
+}
 
 [node name="Papers" type="Control"]
 layout_mode = 3
@@ -125,19 +188,6 @@ texture = ExtResource("5_fh07i")
 position = Vector2(-0.106262, -0.101398)
 shape = SubResource("RectangleShape2D_i7lle")
 
-[node name="ButtonBack" type="Button" parent="."]
-layout_mode = 0
-offset_left = -675.0
-offset_top = 243.0
-offset_right = -427.0
-offset_bottom = 337.0
-theme_override_fonts/font = ExtResource("7_gds26")
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_152q6")
-action_mode = 0
-text = "RETOUR"
-script = ExtResource("8_86s7m")
-
 [node name="Border" type="RigidBody2D" parent="."]
 gravity_scale = 0.0
 
@@ -156,6 +206,60 @@ shape = SubResource("SegmentShape2D_n4qe5")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Border"]
 position = Vector2(-888, 496)
 shape = SubResource("SegmentShape2D_n4qe5")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1551.0
+offset_top = -836.0
+offset_right = 581.0
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.827451)
+
+[node name="ButtonBack" type="Button" parent="."]
+layout_mode = 0
+offset_left = -675.0
+offset_top = 243.0
+offset_right = -427.0
+offset_bottom = 337.0
+theme_override_fonts/font = ExtResource("7_gds26")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_152q6")
+action_mode = 0
+text = "RETOUR"
+script = ExtResource("8_86s7m")
+
+[node name="ComputerMouse" type="Sprite2D" parent="."]
+position = Vector2(-5.02649, 1.23901)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_xrlre")
+script = ExtResource("10_1aj4d")
+
+[node name="Label" type="Label" parent="ComputerMouse"]
+offset_left = -367.597
+offset_top = 103.009
+offset_right = 632.403
+offset_bottom = 283.009
+scale = Vector2(0.75, 0.75)
+theme_override_fonts/font = ExtResource("7_gds26")
+theme_override_font_sizes/font_size = 50
+text = "Utiliser votre
+souris pour déplacer
+les cartes"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="ComputerMouse"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ComputerMouse"]
+libraries = {
+"": SubResource("AnimationLibrary_6clr0")
+}
 
 [connection signal="mouse_entered" from="Paper1/Area2D" to="Paper1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Paper1/Area2D" to="Paper1" method="_on_mouse_exited"]

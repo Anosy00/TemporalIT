@@ -1,0 +1,90 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgj7cp7ecmt4v"]
+
+[ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/MazeControllerScene.cs" id="1_sglnc"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_spjty"]
+
+[sub_resource type="Animation" id="Animation_ju86f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ceqtx"]
+resource_name = "text-animation"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D/Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wfwl7"]
+_data = {
+"RESET": SubResource("Animation_ju86f"),
+"text-animation": SubResource("Animation_ceqtx")
+}
+
+[node name="FirstLooseMaze" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sglnc")
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
+position = Vector2(2.22772, -1.07955)
+zoom = Vector2(4, 4)
+
+[node name="Label" type="Label" parent="CenterContainer/Camera2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_spjty")
+theme_override_font_sizes/font_size = 11
+text = "Inconnu :
+
+Attention à toi !
+Les monstres ne te laisseront pas passer
+si tu ne trouves pas le bon chemin.
+Explore la pièce précédente 
+et tu y trouveras surement
+ce que tu cherches"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_wfwl7")
+}
+
+[connection signal="animation_finished" from="CenterContainer/AnimationPlayer" to="CenterContainer" method="_on_animation_finished"]

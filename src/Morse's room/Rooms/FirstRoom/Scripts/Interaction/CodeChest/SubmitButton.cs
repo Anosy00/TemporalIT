@@ -8,12 +8,15 @@ public partial class SubmitButton : Node
 	private Button _submitButton;
 	private CodeVerification _codeVerification;
 	private LineEdit _codeEntered;
+	private AnimationPlayer _codeEnteredAnimation;
 	
 	//CONSTs
 	private const int CorrectAnswer = 2023;
 	private const string PathChestIsOpened = "res://Morse's room/Rooms/FirstRoom/MorseInstruction.tscn";
 	private const string PathSubmitButton = "SubmitButton";
 	private const string PathCodeEnteredLineEdit = "CodeEntered";
+	private const string PathCodeEnteredAnimation = "AnimationCodeEntered";
+	private const string NameWrongCodeAnimation = "wrong-code";
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -21,6 +24,8 @@ public partial class SubmitButton : Node
 
 		_submitButton = GetNode<Button>(PathSubmitButton);
 		_codeEntered = GetNode<LineEdit>(PathCodeEnteredLineEdit);
+		_codeEnteredAnimation = GetNode<AnimationPlayer>(PathCodeEnteredAnimation);
+		
 	}
 
 	private void _on_submit_pressed()
@@ -51,7 +56,14 @@ public partial class SubmitButton : Node
 		}
 		else
 		{
-			_codeEntered.Text = "";
+			_submitButton.Disabled = true;
+			_codeEnteredAnimation.Play(NameWrongCodeAnimation);
 		}
+	}
+
+	public void _on_code_entered_animation_finished(String name_animation)
+	{
+		_submitButton.Disabled = false;
+		_codeEntered.Text = "";
 	}
 }

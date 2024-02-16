@@ -25,6 +25,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private int direction;
 
 		private MazeResolv.MazeResolv _mazeResolv;
+
+		private AnimationPlayer _transition;
 		
 		//Const
 		private const String _PATH_UP_BUTTON = "ArrowUpButton";
@@ -46,7 +48,10 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 		private const int _DIRECTION_LEFT = 3;
 		private const int _DIRECTION_RIGHT = 4;
 
-		private const String _PATH_LAST_SCENE = "res://Morse's room/Rooms/LastScene/LastScene.tscn";
+		private const String _PATH_NEXT_SCENE = "res://Morse's room/Rooms/LastScene/LastScene.tscn";
+		
+		private const String _PATH_ANIMATION_TRANSITION = "../Transition";
+		private const String _NAME_ANIMATION_TRANSITION = "transition-exit";
 
 		public override void _Ready()
 		{
@@ -65,6 +70,8 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_timer = GetNode<Godot.Timer>(_PATH_TIMER);
 
 			_mazeResolv = new MazeResolv.MazeResolv();
+
+			_transition = GetNode<AnimationPlayer>(_PATH_ANIMATION_TRANSITION);
 		}
 		public void disableAllArrows(bool boolean)
 		{
@@ -95,6 +102,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			_mazeResolv.move();
 			_timer.Start();
 		}
+		
 		public void _on_arrow_left_button_pressed()
 		{
 			disableAllArrows(true);
@@ -154,7 +162,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Arrow
 			}
 			else if (!_mazeResolv.verficationCase(MazeConstants.EXIT_CASE))
 			{
-				GetTree().ChangeSceneToFile(_PATH_LAST_SCENE);
+				_transition.Play(_NAME_ANIMATION_TRANSITION);
 			}
 			else
 			{

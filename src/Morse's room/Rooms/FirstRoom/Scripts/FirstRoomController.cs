@@ -14,6 +14,7 @@ public partial class FirstRoomController : Node2D
 		_playerSaveManager = new PlayerSaveManager();
 		_playerSaveManager.Load();
 		_player.Position = new Vector2(_playerSaveManager.GetX(),_playerSaveManager.GetY());
+		Input.MouseMode = Input.MouseModeEnum.Hidden;
 		Music.PlayMusic();
 	}
 
@@ -21,5 +22,6 @@ public partial class FirstRoomController : Node2D
 	{
 		var playerPosition = _player.GetPositionDelta();
 		_playerSaveManager.Save(playerPosition.X, playerPosition.Y);
+		Input.MouseMode = Input.MouseModeEnum.Visible;
 	}
 }
