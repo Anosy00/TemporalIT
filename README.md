@@ -32,7 +32,7 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 
 | Actual Version | Latest version                |
 | :-------- | :------------------------- |
-| v1 |  [v1.0.1](https://mega.nz/file/onp1SYjS#Alpx-Fyj-r-iUMsLnCbmakkpZi_jl2PRWmSgW1diV4U) |
+| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Windows_Executable_v1.1.0.zip) |
 
 
 | Name Version | Versions                |
