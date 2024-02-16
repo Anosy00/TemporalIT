@@ -12,6 +12,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		private static AnimatedSprite2D _monsterLeft;
 		private static Godot.Timer _timer;
 		private static AudioStreamPlayer _screamMonster;
+		private AnimationPlayer _transition;
 		
 		//Consts
 		private const String _PATH_MONSTER_UP_ANIMATION = "MonsterUp";
@@ -25,6 +26,9 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 		private const String _PATH_SCREAM_MONSTER = "MonsterScream";
 		
 		private const String _PATH_BACK_SCENE = "res://Morse's room/Rooms/Maze/FirstLooseMaze.tscn";
+
+		private const String _PATH_ANIMATION_TRANSITION = "../Transition";
+		private const String _NAME_ANIMATION_TRANSITION = "transition-monster";
 		
 		
 		// Called when the node enters the scene tree for the first time.
@@ -36,6 +40,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 			_monsterLeft = GetNode<AnimatedSprite2D>(_PATH_MONSTER_LEFT_ANIMATION);
 			_timer = GetNode<Godot.Timer>(_PATH_TIMER);
 			_screamMonster = GetNode<AudioStreamPlayer>(_PATH_SCREAM_MONSTER);
+			_transition = GetNode<AnimationPlayer>(_PATH_ANIMATION_TRANSITION);
 
 			_monsterUp.Visible = false;
 			_monsterDown.Visible = false;
@@ -78,7 +83,7 @@ namespace TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Monster
 
 		public void _on_timer_monster_timeout()
 		{
-			GetTree().ChangeSceneToFile(_PATH_BACK_SCENE);
+			_transition.Play(_NAME_ANIMATION_TRANSITION);
 		}
 	}
 }
