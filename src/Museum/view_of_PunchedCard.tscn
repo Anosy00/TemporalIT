@@ -1,9 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://c87v2udtwcfq1"]
+[gd_scene load_steps=25 format=3 uid="uid://c87v2udtwcfq1"]
 
 [ext_resource type="Script" path="res://Scripts/PunchedCard/HolePunchedCard.cs" id="1_1anj4"]
 [ext_resource type="Texture2D" uid="uid://d1j7fbpx5q4oj" path="res://ressources/tilesmap/perfored-card.png" id="1_100dd"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_s5ja8"]
-[ext_resource type="Texture2D" uid="uid://c5mgboaydbh06" path="res://ressources/tilesmap/holePunchedCard.jpg" id="4_d356r"]
 [ext_resource type="Texture2D" uid="uid://c4eodjlrb7dl7" path="res://ressources/holesPunchedCard.png" id="5_u6npa"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wf7a1"]
@@ -179,27 +178,25 @@ label_settings = SubResource("LabelSettings_wf7a1")
 
 [node name="TheHoles" type="Node2D" parent="."]
 
-[node name="HolePunchedCard2" type="Sprite2D" parent="TheHoles"]
-visible = false
-position = Vector2(648, 328)
-scale = Vector2(1, 1.59641)
-texture = ExtResource("4_d356r")
+[node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="TheHoles"]
+position = Vector2(273, 172)
+scale = Vector2(0.909639, 1)
+sprite_frames = SubResource("SpriteFrames_ds4vx")
 
-[node name="HolePunchedCard3" type="Sprite2D" parent="TheHoles"]
-visible = false
-position = Vector2(942, 326.25)
-scale = Vector2(1, 1.59417)
-texture = ExtResource("4_d356r")
-
-[node name="HolePunchedCard1" type="Sprite2D" parent="TheHoles"]
-visible = false
-position = Vector2(281, 326.75)
-scale = Vector2(1, 1.59865)
-texture = ExtResource("4_d356r")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(278, 166)
-scale = Vector2(0.935743, 1)
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TheHoles"]
+position = Vector2(671, 256)
+scale = Vector2(0.909639, 1)
 sprite_frames = SubResource("SpriteFrames_ds4vx")
 frame = 17
 frame_progress = 0.298104
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="TheHoles"]
+position = Vector2(874, 347)
+scale = Vector2(0.909639, 1)
+sprite_frames = SubResource("SpriteFrames_ds4vx")
+frame = 17
+frame_progress = 0.298104
+
+[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D1" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D3" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -5,6 +5,7 @@ public partial class HolePunchedCard : Node
 {
 	private int numberOfHoles;
 	private String nameOfPicture;
+	private AnimatedSprite2D nodeOfHole;
 	
 	
 	// Called when the node enters the scene tree for the first time.
@@ -15,23 +16,27 @@ public partial class HolePunchedCard : Node
 	
 	private void initializing() {
 		
-		//GD.Print(Global.getRoomNumber(),", ",numberOfHoles);
+		
 		Node ParentNode = GetNode("TheHoles");
 		numberOfHoles = ParentNode.GetChildCount();
 		int j = 0;
-		
+		//GD.Print(Global.getRoomNumber(),", ",numberOfHoles);
 		if (Global.getRoomNumber() <= numberOfHoles)
 		{
 			while (j != numberOfHoles)
 			{
 				j = j + 1;
 				//GD.Print(i);
-				nameOfPicture = "TheHoles/HolePunchedCard" + j;
-				Sprite2D nodeOfHole = (Sprite2D)GetNode(nameOfPicture);
+				nameOfPicture = "TheHoles/AnimatedSprite2D" + j; //HolePunchedCard
+				nodeOfHole = (AnimatedSprite2D)GetNode(nameOfPicture);
 				
 				if (j <= Global.getRoomNumber() )
 				{
 					nodeOfHole.Visible = true;
+					if (j == Global.getRoomNumber()){
+						nodeOfHole.Stop();
+						nodeOfHole.Play("default");
+					}
 					
 				}else
 				{
@@ -52,10 +57,10 @@ public partial class HolePunchedCard : Node
 	{
 		
 	}
-	
+	private void _on_animated_sprite_2d_animation_finished()
+	{
+		nodeOfHole.Stop();
+	}
 	
 }
-
-
-
 
