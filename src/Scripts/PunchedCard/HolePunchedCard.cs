@@ -83,11 +83,10 @@ public partial class HolePunchedCard : Node
 		
 		//GD.Print(nodeOfHolePlayed.Name);
 		//GD.Print(frame+", "+nbFrame);
-		if (frame == nbFrame){
+		if (frame >= nbFrame){
 			//GD.Print("egale");
 			nodeOfHolePlayed.Pause();
-			//nodeOfHolePlayed.Frame = nbFrame;
-			
+			nodeOfHolePlayed.Frame = nbFrame;
 		}
 		frame +=1;
 	}
