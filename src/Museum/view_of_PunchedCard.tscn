@@ -197,6 +197,6 @@ sprite_frames = SubResource("SpriteFrames_ds4vx")
 frame = 17
 frame_progress = 0.298104
 
-[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D1" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="animation_finished" from="TheHoles/AnimatedSprite2D3" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="TheHoles/AnimatedSprite2D1" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="frame_changed" from="TheHoles/AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="frame_changed" from="TheHoles/AnimatedSprite2D3" to="." method="_on_animated_sprite_2d_frame_changed"]

@@ -27,6 +27,7 @@ window/size/mode=3
 [dotnet]
 
 project/assembly_name="TemporalIT"
+project/assembly_reload_attempts=1
 enabled=PackedStringArray()
 
 [input]
