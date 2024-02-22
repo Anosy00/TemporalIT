@@ -6,10 +6,13 @@ public struct Sentence
 {
 	public readonly string Name;
 	public readonly string Text;
+	public readonly float TheTime;
 	
-	public Sentence(string name, string text){
+	public Sentence(string name, string text,float time){
 		Name = name;
 		Text = text;
+		TheTime = time;
+		
 	}
 }
 
@@ -18,17 +21,30 @@ public partial class Museum : TileMap
 	private DialogBox.DialogBox _dialogBox;
 	private Godot.Timer _timer;
 	private int _nbTimer;
-
+	private AudioStreamPlayer _narrator;
+	private AudioStreamPlayer _music;
 	private List<Sentence>_dialog1 = new List<Sentence>
 	{
-		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes."),
-		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails."),
-		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique."),
-		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments."),
+		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes.",0.0f),
+		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails.",5.0f),
+		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique.",11.5f),
+		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments.",17.0f),
 	};
 
-	private AudioStreamPlayer _narrator;
 	
+	public void AvancerMusique(float temps)
+	{
+		// Assurez-vous que l'AudioStreamPlayer est prêt
+		if (_narrator != null)
+		{
+			// Définissez le temps de lecture de la musique
+			//_narrator.Stop();
+			_narrator.Seek(temps);//temps
+			//_narrator.Play();
+			
+			GD.Print("time= "+temps);
+		}
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -38,6 +54,7 @@ public partial class Museum : TileMap
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
 		_narrator = GetNode<AudioStreamPlayer>("Narrator");
+		_music = GetNode<AudioStreamPlayer>("Music");
 		_timer = GetNode<Godot.Timer>("Timer");
 		
 		/*GD.Print(""+_dialog1[0]._name);
@@ -46,7 +63,7 @@ public partial class Museum : TileMap
 		
 		SetIndex(0);
 		//GD.Print("Le ZIndex de la scene est "+getZIndex());
-		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox);
+		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox,_dialog1[0].TheTime);
 		_narrator.Play();
 		_timer.Start(6);
 	}
@@ -64,10 +81,11 @@ public partial class Museum : TileMap
 	
 	
 	
-	public static void DisplayDialogBox(string name, string text, DialogBox.DialogBox dialogBox)
+	public void DisplayDialogBox(string name, string text, DialogBox.DialogBox dialogBox,float time)
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
+		AvancerMusique(time);
 	}
 	private void _on_timer_timeout()
 	{
@@ -75,8 +93,10 @@ public partial class Museum : TileMap
 		if (_nbTimer == _dialog1.Count ) {
 			_timer.Stop();
 			_dialogBox.disable();
+			_narrator.Stop();
+			_music.Play();
 		} else {
-			DisplayDialogBox(_dialog1[_nbTimer].Name, _dialog1[_nbTimer].Text, _dialogBox);
+			DisplayDialogBox(_dialog1[_nbTimer].Name, _dialog1[_nbTimer].Text, _dialogBox,_dialog1[_nbTimer].TheTime);
 			_timer.Start(6);
 		}
 		
@@ -100,5 +120,6 @@ public partial class Museum : TileMap
 	{
 		ZIndex = number;
 	}
+	
 	
 }

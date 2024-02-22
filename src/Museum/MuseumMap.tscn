@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://bun2w2ahn4oyw"]
+[gd_scene load_steps=62 format=3 uid="uid://bun2w2ahn4oyw"]
 
 [ext_resource type="Texture2D" uid="uid://lngbjo08vofg" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/preview.png" id="1_sj3wp"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_5cfrb"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://Scripts/ScriptsMuseum/library.cs" id="24_itifs"]
 [ext_resource type="Texture2D" uid="uid://6v08ebnn0ol7" path="res://ressources/images/Libraries_right.png" id="25_adk5d"]
 [ext_resource type="AudioStream" uid="uid://bofsn4phoqqb0" path="res://ressources/sfx/narrator-vf.wav" id="27_srqhs"]
+[ext_resource type="AudioStream" uid="uid://cep64ufbcinh8" path="res://ressources/sfx/Museum_music.wav" id="28_yl3n5"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_md302"]
 
@@ -4805,6 +4806,10 @@ shape = SubResource("RectangleShape2D_ofouw")
 [node name="Narrator" type="AudioStreamPlayer" parent="Museum"]
 stream = ExtResource("27_srqhs")
 volume_db = 10.0
+
+[node name="Music" type="AudioStreamPlayer" parent="Museum"]
+stream = ExtResource("28_yl3n5")
+volume_db = -25.0
 
 [connection signal="body_entered" from="Museum/InteractiveZoneOfThePunshedCard" to="Museum/InteractiveZoneOfThePunshedCard" method="_on_interactive_zone_of_the_punched_card_body_entered"]
 [connection signal="body_exited" from="Museum/InteractiveZoneOfThePunshedCard" to="Museum/InteractiveZoneOfThePunshedCard" method="_on_interactive_zone_of_the_punched_card_body_exited"]
