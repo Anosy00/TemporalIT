@@ -27,7 +27,7 @@ _data = {
 "reset": SubResource("Animation_6ir7u")
 }
 
-[node name="CreditsScene" type="Node"]
+[node name="CreditsScene" type="Node" groups=["cant_paused"]]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
