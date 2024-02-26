@@ -19,11 +19,10 @@ L'application fonctionne uniquement sur Windows 10/11 et Linux.
 Si vous voulez installer installer le jeu, vous pouvez simplement clone le git à l'aide de cette commande
 
 ```bash
-    git clone https://github.com/Anosy00/TemporalIT.git
+git clone https://github.com/Anosy00/TemporalIT.git
 ```
 
-Il vous suffit ensuite de cliquer sur l'executable correspondant à votre système d'exploitation
-(dans le dossier "TemporalIT_Windows_Exe" ou "TemporalIT_Linux_Exe") et enjoy 😉.
+Et si vous avez Godot 4 avec .NET, vous pourrez lancer le projet et enjoy 😉.
 
 Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci-dessous](https://github.com/Anosy00/TemporalIT/tree/master?tab=readme-ov-file#versions)
 
@@ -31,30 +30,32 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 
 ### Windows 10/11 : 
 
-| Actual Version | Latest version                |
+| Version Actuel | Dernière version/Lien |
 | :-------- | :------------------------- |
-| v1 |  [v1.0.1](https://mega.nz/file/onp1SYjS#Alpx-Fyj-r-iUMsLnCbmakkpZi_jl2PRWmSgW1diV4U) |
+| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Windows_Executable_v1.1.0.zip) |
 
 
-| Name Version | Versions                |
+| Nom de la version | Versions/Lien   |
 | :-------- | :------------------------- |
+| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Windows_Executable_v1.1.0.zip)
 | v1 |  [v1.0.1](https://mega.nz/file/onp1SYjS#Alpx-Fyj-r-iUMsLnCbmakkpZi_jl2PRWmSgW1diV4U) |
 | v1 |  [v1.0.0](https://mega.nz/file/A3wXUCTB#v-mPzBCHYeyiizbOeaWQ3s293gnmReaxrn5dvPaPgCo) |
 
 ### Linux : 
 
-| Actual Version | Latest version                |
+| Version Actuel | Dernière version/Lien |
 | :-------- | :------------------------- |
-| v1 |  [v1.0.1](https://mega.nz/file/siRSBCxJ#G26pvLsHiDriQxXbRPhYdy6x802R_8jAzQw0-F5W3HU) |
+| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Linux_Executable_v1.1.0.zip)
 
 
-| Name Version | Versions                |
+| Nom de la version | Versionss/Lien  |
 | :-------- | :------------------------- |
+| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Linux_Executable_v1.1.0.zip)
 | v1 |  [v1.0.1](https://mega.nz/file/siRSBCxJ#G26pvLsHiDriQxXbRPhYdy6x802R_8jAzQw0-F5W3HU) |
 | v1 |  [v1.0.0](https://mega.nz/file/Y3YlWKjD#6zdjdNAo7cMGtwVfZDiff_SVhVuiVsTDoBNaTRHgloc) |
 
 
-## Authors
+## Auteurs
 
 - [@AnosyOO](https://github.com/Anosy00) - THEODORE Lucas
 - [@BAYRYO](https://github.com/BAYRYO) - BILLONNET Alexandre
