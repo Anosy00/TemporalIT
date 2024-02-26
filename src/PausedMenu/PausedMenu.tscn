@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://cbnfhq8jda7li"]
+
+[ext_resource type="Script" path="res://PausedMenu/PausedMenu.cs" id="1_6pmlk"]
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_wmdie"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpevh"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 20.0
+expand_margin_right = 10.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kur7y"]
+bg_color = Color(0, 0.584314, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 20.0
+expand_margin_right = 10.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_8leec"]
+Button/styles/hover = SubResource("StyleBoxFlat_kpevh")
+Button/styles/normal = SubResource("StyleBoxFlat_kur7y")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uwwm"]
+bg_color = Color(0.133333, 0.133333, 0.133333, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 20.0
+expand_margin_right = 10.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45vlk"]
+bg_color = Color(0.772549, 0.176471, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 20.0
+expand_margin_right = 10.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="Theme" id="Theme_1i46i"]
+Button/styles/hover = SubResource("StyleBoxFlat_6uwwm")
+Button/styles/normal = SubResource("StyleBoxFlat_45vlk")
+
+[node name="PausedMenu" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_6pmlk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wmdie")
+theme_override_font_sizes/font_size = 100
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8leec")
+theme_override_fonts/font = ExtResource("2_wmdie")
+theme_override_font_sizes/font_size = 30
+text = "CONTINUER"
+
+[node name="Exit" type="Button" parent="ColorRect/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_1i46i")
+theme_override_fonts/font = ExtResource("2_wmdie")
+theme_override_font_sizes/font_size = 30
+text = "MENU PRINCIPAL"
+
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="ColorRect/CenterContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

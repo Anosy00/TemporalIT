@@ -9,7 +9,7 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.Paper
 		private Vector2 _dir;
 		private bool _dragging;
 		private Vector2 _newPosition;
-		private bool _mouseIn = false;
+		private bool _mouseIn;
 
 		public override void _Input(InputEvent @event)
 		{

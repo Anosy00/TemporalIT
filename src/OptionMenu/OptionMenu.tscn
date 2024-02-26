@@ -76,7 +76,7 @@ Button/styles/hover = SubResource("StyleBoxFlat_1b7ql")
 Button/styles/normal = SubResource("StyleBoxFlat_pougm")
 Button/styles/pressed = SubResource("StyleBoxFlat_nb5c6")
 
-[node name="OptionMenu" type="Node"]
+[node name="OptionMenu" type="Node" groups=["cant_paused"]]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

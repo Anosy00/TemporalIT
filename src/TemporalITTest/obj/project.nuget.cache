@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WkFaT7W197oQBIdydTQkbZeKpCvNUoamso+1WgRBafdOOeSELhDTaW8lX7nF/GSSXbOJ3o1Gcr9S7/cZ7hjxgw==",
+  "dgSpecHash": "M4kJHuCfqlCiLGpygymqX6blgLx8dzhaM6gHqlrLt+8c2CV62Im9fa4enr3v8LgfNZAO1efiHwp+aF7HjM/uww==",
   "success": true,
   "projectFilePath": "C:\\Users\\matia\\Documents\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
   "expectedPackageFiles": [
@@ -53,10 +53,7 @@
     "C:\\Users\\matia\\.nuget\\packages\\system.threading.tasks\\4.0.11\\system.threading.tasks.4.0.11.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\system.threading.tasks.extensions\\4.0.0\\system.threading.tasks.extensions.4.0.0.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\matia\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\matia\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
-    "C:\\Users\\matia\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
-    "C:\\Users\\matia\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512"
+    "C:\\Users\\matia\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": []
 }
