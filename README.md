@@ -32,11 +32,12 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 
 | Version Actuel | Dernière version/Lien |
 | :-------- | :------------------------- |
-| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Windows_Executable_v1.1.0.zip) |
+| v1 |  [v1.2.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.2.0/TemporalIT_Windows_Executable_v1.2.0.zip)
 
 
 | Nom de la version | Versions/Lien   |
 | :-------- | :------------------------- |
+| v1 |  [v1.2.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.2.0/TemporalIT_Windows_Executable_v1.2.0.zip)
 | v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Windows_Executable_v1.1.0.zip)
 | v1 |  [v1.0.1](https://mega.nz/file/onp1SYjS#Alpx-Fyj-r-iUMsLnCbmakkpZi_jl2PRWmSgW1diV4U) |
 | v1 |  [v1.0.0](https://mega.nz/file/A3wXUCTB#v-mPzBCHYeyiizbOeaWQ3s293gnmReaxrn5dvPaPgCo) |
@@ -45,11 +46,12 @@ Ou alors vous pouvez [télécharger le jeu en cliquant sur l'une des versions ci
 
 | Version Actuel | Dernière version/Lien |
 | :-------- | :------------------------- |
-| v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Linux_Executable_v1.1.0.zip)
+| v1 |  [v1.2.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.2.0/TemporalIT_Linux_Executable_v1.2.0.zip)
 
 
 | Nom de la version | Versionss/Lien  |
 | :-------- | :------------------------- |
+| v1 |  [v1.2.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.2.0/TemporalIT_Linux_Executable_v1.2.0.zip)
 | v1 |  [v1.1.0](https://github.com/Anosy00/TemporalIT/releases/download/v1.1.0/TemporalIT_Linux_Executable_v1.1.0.zip)
 | v1 |  [v1.0.1](https://mega.nz/file/siRSBCxJ#G26pvLsHiDriQxXbRPhYdy6x802R_8jAzQw0-F5W3HU) |
 | v1 |  [v1.0.0](https://mega.nz/file/Y3YlWKjD#6zdjdNAo7cMGtwVfZDiff_SVhVuiVsTDoBNaTRHgloc) |
