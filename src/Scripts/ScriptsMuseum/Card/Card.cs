@@ -21,7 +21,7 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 		{
 			if (Input.IsActionPressed("button_e") && KeyboardInteration.IsVisibleInTree())
 			{
-				Global.setRoomNumber(3);//a changer en 1
+				Global.setRoomNumber(1);//à changer en 1
 				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
 				//GD.Print("La scene a été changée");
 				
