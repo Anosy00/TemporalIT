@@ -20,6 +20,7 @@ public partial class FinalText : CenterContainer
 		_animationText = GetNode<AnimationPlayer>(PathAnimation);
 		_text = GetNode<Label>(PathText);
 		_animationText.Play(NameOfTheAnimation);
+		Global.ChestIsOpened = false; //Reset the chest in precedent room
 	}
 
 	public void _on_animation_text_finished(String _animationName)

@@ -21,17 +21,20 @@ public partial class SubmitButton : Node
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-
+		if (Global.ChestIsOpened)
+		{
+			GetTree().ChangeSceneToFile(PathChestIsOpened);
+		}
 		_submitButton = GetNode<Button>(PathSubmitButton);
 		_codeEntered = GetNode<LineEdit>(PathCodeEnteredLineEdit);
 		_codeEnteredAnimation = GetNode<AnimationPlayer>(PathCodeEnteredAnimation);
-		
 	}
 
 	private void _on_submit_pressed()
 	{
 		_codeVerification = new CodeVerification(CorrectAnswer);
 		_codeVerification.Verification(int.Parse(_codeEntered.Text));
+		Global.ChestIsOpened = _codeVerification.ChestIsOpened();
 		ChangeSceneWhenCodeIsGood();
 	}
 
