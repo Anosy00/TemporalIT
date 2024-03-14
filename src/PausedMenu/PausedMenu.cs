@@ -38,16 +38,20 @@ public partial class PausedMenu : CanvasLayer
 
 	public void _on_continue_pressed()
 	{
-		Hide();
-		GetTree().Paused = false;
+		UnpausedConfig();
 	}
 
 	public void _on_exit_pressed()
 	{
-		Hide();
-		GetTree().Paused = false;
+		UnpausedConfig();
 		Music.StopMusic();
 		GetTree().ChangeSceneToFile("res://TitleScreen/TitleScreen.tscn");
+	}
+
+	private void UnpausedConfig()
+	{
+		Hide();
+		GetTree().Paused = false;
 	}
 }
 
