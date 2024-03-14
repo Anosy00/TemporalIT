@@ -17,13 +17,16 @@ public partial class MazeControllerScene : Control
 		_animationPlayer.Play(_NAME_OF_THE_ANIM);
 	}
 
+	public override void _Process(double delta)
+	{
+		if (Input.IsActionPressed("button_e"))
+		{
+			GetTree().ChangeSceneToFile(_NEXT_SCENE_PATH);
+		}
+	}
+
 	private void _on_tree_exited()
 	{
 		_playerSaveManager.Reset();
-	}
-
-	public void _on_animation_finished(String anim_name)
-	{
-		GetTree().ChangeSceneToFile(_NEXT_SCENE_PATH);
 	}
 }

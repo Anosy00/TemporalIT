@@ -1,14 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgj7cp7ecmt4v"]
+[gd_scene load_steps=9 format=3 uid="uid://bgj7cp7ecmt4v"]
 
 [ext_resource type="Script" path="res://Morse's room/Rooms/Maze/Scripts/MazeControllerScene.cs" id="1_sglnc"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_spjty"]
+[ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="3_5gwks"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytu1w"]
+atlas = ExtResource("3_5gwks")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64ht6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytu1w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_ju86f"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D/Label:visible_ratio")
+tracks/0/path = NodePath("VBoxContainer/Camera2D/Label:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,7 +40,7 @@ length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D/Label:visible_ratio")
+tracks/0/path = NodePath("VBoxContainer/Camera2D/Label:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -57,11 +73,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sglnc")
 
-[node name="Camera2D" type="Camera2D" parent="CenterContainer"]
-position = Vector2(2.22772, -1.07955)
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/VBoxContainer"]
+position = Vector2(-573.772, -325.08)
 zoom = Vector2(4, 4)
 
-[node name="Label" type="Label" parent="CenterContainer/Camera2D"]
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Camera2D"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -82,9 +101,22 @@ vertical_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
 
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer/Camera2D"]
+offset_left = -63.2277
+offset_top = 69.0796
+offset_right = 144.772
+offset_bottom = 95.0796
+theme_override_colors/font_color = Color(0.803922, 0.854902, 0, 1)
+theme_override_fonts/font = ExtResource("2_spjty")
+text = "Passer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer/VBoxContainer/Camera2D"]
+position = Vector2(-39.2277, 82.0796)
+sprite_frames = SubResource("SpriteFrames_64ht6")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CenterContainer"]
 libraries = {
 "": SubResource("AnimationLibrary_wfwl7")
 }
-
-[connection signal="animation_finished" from="CenterContainer/AnimationPlayer" to="CenterContainer" method="_on_animation_finished"]
