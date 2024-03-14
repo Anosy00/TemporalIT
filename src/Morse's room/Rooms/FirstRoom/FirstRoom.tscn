@@ -1091,8 +1091,6 @@ position = Vector2(1, 18)
 scale = Vector2(0.4375, 0.453125)
 sprite_frames = SubResource("SpriteFrames_1apjx")
 
-[node name="Node2D" type="Node2D" parent="FirstRoom"]
-
 [connection signal="tree_exited" from="FirstRoom" to="FirstRoom" method="_on_tree_exited"]
 [connection signal="body_entered" from="FirstRoom/AreaNextLevel" to="FirstRoom/AreaNextLevel" method="_on_body_entered"]
 [connection signal="body_entered" from="FirstRoom/AreaBook" to="FirstRoom/AreaBook" method="_on_body_entered"]
