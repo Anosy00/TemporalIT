@@ -18,17 +18,16 @@ public partial class WhiteRect : CharacterBody2D
 	public override void _Process(double delta)
 	{
 		Position = position;
-		if (augment && canMove) { position.X += 1; }
-		else if (!augment && canMove){ position.X -= 1; }
+		if (augment && canMove)
+		{
+			position.X += 1.5F;
+		}
+		else if (!augment && canMove){ position.X -= 1.5F; }
 
 		if (Input.IsActionJustPressed("closeDialog"))
 		{
-			if (isInRedRect){ GD.Print("You are in the red rect");
+			if (isInRedRect){ 
 				canMove = false;
-			}
-			else { GD.Print("You are not in the red rect");
-				Position = new Vector2(0, 0);
-				position = new Vector2(0, 0);
 			}
 		}
 	}
