@@ -40,8 +40,7 @@ public partial class ButtonPunchedCard : Button
 		_keyboardInteration = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		_keyboardInteration.Visible = true;
 		_keyboardInteration.Play("default");
-		_playerSaveManager = new PlayerSaveManager();
-		
+		_playerSaveManager = new PlayerSaveManager();		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
