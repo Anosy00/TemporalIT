@@ -8,6 +8,7 @@ public partial class DialogBox : Node
 	private Label _labelText;
 	private Label _labelName;
 	private AnimationPlayer _animationPlayer;
+	private bool _canCloseDialogBox;
 
 	public DialogBox(Sprite2D dialogBox, Label labelText, Label labelName, AnimationPlayer animationPlayer)
 	{
@@ -15,6 +16,7 @@ public partial class DialogBox : Node
 		_labelText = labelText;
 		_labelName = labelName;
 		_animationPlayer = animationPlayer;
+		_canCloseDialogBox = false;
 	}
 	public void disable()
 	{
@@ -56,13 +58,18 @@ public partial class DialogBox : Node
 
 	public int closeDialogBox()
 	{
-		if (Input.IsActionPressed("closeDialog") && isVisible())
+		if (Input.IsActionPressed("closeDialog") && isVisible() && _canCloseDialogBox)
 		{
 			disable();
 			return 0;
 		}
 
 		return 1;
+	}
+	
+	public void setCanCloseDialogBox(bool canCloseDialogBox)
+	{
+		_canCloseDialogBox = canCloseDialogBox;
 	}
 	
 }

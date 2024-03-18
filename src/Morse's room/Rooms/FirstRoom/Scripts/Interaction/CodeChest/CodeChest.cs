@@ -33,4 +33,6 @@ namespace TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts.Interaction.CodeChest
             _keyboardInteraction.disable();
         }
     }
+    
+    
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=77 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
@@ -8,15 +8,17 @@
 [ext_resource type="Script" path="res://Scripts/Interaction/Ladder/LadderScript.cs" id="6_iittg"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="6_n2xgf"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
-[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank.cs" id="9_iqolm"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://bucg1laq6vekg" path="res://ressources/tilesmap/woodplank.png" id="10_pgfv6"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank1.cs" id="12_h6b5h"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="13_k26hm"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank2.cs" id="14_8qsmj"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/JMJ.cs" id="14_fy0ia"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_ubub2"]
+[ext_resource type="Texture2D" uid="uid://c8kasold4te7a" path="res://ressources/media/jmj-machine.png" id="19_j1byy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
 texture = ExtResource("1_e7p8e")
@@ -1451,7 +1453,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(10, 2)
+position = Vector2(10, 3)
 metadata/_edit_horizontal_guides_ = [940.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1462,39 +1464,14 @@ format = 2
 layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(-131070, 131072, 0, -65534, 131072, 0, 2, 131072, 0, 3, 131072, 0, -7, 131072, 0, -131069, 131072, 0, -131068, 131072, 0, -131067, 131072, 0, -196606, 131072, 0, -196603, 131072, 0, -196604, 131072, 0, -196605, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, 65529, 131072, 0, 4, 131072, 0, 5, 131072, 0, 131065, 131072, 0, 65538, 131072, 0, 65539, 131072, 0, 65540, 131072, 0, 65541, 131072, 0, 131077, 131072, 0, 131076, 131072, 0, 131075, 131072, 0, 131074, 131072, 0, 196609, 131072, 0, 196610, 131072, 0, 196611, 131072, 0, 196612, 131072, 0, 196613, 131072, 0, 196601, 131072, 0, 262138, 131072, 0, 262139, 131072, 0, 262140, 131072, 0, 262141, 131072, 0, 262142, 131072, 0, 262143, 131072, 0, 196608, 131072, 0, -131078, 131072, 0, -65542, 131072, 0, -6, 131072, 0, 65530, 131072, 0, 131066, 131072, 0, 196602, 131072, 0, -131077, 131072, 0, -65541, 131072, 0, -5, 131072, 0, 65531, 131072, 0, 131067, 131072, 0, 196603, 131072, 0, -131076, 131072, 0, -65540, 131072, 0, -4, 131072, 0, 65532, 131072, 0, 131068, 131072, 0, 196604, 131072, 0, -131075, 131072, 0, -3, 131072, 0, 65533, 131072, 0, 131069, 131072, 0, 196605, 131072, 0, -131074, 131072, 0, -65538, 131072, 0, -2, 131072, 0, 65534, 131072, 0, 131070, 131072, 0, 196606, 131072, 0, -131073, 131072, 0, -65537, 131072, 0, -1, 131072, 0, 65535, 131072, 0, 131071, 131072, 0, 196607, 131072, 0, -196608, 131072, 0, -131072, 131072, 0, -65536, 131072, 0, 0, 131072, 0, 65536, 131072, 0, 131072, 131072, 0, -196607, 131072, 0, -131071, 131072, 0, -65535, 131072, 0, 1, 131072, 0, 65537, 131072, 0, 131073, 131072, 0, -65543, 131072, 0, -262146, 131072, 0, -262147, 131072, 0, -262148, 131072, 0, -262149, 131072, 0, -262150, 131072, 0, -262151, 131072, 0, -196615, 131072, 0, -196614, 131072, 0, -196613, 131072, 0, -196612, 131072, 0, -196611, 131072, 0, -196610, 131072, 0, -196609, 131072, 0, -262144, 131072, 0, -262143, 131072, 0, -262142, 131072, 0, -262141, 131072, 0, -262140, 131072, 0, -262139, 131072, 0, -131079, 131072, 0, -65539, 131072, 0, -65531, 131072, 0, 262137, 131072, 0, -262145, 131072, 0, -327680, 131072, 0, -327679, 131072, 0, -327678, 131072, 0, -327677, 131072, 0, -327676, 131072, 0, -327675, 131072, 0, -458748, 1, 65537, -458751, 1, 65537, -393218, 1, 65537, -393221, 1, 65537)
 layer_1/name = "Furnitures"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-262150, 196609, 65552, -196614, 196609, 65553, 131065, 655363, 65543)
 layer_2/name = "Utilities"
-layer_2/enabled = true
-layer_2/modulate = Color(1, 1, 1, 1)
-layer_2/y_sort_enabled = false
-layer_2/y_sort_origin = 0
-layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-393211, 131075, 65549, -393222, 1, 65537, -393219, 1, 65537, -458752, 1, 65537, 131065, 720899, 131079)
 layer_3/name = "Decoration"
-layer_3/enabled = true
-layer_3/modulate = Color(1, 1, 1, 1)
-layer_3/y_sort_enabled = false
-layer_3/y_sort_origin = 0
-layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(65529, 1179651, 65538)
 layer_4/name = "WoodPlank1"
-layer_4/enabled = true
-layer_4/modulate = Color(1, 1, 1, 1)
-layer_4/y_sort_enabled = false
-layer_4/y_sort_origin = 0
-layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
 layer_5/name = "WoodPlank2"
-layer_5/enabled = true
-layer_5/modulate = Color(1, 1, 1, 1)
-layer_5/y_sort_enabled = false
-layer_5/y_sort_origin = 0
-layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="TileMap"]
@@ -1608,7 +1585,8 @@ scale = Vector2(1.2, 1.236)
 sprite_frames = SubResource("SpriteFrames_l6to6")
 
 [node name="Plank1" type="Area2D" parent="TileMap"]
-script = ExtResource("9_iqolm")
+position = Vector2(0.333328, 0)
+script = ExtResource("12_h6b5h")
 
 [node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank1"]
 position = Vector2(-188, -142)
@@ -1636,7 +1614,7 @@ sprite_frames = SubResource("SpriteFrames_dquc4")
 
 [node name="Plank2" type="Area2D" parent="TileMap"]
 position = Vector2(0.333328, -4.33333)
-script = ExtResource("9_iqolm")
+script = ExtResource("14_8qsmj")
 metadata/_edit_group_ = true
 
 [node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank2"]
@@ -1694,6 +1672,52 @@ one_shot = true
 position = Vector2(674, 249)
 script = ExtResource("11_uayp2")
 
+[node name="Objectif" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(80, 106)
+scale = Vector2(0.15, 0.433)
+texture = ExtResource("12_8t5ke")
+metadata/_edit_group_ = true
+
+[node name="LabelObjectif" type="Label" parent="Objectif"]
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.248
+anchor_right = 0.194
+anchor_bottom = 0.248
+offset_left = -1065.43
+offset_top = -137.616
+offset_right = 494.572
+offset_bottom = -65.616
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ubub2")
+theme_override_font_sizes/font_size = 50
+text = "Objectif"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelText" type="Label" parent="Objectif"]
+offset_left = -753.0
+offset_top = -25.0
+offset_right = 740.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ubub2")
+theme_override_font_sizes/font_size = 50
+text = "Récupérer les planches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="Jmj-machine" type="Sprite2D" parent="."]
+position = Vector2(779, 550)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("19_j1byy")
+
 [connection signal="body_entered" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_body_exited"]
 [connection signal="body_entered" from="TileMap/Plank1" to="TileMap/Plank1" method="_on_body_entered"]
@@ -1703,3 +1727,4 @@ script = ExtResource("11_uayp2")
 [connection signal="body_entered" from="JMJ" to="JMJ" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="JMJ" to="JMJ" method="_on_body_exited"]
 [connection signal="timeout" from="JMJ/Timer" to="JMJ" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="TileMap/LadderArea" method="_on_timer_timeout"]

@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="8_higbq"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Book/Book.cs" id="8_nnod5"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Paper/Paper.cs" id="10_tnv0c"]
-[ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/CodeChest/CodeChest.cs" id="12_85a2x"]
+[ext_resource type="Script" path="res://Global/CodeChest.cs" id="12_85a2x"]
 [ext_resource type="Script" path="res://Morse's room/Rooms/FirstRoom/Scripts/Interaction/Radio/Radio.cs" id="13_bt0ll"]
 [ext_resource type="Texture2D" uid="uid://dwgnimxjegxm" path="res://ressources/images/radio-morse.png" id="14_3xi8c"]
 

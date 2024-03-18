@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=60 format=3 uid="uid://c1iroer1genb1"]
 
+[ext_resource type="Script" path="res://JMJ's Room/Room/Saddler.cs" id="1_b0nxv"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
 [ext_resource type="Texture2D" uid="uid://btjcpl00c3qql" path="res://ressources/tilesmap/0x72_DungeonTilesetII_v1.6.png" id="2_4miwt"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="3_80n8l"]
@@ -15,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="13_4g0i2"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="14_48mms"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_h46hr"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/CodeChestJMJ.cs" id="16_lcuyh"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/StringFound.cs" id="17_86gx4"]
+[ext_resource type="Texture2D" uid="uid://cvq3g3xe4lfcm" path="res://ressources/images/string.png" id="18_5pkao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
 texture = ExtResource("1_tbaut")
@@ -1489,16 +1493,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6fuo"]
-radius = 17.0
-height = 48.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tyqt"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_01rwb"]
-Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvh3q"]
 size = Vector2(60, 26.5)
 
@@ -1588,102 +1582,140 @@ b = Vector2(80.25, 70.5)
 a = Vector2(79.25, -56)
 b = Vector2(80.75, 70.5)
 
-[node name="Saddler" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbuma"]
+size = Vector2(32.75, 31.75)
 
-[node name="TileMap" type="TileMap" parent="."]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4pt2v"]
+size = Vector2(43.75, 40.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk28i"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18qs0"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flvco"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c274c"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaf8w"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4ilq"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6f8u"]
+atlas = ExtResource("5_dhvh8")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgk6n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk28i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18qs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_flvco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c274c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaf8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4ilq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6f8u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1chkm"]
+size = Vector2(7.75, 9)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iv6ib"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6fuo"]
+radius = 17.0
+height = 48.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1tyqt"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_01rwb"]
+Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
+
+[node name="Root" type="Node2D"]
+
+[node name="Saddler" type="Node2D" parent="."]
+position = Vector2(0, 1)
+script = ExtResource("1_b0nxv")
+
+[node name="TileMap" type="TileMap" parent="Saddler"]
 position = Vector2(554, 320)
-scale = Vector2(4, 4)
 tile_set = SubResource("TileSet_hk2t2")
 format = 2
 layer_0/tile_data = PackedInt32Array(-131075, 65538, 65540, -3, 65538, 65540, 131069, 65538, 65540, 65536, 65538, 65540, -65536, 65538, 65540, -196608, 65538, 65540, -196605, 65538, 65540, -65533, 65538, 65540, 65539, 65538, 65540, 262141, 65538, 65540, 196608, 65538, 65540, 196611, 65538, 65540)
 layer_1/name = "Element"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(196611, 196610, 65542, -262141, 655363, 9, -196605, 655363, 10, -131069, 655363, 11, -262140, 720899, 9, -196604, 720899, 10, -131068, 720899, 11, -131075, 393219, 65537, 0, 393221, 10, 65535, 327685, 10, 131071, 327685, 11, 65536, 393221, 11, 65537, 393221, 11, 65538, 458757, 11, 2, 458757, 10, 1, 393221, 10)
 
-[node name="Camera2D" type="Camera2D" parent="TileMap"]
+[node name="Camera2D" type="Camera2D" parent="Saddler/TileMap"]
 position = Vector2(5, 1)
+scale = Vector2(4, 4)
+zoom = Vector2(4, 4)
 
-[node name="LadderRigid" type="RigidBody2D" parent="TileMap"]
+[node name="LadderRigid" type="RigidBody2D" parent="Saddler/TileMap"]
 position = Vector2(56.5, 56.5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/LadderRigid"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/LadderRigid"]
 position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_j6lii")
 
-[node name="Player" parent="TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(17, -23)
-scale = Vector2(1, 1)
-script = ExtResource("4_i0vk7")
-
-[node name="EButtonLadder" type="Area2D" parent="TileMap"]
+[node name="EButtonLadder" type="Area2D" parent="Saddler/TileMap"]
 position = Vector2(55, 55.25)
 script = ExtResource("5_fi31q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonLadder"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/EButtonLadder"]
 position = Vector2(0.5, -0.5)
 shape = SubResource("CapsuleShape2D_wy1np")
 
-[node name="EButtonLadderSprite" type="AnimatedSprite2D" parent="TileMap/EButtonLadder"]
+[node name="EButtonLadderSprite" type="AnimatedSprite2D" parent="Saddler/TileMap/EButtonLadder"]
 position = Vector2(0, -19.5)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_2xg2s")
 
-[node name="EButtonPaper" type="Area2D" parent="TileMap"]
-position = Vector2(-1.5, 12.25)
-script = ExtResource("8_qsyls")
-
-[node name="EButtonPaperSprite" type="AnimatedSprite2D" parent="TileMap/EButtonPaper"]
-position = Vector2(0, -16.25)
-scale = Vector2(0.4, 0.4)
-sprite_frames = SubResource("SpriteFrames_2xg2s")
-
-[node name="SpriteNewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
-position = Vector2(0.25, 0.5)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_h2qro")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/EButtonPaper"]
-visible = false
-position = Vector2(-6.5, 0.25)
-shape = SubResource("CapsuleShape2D_s6fuo")
-
-[node name="ButtonClose" type="Button" parent="TileMap/EButtonPaper"]
-visible = false
-offset_left = -136.25
-offset_top = 47.75
-offset_right = -53.25
-offset_bottom = 68.75
-theme = SubResource("Theme_01rwb")
-theme_override_font_sizes/font_size = 8
-text = "Fermer le journal"
-script = ExtResource("12_4pf8n")
-
-[node name="NewsPaper" type="Sprite2D" parent="TileMap/EButtonPaper"]
-visible = false
-position = Vector2(8.5, -9.25)
-scale = Vector2(0.075, 0.075)
-texture = ExtResource("11_q87uh")
-
-[node name="Table" type="RigidBody2D" parent="TileMap"]
+[node name="Table" type="RigidBody2D" parent="Saddler/TileMap"]
 position = Vector2(14.75, 14)
 freeze = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Table"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Table"]
 position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
 
-[node name="DialogBox" type="Sprite2D" parent="TileMap"]
+[node name="DialogBox" type="Sprite2D" parent="Saddler/TileMap"]
+visible = false
 position = Vector2(9.75, 51.25)
 rotation = 0.000841907
 scale = Vector2(0.15, 0.25)
 texture = ExtResource("13_4g0i2")
 script = ExtResource("14_48mms")
 
-[node name="LabelText" type="Label" parent="TileMap/DialogBox"]
+[node name="LabelText" type="Label" parent="Saddler/TileMap/DialogBox"]
 offset_left = -750.0
 offset_top = -24.0
 offset_right = 740.0
@@ -1696,7 +1728,7 @@ visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="LabelName" type="Label" parent="TileMap/DialogBox"]
+[node name="LabelName" type="Label" parent="Saddler/TileMap/DialogBox"]
 offset_left = -753.451
 offset_top = -84.0058
 offset_right = -479.451
@@ -1707,32 +1739,163 @@ label_settings = SubResource("LabelSettings_c3aj7")
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TileMap/DialogBox"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Saddler/TileMap/DialogBox"]
 libraries = {
 "": SubResource("AnimationLibrary_fgbd8")
 }
 
-[node name="Border" type="RigidBody2D" parent="TileMap"]
+[node name="Border" type="RigidBody2D" parent="Saddler/TileMap"]
 position = Vector2(11.75, 6)
 
-[node name="BorderTop" type="CollisionShape2D" parent="TileMap/Border"]
+[node name="BorderTop" type="CollisionShape2D" parent="Saddler/TileMap/Border"]
 position = Vector2(-4, -62)
 shape = SubResource("SegmentShape2D_uasm4")
 
-[node name="BorderLeft" type="CollisionShape2D" parent="TileMap/Border"]
+[node name="BorderLeft" type="CollisionShape2D" parent="Saddler/TileMap/Border"]
 position = Vector2(-10.5, -6)
 shape = SubResource("SegmentShape2D_3w3o0")
 
-[node name="BorderBottom" type="CollisionShape2D" parent="TileMap/Border"]
+[node name="BorderBottom" type="CollisionShape2D" parent="Saddler/TileMap/Border"]
 position = Vector2(-9.75, -6.75)
 shape = SubResource("SegmentShape2D_rue2f")
 
-[node name="BorderRight" type="CollisionShape2D" parent="TileMap/Border"]
+[node name="BorderRight" type="CollisionShape2D" parent="Saddler/TileMap/Border"]
 position = Vector2(-11.25, -5.25)
 shape = SubResource("SegmentShape2D_5ict7")
 
-[connection signal="body_entered" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="TileMap/EButtonLadder" to="TileMap/EButtonLadder" method="_on_body_exited"]
-[connection signal="body_entered" from="TileMap/EButtonPaper" to="TileMap/EButtonPaper" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="TileMap/EButtonPaper" to="TileMap/EButtonPaper" method="_on_body_exited"]
-[connection signal="pressed" from="TileMap/EButtonPaper/ButtonClose" to="TileMap/EButtonPaper/ButtonClose" method="_on_pressed"]
+[node name="Chest" type="Area2D" parent="Saddler/TileMap"]
+position = Vector2(-49.5, -40.25)
+script = ExtResource("16_lcuyh")
+
+[node name="Chest" type="RigidBody2D" parent="Saddler/TileMap/Chest"]
+position = Vector2(2.75, -0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Chest/Chest"]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_mbuma")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Chest"]
+position = Vector2(7.25, 4)
+rotation = -0.00355689
+shape = SubResource("RectangleShape2D_4pt2v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Saddler/TileMap/Chest"]
+position = Vector2(-14.5, -18.75)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_hgk6n")
+
+[node name="Barrel" type="RigidBody2D" parent="Saddler/TileMap"]
+position = Vector2(64.25, -33.25)
+scale = Vector2(4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Barrel"]
+position = Vector2(-0.1875, -0.6875)
+shape = SubResource("RectangleShape2D_1chkm")
+
+[node name="StringFound" type="Area2D" parent="Saddler/TileMap"]
+visible = false
+script = ExtResource("17_86gx4")
+
+[node name="StringFound" type="Sprite2D" parent="Saddler/TileMap/StringFound"]
+position = Vector2(-61, -78)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("18_5pkao")
+
+[node name="Label" type="Label" parent="Saddler/TileMap/StringFound"]
+offset_left = -37.0
+offset_top = -85.0
+offset_right = 138.0
+offset_bottom = -59.0
+scale = Vector2(0.8, 0.8)
+text = "Les fils ont été trouvés"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/StringFound"]
+shape = SubResource("SegmentShape2D_iv6ib")
+
+[node name="EButtonPaper" type="Area2D" parent="Saddler/TileMap"]
+position = Vector2(-1.5, 12.25)
+script = ExtResource("8_qsyls")
+
+[node name="EButtonPaperSprite" type="AnimatedSprite2D" parent="Saddler/TileMap/EButtonPaper"]
+position = Vector2(0, -16.25)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_2xg2s")
+
+[node name="SpriteNewsPaper" type="Sprite2D" parent="Saddler/TileMap/EButtonPaper"]
+position = Vector2(0.25, 0.5)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("7_h2qro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/EButtonPaper"]
+visible = false
+position = Vector2(-6.5, 0.25)
+shape = SubResource("CapsuleShape2D_s6fuo")
+
+[node name="ButtonClose" type="Button" parent="Saddler/TileMap/EButtonPaper"]
+visible = false
+offset_left = -136.25
+offset_top = 47.75
+offset_right = -53.25
+offset_bottom = 68.75
+theme = SubResource("Theme_01rwb")
+theme_override_font_sizes/font_size = 8
+text = "Fermer le journal"
+script = ExtResource("12_4pf8n")
+
+[node name="NewsPaper" type="Sprite2D" parent="Saddler/TileMap/EButtonPaper"]
+visible = false
+position = Vector2(8.5, -9.25)
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("11_q87uh")
+
+[node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
+position = Vector2(-34, -5)
+scale = Vector2(1, 1)
+script = ExtResource("4_i0vk7")
+
+[node name="ObjectifSaddler" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(400, 272)
+scale = Vector2(0.1, 0.2)
+texture = ExtResource("13_4g0i2")
+metadata/_edit_group_ = true
+
+[node name="LabelObjectif" type="Label" parent="ObjectifSaddler"]
+anchors_preset = -1
+anchor_left = 0.194
+anchor_top = 0.248
+anchor_right = 0.194
+anchor_bottom = 0.248
+offset_left = -1065.43
+offset_top = -137.616
+offset_right = 494.572
+offset_bottom = -65.616
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_h46hr")
+theme_override_font_sizes/font_size = 50
+text = "Objectif"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelText" type="Label" parent="ObjectifSaddler"]
+offset_left = -753.0
+offset_top = -25.0
+offset_right = 740.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_h46hr")
+theme_override_font_sizes/font_size = 50
+text = "Récupérer les planches"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="tree_exited" from="Saddler" to="Saddler" method="_on_tree_exited"]
+[connection signal="body_entered" from="Saddler/TileMap/EButtonLadder" to="Saddler/TileMap/EButtonLadder" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Saddler/TileMap/EButtonLadder" to="Saddler/TileMap/EButtonLadder" method="_on_body_exited"]
+[connection signal="body_entered" from="Saddler/TileMap/Chest" to="Saddler/TileMap/Chest" method="_on_body_entered"]
+[connection signal="body_exited" from="Saddler/TileMap/Chest" to="Saddler/TileMap/Chest" method="_on_body_exited"]
+[connection signal="body_entered" from="Saddler/TileMap/EButtonPaper" to="Saddler/TileMap/EButtonPaper" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Saddler/TileMap/EButtonPaper" to="Saddler/TileMap/EButtonPaper" method="_on_body_exited"]
+[connection signal="pressed" from="Saddler/TileMap/EButtonPaper/ButtonClose" to="Saddler/TileMap/EButtonPaper/ButtonClose" method="_on_pressed"]

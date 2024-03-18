@@ -2,7 +2,7 @@ using Godot;
 
 public partial class playerInSaddler : CharacterBody2D
 {
-	private const float SPEED = 4f;
+	private const float SPEED = 1.2f;
 
 	private AnimatedSprite2D animateSprite;
 	

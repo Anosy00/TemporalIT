@@ -12,6 +12,9 @@ public partial class EButton : Node
 	{
 		_keyInteraction = keyInteraction;
 	}
+	
+	public EButton()
+	{}
 
 	public override void _Ready()
 	{
@@ -37,12 +40,12 @@ public partial class EButton : Node
 		
 	public int makeInteraction(SceneTree tree,String key,String nextScenePath)
 	{
-		if (Input.IsActionPressed(key) && isVisible() && GlobalJmj.hadInteractedWithNewsPaper)
+		if (Input.IsActionJustReleased(key) && isVisible())
 		{
 			tree.ChangeSceneToFile(nextScenePath);
 			return 0;
 		}
-		else if (Input.IsActionPressed(key) && isVisible() && !GlobalJmj.hadInteractedWithNewsPaper)
+		else if (Input.IsActionJustReleased(key) && isVisible())
 		{
 			return 1;
 		}
@@ -52,7 +55,7 @@ public partial class EButton : Node
 
 	public int makeTalking()
 	{
-		if (Input.IsActionPressed("button_e") && isVisible())
+		if (Input.IsActionJustReleased("button_e") && isVisible())
 		{
 			return 0;
 		}

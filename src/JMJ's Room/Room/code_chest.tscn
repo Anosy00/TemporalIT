@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://chxm6dp2xi7v1"]
+
+[ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_l5vjp"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/BackButtonJMJ.cs" id="2_t7epg"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/SubmitButtonJMJ.cs" id="2_yh1vv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mia1d"]
+bg_color = Color(0.00784314, 0.00784314, 0.0509804, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="CodeChest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -130.0
+offset_top = -74.0
+offset_right = 128.0
+offset_bottom = 77.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mia1d")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = -543.0
+offset_top = -348.0
+offset_right = 538.0
+offset_bottom = 349.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l5vjp")
+text = "Tap a code :"
+horizontal_alignment = 1
+
+[node name="CodeEntered" type="LineEdit" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_l5vjp")
+placeholder_text = "____ "
+alignment = 1
+max_length = 4
+virtual_keyboard_enabled = false
+virtual_keyboard_type = 2
+
+[node name="SubmitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l5vjp")
+text = "SUBMIT"
+script = ExtResource("2_yh1vv")
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_l5vjp")
+text = "BACK"
+script = ExtResource("2_t7epg")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer/SubmitButton" method="_on_submit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_pressed"]

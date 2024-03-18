@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dhadae3bsghao"]
+[gd_scene load_steps=5 format=3 uid="uid://bouulsjh5h3ar"]
 
 [ext_resource type="Script" path="res://Global/SubmitButton.cs" id="1_d11om"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_aik0l"]
@@ -10,42 +10,6 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
-
-[sub_resource type="Animation" id="Animation_l2crw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CodeEntered:theme_override_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_gi7v6"]
-resource_name = "wrong-code"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CodeEntered:theme_override_colors/font_color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0.741176, 0, 0, 1), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_i11ux"]
-_data = {
-"RESET": SubResource("Animation_l2crw"),
-"wrong-code": SubResource("Animation_gi7v6")
-}
 
 [node name="CodeChest" type="Control"]
 layout_mode = 3
@@ -81,39 +45,30 @@ script = ExtResource("1_d11om")
 
 [node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "Taper un code:"
+theme_override_fonts/font = ExtResource("2_aik0l")
+text = "Tap a code :"
 horizontal_alignment = 1
 
 [node name="CodeEntered" type="LineEdit" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("1_2b6ls")
+theme_override_fonts/font = ExtResource("2_aik0l")
 placeholder_text = "____ "
 alignment = 1
 max_length = 4
 virtual_keyboard_enabled = false
 virtual_keyboard_type = 2
-text_direction = 1
 
 [node name="SubmitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "ENVOYER"
+theme_override_fonts/font = ExtResource("2_aik0l")
+text = "SUBMIT"
 
 [node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_2b6ls")
-text = "RETOUR"
-script = ExtResource("3_4lslq")
+theme_override_fonts/font = ExtResource("2_aik0l")
+text = "BACK"
+script = ExtResource("3_v13ty")
 
-[node name="AnimationCodeEntered" type="AnimationPlayer" parent="CenterContainer/VBoxContainer"]
-libraries = {
-"": SubResource("AnimationLibrary_i11ux")
-}
-
-[connection signal="text_changed" from="CenterContainer/VBoxContainer/CodeEntered" to="CenterContainer/VBoxContainer" method="_on_code_entered_text_changed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/SubmitButton" to="CenterContainer/VBoxContainer" method="_on_submit_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BackButton" to="CenterContainer/VBoxContainer/BackButton" method="_on_back_button_pressed"]
-[connection signal="animation_finished" from="CenterContainer/VBoxContainer/AnimationCodeEntered" to="CenterContainer/VBoxContainer" method="_on_code_entered_animation_finished"]
