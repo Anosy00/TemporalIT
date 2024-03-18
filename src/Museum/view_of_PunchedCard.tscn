@@ -456,8 +456,8 @@ label_settings = SubResource("LabelSettings_wf7a1")
 [node name="TheHoles" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(290.125, 241.75)
-scale = Vector2(0.774598, 0.787947)
+position = Vector2(317.125, 258.75)
+scale = Vector2(0.883032, 0.939732)
 sprite_frames = SubResource("SpriteFrames_ds4vx")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TheHoles"]

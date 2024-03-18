@@ -32,7 +32,7 @@ public partial class Museum : TileMap
 	};
 
 	
-	public void AvancerMusique(float temps)
+	public void ForwardMusic(float temps)
 	{
 		// Assurez-vous que l'AudioStreamPlayer est prêt
 		if (_narrator != null)
@@ -85,7 +85,7 @@ public partial class Museum : TileMap
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
-		AvancerMusique(time);
+		ForwardMusic(time);
 	}
 	private void _on_timer_timeout()
 	{
