@@ -2,12 +2,10 @@ using Godot;
 using System;
 using TemporalIT;
 
-public partial class WoodPlank : Area2D
+public partial class WoodPlank1 : Area2D
 {
 	private EButton _button;
 	private static CollisionShape2D _collisionShape2D;
-
-	private bool _isTook = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -19,6 +17,7 @@ public partial class WoodPlank : Area2D
 			Visible = false;
 			_collisionShape2D.Disabled = true;
 		}
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,10 +26,11 @@ public partial class WoodPlank : Area2D
 		if (Input.IsActionJustReleased("button_e") && _button.isVisible())
 		{
 			Visible = false;
-			_collisionShape2D.Disabled = true;
+			_collisionShape2D.Disabled = !_collisionShape2D.Disabled;
 			GlobalJMJ.nbPlanks++;
-			_isTook = true;
 		}
+		
+		GD.Print(_collisionShape2D.Disabled);
 	}
 
 	public void _on_body_entered(CharacterBody2D body)

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="TemporalIT"
 run/main_scene="res://Museum/MuseumMap.tscn"
-config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon_TemporalIT.png"
 

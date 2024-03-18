@@ -25,7 +25,6 @@ public partial class LadderScript : Node
 			GetNode<Label>("../DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
-		GD.Print(_dialogBox);
 		_dialogBox.setCanCloseDialogBox(false);
 		_timer = GetNode<Timer>("../../Timer");
 	}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=77 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
@@ -8,15 +8,17 @@
 [ext_resource type="Script" path="res://Scripts/Interaction/Ladder/LadderScript.cs" id="6_iittg"]
 [ext_resource type="PackedScene" uid="uid://8wky70epxhd3" path="res://Player/player.tscn" id="6_n2xgf"]
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
-[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank.cs" id="9_iqolm"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://bucg1laq6vekg" path="res://ressources/tilesmap/woodplank.png" id="10_pgfv6"]
 [ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank1.cs" id="12_h6b5h"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="13_k26hm"]
+[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank2.cs" id="14_8qsmj"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/JMJ.cs" id="14_fy0ia"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_ubub2"]
+[ext_resource type="Texture2D" uid="uid://c8kasold4te7a" path="res://ressources/media/jmj-machine.png" id="19_j1byy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
 texture = ExtResource("1_e7p8e")
@@ -1583,7 +1585,8 @@ scale = Vector2(1.2, 1.236)
 sprite_frames = SubResource("SpriteFrames_l6to6")
 
 [node name="Plank1" type="Area2D" parent="TileMap"]
-script = ExtResource("9_iqolm")
+position = Vector2(0.333328, 0)
+script = ExtResource("12_h6b5h")
 
 [node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank1"]
 position = Vector2(-188, -142)
@@ -1611,7 +1614,7 @@ sprite_frames = SubResource("SpriteFrames_dquc4")
 
 [node name="Plank2" type="Area2D" parent="TileMap"]
 position = Vector2(0.333328, -4.33333)
-script = ExtResource("9_iqolm")
+script = ExtResource("14_8qsmj")
 metadata/_edit_group_ = true
 
 [node name="WoodPlank" type="RigidBody2D" parent="TileMap/Plank2"]
@@ -1709,6 +1712,11 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="Jmj-machine" type="Sprite2D" parent="."]
+position = Vector2(779, 550)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("19_j1byy")
 
 [connection signal="body_entered" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="TileMap/LadderArea" to="TileMap/LadderArea" method="_on_body_exited"]

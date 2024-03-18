@@ -102,12 +102,13 @@ public partial class JMJ : Area2D
 
 			else
 			{
+				_dialogBox.setCanCloseDialogBox(false);
+				_timer.Start();
 				
 			}
 			
 			
 			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._name, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
-			_timer.Start();
 			nbTimer ++;
 		}
 		
