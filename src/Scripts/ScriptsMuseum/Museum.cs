@@ -2,44 +2,38 @@ using Godot;
 
 namespace TemporalIT.Scripts.ScriptsMuseum;
 
-public struct Sentence
-{
-	public readonly string Name;
-	public readonly string Text;
-	public readonly float TheTime;
-	
-	public Sentence(string name, string text,float time){
-		Name = name;
-		Text = text;
-		TheTime = time;
-		
-	}
-}
-
 public partial class Museum : TileMap
 {
+	private String language;
 	private DialogBox.DialogBox _dialogBox;
 	private Godot.Timer _timer;
 	private int _nbTimer;
 	private AudioStreamPlayer _narrator;
 	private AudioStreamPlayer _music;
-	private List<Sentence>_dialog1 = new List<Sentence>
+
+
+
+	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "fr");
+
+	/*
+	GD.Print(_dialog1);
+
+
+	new List<Sentence>
 	{
 		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes.",0.0f),
 		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails.",6.0f),
 		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique.",12.0f),
 		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments.",18.0f),
 	};
-
+	*/
 	
 	public void ForwardMusic(float temps)
 	{
-		// Assurez-vous que l'AudioStreamPlayer est prêt
 		if (_narrator != null)
 		{
-			// Définissez le temps de lecture de la musique
 			//_narrator.Stop();
-			_narrator.Seek(temps);//temps
+			_narrator.Seek(temps);
 			//_narrator.Play();
 			
 			GD.Print("time= "+temps);
@@ -63,7 +57,8 @@ public partial class Museum : TileMap
 		
 		SetIndex(0);
 		//GD.Print("Le ZIndex de la scene est "+getZIndex());
-		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox,_dialog1[0].TheTime);
+		GD.Print(_dialog1[0]._speaker);	
+		DisplayDialogBox(_dialog1[0]._speaker, _dialog1[0]._text, _dialogBox,_dialog1[0]._time);
 		_narrator.Play();
 		_timer.Start(6);
 	}
@@ -96,7 +91,7 @@ public partial class Museum : TileMap
 			_narrator.Stop();
 			_music.Play();
 		} else {
-			DisplayDialogBox(_dialog1[_nbTimer].Name, _dialog1[_nbTimer].Text, _dialogBox,_dialog1[_nbTimer].TheTime);
+			DisplayDialogBox(_dialog1[_nbTimer]._speaker, _dialog1[_nbTimer]._text, _dialogBox,_dialog1[_nbTimer]._time);
 			_timer.Start(6);
 		}
 		
@@ -104,12 +99,10 @@ public partial class Museum : TileMap
 	
 	public static CollisionShape2D GetCollisionShapePlayer(Node rootNode, string path)
 	{
-		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CollisionShape2D>(path);
 	}
 	public static CharacterBody2D GetCharacterBody2D(Node rootNode, string path)
 	{
-		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CharacterBody2D>(path);
 	}
 	private int GetIndex()

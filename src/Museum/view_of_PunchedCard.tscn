@@ -456,18 +456,18 @@ label_settings = SubResource("LabelSettings_wf7a1")
 [node name="TheHoles" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(317.125, 258.75)
-scale = Vector2(0.883032, 0.939732)
+position = Vector2(319, 253)
+scale = Vector2(0.875, 0.917411)
 sprite_frames = SubResource("SpriteFrames_ds4vx")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(647.75, 240.5)
-scale = Vector2(0.893574, 0.888393)
+position = Vector2(676.75, 240)
+scale = Vector2(1.12651, 0.883929)
 sprite_frames = SubResource("SpriteFrames_wp4b5")
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(942, 243)
-scale = Vector2(0.893574, 0.866071)
+position = Vector2(975.875, 248)
+scale = Vector2(1.16566, 0.910714)
 sprite_frames = SubResource("SpriteFrames_45yp4")
 
 [connection signal="frame_changed" from="TheHoles/AnimatedSprite2D1" to="." method="_on_animated_sprite_2d_frame_changed"]
