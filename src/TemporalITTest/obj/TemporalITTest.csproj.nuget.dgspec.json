@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj": {}
+    "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {}
   },
   "projects": {
-    "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj": {
+    "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj",
+        "projectUniqueName": "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj",
         "projectName": "TemporalIT",
-        "projectPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj",
-        "packagesPath": "/home/anosy0/.nuget/packages/",
-        "outputPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/.godot/mono/temp/obj/",
+        "projectPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj",
+        "packagesPath": "C:\\Users\\pokew\\.nuget\\packages\\",
+        "outputPath": "F:\\Godot Projets\\TemporalIT\\src\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/anosy0/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\pokew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -76,39 +88,60 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj": {
+    "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj",
+        "projectUniqueName": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
         "projectName": "TemporalITTest",
-        "projectPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/TemporalITTest.csproj",
-        "packagesPath": "/home/anosy0/.nuget/packages/",
-        "outputPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalITTest/obj/",
+        "projectPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
+        "packagesPath": "C:\\Users\\pokew\\.nuget\\packages\\",
+        "outputPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/anosy0/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\pokew\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj": {
-                "projectPath": "/home/anosy0/Documents/IUT/TrueTemporalIT/TemporalIT/src/TemporalIT.csproj"
+              "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj": {
+                "projectPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj"
               }
             }
           }
@@ -117,6 +150,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -155,12 +193,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.28, 6.0.28]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -12,7 +12,7 @@ public partial class FinalText : CenterContainer
 	private const string PathText = "Camera2D/Label";
 	private const string PathCreditsScene = "res://Credits/CreditsScene.tscn";
 	
-	private const string NameOfTheAnimation = "text-animation";
+	private const string NameOfTheAnimation = "text -animation";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
