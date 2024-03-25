@@ -13,7 +13,7 @@ public partial class Museum : TileMap
 
 
 
-	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "en");
+	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "fr");
 
 	/*
 	GD.Print(_dialog1);
@@ -28,7 +28,7 @@ public partial class Museum : TileMap
 	};
 	*/
 	
-	public void ForwardMusic(float temps)
+	public void ForwardVoiceDialog(float temps)
 	{
 		if (_narrator != null)
 		{
@@ -36,7 +36,7 @@ public partial class Museum : TileMap
 			_narrator.Seek(temps);
 			//_narrator.Play();
 			
-			GD.Print("time= "+temps);
+			//GD.Print("time= "+temps);
 		}
 	}
 	// Called when the node enters the scene tree for the first time.
@@ -80,7 +80,7 @@ public partial class Museum : TileMap
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
-		ForwardMusic(time);
+		ForwardVoiceDialog(time);
 	}
 	private void _on_timer_timeout()
 	{
@@ -113,4 +113,6 @@ public partial class Museum : TileMap
 	{
 		ZIndex = number;
 	}
+	
+	
 }

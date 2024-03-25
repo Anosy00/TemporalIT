@@ -4069,39 +4069,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
-=======
     "C:\\Users\\pokew\\.nuget\\packages\\": {},
->>>>>>> punched_card
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Lucas\\Documents\\IUT\\TemporalIT\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
-      "projectName": "TemporalITTest",
-      "projectPath": "C:\\Users\\Lucas\\Documents\\IUT\\TemporalIT\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
-      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lucas\\Documents\\IUT\\TemporalIT\\TemporalIT\\src\\TemporalITTest\\obj\\",
-=======
       "projectUniqueName": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
       "projectName": "TemporalITTest",
       "projectPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\TemporalITTest.csproj",
       "packagesPath": "C:\\Users\\pokew\\.nuget\\packages\\",
       "outputPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\obj\\",
->>>>>>> punched_card
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\pokew\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> punched_card
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4117,13 +4101,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Lucas\\Documents\\IUT\\TemporalIT\\TemporalIT\\src\\TemporalIT.csproj": {
-              "projectPath": "C:\\Users\\Lucas\\Documents\\IUT\\TemporalIT\\TemporalIT\\src\\TemporalIT.csproj"
-=======
             "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj": {
               "projectPath": "F:\\Godot Projets\\TemporalIT\\src\\TemporalIT.csproj"
->>>>>>> punched_card
             }
           }
         }
@@ -4178,17 +4157,6 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-<<<<<<< HEAD
-            "version": "[6.0.27, 6.0.27]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.27, 6.0.27]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.27, 6.0.27]"
-=======
             "version": "[6.0.28, 6.0.28]"
           },
           {
@@ -4198,7 +4166,6 @@
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
             "version": "[6.0.28, 6.0.28]"
->>>>>>> punched_card
           }
         ],
         "frameworkReferences": {
@@ -4206,12 +4173,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
->>>>>>> punched_card
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file F:\\Godot Projets\\TemporalIT\\src\\TemporalITTest\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

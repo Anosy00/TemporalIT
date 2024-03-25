@@ -36,7 +36,9 @@ public partial class WhiteRect : CharacterBody2D
 		
 		if (win == 3)
 		{
-			GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn");
+			Global.setRoomNumber(2);//à changer en 1
+			GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
+			//GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn");
 		}
 	}
 	
