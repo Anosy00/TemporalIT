@@ -102,4 +102,5 @@ vertical_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
 
+[connection signal="tree_exiting" from="CenterContainer" to="CenterContainer" method="_on_tree_exiting"]
 [connection signal="animation_finished" from="CenterContainer/AnimationText" to="CenterContainer" method="_on_animation_text_finished"]

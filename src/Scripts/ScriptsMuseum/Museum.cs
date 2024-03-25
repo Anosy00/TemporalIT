@@ -1,5 +1,4 @@
 using Godot;
-
 namespace TemporalIT.Scripts.ScriptsMuseum;
 
 public struct Sentence
@@ -32,6 +31,7 @@ public partial class Museum : TileMap
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Timer._start();
 		_dialogBox = new DialogBox.DialogBox(GetNode<Sprite2D>("Player/DialogBox"),
 			GetNode<Label>("Player/DialogBox/LabelText2"),
 			GetNode<Label>("Player/DialogBox/LabelName"),
@@ -96,9 +96,9 @@ public partial class Museum : TileMap
 	{
 		return ZIndex;
 	}
+
 	private void SetIndex(int number)
 	{
 		ZIndex = number;
 	}
-	
 }

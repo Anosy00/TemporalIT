@@ -1,5 +1,6 @@
 using Godot;
 using TemporalIT.Morse_s_room.Rooms.FirstRoom.Scripts;
+using Timer = TemporalIT.Scripts.Timer;
 
 namespace TemporalIT.Morse_s_room.Rooms.LastScene.Scripts;
 
@@ -25,5 +26,9 @@ public partial class FinalText : CenterContainer
 	public void _on_animation_text_finished(String _animationName)
 	{
 		GetTree().ChangeSceneToFile(PathCreditsScene);
+	}
+	public void _on_tree_exiting()
+	{
+		Timer._stop();
 	}
 }
