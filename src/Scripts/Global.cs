@@ -3,6 +3,7 @@ using System;
 
 public static class Global
 {
+	private static int roomNumber=0;
 	public static bool isDialogActive = false;
 	public static string playerName = "[Player]";
 
@@ -15,5 +16,12 @@ public static class Global
 			_name = name;
 			_text = text;
 		}
+	}
+	
+	public static void setRoomNumber(int number){
+		roomNumber=number;
+	}
+	public static int getRoomNumber(){
+		return roomNumber;
 	}
 }

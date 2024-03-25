@@ -24,6 +24,8 @@ public partial class FinalText : CenterContainer
 
 	public void _on_animation_text_finished(String _animationName)
 	{
-		GetTree().ChangeSceneToFile(PathCreditsScene);
+		//GetTree().ChangeSceneToFile(PathCreditsScene);
+		Global.setRoomNumber(3);
+		GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
 	}
 }

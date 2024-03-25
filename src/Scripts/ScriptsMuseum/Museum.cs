@@ -2,33 +2,43 @@ using Godot;
 
 namespace TemporalIT.Scripts.ScriptsMuseum;
 
-public struct Sentence
-{
-	public readonly string Name;
-	public readonly string Text;
-	
-	public Sentence(string name, string text){
-		Name = name;
-		Text = text;
-	}
-}
-
 public partial class Museum : TileMap
 {
+	private String language;
 	private DialogBox.DialogBox _dialogBox;
 	private Godot.Timer _timer;
 	private int _nbTimer;
-
-	private List<Sentence>_dialog1 = new List<Sentence>
-	{
-		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes."),
-		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails."),
-		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique."),
-		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments."),
-	};
-
 	private AudioStreamPlayer _narrator;
+	private AudioStreamPlayer _music;
+
+
+
+	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "en");
+
+	/*
+	GD.Print(_dialog1);
+
+
+	new List<Sentence>
+	{
+		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes.",0.0f),
+		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails.",6.0f),
+		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique.",12.0f),
+		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments.",18.0f),
+	};
+	*/
 	
+	public void ForwardMusic(float temps)
+	{
+		if (_narrator != null)
+		{
+			//_narrator.Stop();
+			_narrator.Seek(temps);
+			//_narrator.Play();
+			
+			GD.Print("time= "+temps);
+		}
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -38,6 +48,7 @@ public partial class Museum : TileMap
 			GetNode<AnimationPlayer>("Player/DialogBox/AnimationPlayer"));
 		_dialogBox.disable();
 		_narrator = GetNode<AudioStreamPlayer>("Narrator");
+		_music = GetNode<AudioStreamPlayer>("Music");
 		_timer = GetNode<Godot.Timer>("Timer");
 		
 		/*GD.Print(""+_dialog1[0]._name);
@@ -46,7 +57,8 @@ public partial class Museum : TileMap
 		
 		SetIndex(0);
 		//GD.Print("Le ZIndex de la scene est "+getZIndex());
-		DisplayDialogBox(_dialog1[0].Name, _dialog1[0].Text, _dialogBox);
+		GD.Print(_dialog1[0]._speaker);	
+		DisplayDialogBox(_dialog1[0]._speaker, _dialog1[0]._text, _dialogBox,_dialog1[0]._time);
 		_narrator.Play();
 		_timer.Start(6);
 	}
@@ -64,10 +76,11 @@ public partial class Museum : TileMap
 	
 	
 	
-	public static void DisplayDialogBox(string name, string text, DialogBox.DialogBox dialogBox)
+	public void DisplayDialogBox(string name, string text, DialogBox.DialogBox dialogBox,float time)
 	{
 		dialogBox.setTextOfLabel(name, text);
 		dialogBox.available("display_text");
+		ForwardMusic(time);
 	}
 	private void _on_timer_timeout()
 	{
@@ -75,8 +88,10 @@ public partial class Museum : TileMap
 		if (_nbTimer == _dialog1.Count ) {
 			_timer.Stop();
 			_dialogBox.disable();
+			_narrator.Stop();
+			_music.Play();
 		} else {
-			DisplayDialogBox(_dialog1[_nbTimer].Name, _dialog1[_nbTimer].Text, _dialogBox);
+			DisplayDialogBox(_dialog1[_nbTimer]._speaker, _dialog1[_nbTimer]._text, _dialogBox,_dialog1[_nbTimer]._time);
 			_timer.Start(6);
 		}
 		
@@ -84,12 +99,10 @@ public partial class Museum : TileMap
 	
 	public static CollisionShape2D GetCollisionShapePlayer(Node rootNode, string path)
 	{
-		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CollisionShape2D>(path);
 	}
 	public static CharacterBody2D GetCharacterBody2D(Node rootNode, string path)
 	{
-		// Utilisez la référence rootNode pour accéder au sous-noeud
 		return rootNode.GetNode<CharacterBody2D>(path);
 	}
 	private int GetIndex()
@@ -100,5 +113,4 @@ public partial class Museum : TileMap
 	{
 		ZIndex = number;
 	}
-	
 }

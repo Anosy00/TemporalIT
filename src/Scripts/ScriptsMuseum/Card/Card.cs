@@ -21,7 +21,9 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 		{
 			if (Input.IsActionPressed("button_e") && KeyboardInteration.IsVisibleInTree())
 			{
+				Global.setRoomNumber(1);//à changer en 1
 				GetTree().ChangeSceneToFile("res://Museum/PunchedCard.tscn");
+				//GD.Print("La scene a été changée");
 				
 			}
 		}
@@ -38,11 +40,7 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 			// Replace with function body.
 			KeyboardInteration.Visible = false;
 			KeyboardInteration.Stop();
-		}
-
-
-
-		
+		}		
 	}
 }
 

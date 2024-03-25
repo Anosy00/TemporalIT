@@ -1,0 +1,50 @@
+{
+  "fr": {
+	"Dialogues": [
+	  {
+		"Speaker": "Narrateur",
+		"Text": "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes.",
+		"Time": 0.0
+	  },
+	  {
+		"Speaker": "Narrateur",
+		"Text": "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails.",
+		"Time": 6.0
+	  },
+	  {
+		"Speaker": "Narrateur",
+		"Text": "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique.",
+		"Time": 12.0
+	  },
+	  {
+		"Speaker": "Narrateur",
+		"Text": "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments.",
+		"Time": 18.0
+	  }
+	]
+  },
+  "en": {
+	"Dialogues": [
+	  {
+		"Speaker": "Narrator",
+		"Text": "Welcome to the Computer Museum! In this game, dialogues automatically proceed to the next one after a few seconds.",
+		"Time": 0.0
+	  },
+	  {
+		"Speaker": "Narrator",
+		"Text": "In this game, you will need to solve puzzles to progress in the story, so pay attention to all the details.",
+		"Time": 6.0
+	  },
+	  {
+		"Speaker": "Narrator",
+		"Text": "Start by reading the descriptions of the various machines that have marked the history of computing.",
+		"Time": 12.0
+	  },
+	  {
+		"Speaker": "Narrator",
+		"Text": "Use the arrow keys on your keyboard to move your character, and the E key to interact with elements.",
+		"Time": 18.0
+	  }
+	]
+  }
+}
