@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c1iroer1genb1"]
+[gd_scene load_steps=59 format=3 uid="uid://c1iroer1genb1"]
 
 [ext_resource type="Script" path="res://JMJ's Room/Room/Saddler.cs" id="1_b0nxv"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="1_tbaut"]
@@ -13,11 +13,11 @@
 [ext_resource type="Script" path="res://Scripts/Interaction/NewsPaper/NewsPaper.cs" id="8_qsyls"]
 [ext_resource type="Texture2D" uid="uid://bi3xa5oktu2ao" path="res://ressources/media/NewsPaper.png" id="11_q87uh"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/ButtonClose.cs" id="12_4pf8n"]
+[ext_resource type="Script" path="res://JMJ's Room/Room/StringFound.cs" id="12_kajno"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="13_4g0i2"]
 [ext_resource type="Script" path="res://Scripts/DialogBox/DialogBox.cs" id="14_48mms"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_h46hr"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/CodeChestJMJ/CodeChestJMJ.cs" id="16_lcuyh"]
-[ext_resource type="Script" path="res://Scripts/ScriptsJMJ/StringFound.cs" id="17_86gx4"]
 [ext_resource type="Texture2D" uid="uid://cvq3g3xe4lfcm" path="res://ressources/images/string.png" id="18_5pkao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkqpy"]
@@ -1496,76 +1496,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvh3q"]
 size = Vector2(60, 26.5)
 
-[sub_resource type="LabelSettings" id="LabelSettings_rp3gx"]
-font = ExtResource("14_h46hr")
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_c3aj7"]
-font = ExtResource("14_h46hr")
-font_size = 32
-font_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_mq1xr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LabelText:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LabelName:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
-
-[sub_resource type="Animation" id="Animation_gq3ot"]
-resource_name = "displayText"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LabelText:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LabelName:visible_ratio")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgbd8"]
-_data = {
-"RESET": SubResource("Animation_mq1xr"),
-"displayText": SubResource("Animation_gq3ot")
-}
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uasm4"]
 a = Vector2(71.75, 1)
 b = Vector2(-72.5, -0.25)
@@ -1648,8 +1578,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1chkm"]
 size = Vector2(7.75, 9)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_iv6ib"]
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s6fuo"]
 radius = 17.0
 height = 48.0
@@ -1659,6 +1587,76 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_01rwb"]
 Button/styles/normal = SubResource("StyleBoxFlat_1tyqt")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rp3gx"]
+font = ExtResource("14_h46hr")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3aj7"]
+font = ExtResource("14_h46hr")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_mq1xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_gq3ot"]
+resource_name = "displayText"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LabelText:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LabelName:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgbd8"]
+_data = {
+"RESET": SubResource("Animation_mq1xr"),
+"displayText": SubResource("Animation_gq3ot")
+}
 
 [node name="Root" type="Node2D"]
 
@@ -1706,43 +1704,6 @@ freeze = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/Table"]
 position = Vector2(0.25, -0.75)
 shape = SubResource("RectangleShape2D_jvh3q")
-
-[node name="DialogBox" type="Sprite2D" parent="Saddler/TileMap"]
-visible = false
-position = Vector2(9.75, 51.25)
-rotation = 0.000841907
-scale = Vector2(0.15, 0.25)
-texture = ExtResource("13_4g0i2")
-script = ExtResource("14_48mms")
-
-[node name="LabelText" type="Label" parent="Saddler/TileMap/DialogBox"]
-offset_left = -750.0
-offset_top = -24.0
-offset_right = 740.0
-offset_bottom = 91.0
-text = "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023"
-label_settings = SubResource("LabelSettings_rp3gx")
-vertical_alignment = 1
-autowrap_mode = 2
-visible_characters = 0
-visible_ratio = 0.0
-metadata/_edit_use_anchors_ = true
-
-[node name="LabelName" type="Label" parent="Saddler/TileMap/DialogBox"]
-offset_left = -753.451
-offset_top = -84.0058
-offset_right = -479.451
-offset_bottom = -35.0058
-theme_override_fonts/font = ExtResource("14_h46hr")
-text = "[Player]"
-label_settings = SubResource("LabelSettings_c3aj7")
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Saddler/TileMap/DialogBox"]
-libraries = {
-"": SubResource("AnimationLibrary_fgbd8")
-}
 
 [node name="Border" type="RigidBody2D" parent="Saddler/TileMap"]
 position = Vector2(11.75, 6)
@@ -1793,15 +1754,16 @@ position = Vector2(-0.1875, -0.6875)
 shape = SubResource("RectangleShape2D_1chkm")
 
 [node name="StringFound" type="Area2D" parent="Saddler/TileMap"]
-visible = false
-script = ExtResource("17_86gx4")
+script = ExtResource("12_kajno")
 
 [node name="StringFound" type="Sprite2D" parent="Saddler/TileMap/StringFound"]
+visible = false
 position = Vector2(-61, -78)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("18_5pkao")
 
 [node name="Label" type="Label" parent="Saddler/TileMap/StringFound"]
+visible = false
 offset_left = -37.0
 offset_top = -85.0
 offset_right = 138.0
@@ -1809,8 +1771,10 @@ offset_bottom = -59.0
 scale = Vector2(0.8, 0.8)
 text = "Les fils ont été trouvés"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Saddler/TileMap/StringFound"]
-shape = SubResource("SegmentShape2D_iv6ib")
+[node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
+position = Vector2(-34, -5)
+scale = Vector2(1, 1)
+script = ExtResource("4_i0vk7")
 
 [node name="EButtonPaper" type="Area2D" parent="Saddler/TileMap"]
 position = Vector2(-1.5, 12.25)
@@ -1848,10 +1812,42 @@ position = Vector2(8.5, -9.25)
 scale = Vector2(0.075, 0.075)
 texture = ExtResource("11_q87uh")
 
-[node name="Player" parent="Saddler/TileMap" instance=ExtResource("3_80n8l")]
-position = Vector2(-34, -5)
-scale = Vector2(1, 1)
-script = ExtResource("4_i0vk7")
+[node name="DialogBox" type="Sprite2D" parent="Saddler/TileMap"]
+visible = false
+position = Vector2(9.75, 51.25)
+rotation = 0.000841907
+scale = Vector2(0.15, 0.25)
+texture = ExtResource("13_4g0i2")
+script = ExtResource("14_48mms")
+
+[node name="LabelText" type="Label" parent="Saddler/TileMap/DialogBox"]
+offset_left = -750.0
+offset_top = -24.0
+offset_right = 740.0
+offset_bottom = 91.0
+text = "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023"
+label_settings = SubResource("LabelSettings_rp3gx")
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="LabelName" type="Label" parent="Saddler/TileMap/DialogBox"]
+offset_left = -753.451
+offset_top = -84.0058
+offset_right = -479.451
+offset_bottom = -35.0058
+theme_override_fonts/font = ExtResource("14_h46hr")
+text = "[Player]"
+label_settings = SubResource("LabelSettings_c3aj7")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Saddler/TileMap/DialogBox"]
+libraries = {
+"": SubResource("AnimationLibrary_fgbd8")
+}
 
 [node name="ObjectifSaddler" type="Sprite2D" parent="."]
 visible = false

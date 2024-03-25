@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TemporalIT;
 
 public partial class StringFound : Area2D
 {
@@ -10,18 +11,17 @@ public partial class StringFound : Area2D
 	{
 		_stringFound = GetNode<Sprite2D>("StringFound");
 		_labelStringFound = GetNode<Label>("Label");
-	}
-
-	/*public StringFound()
-	{
 		_stringFound.Visible = false;
 		_labelStringFound.Visible = false;
-	}*/
+	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		if (GlobalJMJ.hasString)
+		{
+			_stringFound.Visible = true;
+			_labelStringFound.Visible = true;
+		}
 	}
-	
-	
 }
