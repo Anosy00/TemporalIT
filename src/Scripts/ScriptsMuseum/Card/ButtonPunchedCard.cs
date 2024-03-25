@@ -11,11 +11,10 @@ public partial class ButtonPunchedCard : Button
 	private PlayerSaveManager _playerSaveManager;
 	public override void _Ready()
 	{
-		ZIndex=-1;
 		switch (Global.getRoomNumber())
 		{
 			case 1:
-				_nextScene = "res://JMJ's Room/Room/tile_map.tscn";
+				_nextScene = "res://JMJ's Room/Room/Saddler.tscn";
 				break;
 			case 2:
 				_nextScene = "res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn";

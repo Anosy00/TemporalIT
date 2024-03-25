@@ -122,7 +122,7 @@ public partial class JMJ : Area2D
 			}
 			
 			
-			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer].Name, DialogJMJ._dialog1[nbTimer].Text, _dialogBox);
+			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._speaker, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
 			nbTimer ++;
 		}
 		
