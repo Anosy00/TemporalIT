@@ -29,8 +29,6 @@ public partial class WoodPlank1 : Area2D
 			_collisionShape2D.Disabled = !_collisionShape2D.Disabled;
 			GlobalJMJ.nbPlanks++;
 		}
-		
-		GD.Print(_collisionShape2D.Disabled);
 	}
 
 	public void _on_body_entered(CharacterBody2D body)

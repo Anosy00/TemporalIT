@@ -18,7 +18,7 @@ public partial class Saddler : Node2D
 		_playerSaveManager.load();
 		if (GlobalJMJ.firstEntryInSaddler)
 		{
-			_characterBody2D.Position = _playerSaveManager.load();
+			_characterBody2D.Position = new Vector2(-34, -5);
 			GlobalJMJ.firstEntryInSaddler = false;
 		}
 		else

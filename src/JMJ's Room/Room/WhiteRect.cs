@@ -36,7 +36,7 @@ public partial class WhiteRect : CharacterBody2D
 		
 		if (win == 3)
 		{
-			GD.Print("You win!");
+			GetTree().ChangeSceneToFile("res://Morse's room/Rooms/FirstRoom/FirstRoom.tscn");
 		}
 	}
 	

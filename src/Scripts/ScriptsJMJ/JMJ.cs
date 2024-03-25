@@ -58,6 +58,18 @@ public partial class JMJ : Area2D
 			}
 			
 		}
+
+		if (nbTimer == 7)
+		{
+
+			_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
+			_labelObjectif.AddThemeFontSizeOverride("font_size", 35);
+		}
+
+		if (GlobalJMJ.canInteractWithMachine)
+		{
+			_objectif.Visible = false;
+		}
 	}
 
 
