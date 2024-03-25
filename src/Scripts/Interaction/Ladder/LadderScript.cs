@@ -2,7 +2,7 @@ using Godot;
 using System;
 using TemporalIT;
 using TemporalIT.Scripts.KeyboardInteraction;
-using Timer = System.Timers.Timer;
+using Timer = Godot.Timer;
 
 namespace TemporalIT.Scripts.Interaction.Ladder;
 

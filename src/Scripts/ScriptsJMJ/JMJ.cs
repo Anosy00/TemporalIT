@@ -2,9 +2,7 @@ using Godot;
 using System;
 using TemporalIT;
 using TemporalIT.Scripts.DialogBox;
-using TemporalIT.Scripts.ScriptsJMJ;
 using Timer = Godot.Timer;
-using GlobalJMJ = TemporalIT.Scripts.ScriptsJMJ.GlobalJMJ;
 
 public partial class JMJ : Area2D
 {
@@ -46,12 +44,12 @@ public partial class JMJ : Area2D
 	{
 		if (_keyboardInteration.makeTalking() == 0)
 		{
-			if (GlobalJmj.nbOfInteractionWithJMJ == 0)
+			if (GlobalJMJ.nbOfInteractionWithJMJ == 0)
 			{
 				_dialogBox.setTextOfLabel("???", "Mais qui êtes vous ? Que faites vous ici ?");
 				_dialogBox.available("displayText");
 				_timer.Start();
-				GlobalJmj.nbOfInteractionWithJMJ++;
+				GlobalJMJ.nbOfInteractionWithJMJ++;
 			}
 
 			else
@@ -112,7 +110,7 @@ public partial class JMJ : Area2D
 			}
 			
 			
-			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._name, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
+			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer].Name, DialogJMJ._dialog1[nbTimer].Text, _dialogBox);
 			nbTimer ++;
 		}
 		

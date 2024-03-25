@@ -5,11 +5,11 @@ using TemporalIT.Scripts.DialogBox;
 
 public partial class ButtonClose : Button
 {
-	private DialogBox.DialogBox _dialogBox;
+	private DialogBox _dialogBox;
 	
 	public override void _Ready()
 	{
-		_dialogBox = new DialogBox.DialogBox(GetNode<Sprite2D>("../../DialogBox"),
+		_dialogBox = new DialogBox(GetNode<Sprite2D>("../../DialogBox"),
 			GetNode<Label>("../../DialogBox/LabelText"),
 			GetNode<Label>("../../DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../../DialogBox/AnimationPlayer"));

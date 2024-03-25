@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using TemporalIT;
+using TemporalIT.Scripts.DialogBox;
 using TemporalIT.Scripts.KeyboardInteraction;
 
 public partial class LadderSaddler : Node

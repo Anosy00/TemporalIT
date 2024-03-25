@@ -6,7 +6,7 @@ using TemporalIT.Morse_s_room.Rooms.Maze.Scripts.Player;
 
 public partial class Saddler : Node2D
 {
-	private PlayerSaveManagerJMJ _playerSaveManager;
+	private PlayerSaveManager _playerSaveManager;
 	private CharacterBody2D _characterBody2D;
 	private static Sprite2D _objectifSaddler;
 	private static Label _labelText;
@@ -14,11 +14,11 @@ public partial class Saddler : Node2D
 	public override void _Ready()
 	{
 		_characterBody2D = GetNode<CharacterBody2D>("TileMap/Player");
-		_playerSaveManager = new PlayerSaveManagerJMJ();
+		_playerSaveManager = new PlayerSaveManager();
 		_playerSaveManager.load();
 		if (GlobalJMJ.firstEntryInSaddler)
 		{
-			_characterBody2D.Position = _playerSaveManager.launchingPosition();
+			_characterBody2D.Position = _playerSaveManager.load();
 			GlobalJMJ.firstEntryInSaddler = false;
 		}
 		else

@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using TemporalIT;
-using TemporalIT.Scripts.ScriptsJMJ;
 
 public partial class WoodPlank1 : Area2D
 {
@@ -36,7 +35,7 @@ public partial class WoodPlank1 : Area2D
 
 	public void _on_body_entered(CharacterBody2D body)
 	{
-		if (GlobalJmj.canInteractWithPlanks)
+		if (GlobalJMJ.canInteractWithPlanks)
 		{
 			_button.available("default");
 		}

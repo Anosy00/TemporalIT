@@ -1,8 +1,8 @@
 
-
+namespace TemporalIT;
 using TemporalIT.Scripts.DialogBox;
 
-public static class GlobalJmj
+public static class GlobalJMJ
 {
     public static int nbOfInteractionWithJMJ = 0;
     public static bool hadInteractedWithNewsPaper = false;
