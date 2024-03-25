@@ -13,7 +13,7 @@ public partial class Museum : TileMap
 
 
 
-	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "fr");
+	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "en");
 
 	/*
 	GD.Print(_dialog1);
@@ -113,6 +113,4 @@ public partial class Museum : TileMap
 	{
 		ZIndex = number;
 	}
-	
-	
 }

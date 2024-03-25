@@ -1,13 +1,13 @@
 using Godot;
 using System;
 
-public partial class HolePunchedCard : Node
+public partial class ViewOfPunchedCard : Node
 {
-	private int numberOfHoles;
+	private int numberOfAnimatedSprite;
 	private String nameOfPicture;
 	private AnimatedSprite2D nodeOfHolePlayed;
 	private int frame;
-	int nbFrame=17;
+	int nbFrame=11;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -19,12 +19,12 @@ public partial class HolePunchedCard : Node
 		
 		
 		Node ParentNode = GetNode("TheHoles");
-		numberOfHoles = ParentNode.GetChildCount();
+		numberOfAnimatedSprite = ParentNode.GetChildCount();
 		int j = 0;
 		//GD.Print(Global.getRoomNumber(),", ",numberOfHoles);
-		if (Global.getRoomNumber() <= numberOfHoles)
+		if (Global.getRoomNumber() <= numberOfAnimatedSprite)
 		{
-			while (j != numberOfHoles)
+			while (j != numberOfAnimatedSprite)
 			{
 				j = j + 1;
 				frame=0;

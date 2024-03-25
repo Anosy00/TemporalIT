@@ -1,7 +1,7 @@
-[gd_scene load_steps=66 format=3 uid="uid://c87v2udtwcfq1"]
+[gd_scene load_steps=50 format=3 uid="uid://c87v2udtwcfq1"]
 
-[ext_resource type="Script" path="res://Scripts/PunchedCard/HolePunchedCard.cs" id="1_1anj4"]
 [ext_resource type="Texture2D" uid="uid://d1j7fbpx5q4oj" path="res://ressources/tilesmap/perfored-card.png" id="1_100dd"]
+[ext_resource type="Script" path="res://Scripts/PunchedCard/ViewOfPunchedCard.cs" id="1_wf2b3"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="2_s5ja8"]
 [ext_resource type="Texture2D" uid="uid://ddht53e0vu8u6" path="res://ressources/images/introduction_animation.png" id="4_668p8"]
 [ext_resource type="Texture2D" uid="uid://cle4rhfacy3nc" path="res://ressources/images/room1_animation.png" id="5_2wsj4"]
@@ -20,10 +20,6 @@ region = Rect2(0, 0, 498, 224)
 atlas = ExtResource("4_668p8")
 region = Rect2(498, 0, 498, 224)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pawhi"]
-atlas = ExtResource("4_668p8")
-region = Rect2(996, 0, 498, 224)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jembu"]
 atlas = ExtResource("4_668p8")
 region = Rect2(1494, 0, 498, 224)
@@ -31,10 +27,6 @@ region = Rect2(1494, 0, 498, 224)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ikx8q"]
 atlas = ExtResource("4_668p8")
 region = Rect2(1992, 0, 498, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x23b6"]
-atlas = ExtResource("4_668p8")
-region = Rect2(2490, 0, 498, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s7ws7"]
 atlas = ExtResource("4_668p8")
@@ -48,14 +40,6 @@ region = Rect2(3486, 0, 498, 224)
 atlas = ExtResource("4_668p8")
 region = Rect2(3984, 0, 498, 224)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_doggg"]
-atlas = ExtResource("4_668p8")
-region = Rect2(4482, 0, 498, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bgajq"]
-atlas = ExtResource("4_668p8")
-region = Rect2(4980, 0, 498, 224)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8y42q"]
 atlas = ExtResource("4_668p8")
 region = Rect2(5478, 0, 498, 224)
@@ -63,10 +47,6 @@ region = Rect2(5478, 0, 498, 224)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g5wyw"]
 atlas = ExtResource("4_668p8")
 region = Rect2(5976, 0, 498, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_66x0j"]
-atlas = ExtResource("4_668p8")
-region = Rect2(6474, 0, 498, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gkcde"]
 atlas = ExtResource("4_668p8")
@@ -79,10 +59,6 @@ region = Rect2(7470, 0, 498, 224)
 [sub_resource type="AtlasTexture" id="AtlasTexture_nad5t"]
 atlas = ExtResource("4_668p8")
 region = Rect2(7968, 0, 498, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dbum1"]
-atlas = ExtResource("4_668p8")
-region = Rect2(8466, 0, 498, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy0gk"]
 atlas = ExtResource("4_668p8")
@@ -98,16 +74,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_mhr55")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pawhi")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_jembu")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ikx8q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x23b6")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_s7ws7")
@@ -119,19 +89,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_ntoau")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_doggg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bgajq")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_8y42q")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g5wyw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_66x0j")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gkcde")
@@ -141,9 +102,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nad5t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dbum1")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wy0gk")
@@ -205,26 +163,6 @@ region = Rect2(2739, 0, 249, 224)
 atlas = ExtResource("5_2wsj4")
 region = Rect2(2988, 0, 249, 224)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hoo0j"]
-atlas = ExtResource("5_2wsj4")
-region = Rect2(3237, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgrey"]
-atlas = ExtResource("5_2wsj4")
-region = Rect2(3486, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3k7jb"]
-atlas = ExtResource("5_2wsj4")
-region = Rect2(3735, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o72ji"]
-atlas = ExtResource("5_2wsj4")
-region = Rect2(3984, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gxc77"]
-atlas = ExtResource("5_2wsj4")
-region = Rect2(4233, 0, 249, 224)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_wp4b5"]
 animations = [{
 "frames": [{
@@ -266,21 +204,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_h6sg5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hoo0j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tgrey")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3k7jb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o72ji")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gxc77")
 }],
 "loop": true,
 "name": &"default",
@@ -339,26 +262,6 @@ region = Rect2(2739, 0, 249, 224)
 atlas = ExtResource("6_asg7h")
 region = Rect2(2988, 0, 249, 224)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_udks6"]
-atlas = ExtResource("6_asg7h")
-region = Rect2(3237, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qrodv"]
-atlas = ExtResource("6_asg7h")
-region = Rect2(3486, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cvhqe"]
-atlas = ExtResource("6_asg7h")
-region = Rect2(3735, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dltmd"]
-atlas = ExtResource("6_asg7h")
-region = Rect2(3984, 0, 249, 224)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_by8lu"]
-atlas = ExtResource("6_asg7h")
-region = Rect2(4233, 0, 249, 224)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_45yp4"]
 animations = [{
 "frames": [{
@@ -400,21 +303,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w826g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_udks6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qrodv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cvhqe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dltmd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_by8lu")
 }],
 "loop": true,
 "name": &"default",
@@ -422,7 +310,7 @@ animations = [{
 }]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_1anj4")
+script = ExtResource("1_wf2b3")
 
 [node name="Perfored-card" type="Sprite2D" parent="."]
 position = Vector2(576, 283.5)
@@ -456,18 +344,20 @@ label_settings = SubResource("LabelSettings_wf7a1")
 [node name="TheHoles" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D1" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(319, 253)
-scale = Vector2(0.875, 0.917411)
+position = Vector2(332.531, 259)
+scale = Vector2(0.913529, 0.939732)
 sprite_frames = SubResource("SpriteFrames_ds4vx")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(676.75, 240)
-scale = Vector2(1.12651, 0.883929)
+position = Vector2(653.375, 259)
+scale = Vector2(0.888554, 0.9375)
 sprite_frames = SubResource("SpriteFrames_wp4b5")
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="TheHoles"]
-position = Vector2(975.875, 248)
-scale = Vector2(1.16566, 0.910714)
+position = Vector2(941.438, 259)
+scale = Vector2(0.888052, 0.9375)
 sprite_frames = SubResource("SpriteFrames_45yp4")
 
 [connection signal="frame_changed" from="TheHoles/AnimatedSprite2D1" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="frame_changed" from="TheHoles/AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="frame_changed" from="TheHoles/AnimatedSprite2D3" to="." method="_on_animated_sprite_2d_frame_changed"]

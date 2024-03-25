@@ -40,11 +40,7 @@ namespace TemporalIT.Scripts.ScriptsMuseum.Card
 			// Replace with function body.
 			KeyboardInteration.Visible = false;
 			KeyboardInteration.Stop();
-		}
-
-
-
-		
+		}		
 	}
 }
 

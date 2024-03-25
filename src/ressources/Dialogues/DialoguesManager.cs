@@ -21,7 +21,6 @@ public partial class DialoguesManager : Node
 				List<Sentence> sequentialSentences = new List<Sentence>();
 				foreach (var dialogue in dialogues[language].Dialogues)
 				{
-					// Utiliser les propriétés de chaque dialogue pour créer un objet Sentence
 					sequentialSentences.Add(new Sentence(dialogue.Speaker, dialogue.Text, dialogue.Time));
 				}
 				return sequentialSentences;
