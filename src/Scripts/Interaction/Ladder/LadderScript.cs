@@ -2,6 +2,7 @@ using Godot;
 using System;
 using TemporalIT;
 using TemporalIT.Scripts.KeyboardInteraction;
+using Timer = System.Timers.Timer;
 
 namespace TemporalIT.Scripts.Interaction.Ladder;
 
@@ -12,7 +13,7 @@ public partial class LadderScript : Node
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private const String _NEXT_SCENE_PATH = "res://JMJ's Room/Room/Saddler.tscn";
 	private Sprite2D _objectif;
-	private DialogBox _dialogBox;
+	private DialogBox.DialogBox _dialogBox;
 	private Timer _timer;
 
 	private Camera2D _camera;
@@ -22,7 +23,7 @@ public partial class LadderScript : Node
 		_keyInteration = new EButton(GetNode<AnimatedSprite2D>("EButtonLadderSprite"));
 		_keyInteration.disable();
 		_objectif = GetNode<Sprite2D>("../../Objectif");
-		_dialogBox = new DialogBox(GetNode<Sprite2D>("../DialogBox"),
+		_dialogBox = new DialogBox.DialogBox(GetNode<Sprite2D>("../DialogBox"),
 			GetNode<Label>("../DialogBox/LabelText"),
 			GetNode<Label>("../DialogBox/LabelName"),
 			GetNode<AnimationPlayer>("../DialogBox/AnimationPlayer"));

@@ -7,6 +7,8 @@ public partial class WhiteRect : CharacterBody2D
 	private bool isInRedRect = false;
 	private bool augment = true;
 	private bool canMove = true;
+
+	private int win = 0;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -28,7 +30,13 @@ public partial class WhiteRect : CharacterBody2D
 		{
 			if (isInRedRect){ 
 				canMove = false;
+				win++;
 			}
+		}
+		
+		if (win == 3)
+		{
+			GD.Print("You win!");
 		}
 	}
 	

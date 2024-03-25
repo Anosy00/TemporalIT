@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using TemporalIT;
+using TemporalIT.Scripts.DialogBox;
 
 public partial class ButtonClose : Button
 {

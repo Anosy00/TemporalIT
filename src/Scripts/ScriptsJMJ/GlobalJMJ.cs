@@ -1,4 +1,6 @@
-namespace TemporalIT.Scripts.ScriptsJMJ;
+
+
+using TemporalIT.Scripts.DialogBox;
 
 public static class GlobalJmj
 {

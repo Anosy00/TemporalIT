@@ -3,6 +3,8 @@ using System;
 using TemporalIT;
 using TemporalIT.Scripts.DialogBox;
 using TemporalIT.Scripts.ScriptsJMJ;
+using Timer = Godot.Timer;
+using GlobalJMJ = TemporalIT.Scripts.ScriptsJMJ.GlobalJMJ;
 
 public partial class JMJ : Area2D
 {
