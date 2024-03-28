@@ -7,7 +7,7 @@ Le jeu est entièrement codé avec C# et utilise le moteur graphique Godot pour 
 
 Dans ce jeu, vous retrouverez deux célébrités:
 
-- Josesh Marie JACQUARD (1752-1884) : Créateur de la machine à tisser qui est considéré comme la première machine informatique.
+- Joseph Marie JACQUARD (1752-1884) : Créateur de la machine à tisser qui est considéré comme la première machine informatique.
 - Samuel Morse (1791-1872) : Créateur du langage Morse.
 
 
