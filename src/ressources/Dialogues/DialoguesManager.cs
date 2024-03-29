@@ -22,6 +22,13 @@ public partial class LanguageManager : Node
 				List<Sentence> sequentialSentences = new List<Sentence>();
 				foreach (var dialogue in dialogues[Global.language].Dialogues)
 				{
+					if (dialogue.Speaker == "[playerName]"){
+						dialogue.Speaker = Global.playerName;
+					}
+					if (dialogue.Text.Contains("[playerName]"))
+					{
+						dialogue.Text = dialogue.Text.Replace("[playerName]", Global.playerName);
+					}
 					sequentialSentences.Add(new Sentence(dialogue.Speaker, dialogue.Text, dialogue.Time));
 				}
 				return sequentialSentences;
