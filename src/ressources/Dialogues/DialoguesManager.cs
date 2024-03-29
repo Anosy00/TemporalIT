@@ -10,6 +10,7 @@ public partial class LanguageManager : Node
 {
 	private static string jsonString;
 	private static Dictionary<string, LanguageDialogues> dialogues;
+	private static Dictionary<string, string> uniqueTexts;
 	public static List<Sentence> GetSequentialSentences(string jsonFilePath)
 	{
 		jsonString = LoadJsonFromFile(jsonFilePath);
@@ -32,6 +33,26 @@ public partial class LanguageManager : Node
 		}
 		return null;
 	}
+
+	public static Dictionary<string, string> getUniqueTexts(string jsonFilePath)
+	{
+		string jsonString = LoadJsonFromFile(jsonFilePath);
+		if (jsonString != null)
+		{
+			try
+			{
+				uniqueTexts = JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(jsonString)[Global.language];
+				return uniqueTexts;
+			}
+			catch (Exception e)
+			{
+				GD.PrintErr("Erreur lors de la désérialisation du JSON : " + e.Message);
+				return null;
+			}
+		}
+		return null;
+	}
+
 
 	private static string LoadJsonFromFile(string filePath)
 	{
@@ -75,6 +96,19 @@ public partial class LanguageManager : Node
 		{
 			GD.PrintErr("Erreur lors de la désérialisation du JSON : " + e.Message);
 			return null;
+		}
+	}
+
+	private static T DeserializeJson<T>(string jsonString)
+	{
+		try
+		{
+			return JsonSerializer.Deserialize<T>(jsonString);
+		}
+		catch (Exception e)
+		{
+			GD.PrintErr("Erreur lors de la désérialisation du JSON : " + e.Message);
+			return default;
 		}
 	}
 }

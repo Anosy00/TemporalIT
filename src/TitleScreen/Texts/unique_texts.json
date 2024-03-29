@@ -1,0 +1,15 @@
+{
+  "fr": {
+	"Play": "JOUER",
+	"Options": "OPTIONS",
+	"Credits": "CREDITS",
+	"Exit": "QUITTER"
+  },
+  "en": {
+	"Play": "PLAY",
+	"Options": "OPTIONS",
+	"Credits": "CREDITS",
+	"Exit": "EXIT"
+  }
+}
+
