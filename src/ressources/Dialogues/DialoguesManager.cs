@@ -6,20 +6,20 @@ using System.Collections.Generic;
 using TemporalIT.Scripts.ScriptsMuseum;
 
 
-public partial class DialoguesManager : Node
+public partial class LanguageManager : Node
 {
 	private static string jsonString;
 	private static Dictionary<string, LanguageDialogues> dialogues;
-	public static List<Sentence> GetSequentialSentences(string jsonFilePath, string language)
+	public static List<Sentence> GetSequentialSentences(string jsonFilePath)
 	{
 		jsonString = LoadJsonFromFile(jsonFilePath);
 		if (jsonString != null)
 		{
 			dialogues = DeserializeJson(jsonString);
-			if (dialogues != null && dialogues.ContainsKey(language))
+			if (dialogues != null && dialogues.ContainsKey(Global.language))
 			{
 				List<Sentence> sequentialSentences = new List<Sentence>();
-				foreach (var dialogue in dialogues[language].Dialogues)
+				foreach (var dialogue in dialogues[Global.language].Dialogues)
 				{
 					sequentialSentences.Add(new Sentence(dialogue.Speaker, dialogue.Text, dialogue.Time));
 				}
@@ -27,7 +27,7 @@ public partial class DialoguesManager : Node
 			}
 			else
 			{
-				GD.PrintErr("Dialogue non trouvé pour la langue : " + language);
+				GD.PrintErr("Dialogue non trouvé pour la langue : " + Global.language);
 			}
 		}
 		return null;

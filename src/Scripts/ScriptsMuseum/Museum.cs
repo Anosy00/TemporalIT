@@ -13,7 +13,7 @@ public partial class Museum : TileMap
 
 
 
-	private List<Sentence> _dialog1 = DialoguesManager.GetSequentialSentences("Museum/Dialogues.json", "fr");
+	private List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("Museum/Dialogues.json");
 
 	/*
 	GD.Print(_dialog1);

@@ -10,7 +10,7 @@ public partial class JMJ : Area2D
 	private const String _NAME_OF_THE_ANIMATION = "default";
 	private DialogBox _dialogBox;
 	private Timer _timer;
-	private static int nbTimer = 0;
+	private static int nbDialog = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
 	// Called when the node enters the scene tree for the first time.
@@ -46,7 +46,9 @@ public partial class JMJ : Area2D
 		{
 			if (GlobalJMJ.nbOfInteractionWithJMJ == 0)
 			{
-				_dialogBox.setTextOfLabel("???", "Mais qui êtes vous ? Que faites vous ici ?");
+				List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("JMJ's Room/Texts/DialoguesBottomRoom.json");
+				_dialogBox.setTextOfLabel(_dialog1[nbDialog]._speaker, _dialog1[nbDialog]._text);
+				nbDialog++;
 				_dialogBox.available("displayText");
 				_timer.Start();
 				GlobalJMJ.nbOfInteractionWithJMJ++;
@@ -59,7 +61,7 @@ public partial class JMJ : Area2D
 			
 		}
 
-		if (nbTimer == 7)
+		if (nbDialog == 7)
 		{
 
 			_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
@@ -78,11 +80,11 @@ public partial class JMJ : Area2D
 	{
 		_dialogBox.disable();
 		GlobalJMJ.canInteractWithPlanks = true;
-		if (nbTimer == DialogJMJ._dialog1.Count || nbTimer == 4 && GlobalJMJ.nbPlanks < 2 || nbTimer == 7 && !GlobalJMJ.hasString) {
+		if (nbDialog == DialogJMJ._dialog1.Count || nbDialog == 4 && GlobalJMJ.nbPlanks < 2 || nbDialog == 7 && !GlobalJMJ.hasString) {
 			_timer.Stop();
 			_dialogBox.disable();
 			GlobalJMJ.isObjActive = false;
-			if (nbTimer == 7)
+			if (nbDialog == 7)
 			{
 				
 				_labelObjectif.Text = "Trouver du fil \n Indice : Date de décès dans le journal";
@@ -101,12 +103,12 @@ public partial class JMJ : Area2D
 
 			if (GlobalJMJ.nbPlanks < 2)
 			{
-				if (nbTimer != 3)
+				if (nbDialog != 3)
 				{
 					_timer.Start(3);
 				
 				}
-				if (nbTimer == 6)
+				if (nbDialog == 6)
 				{
 					_dialogBox.setCanCloseDialogBox(true);
 				}
@@ -122,8 +124,8 @@ public partial class JMJ : Area2D
 			}
 			
 			
-			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbTimer]._speaker, DialogJMJ._dialog1[nbTimer]._text, _dialogBox);
-			nbTimer ++;
+			GlobalJMJ.displayDialogBox(DialogJMJ._dialog1[nbDialog]._speaker, DialogJMJ._dialog1[nbDialog]._text, _dialogBox);
+			nbDialog ++;
 		}
 		
 

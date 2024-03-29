@@ -7,6 +7,8 @@ public static class Global
 	public static bool isDialogActive = false;
 	public static string playerName = "[Player]";
 
+	public static string language = "en";
+
 	public struct Sentence
 	{
 		public string _name;

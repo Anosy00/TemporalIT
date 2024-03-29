@@ -5,6 +5,9 @@ namespace TemporalIT;
 
 public static class DialogJMJ
 {
+	public static List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("JMJ's Room/Texts/DialoguesBottomRoom.json");
+
+	/*
 	public static List<Sentence> _dialog1 = new List<Sentence>
 	{
 		new Sentence(Global.playerName, "Je m'appelle " + Global.playerName + " il me semble que j'ai voyagé dans le temps !", 0),
@@ -16,4 +19,5 @@ public static class DialogJMJ
 		new Sentence("Jacquard", "La date de son décès est parue dans le journal, je l'ai rangé là haut !", 0),
 		new Sentence("Jacquard", "Merci beaucoup ! Tu peux maintenant aller utiliser ma machine !", 0),
 	};
+	*/
 }

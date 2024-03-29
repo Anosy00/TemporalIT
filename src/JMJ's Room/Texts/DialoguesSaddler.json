@@ -1,0 +1,20 @@
+{
+  "fr": {
+	"Dialogues": [
+	  {
+		"Speaker": "[PlayerName]",
+		"Text": "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023",
+		"Time": 0
+	  }
+	]
+  },
+  "en": {
+	"Dialogues": [
+	  {
+		"Speaker": "[PlayerName]",
+		"Text": "What?! We're in 1801?! How is this possible, I'm from 2023",
+		"Time": 0
+	  }
+	]
+  }
+}

@@ -6,6 +6,7 @@ using TemporalIT.Scripts.DialogBox;
 public partial class ButtonClose : Button
 {
 	private DialogBox _dialogBox;
+	List<Sentence>_dialog1 = LanguageManager.GetSequentialSentences("JMJ's Room/Texts/DialoguesSaddler.json");
 	
 	public override void _Ready()
 	{
@@ -20,7 +21,7 @@ public partial class ButtonClose : Button
 		NewsPaper.setInvisibleNewsPaper();
 		if (!GlobalJMJ.hadInteractedWithNewsPaper)
 		{
-			_dialogBox.setTextOfLabel("[Player]", "Quoi ?! Nous sommes en 1801 ?! Comment est-ce possible je viens de 2023");
+			_dialogBox.setTextOfLabel(_dialog1[0]._speaker, _dialog1[0]._text);
 			_dialogBox.available("displayText");
 			GlobalJMJ.hadInteractedWithNewsPaper = true;
 		}
@@ -28,7 +29,5 @@ public partial class ButtonClose : Button
 		{
 			Global.isDialogActive = false;
 		}
-		
-
 	}
 }

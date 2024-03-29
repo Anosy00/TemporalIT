@@ -1,0 +1,90 @@
+{
+  "fr": {
+	"Dialogues": [
+	  {
+		"Speaker": "[playerName]",
+		"Text": "Je m'appelle [playerName], il me semble que j'ai voyagé dans le temps !",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "???",
+		"Text": "Le voyage dans le temps ?! C'est impossible, mais bon passons j'ai un problème plus important...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Je m'appelle Joseph Marie Jacquard et j'ai un problème dans la construction de ma machine, aide moi à la construire !...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Récupère moi les deux planches qui traînent dans mon atelier s'il te plaît",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Merci, il nous manque uniquement du fil, tu peux en trouver dans mon coffre en haut...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Le code du coffre se réfère à la date de décès d'un ami très cher à mes yeux...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "La date de son décès est parue dans le journal, je l'ai rangé là haut !",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Merci beaucoup ! Tu peux maintenant aller utiliser ma machine à tisser!",
+		"Time": 0
+	  }
+	]
+  },
+  "en": {
+	"Dialogues": [
+	  {
+		"Speaker": "[playerName]",
+		"Text": "My name is [playerName] and it seems like I've traveled through time!",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "???",
+		"Text": "Time travel?! That's impossible, but never mind, I have a more important problem...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "My name is Joseph Marie Jacquard and I have a problem with building my machine, help me build it!...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Please fetch me the two planks lying in my workshop",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Thank you, we only need some thread now, you can find it in my chest upstairs...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "The code for the chest refers to the date of death of a dear friend of mine...",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "The date of his death was published in the newspaper, I've put it up there!",
+		"Time": 0
+	  },
+	  {
+		"Speaker": "Jacquard",
+		"Text": "Thank you very much! You can now go and use my weaving machine!",
+		"Time": 0
+	  }
+	]
+  }
+}
