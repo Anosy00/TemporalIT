@@ -1,0 +1,18 @@
+{
+  "en": {
+	"PunchedCard": "Invented by Joseph Marie Jacquard in the early 19th century, the punched card is a piece of paper read by a device detecting the presence or absence of a hole. It will display your progress in the game.",
+	"IBM5150": "The IBM Personal Computer, model 5150, is a computer produced by IBM in 1981 in several million units. It notably uses an X86 processor, revolutionary for the time and still used today.",
+	"Macintosh128k": "Produced by Apple in 1984, the Macintosh 128k is known to be the first personal computer with good graphics performance at an affordable price for the middle class.",
+	"PowerBook5300": "Launched by Apple in 1995, the PowerBook 5300 is the first laptop computer with a design close to what we know today. It had many technical problems that gave Apple the reputation of selling defective products.",
+	"PET2001": "Marketed in 1977 by Commodore International, the PET 2001 (acronym for Personal Electronic Transactor) is one of the first personal computers. It featured the famous MOS 6502 processor.",
+	"TI994": "Produced by Texas Instruments in 1979, the TI-99/4 was intended for home and educational use. It was notably capable of playing video games."
+  },
+  "fr": {
+	"PunchedCard": "Inventée par Joseph Marie Jacquard au début du XIXe siècle, la carte perforée est un morceau de papier qui est lu par un dispositif repérant la présence ou l'absence de trou. Elle permettra d'afficher votre progression dans le jeu.",
+	"IBM5150": "L’IBM Personal Computer, modèle 5150, est un ordinateur produit par IBM en 1981 en plusieurs millions d’exemplaires, il utilise notamment un processeur X86, révolutionnaire pour l'époque et encore utilisé de nos jours.",
+	"Macintosh128k": "Produit par Apple en 1984, le Macintosh 128k est connu pour être le premier ordinateur personnel avec de bonnes performances graphiques à un prix accessible pour la classe moyenne.",
+	"PowerBook5300": "Lancé par Apple en 1995, le PowerBook 5300 est le premier ordinateur portable avec un design proche de ce que nous connaissons aujourd'hui. Il avait de nombreux problèmes techniques qui valurent à Apple la réputation de vendre des produits défectueux.",
+	"PET2001": "Commercialisé en 1977 par Commodore International, le PET 2001 (acronyme de Personal Electronic Transactor) est l'un des premiers ordinateurs personnels. Il disposait du célèbre processeur MOS 6502.",
+	"TI994": "Produit par Texas Instruments en 1979, le TI-99/4 était destiné à un usage domestique et éducatif. Il était notamment capable de jouer à des jeux vidéo."
+  }
+}

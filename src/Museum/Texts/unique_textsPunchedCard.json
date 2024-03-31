@@ -1,0 +1,12 @@
+{
+  "en": {
+	"Introduction": "Introduction",
+	"Room1": "Room 1",
+	"Room2": "Room 2"
+  },
+  "fr": {
+	"Introduction": "Introduction",
+	"Room1": "Salle 1",
+	"Room2": "Salle 2"
+  }
+}

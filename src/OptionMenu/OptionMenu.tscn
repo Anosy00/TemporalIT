@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://dywv3buv3ivmr"]
+[gd_scene load_steps=15 format=3 uid="uid://dywv3buv3ivmr"]
 
 [ext_resource type="Texture2D" uid="uid://byp26o0jyt83e" path="res://ressources/media/image.png" id="1_rp47s"]
+[ext_resource type="Script" path="res://OptionMenu/OptionMenu.cs" id="1_wvo6c"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="3_tnpm2"]
 [ext_resource type="Script" path="res://Scripts/OptionMenu/ReturnButton.cs" id="4_nhjgg"]
 [ext_resource type="Script" path="res://Scripts/OptionMenu/ResolutionMenu.cs" id="4_p5edt"]
@@ -77,6 +78,7 @@ Button/styles/normal = SubResource("StyleBoxFlat_pougm")
 Button/styles/pressed = SubResource("StyleBoxFlat_nb5c6")
 
 [node name="OptionMenu" type="Node" groups=["cant_paused"]]
+script = ExtResource("1_wvo6c")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

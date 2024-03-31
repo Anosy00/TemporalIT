@@ -3,6 +3,8 @@ namespace TemporalIT.Scripts.OptionMenu;
 
 public partial class ResolutionMenu : OptionButton
 {
+	private Dictionary<string, string>_uniqueTexts1 = LanguageManager.getUniqueTexts("OptionMenu/Texts/unique_texts.json");
+	
 	private static readonly Vector2I[] Resolutions = new Vector2I[]
 	{
 		new Vector2I(1920, 1080),
@@ -32,7 +34,7 @@ public partial class ResolutionMenu : OptionButton
 				break;
 			default:
 				if (ItemCount == CustomResolutionIndex)
-					AddItem("Personnalisé", CustomResolutionIndex);
+					AddItem(_uniqueTexts1["Custom"], CustomResolutionIndex);
 				if (DisplayServer.WindowGetSize() != Resolutions[0] &&
 					DisplayServer.WindowGetSize() != Resolutions[1] &&
 					DisplayServer.WindowGetSize() != Resolutions[2])

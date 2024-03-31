@@ -1,0 +1,23 @@
+{
+	"en": {
+	  "WindowedMode": "Windowed Mode :",
+	  "Fullscreen": "Fullscreen",
+	  "Maximized": "Maximized",
+	  "Windowed": "Windowed",
+	  "Resolution": "Resolution :",
+	  "Custom": "Custom",
+	  "Volume": "Volume :",
+	  "RETURN": "RETURN"
+	},
+	"fr": {
+	  "WindowedMode": "Mode fenêtré :",
+	  "Fullscreen": "Plein écran",
+	  "Maximized": "Maximisé",
+	  "Windowed": "Fenêtré",
+	  "Resolution": "Résolution :",
+	  "Custom": "Personnalisé",
+	  "Volume": "Volume :",
+	  "RETURN": "RETOUR"
+	}
+  }
+  

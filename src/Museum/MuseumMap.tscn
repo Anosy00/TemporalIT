@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bun2w2ahn4oyw"]
+[gd_scene load_steps=61 format=3 uid="uid://bun2w2ahn4oyw"]
 
 [ext_resource type="Texture2D" uid="uid://lngbjo08vofg" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/preview.png" id="1_sj3wp"]
 [ext_resource type="Texture2D" uid="uid://cpdl3b70ou8kr" path="res://ressources/tilesmap/LPC_house_interior/LPC_house_interior/interior.png" id="2_5cfrb"]
@@ -4298,11 +4298,6 @@ font = ExtResource("12_top77")
 font_size = 18
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_c3qll"]
-font = ExtResource("12_top77")
-font_size = 18
-font_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_dlxjl"]
 font = ExtResource("12_top77")
 font_size = 32
@@ -4472,22 +4467,19 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_TI99/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -3.00177
-anchor_top = 0.047
-anchor_right = -3.00177
-anchor_bottom = 0.60969
-offset_left = 1931.36
-offset_top = -96.024
-offset_right = 2696.36
-offset_bottom = -32.0605
-text = "Produit par Texas Instruments en 1979,
-le TI-99/4 était destiné à un usage
-domestique et éducatif. Il était
-notamment capable de jouer à des jeux
-vidéo."
+anchor_left = 0.00599999
+anchor_top = 0.036
+anchor_right = 0.994
+anchor_bottom = 0.964
+offset_left = -384.62
+offset_top = -95.912
+offset_right = -385.38
+offset_bottom = -96.088
+text = "Produit par Texas Instruments en 1979, le TI-99/4 était destiné à un usage domestique et éducatif. Il était notamment capable de jouer à des jeux vidéo."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_TI99/TheDialogBox"]
@@ -4521,24 +4513,19 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_Applemac/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = 0.03
-anchor_top = 0.057
+anchor_left = 0.00599999
+anchor_top = 0.036
 anchor_right = 0.994
-anchor_bottom = 0.979
-offset_left = -385.101
-offset_top = -95.944
-offset_right = -385.383
-offset_bottom = -95.968
-text = "Produit par Apple en 1984,
-Le Macintosh 128k est connu pour
-être le premier ordinateur
-personnel avec de bonnes
-performances graphiques à un
-prix accessible pour la
-classe moyenne."
+anchor_bottom = 0.964
+offset_left = -384.62
+offset_top = -95.912
+offset_right = -385.38
+offset_bottom = -96.088
+text = "Commercialisé en 1977 par Commodore International, le PET 2001 (acronyme de Personal Electronic Transactor) est l'un des premiers ordinateurs personnels. Il disposait du célèbre processeur MOS 6502."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_Applemac/TheDialogBox"]
@@ -4572,23 +4559,19 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_IBM5150/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = 0.012
+anchor_left = 0.0119948
 anchor_top = 0.052
-anchor_right = 0.994
+anchor_right = 0.995293
 anchor_bottom = 0.969
 offset_left = -385.236
 offset_top = -95.984
 offset_right = -385.376
 offset_bottom = -96.048
-text = "L’IBM Personnal Computer, modèle 5150, 
-est un ordinateur produit par IBM en 
-1981 en plusieurs millions d’exemplaires, 
-il utilise notement un processeur X86, 
-révolutionnaire pour l'époque et encore 
-utilisé de nos jours."
+text = "L’IBM Personnal Computer, modèle 5150,  est un ordinateur produit par IBM en  1981 en plusieurs millions d’exemplaires,  il utilise notement un processeur X86, révolutionnaire pour l'époque et encore  utilisé de nos jours."
 label_settings = SubResource("LabelSettings_wft34")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_IBM5150/TheDialogBox"]
@@ -4622,59 +4605,7 @@ texture = ExtResource("11_3ubsv")
 
 [node name="LabelText" type="Label" parent="Museum/RigidBody2D_PC/TheDialogBox/bubble"]
 anchors_preset = -1
-anchor_left = -6.8159
-anchor_top = -0.102868
-anchor_right = -6.8159
-anchor_bottom = -0.102868
-offset_left = 4871.24
-offset_top = -68.2494
-offset_right = 5628.24
-offset_bottom = 111.751
-text = "Lancé par Apple en 1995, le
-PowerBook 5300 est le premier
-ordinateur portable avec un design
-proche de ce que nous connaissons
-aujourd'hui. Il avait de nombreux
-problèmes techniques qui valurent à
-Apple la réputation de vendre des
-produits défectueux."
-label_settings = SubResource("LabelSettings_c3qll")
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_PC/TheDialogBox"]
-visible = false
-position = Vector2(13, -19)
-shape = SubResource("CircleShape2D_cn6ey")
-
-[node name="RigidBody2D_IBM5151" type="RigidBody2D" parent="Museum"]
-position = Vector2(429, 236)
-
-[node name="Table" type="Sprite2D" parent="Museum/RigidBody2D_IBM5151"]
-position = Vector2(11, -14)
-texture = ExtResource("13_fjorn")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Museum/RigidBody2D_IBM5151"]
-position = Vector2(11, -14)
-shape = SubResource("RectangleShape2D_y7e2p")
-
-[node name="pet2001" type="Sprite2D" parent="Museum/RigidBody2D_IBM5151"]
-position = Vector2(11, -19)
-scale = Vector2(0.84375, 0.8125)
-texture = ExtResource("19_to8an")
-
-[node name="TheDialogBox" type="Area2D" parent="Museum/RigidBody2D_IBM5151"]
-script = ExtResource("10_hoq87")
-
-[node name="bubble" type="Sprite2D" parent="Museum/RigidBody2D_IBM5151/TheDialogBox"]
-position = Vector2(118.5, -10.5)
-scale = Vector2(0.193507, 0.411458)
-texture = ExtResource("11_3ubsv")
-
-[node name="LabelText" type="Label" parent="Museum/RigidBody2D_IBM5151/TheDialogBox/bubble"]
-anchors_preset = -1
-anchor_left = 0.006
+anchor_left = 0.00599999
 anchor_top = 0.036
 anchor_right = 0.994
 anchor_bottom = 0.964
@@ -4682,19 +4613,60 @@ offset_left = -384.62
 offset_top = -95.912
 offset_right = -385.38
 offset_bottom = -96.088
-text = "Commercialisé en 1977 par Commodore
-International, le PET 2001 (acronyme de
-Personal Electronic Transactor) est 
-l'un des premiers ordinateurs 
-personnels.
-Il disposait du célèbre processeur
-MOS 6502."
+text = "Lancé par Apple en 1995, le PowerBook 5300 est le premier ordinateur portable avec un design proche de ce que nous connaissons aujourd'hui. Il avait de nombreux problèmes techniques qui valurent à Apple la réputation de vendre des produits défectueux."
 label_settings = SubResource("LabelSettings_oik7s")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_IBM5151/TheDialogBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_PC/TheDialogBox"]
+visible = false
+position = Vector2(13, -19)
+shape = SubResource("CircleShape2D_cn6ey")
+
+[node name="RigidBody2D_PET2001" type="RigidBody2D" parent="Museum"]
+position = Vector2(429, 236)
+
+[node name="Table" type="Sprite2D" parent="Museum/RigidBody2D_PET2001"]
+position = Vector2(11, -14)
+texture = ExtResource("13_fjorn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Museum/RigidBody2D_PET2001"]
+position = Vector2(11, -14)
+shape = SubResource("RectangleShape2D_y7e2p")
+
+[node name="pet2001" type="Sprite2D" parent="Museum/RigidBody2D_PET2001"]
+position = Vector2(11, -19)
+scale = Vector2(0.84375, 0.8125)
+texture = ExtResource("19_to8an")
+
+[node name="TheDialogBox" type="Area2D" parent="Museum/RigidBody2D_PET2001"]
+script = ExtResource("10_hoq87")
+
+[node name="bubble" type="Sprite2D" parent="Museum/RigidBody2D_PET2001/TheDialogBox"]
+position = Vector2(118.5, -10.5)
+scale = Vector2(0.193507, 0.411458)
+texture = ExtResource("11_3ubsv")
+
+[node name="LabelText" type="Label" parent="Museum/RigidBody2D_PET2001/TheDialogBox/bubble"]
+anchors_preset = -1
+anchor_left = 0.00599999
+anchor_top = 0.036
+anchor_right = 0.994
+anchor_bottom = 0.964
+offset_left = -384.62
+offset_top = -95.912
+offset_right = -385.38
+offset_bottom = -96.088
+text = "Commercialisé en 1977 par Commodore International, le PET 2001 (acronyme de Personal Electronic Transactor) est l'un des premiers ordinateurs personnels. Il disposait du célèbre processeur MOS 6502."
+label_settings = SubResource("LabelSettings_oik7s")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Museum/RigidBody2D_PET2001/TheDialogBox"]
 visible = false
 position = Vector2(12, -5)
 shape = SubResource("CircleShape2D_cn6ey")
@@ -4823,6 +4795,6 @@ volume_db = -25.0
 [connection signal="body_exited" from="Museum/RigidBody2D_IBM5150/TheDialogBox" to="Museum/RigidBody2D_IBM5150/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_exited"]
 [connection signal="body_entered" from="Museum/RigidBody2D_PC/TheDialogBox" to="Museum/RigidBody2D_PC/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_entered"]
 [connection signal="body_exited" from="Museum/RigidBody2D_PC/TheDialogBox" to="Museum/RigidBody2D_PC/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_exited"]
-[connection signal="body_entered" from="Museum/RigidBody2D_IBM5151/TheDialogBox" to="Museum/RigidBody2D_IBM5151/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_entered"]
-[connection signal="body_exited" from="Museum/RigidBody2D_IBM5151/TheDialogBox" to="Museum/RigidBody2D_IBM5151/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_exited"]
+[connection signal="body_entered" from="Museum/RigidBody2D_PET2001/TheDialogBox" to="Museum/RigidBody2D_PET2001/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_entered"]
+[connection signal="body_exited" from="Museum/RigidBody2D_PET2001/TheDialogBox" to="Museum/RigidBody2D_PET2001/TheDialogBox" method="_on_interactive_zone_of_the_computer_body_exited"]
 [connection signal="timeout" from="Museum/Timer" to="Museum" method="_on_timer_timeout"]

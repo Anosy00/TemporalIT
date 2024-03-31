@@ -14,19 +14,7 @@ public partial class Museum : TileMap
 
 
 	private List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("Museum/Dialogues.json");
-
-	/*
-	GD.Print(_dialog1);
-
-
-	new List<Sentence>
-	{
-		new Sentence("Narrateur", "Bienvenue au Musée de l'informatique ! Dans ce jeu, les dialogues passent automatiquement au suivant au bout de quelques secondes.",0.0f),
-		new Sentence("Narrateur", "Dans ce jeu, tu devras résoudre des énigmes pour avancer dans l'histoire, donc prête attention à tous les détails.",6.0f),
-		new Sentence("Narrateur", "Commence par lire les descriptions des différentes machines qui ont marqué l'histoire de l'informatique.",12.0f),
-		new Sentence("Narrateur", "Utilise les flèches de ton clavier pour bouger ton personnage, et la touche E pour interagir avec les éléments.",18.0f),
-	};
-	*/
+	private Dictionary<string, string> _uniqueTexts1 = LanguageManager.getUniqueTexts("Museum/Texts/unique_texts.json");
 	
 	public void ForwardVoiceDialog(float temps)
 	{
@@ -50,7 +38,14 @@ public partial class Museum : TileMap
 		_narrator = GetNode<AudioStreamPlayer>("Narrator");
 		_music = GetNode<AudioStreamPlayer>("Music");
 		_timer = GetNode<Godot.Timer>("Timer");
-		
+
+		GetNode<Label>("InteractiveZoneOfThePunshedCard/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["PunchedCard"];
+		GetNode<Label>("RigidBody2D_TI99/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["TI994"];
+		GetNode<Label>("RigidBody2D_Applemac/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["Macintosh128k"];
+		GetNode<Label>("RigidBody2D_IBM5150/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["IBM5150"];
+		GetNode<Label>("RigidBody2D_PC/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["PowerBook5300"];
+		GetNode<Label>("RigidBody2D_PET2001/TheDialogBox/bubble/LabelText").Text = _uniqueTexts1["PET2001"];
+
 		/*GD.Print(""+_dialog1[0]._name);
 		GD.Print(""+_dialog1[0]._text);
 		GD.Print(""+_dialogBox, _timer);*/

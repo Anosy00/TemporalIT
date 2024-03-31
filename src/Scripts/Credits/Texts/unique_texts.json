@@ -1,0 +1,12 @@
+{
+	"en": {
+	  "ProgrammingTeam": "Programming Team",
+	  "VoiceActors": "Voice Actors",
+	  "ThanksForPlaying": "Thanks for playing!"
+	},
+	"fr": {
+	  "ProgrammingTeam": "Équipe de programmation",
+	  "VoiceActors": "Doubleurs",
+	  "ThanksForPlaying": "Merci d'avoir joué !"
+	}
+  }
