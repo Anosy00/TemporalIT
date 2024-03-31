@@ -52,7 +52,7 @@ public partial class LadderScript : Node
 		else
 		{
 			if (Input.IsActionPressed("button_e") && _keyInteration.isVisible() &&
-			    GlobalJMJ.nbOfInteractionWithJMJ == 0)
+				GlobalJMJ.nbOfInteractionWithJMJ == 0)
 			{
 				_dialogBox.setTextOfLabel("[Player]","Je devrais aller parler à cet homme avant...");
 				_dialogBox.available("displayText");

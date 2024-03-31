@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bp8nfdgppjtvj"]
+[gd_scene load_steps=15 format=3 uid="uid://bp8nfdgppjtvj"]
 
 [ext_resource type="Script" path="res://Scripts/ScriptsMuseum/Card/ButtonPunchedCard.cs" id="1_oqbhm"]
+[ext_resource type="Script" path="res://Museum/PunchedCard.cs" id="1_tg0xf"]
 [ext_resource type="PackedScene" uid="uid://c87v2udtwcfq1" path="res://Museum/view_of_PunchedCard.tscn" id="3_2fx6y"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="3_5n64p"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="4_xga6v"]
@@ -68,6 +69,7 @@ font_size = 27
 
 [node name="PunchedCard" type="Node2D"]
 position = Vector2(76, 176)
+script = ExtResource("1_tg0xf")
 
 [node name="ButtonPunchedCard" type="Button" parent="."]
 offset_left = 66.0

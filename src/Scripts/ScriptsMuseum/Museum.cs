@@ -13,8 +13,8 @@ public partial class Museum : TileMap
 
 
 
-	private List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("Museum/Dialogues.json");
-	private Dictionary<string, string> _uniqueTexts1 = LanguageManager.getUniqueTexts("Museum/Texts/unique_texts.json");
+	private List<Sentence> _dialog1 = LanguageManager.GetSequentialSentences("Museum/Texts/DialoguesMuseum.json");
+	private Dictionary<string, string> _uniqueTexts1 = LanguageManager.getUniqueTexts("Museum/Texts/unique_textsMuseum.json");
 	
 	public void ForwardVoiceDialog(float temps)
 	{

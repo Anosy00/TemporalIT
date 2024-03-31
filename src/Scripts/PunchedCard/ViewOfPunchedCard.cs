@@ -9,10 +9,17 @@ public partial class ViewOfPunchedCard : Node
 	private int frame;
 	int nbFrame=11;
 	
+	private Dictionary<string, string> _uniqueTexts1 = LanguageManager.getUniqueTexts("Museum/Texts/unique_textsPunchedCard.json");
+
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		initializing();
+		GetNode<Label>("Label").Text = _uniqueTexts1["Introduction"];
+		GetNode<Label>("Label2").Text = _uniqueTexts1["Room1"];
+		GetNode<Label>("Label3").Text = _uniqueTexts1["Room2"];
+		
 	}
 	
 	private void initializing() {
