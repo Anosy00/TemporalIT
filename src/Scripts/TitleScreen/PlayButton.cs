@@ -13,11 +13,11 @@ public partial class PlayButton : Button
 
     private void _on_start_button_pressed()
     {
-        if (GetTree().ChangeSceneToFile("res://Museum/MuseumMap.tscn") != Error.Ok)
+        if (GetTree().ChangeSceneToFile("res://ConfigStartGame/ConfigStartGame.tscn") != Error.Ok)
             GD.PrintErr("Failed to change scene to MuseumMap.tscn");
         else
         {
-            GetTree().ChangeSceneToFile("res://Museum/MuseumMap.tscn");
+            GetTree().ChangeSceneToFile("res://ConfigStartGame/ConfigStartGame.tscn");
         }
     }
 }

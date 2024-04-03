@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TemporalITTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+238a65df96f5066a6ef064f06bc581f67b03a672")]
 [assembly: System.Reflection.AssemblyProductAttribute("TemporalITTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TemporalITTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

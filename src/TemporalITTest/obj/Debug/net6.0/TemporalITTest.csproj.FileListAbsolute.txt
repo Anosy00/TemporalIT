@@ -96,9 +96,10 @@ C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\Temporal
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.AssemblyInfoInputs.cache
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.AssemblyInfo.cs
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.csproj.CoreCompileInputs.cache
-C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.csproj.CopyComplete
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.dll
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\refint\TemporalITTest.dll
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.pdb
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.genruntimeconfig.cache
 C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\ref\TemporalITTest.dll
+C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\TemporalITTest.sourcelink.json
+C:\Users\matia\Documents\TemporalIT\src\TemporalITTest\obj\Debug\net6.0\Temporal.10F5273D.Up2Date
