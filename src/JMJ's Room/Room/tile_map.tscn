@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://40j8ycjitstb"]
+[gd_scene load_steps=114 format=3 uid="uid://40j8ycjitstb"]
 
 [ext_resource type="Texture2D" uid="uid://i4y438usgn4d" path="res://ressources/tilesmap/tileset_16x16_interior/tileset_16x16_interior.png" id="1_e7p8e"]
 [ext_resource type="Texture2D" uid="uid://cr5yogmu2q4a0" path="res://ressources/tilesmap/tileset_16x16_interior/medieval tileset interior.png" id="2_2u5u2"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bsqvjhfdd24tj" path="res://ressources/tilesmap/ladder.png" id="8_jhrpl"]
 [ext_resource type="Texture2D" uid="uid://byirslqo7n50a" path="res://ressources/ui-keyboard/LetterEButton-Sheet.png" id="9_u6vnd"]
 [ext_resource type="Texture2D" uid="uid://bucg1laq6vekg" path="res://ressources/tilesmap/woodplank.png" id="10_pgfv6"]
-[ext_resource type="Texture2D" uid="uid://cgmjeftmvpjy5" path="res://ressources/Character/Perso_pixel.png" id="11_j0p0o"]
 [ext_resource type="Script" path="res://Scripts/Player/ScriptJMJ'sRoom/PlayerMovement.cs" id="11_uayp2"]
 [ext_resource type="Texture2D" uid="uid://bvl0vmojemw1r" path="res://ressources/media/Sans_titre.png" id="12_8t5ke"]
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/WoodPlank1.cs" id="12_h6b5h"]
@@ -19,6 +18,7 @@
 [ext_resource type="Script" path="res://Scripts/ScriptsJMJ/JMJ.cs" id="14_fy0ia"]
 [ext_resource type="FontFile" uid="uid://dyh13wh6kifnk" path="res://ressources/system-font/press-start-2p/PressStart2P.ttf" id="14_ubub2"]
 [ext_resource type="Script" path="res://JMJ's Room/Room/Machine.cs" id="15_qfxtk"]
+[ext_resource type="Texture2D" uid="uid://b8ux7p0b7uao6" path="res://ressources/Character/JMJ_Character_Spirte-Sheet.png" id="18_ue8kr"]
 [ext_resource type="Texture2D" uid="uid://c8kasold4te7a" path="res://ressources/media/jmj-machine.png" id="19_j1byy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_57g0c"]
@@ -1452,6 +1452,189 @@ _data = {
 "displayText": SubResource("Animation_gq3ot")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1n8t"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lm51j"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ll6mp"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opu54"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7wgo"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5w5b"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mia8m"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13iyo"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_se0ok"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kd8ce"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(144, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uchbl"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(160, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qyjgj"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(176, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qf7k"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(192, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoy58"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(208, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbev8"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(224, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64lso"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(240, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pherw"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(256, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufdks"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(272, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8h1k"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(288, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k341g"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(304, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcd1q"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(320, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a3wk"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(336, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ostn4"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(352, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko6vg"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(368, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2oeg"]
+atlas = ExtResource("18_ue8kr")
+region = Rect2(384, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uiabf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1n8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lm51j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ll6mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opu54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7wgo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5w5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mia8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13iyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_se0ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kd8ce")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uchbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qyjgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qf7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoy58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbev8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64lso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pherw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufdks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8h1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k341g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcd1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a3wk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ostn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko6vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2oeg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjsma"]
 radius = 48.0
 height = 118.0
@@ -1528,14 +1711,39 @@ format = 2
 layer_0/name = "Ground"
 layer_0/tile_data = PackedInt32Array(-131070, 131072, 0, -65534, 131072, 0, 2, 131072, 0, 3, 131072, 0, -7, 131072, 0, -131069, 131072, 0, -131068, 131072, 0, -131067, 131072, 0, -196606, 131072, 0, -196603, 131072, 0, -196604, 131072, 0, -196605, 131072, 0, -65533, 131072, 0, -65532, 131072, 0, 65529, 131072, 0, 4, 131072, 0, 5, 131072, 0, 131065, 131072, 0, 65538, 131072, 0, 65539, 131072, 0, 65540, 131072, 0, 65541, 131072, 0, 131077, 131072, 0, 131076, 131072, 0, 131075, 131072, 0, 131074, 131072, 0, 196609, 131072, 0, 196610, 131072, 0, 196611, 131072, 0, 196612, 131072, 0, 196613, 131072, 0, 196601, 131072, 0, 262138, 131072, 0, 262139, 131072, 0, 262140, 131072, 0, 262141, 131072, 0, 262142, 131072, 0, 262143, 131072, 0, 196608, 131072, 0, -131078, 131072, 0, -65542, 131072, 0, -6, 131072, 0, 65530, 131072, 0, 131066, 131072, 0, 196602, 131072, 0, -131077, 131072, 0, -65541, 131072, 0, -5, 131072, 0, 65531, 131072, 0, 131067, 131072, 0, 196603, 131072, 0, -131076, 131072, 0, -65540, 131072, 0, -4, 131072, 0, 65532, 131072, 0, 131068, 131072, 0, 196604, 131072, 0, -131075, 131072, 0, -3, 131072, 0, 65533, 131072, 0, 131069, 131072, 0, 196605, 131072, 0, -131074, 131072, 0, -65538, 131072, 0, -2, 131072, 0, 65534, 131072, 0, 131070, 131072, 0, 196606, 131072, 0, -131073, 131072, 0, -65537, 131072, 0, -1, 131072, 0, 65535, 131072, 0, 131071, 131072, 0, 196607, 131072, 0, -196608, 131072, 0, -131072, 131072, 0, -65536, 131072, 0, 0, 131072, 0, 65536, 131072, 0, 131072, 131072, 0, -196607, 131072, 0, -131071, 131072, 0, -65535, 131072, 0, 1, 131072, 0, 65537, 131072, 0, 131073, 131072, 0, -65543, 131072, 0, -262146, 131072, 0, -262147, 131072, 0, -262148, 131072, 0, -262149, 131072, 0, -262150, 131072, 0, -262151, 131072, 0, -196615, 131072, 0, -196614, 131072, 0, -196613, 131072, 0, -196612, 131072, 0, -196611, 131072, 0, -196610, 131072, 0, -196609, 131072, 0, -262144, 131072, 0, -262143, 131072, 0, -262142, 131072, 0, -262141, 131072, 0, -262140, 131072, 0, -262139, 131072, 0, -131079, 131072, 0, -65539, 131072, 0, -65531, 131072, 0, 262137, 131072, 0, -262145, 131072, 0, -327680, 131072, 0, -327679, 131072, 0, -327678, 131072, 0, -327677, 131072, 0, -327676, 131072, 0, -327675, 131072, 0, -458748, 1, 65537, -458751, 1, 65537, -393218, 1, 65537, -393221, 1, 65537)
 layer_1/name = "Furnitures"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(-262150, 196609, 65552, -196614, 196609, 65553, 131065, 655363, 65543)
 layer_2/name = "Utilities"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array(-393211, 131075, 65549, -393222, 1, 65537, -393219, 1, 65537, -458752, 1, 65537, 131065, 720899, 131079)
 layer_3/name = "Decoration"
+layer_3/enabled = true
+layer_3/modulate = Color(1, 1, 1, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(65529, 1179651, 65538)
 layer_4/name = "WoodPlank1"
+layer_4/enabled = true
+layer_4/modulate = Color(1, 1, 1, 1)
+layer_4/y_sort_enabled = false
+layer_4/y_sort_origin = 0
+layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
 layer_5/name = "WoodPlank2"
+layer_5/enabled = true
+layer_5/modulate = Color(1, 1, 1, 1)
+layer_5/y_sort_enabled = false
+layer_5/y_sort_origin = 0
+layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array()
 
 [node name="Camera2D" type="Camera2D" parent="TileMap"]
@@ -1733,10 +1941,10 @@ libraries = {
 position = Vector2(-6, 0)
 script = ExtResource("14_fy0ia")
 
-[node name="Sprite2D" type="Sprite2D" parent="JMJ"]
-position = Vector2(265, 301)
-scale = Vector2(2.25, 2.78125)
-texture = ExtResource("11_j0p0o")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="JMJ"]
+position = Vector2(265.446, 291.35)
+scale = Vector2(3.32401, 3.09669)
+sprite_frames = SubResource("SpriteFrames_uiabf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JMJ"]
 position = Vector2(264, 292)

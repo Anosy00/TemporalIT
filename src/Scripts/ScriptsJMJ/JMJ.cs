@@ -13,6 +13,7 @@ public partial class JMJ : Area2D
 	private static int nbTimer = 0;
 	private Sprite2D _objectif;
 	private Label _labelObjectif;
+	private AnimatedSprite2D _jmj;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -27,6 +28,8 @@ public partial class JMJ : Area2D
 		_dialogBox.setCanCloseDialogBox(false);
 		_objectif = GetNode<Sprite2D>("../Objectif");
 		_labelObjectif = GetNode<Label>("../Objectif/LabelText");
+		_jmj = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		_jmj.Play();
 	}
 	
 	public void _on_area_2d_body_entered(CharacterBody2D body)
