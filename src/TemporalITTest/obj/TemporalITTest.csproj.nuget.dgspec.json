@@ -110,6 +110,7 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "version": "[6.0.27, 6.0.27]"
             },
             {
@@ -120,6 +121,8 @@
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[6.0.27, 6.0.27]"
 =======
+=======
+>>>>>>> AddNamePlayer
               "version": "[6.0.28, 6.0.28]"
             },
             {
@@ -129,7 +132,10 @@
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[6.0.28, 6.0.28]"
+<<<<<<< HEAD
 >>>>>>> punched_card
+=======
+>>>>>>> AddNamePlayer
             }
           ],
           "frameworkReferences": {
@@ -138,7 +144,11 @@
             }
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+>>>>>>> AddNamePlayer
         }
       }
     },
@@ -251,6 +261,7 @@
             {
               "name": "Microsoft.AspNetCore.App.Ref",
 <<<<<<< HEAD
+<<<<<<< HEAD
               "version": "[6.0.27, 6.0.27]"
             },
             {
@@ -261,6 +272,8 @@
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[6.0.27, 6.0.27]"
 =======
+=======
+>>>>>>> AddNamePlayer
               "version": "[6.0.28, 6.0.28]"
             },
             {
@@ -270,7 +283,10 @@
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[6.0.28, 6.0.28]"
+<<<<<<< HEAD
 >>>>>>> punched_card
+=======
+>>>>>>> AddNamePlayer
             }
           ],
           "frameworkReferences": {
@@ -279,10 +295,14 @@
             }
           },
 <<<<<<< HEAD
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
 =======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
 >>>>>>> punched_card
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+>>>>>>> AddNamePlayer
         }
       }
     }

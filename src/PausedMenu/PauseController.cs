@@ -19,6 +19,7 @@ public partial class PauseController : CanvasLayer
 			pathToScene = scene.SceneFilePath;
 			if (checkIfSceneCanBePaused(pathToScene))
 			{
+				Input.MouseMode = Input.MouseModeEnum.Visible;
 				GetTree().Paused = true;
 			}
 		}

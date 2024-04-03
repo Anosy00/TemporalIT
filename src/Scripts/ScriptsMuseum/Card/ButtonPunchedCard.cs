@@ -46,6 +46,7 @@ public partial class ButtonPunchedCard : Button
 	public override void _Process(double delta)
 	{
 		if (!Input.IsActionPressed("button_e")) return;
+		Global.ChestIsOpened = false;
 		GetTree().ChangeSceneToFile(_nextScene);
 		Music.PlayMusic();
 		_playerSaveManager.Reset();
@@ -55,6 +56,7 @@ public partial class ButtonPunchedCard : Button
 
 	private void _on_pressed()
 	{
+		Global.ChestIsOpened = false;
 		GetTree().ChangeSceneToFile(_nextScene);
 		Music.PlayMusic();
 		_playerSaveManager.Reset();

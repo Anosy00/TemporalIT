@@ -24,4 +24,5 @@ public static class Global
 	public static int getRoomNumber(){
 		return roomNumber;
 	}
+	public  static bool ChestIsOpened = false;
 }
